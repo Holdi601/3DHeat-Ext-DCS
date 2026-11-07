@@ -62,12 +62,15 @@ viewer's defaults (Y up, scale 1) and no placement step.
 **Latitude and longitude:** every theatre is a Transverse Mercator projection
 with its own constants; `<name>.json` carries them, the level's corners in
 latitude and longitude, and every town with both its latitude/longitude and
-its DCS x/z. Iraq's constants are not published; `fit` finds them from any
-recording that holds both, such as a Watcher session of one Iraq flight:
+its DCS x/z. Iraq's constants are not published; the ones used are fitted to
+the 43 beacons the theatre's own `beacons.lua` gives both ways (4 cm root mean
+square; the same fit gives Caucasus, Syria and Sinai back to the millimetre).
+For a theatre without constants, `fit` finds them from any recording that
+holds both, such as a Watcher session of one flight:
 
 ```bash
 heat3d-dcs-maps fit "<session>/heat.parquet"   # or .jsonl / .csv with lat, lon, x, z
-heat3d-dcs-maps level Iraq --projection <LON0> <FE> <FN> -o levels --around 33.3 44.4 30
+heat3d-dcs-maps level <theatre> --projection <LON0> <FE> <FN> -o levels --around 33.3 44.4 30
 ```
 
 **The sea floor** is left out (a flight-sim heatmap does not need the bottom

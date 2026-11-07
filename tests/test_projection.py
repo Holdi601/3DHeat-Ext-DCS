@@ -39,7 +39,12 @@ def test_false_origin_is_applied():
     p = for_theatre("MarianasWWII")
     x, z = p.to_dcs(13.48, 144.8)  # Guam lies near the theatre's origin
     assert abs(x) < 20_000 and abs(z) < 20_000
-    assert for_theatre("Iraq") is None
+
+
+def test_iraq_fitted_to_its_beacons():
+    # Al Asad's TACAN as the theatre's beacons.lua gives it both ways.
+    lat, lon = for_theatre("Iraq").to_latlon(61461.03125, -164405.296875)
+    assert abs(lat - 33.787370) < 1e-6 and abs(lon - 42.443594) < 1e-6
 
 
 def test_as_dict_names_the_source():

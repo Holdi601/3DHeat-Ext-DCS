@@ -69,6 +69,10 @@ THEATRES: dict[str, Projection] = {
     "Caucasus": Projection(33, -99516.9999999732, -4998114.999999984),
     "Falklands": Projection(-57, 147639.99999997593, 5815417.000000032),
     "GermanyColdWar": Projection(21, 35427.619999985734, -6061633.128000011),
+    # Iraq's constants are not published; fitted to the 43 beacons its own
+    # beacons.lua gives both ways (DCS x/z and lat/lon), 4 cm root mean square.
+    # The same fit gives Caucasus, Syria and Sinai back to the millimetre.
+    "Iraq": Projection(45, 72290.0, -3680057.0, source="fitted to the theatre's beacons"),
     "Kola": Projection(21, -62702.00000000087, -7543624.999999979),
     "MarianaIslands": Projection(147, 238417.99999989968, -1491840.000000048),
     # The 1944 Marianas share the modern map's ground and origin (checked: the
