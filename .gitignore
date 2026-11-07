@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Levels built from a user's own game files never belong here.
+*.glb
+*.gltf
+*.surface5
+*.scn5
+.claude/
+*.jsonl

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heat3d-ext-dcs"
+version = "0.1.0"
+description = "DCS World theatres into 3DHeat levels: the game's own ground, sea, airfields, roads and towns, from your own install"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+heat3d-dcs-maps = "heat3d_ext_dcs.cli:main"
+
+[tool.setuptools]
+packages = ["heat3d_ext_dcs", "heat3d_update"]
