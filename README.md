@@ -84,6 +84,14 @@ are 35 to 90 million vertices; for those, `level` asks for a region
 (`--around LAT LON KM`, or `--bounds X0 Z0 X1 Z1` in DCS metres) or a thinner
 mesh (`--cell 50`: every vertex within 50 m becomes one), or `--force`.
 
+**Airfields.** Each `AirfieldsTaxiways/<name>.rn4` holds one airfield's taxi
+network, named after it; its points are (x, y, z) doubles in DCS metres. The
+level's `.json` lists every airfield inside the region with its name (the
+file's), the middle of its points' box, the box, and the ground there. On
+Caucasus all 21 files read, each placed on its field (Beslan 89 m, Kutaisi
+191 m from the surveyed airport reference point: the middle of the taxiways,
+not the runway's).
+
 `<name>.json` also records the source file, its size and date, the tiles
 read, the triangle count per class, and how many of the theatre's towns land
 on the ground - a check of the projection that should read "N of N".
@@ -131,12 +139,13 @@ above exists for a reason), and versions of DCS other than the one above.
 
 ## Not read
 
-- **Buildings and other objects** (`Scenes/*.scn5` places them, the models
-  are `.edm` in `Models/`): not decoded, so there is no `structure:` part. A
-  town shows as town-coloured ground, not as houses.
-- **Airfield names and positions** (`AirfieldsTaxiways/*.rn4`) and the road
-  network as a graph (`roads/*.rn4`): not decoded. Airfields show as runway
-  ground; their names are not in the level.
+- **Buildings** as shapes (the models are `.edm` in `Models/`): there is no
+  `structure:` part. A town shows as town-coloured ground, not as houses.
+- **Buildings and other objects**: `Scenes/<theatre>.scn5` starts
+  `landscape5::Scene5File`, version 9, then the names of the models it
+  places (615 on Caucasus: vehicles, hangars, houses, bridges) and a block per
+  model; the placements themselves are not decoded yet.
+- **The road network as a graph** (`roads/*.rn4`): not decoded.
 - Textures, trees, the sea's waves, the terrain's own lower levels of detail.
 
 ## Eagle Dynamics' terms

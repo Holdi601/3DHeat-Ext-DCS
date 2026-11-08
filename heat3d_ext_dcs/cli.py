@@ -20,7 +20,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from . import __version__
-from . import glb, install, projection, towns
+from . import airfields, glb, install, projection, towns
 from .level import COLOURS, Region, around, build, estimate_vertices, fmt_bounds, ground_height
 from .surface5 import FormatError, Surface5
 
@@ -131,6 +131,16 @@ def cmd_level(args) -> int:
             row.update(x=round(x, 1), z=round(z, 1), ground=None if y is None else round(y, 1))
             on_land += y is not None and y > -1.0
         places.append(row)
+    fields = []
+    for a in airfields.read(t.folder / "AirfieldsTaxiways"):
+        if region is not None and not region.holds(a.x, a.z):
+            continue
+        y = ground_height(level, a.x, a.z)
+        row = {"name": a.name, "x": round(a.x, 1), "z": round(a.z, 1), "ground": None if y is None else round(y, 1),
+               "box": [round(v, 1) for v in a.box]}
+        if proj is not None:
+            row["lat"], row["lon"] = (round(v, 6) for v in proj.to_latlon(a.x, a.z))
+        fields.append(row)
     bounds = fmt_bounds(level)
     corners = None
     if proj is not None and bounds:
@@ -165,6 +175,7 @@ def cmd_level(args) -> int:
         "colours": {k: list(v) for k, v in COLOURS.items()},
         "towns_on_land": f"{on_land} of {len(places)}" if proj else None,
         "towns": places,
+        "airfields": fields,
         "glb_bytes": size,
         "seconds": round(time.monotonic() - started, 1),
     }
@@ -175,6 +186,8 @@ def cmd_level(args) -> int:
     )
     if proj is not None:
         print(f"  towns on land: {meta['towns_on_land']} (a check of the projection)")
+    if fields:
+        print(f"  airfields: {', '.join(f['name'] for f in fields)}")
     return 0
 
 
