@@ -32,6 +32,7 @@ failed, 2 nothing found.
 |---|---|
 | `ground:<Level>` | the terrain's own triangles, coloured by what the game draws over each |
 | `water:<Level>` | every triangle the game marks as under the sea, laid flat at sea level |
+| `structure:<Level>` | the theatre's buildings as boxes, where the game places them (below) |
 
 The colours show with **Captured colour** in the viewer's level panel. Each
 ground triangle takes the class of the overlay the game draws it with:
@@ -92,14 +93,31 @@ Caucasus all 21 files read, each placed on its field (Beslan 89 m, Kutaisi
 191 m from the surveyed airport reference point: the middle of the taxiways,
 not the runway's).
 
+**Buildings.** `Scenes/<theatre>.scn5` places every object of the theatre
+(Caucasus: 15.6 million - trees, lamps, fences, wires, houses). The ones
+that are buildings by name and size (houses, flats, sheds, hangars,
+factories, towers, terminals: 171 of Caucasus' 615 models, 568,000
+placements) are drawn as boxes: each model's own bounding box from the
+file, turned to its heading and standing where the game puts it, from up to
+3 m below its origin (its footing on a slope) to its top. Trees, shrubs,
+lights, poles, wires, fences, walls, signs, vehicles, wagons, boats, cranes,
+masts, pylons and bridges are left out. No model shape or texture of the
+game is copied: a box per building, coloured by kind (house, block,
+industrial, airfield, tower, other). `<name>.json` lists them too
+(`buildings.rows`: x, z, base, height, half lengths, heading, kind) for the
+viewer's hybrid backdrop, which draws them in the game's towns instead of
+the mapped buildings. `--no-buildings` leaves them out.
+
 `<name>.json` also records the source file, its size and date, the tiles
 read, the triangle count per class, and how many of the theatre's towns land
 on the ground - a check of the projection that should read "N of N".
 
 ## What it reads, and how
 
-Only `Mods/terrains/<theatre>/surface/*.surface5` (the ground mesh) and
-`map/towns.lua` (place names, read as text, never run). Not the encrypted
+Only `Mods/terrains/<theatre>/surface/*.surface5` (the ground mesh),
+`Scenes/*.scn5` (where objects stand, and each model's box),
+`AirfieldsTaxiways/*.rn4` and `map/towns.lua` (place names, read as text,
+never run). Not the encrypted
 `terrain.cfg.lua.pak.crypt`, not `manifest.bin`, nothing of the program.
 
 The `.surface5` format is undocumented; the layout, as read from the files,
@@ -130,6 +148,12 @@ On the theatres installed on 2026-11-07 (DCS 2.9.30.28738, standalone):
   classes.
 - Both loaded in the viewer (WebGL2 in software), with town markers in the
   same DCS metres sitting on the ground.
+- Caucasus scene, Beslan and Vladikavkaz (60 km square): 20,887 buildings.
+  Placements land on their ground (an instance's height is the ground's);
+  runway lights trace the game's runway (Beslan: 53 m beside the surveyed
+  one and about 85 m along it, as the runway-coloured ground says too), and
+  wagons and wall segments line up with the decoded heading (297 of 297 and
+  381 of 381).
 - `tests/` builds `.surface5` files to the same layout, so no game data is
   kept here; `tests/test_real_install.py` runs on the install of the machine
   running the tests, and is skipped without one.
@@ -139,12 +163,12 @@ above exists for a reason), and versions of DCS other than the one above.
 
 ## Not read
 
-- **Buildings** as shapes (the models are `.edm` in `Models/`): there is no
-  `structure:` part. A town shows as town-coloured ground, not as houses.
-- **Buildings and other objects**: `Scenes/<theatre>.scn5` starts
-  `landscape5::Scene5File`, version 9, then the names of the models it
-  places (615 on Caucasus: vehicles, hangars, houses, bridges) and a block per
-  model; the placements themselves are not decoded yet.
+- **Buildings as shapes** (the models are `.edm` in `Models/`): boxes only,
+  on purpose. Their layout, and the scene's, is written down in
+  [`heat3d_ext_dcs/scene5.py`](heat3d_ext_dcs/scene5.py); every theatre
+  installed reads (two older ones, Nevada and The Channel, in a variant
+  layout the reader knows too).
+- Trees, lights and the other objects of the scene: read, not drawn.
 - **The road network as a graph** (`roads/*.rn4`): not decoded.
 - Textures, trees, the sea's waves, the terrain's own lower levels of detail.
 

@@ -43,3 +43,20 @@ def test_towns_land_on_the_ground():
               and abs(proj.to_dcs(p.lat, p.lon)[1] - proj.to_dcs(places[0].lat, places[0].lon)[1]) < 2500]
     heights = [ground_height(lv, *proj.to_dcs(p.lat, p.lon), reach=200.0) for p in inside]
     assert all(h is not None and h > -2.0 for h in heights), (t.name, heights)
+
+
+@pytest.mark.parametrize("t", [t for t in _theatres() if t.scene], ids=lambda t: t.name)
+def test_scene_reads(t):
+    from heat3d_ext_dcs import buildings
+    from heat3d_ext_dcs.scene5 import Scene5
+
+    with Scene5(t.scene) as s:
+        assert s.nodes and s.instance_count > 0
+        assert buildings.model_kinds(s.models, s.boxes)
+        mid = s.nodes[len(s.nodes) // 2]
+        inst = s.instances(touches=lambda b: b is mid.bounds)
+        assert len(inst) == mid.count
+        b = mid.bounds
+        # Every placement inside its node's bounds (x, z), metres.
+        x, z = inst.position[:, 0], inst.position[:, 2]
+        assert ((x >= b[0] - 1) & (x <= b[3] + 1) & (z >= b[2] - 1) & (z <= b[5] + 1)).all()

@@ -72,6 +72,7 @@ class Theatre:
     folder: Path
     surface: Path | None
     towns: Path
+    scene: Path | None = None
 
     @property
     def size(self) -> int:
@@ -84,7 +85,9 @@ def theatres(dcs: Path) -> list[Theatre]:
         if not d.is_dir():
             continue
         surfaces = sorted((d / "surface").glob("*.surface5")) if (d / "surface").is_dir() else []
-        out.append(Theatre(d.name, d, surfaces[0] if surfaces else None, d / "map" / "towns.lua"))
+        scenes = sorted((d / "Scenes").glob("*.scn5")) if (d / "Scenes").is_dir() else []
+        out.append(Theatre(d.name, d, surfaces[0] if surfaces else None, d / "map" / "towns.lua",
+                           scenes[0] if scenes else None))
     return out
 
 

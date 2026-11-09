@@ -14,14 +14,16 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import struct
 import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
 
 from . import __version__
-from . import airfields, glb, install, projection, towns
+from . import airfields, buildings, glb, install, projection, towns
 from .level import COLOURS, Region, around, build, estimate_vertices, fmt_bounds, ground_height
+from .scene5 import Scene5
 from .surface5 import FormatError, Surface5
 
 #: Above this many vertices to read, a whole-map export asks for --cell, a region or --force.
@@ -116,8 +118,17 @@ def cmd_level(args) -> int:
     if not level.triangle_count:
         print(f"{t.name}: nothing inside the region", file=sys.stderr)
         return 1
+    built = None
+    if t.scene is not None and not args.no_buildings:
+        try:
+            built = _buildings(t.scene, region)
+        except (FormatError, OSError, struct.error) as e:
+            print(f"{t.name}: buildings not read: {e}", file=sys.stderr)
+    parts = level.parts()
+    if built is not None and len(built["rows"]):
+        parts.append((f"structure:{name}", built["prims"]))
     path = out / f"{name}.glb"
-    size = glb.write(path, level.parts())
+    size = glb.write(path, parts)
 
     places = []
     on_land = 0
@@ -176,6 +187,7 @@ def cmd_level(args) -> int:
         "towns_on_land": f"{on_land} of {len(places)}" if proj else None,
         "towns": places,
         "airfields": fields,
+        "buildings": None if built is None else _buildings_json(built),
         "glb_bytes": size,
         "seconds": round(time.monotonic() - started, 1),
     }
@@ -188,7 +200,49 @@ def cmd_level(args) -> int:
         print(f"  towns on land: {meta['towns_on_land']} (a check of the projection)")
     if fields:
         print(f"  airfields: {', '.join(f['name'] for f in fields)}")
+    if built is not None:
+        print(f"  buildings: {len(built['rows']):,} from {built['source'].name}")
     return 0
+
+
+def _buildings(scene: Path, region: Region | None) -> dict:
+    """The scene's buildings inside the region: their boxes, and one primitive per kind."""
+    with Scene5(scene) as sc:
+        kinds = buildings.model_kinds(sc.models, sc.boxes)
+        inst = sc.instances(touches=None if region is None else region.touches, models=set(kinds))
+        if region is not None and len(inst):
+            keep = region.holds(inst.position[:, 0], inst.position[:, 2])
+            inst = type(inst)(inst.model[keep], inst.position[keep], inst.x_axis[keep], inst.z_axis[keep])
+        rows = buildings.boxes(inst, sc.boxes)
+        kind = [buildings.KINDS.index(kinds[int(m)]) for m in inst.model]
+        prims = []
+        for k, label in enumerate(buildings.KINDS):
+            sel = [i for i, v in enumerate(kind) if v == k]
+            if sel:
+                prims.append(buildings.mesh(rows[sel], buildings.KIND_COLOURS[label], label))
+        return {"rows": rows, "kind": kind, "prims": prims, "source": scene, "version": sc.version,
+                "models": len(kinds), "placed": sc.instance_count}
+
+
+def _buildings_json(b: dict) -> dict:
+    """The level's buildings for the viewer's hybrid backdrop: a row per building."""
+    rows = []
+    for (x, z, base, top, hx, hz, ux, uz), k in zip(b["rows"].tolist(), b["kind"]):
+        rows.append([round(x, 1), round(z, 1), round(base, 1), round(top - base, 1), round(hx, 1), round(hz, 1),
+                     round(math.degrees(math.atan2(uz, ux)), 1), k])
+    counts = {label: b["kind"].count(i) for i, label in enumerate(buildings.KINDS)}
+    return {
+        "source": str(b["source"]),
+        "scene_version": b["version"],
+        "placements_in_scene": b["placed"],
+        "building_models": b["models"],
+        "count": len(rows),
+        "kinds": list(buildings.KINDS),
+        "per_kind": counts,
+        "columns": ["x", "z", "base", "height", "half_x", "half_z", "heading_deg", "kind"],
+        "heading": "the model's x axis, degrees from DCS x (north) toward z (east); half_x lies along it",
+        "rows": rows,
+    }
 
 
 def cmd_towns(args) -> int:
@@ -287,6 +341,7 @@ def main(argv: list[str] | None = None) -> int:
                        help="only this box, in DCS metres (x north, z east)")
     p.add_argument("--seabed", action="store_true", help="keep the sea floor as ground (default: left out)")
     p.add_argument("--no-water", action="store_true", help="leave out the flat sea")
+    p.add_argument("--no-buildings", action="store_true", help="leave out the buildings of the theatre's scene")
     p.add_argument("--force", action="store_true", help="export a very large map whole at full detail")
     p.add_argument("--projection", nargs=3, type=float, metavar=("LON0", "FE", "FN"),
                    help="the theatre's Transverse Mercator constants, for one this tool does not know (see fit)")
