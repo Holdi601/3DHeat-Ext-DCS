@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="392" viewBox="0 0 500 392" role="img" aria-label="heat3d-dcs-maps on a synthetic install">
+<rect width="500" height="392" rx="8" fill="#1e1f24"/>
+<rect width="500" height="26" rx="8" fill="#2c2e35"/><rect y="18" width="500" height="8" fill="#2c2e35"/>
+<circle cx="16" cy="13" r="5" fill="#ff5f57"/><circle cx="32" cy="13" r="5" fill="#febc2e"/><circle cx="48" cy="13" r="5" fill="#28c840"/>
+<text x="250.0" y="17" fill="#9aa0aa" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12" text-anchor="middle">heat3d-dcs-maps on a synthetic install</text>
+<g font-family="Consolas,Menlo,DejaVu Sans Mono,monospace" font-size="13" xml:space="preserve" style="white-space:pre">
+<text x="16" y="46" fill="#7ee787" xml:space="preserve" style="white-space:pre">$&#160;heat3d-dcs-maps&#160;towns&#160;TestTheatre&#160;--dcs&#160;DCS</text>
+<text x="16" y="64" fill="#d6d9df" xml:space="preserve" style="white-space:pre">[</text>
+<text x="16" y="82" fill="#d6d9df" xml:space="preserve" style="white-space:pre">&#160;{</text>
+<text x="16" y="100" fill="#d6d9df" xml:space="preserve" style="white-space:pre">&#160;&#160;&quot;name&quot;:&#160;&quot;Example&#160;Town&quot;,</text>
+<text x="16" y="118" fill="#d6d9df" xml:space="preserve" style="white-space:pre">&#160;&#160;&quot;lat&quot;:&#160;0.0108,</text>
+<text x="16" y="136" fill="#d6d9df" xml:space="preserve" style="white-space:pre">&#160;&#160;&quot;lon&quot;:&#160;0.0181,</text>
+<text x="16" y="154" fill="#d6d9df" xml:space="preserve" style="white-space:pre">&#160;&#160;&quot;x&quot;:&#160;1193.7,</text>
+<text x="16" y="172" fill="#d6d9df" xml:space="preserve" style="white-space:pre">&#160;&#160;&quot;z&quot;:&#160;2014.1</text>
+<text x="16" y="190" fill="#d6d9df" xml:space="preserve" style="white-space:pre">&#160;},</text>
+<text x="16" y="208" fill="#d6d9df" xml:space="preserve" style="white-space:pre">&#160;{</text>
+<text x="16" y="226" fill="#d6d9df" xml:space="preserve" style="white-space:pre">&#160;&#160;&quot;name&quot;:&#160;&quot;Far&#160;away&quot;,</text>
+<text x="16" y="244" fill="#d6d9df" xml:space="preserve" style="white-space:pre">&#160;&#160;&quot;lat&quot;:&#160;10.0,</text>
+<text x="16" y="262" fill="#d6d9df" xml:space="preserve" style="white-space:pre">&#160;&#160;&quot;lon&quot;:&#160;10.0,</text>
+<text x="16" y="280" fill="#d6d9df" xml:space="preserve" style="white-space:pre">&#160;&#160;&quot;x&quot;:&#160;1122228.3,</text>
+<text x="16" y="298" fill="#d6d9df" xml:space="preserve" style="white-space:pre">&#160;&#160;&quot;z&quot;:&#160;1101255.2</text>
+<text x="16" y="316" fill="#d6d9df" xml:space="preserve" style="white-space:pre">&#160;}</text>
+<text x="16" y="334" fill="#d6d9df" xml:space="preserve" style="white-space:pre">]</text>
+<text x="16" y="352" fill="#7ee787" xml:space="preserve" style="white-space:pre">$&#160;echo&#160;$?</text>
+<text x="16" y="370" fill="#d6d9df" xml:space="preserve" style="white-space:pre">0</text>
+</g></svg>

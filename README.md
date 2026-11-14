@@ -24,6 +24,21 @@ folders; `--dcs <folder>` (the one holding `Mods\terrains`) or the `DCS_PATH`
 environment variable say where it is otherwise. Exit status: 0 done, 1
 failed, 2 nothing found.
 
+| `level` option | Does |
+|---|---|
+| `-o`, `--out FOLDER` | where `<name>.glb` and `<name>.json` go (required) |
+| `--dcs FOLDER` | the DCS World folder (also for `list` and `towns`) |
+| `--name NAME` | the level's name (default: the theatre's) |
+| `--around LAT LON KM` / `--bounds X0 Z0 X1 Z1` | only a square around a point / a box in DCS metres |
+| `--cell M` | thin the mesh to *M* metres (default 0: the game's own triangles) |
+| `--seabed`, `--no-water`, `--no-buildings` | keep the sea floor; leave out the flat sea; leave out the buildings |
+| `--force` | export a very large map whole at full detail |
+| `--projection LON0 FE FN` | Transverse Mercator constants for a theatre this tool does not know (see `fit`) |
+
+**Documentation:** [holdi601.github.io/3DHeat-Ext-DCS](https://holdi601.github.io/3DHeat-Ext-DCS/), a page per command with step-by-step use and example output. This converter is part of [3DHeat](https://github.com/Holdi601/3DHeat) ([documentation](https://holdi601.github.io/3DHeat/)); the telemetry these levels carry, and the viewer's one-file-a-match container, are described in [One file a match (.3dheat)](https://holdi601.github.io/3DHeat/container.html).
+
+![From a DCS install to a 3DHeat level](docs/assets/img/flow.svg)
+
 ## What comes out
 
 `<out>/<name>.glb` and `<name>.json` beside it.
