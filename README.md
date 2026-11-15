@@ -88,7 +88,7 @@ holds the telemetry you load on top.
 | `water:<Level>` | every triangle the game marks as under the sea, laid flat at sea level |
 | `structure:<Level>` | the theatre's buildings as boxes, where the game places them |
 
-The colours show with **Captured colour** in the viewer's level panel:
+The colours show with **Captured colour** in the viewer's Background / level panel:
 
 | Class | Colour | From the game's overlay |
 |---|---|---|

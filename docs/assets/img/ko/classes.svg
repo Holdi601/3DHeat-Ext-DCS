@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="852" height="246" viewBox="0 0 852 246" font-family="Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="852" height="246" rx="10" fill="#f6f7f9"/>
+<text x="16" y="32" font-size="18" fill="#1f2328" font-weight="600">지면 종류와 색</text>
+<rect x="16" y="50" width="34" height="20" rx="3" fill="#191919" stroke="#8c95a3"/>
+<text x="60" y="65" font-size="15" fill="#1f2328" font-weight="600">활주로</text>
+<text x="155" y="65" font-size="14" fill="#5b6270">활주로, 유도로</text>
+<rect x="16" y="80" width="34" height="20" rx="3" fill="#474747" stroke="#8c95a3"/>
+<text x="60" y="95" font-size="15" fill="#1f2328" font-weight="600">도로</text>
+<text x="155" y="95" font-size="14" fill="#5b6270">도로</text>
+<rect x="16" y="110" width="34" height="20" rx="3" fill="#604c42" stroke="#8c95a3"/>
+<text x="60" y="125" font-size="15" fill="#1f2328" font-weight="600">철도</text>
+<text x="155" y="125" font-size="14" fill="#5b6270">철도</text>
+<rect x="16" y="140" width="34" height="20" rx="3" fill="#bc664f" stroke="#8c95a3"/>
+<text x="60" y="155" font-size="15" fill="#1f2328" font-weight="600">마을</text>
+<text x="155" y="155" font-size="14" fill="#5b6270">마을, 건물</text>
+<rect x="16" y="170" width="34" height="20" rx="3" fill="#3d72b7" stroke="#8c95a3"/>
+<text x="60" y="185" font-size="15" fill="#1f2328" font-weight="600">물</text>
+<text x="155" y="185" font-size="14" fill="#5b6270">강, 호수</text>
+<rect x="16" y="200" width="34" height="20" rx="3" fill="#dbcc9e" stroke="#8c95a3"/>
+<text x="60" y="215" font-size="15" fill="#1f2328" font-weight="600">해변</text>
+<text x="155" y="215" font-size="14" fill="#5b6270">해변</text>
+<rect x="426" y="50" width="34" height="20" rx="3" fill="#8c877f" stroke="#8c95a3"/>
+<text x="470" y="65" font-size="15" fill="#1f2328" font-weight="600">암석</text>
+<text x="565" y="65" font-size="14" fill="#5b6270">암석</text>
+<rect x="426" y="80" width="34" height="20" rx="3" fill="#99a560" stroke="#8c95a3"/>
+<text x="470" y="95" font-size="15" fill="#1f2328" font-weight="600">들판</text>
+<text x="565" y="95" font-size="14" fill="#5b6270">들판, 풀밭</text>
+<rect x="426" y="110" width="34" height="20" rx="3" fill="#49683a" stroke="#8c95a3"/>
+<text x="470" y="125" font-size="15" fill="#1f2328" font-weight="600">숲</text>
+<text x="565" y="125" font-size="14" fill="#5b6270">숲, 나무</text>
+<rect x="426" y="140" width="34" height="20" rx="3" fill="#a0967c" stroke="#8c95a3"/>
+<text x="470" y="155" font-size="15" fill="#1f2328" font-weight="600">육지</text>
+<text x="565" y="155" font-size="14" fill="#5b6270">그 밖의 것</text>
+<rect x="426" y="170" width="34" height="20" rx="3" fill="#546d87" stroke="#8c95a3"/>
+<text x="470" y="185" font-size="15" fill="#1f2328" font-weight="600">바다 밑바닥</text>
+<text x="565" y="185" font-size="14" fill="#5b6270">--seabed일 때만</text>
+</svg>

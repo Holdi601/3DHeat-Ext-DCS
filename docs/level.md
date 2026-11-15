@@ -24,7 +24,7 @@ New to the command line? Read [Before you start](before-you-start.md) first.
 4. The command prints the tiles as it reads them, the triangle count, the
    file written, and how many of the theatre's towns land on the ground - a
    check of the projection that should read "N of N".
-5. Load `<folder>/<name>.glb` in the viewer's Level panel and turn on
+5. Load `<folder>/<name>.glb` in the viewer's Background / Background / level panel and turn on
    **Captured colour** to see the ground classes.
 
 ![level on a synthetic install](assets/img/level.svg)

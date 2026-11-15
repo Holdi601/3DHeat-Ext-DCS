@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="852" height="246" viewBox="0 0 852 246" font-family="Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="852" height="246" rx="10" fill="#f6f7f9"/>
+<text x="16" y="32" font-size="18" fill="#1f2328" font-weight="600">Класе тла и њихове боје</text>
+<rect x="16" y="50" width="34" height="20" rx="3" fill="#191919" stroke="#8c95a3"/>
+<text x="60" y="65" font-size="15" fill="#1f2328" font-weight="600">писта</text>
+<text x="155" y="65" font-size="14" fill="#5b6270">писте, руловање</text>
+<rect x="16" y="80" width="34" height="20" rx="3" fill="#474747" stroke="#8c95a3"/>
+<text x="60" y="95" font-size="15" fill="#1f2328" font-weight="600">пут</text>
+<text x="155" y="95" font-size="14" fill="#5b6270">путеви</text>
+<rect x="16" y="110" width="34" height="20" rx="3" fill="#604c42" stroke="#8c95a3"/>
+<text x="60" y="125" font-size="15" fill="#1f2328" font-weight="600">пруга</text>
+<text x="155" y="125" font-size="14" fill="#5b6270">пруге</text>
+<rect x="16" y="140" width="34" height="20" rx="3" fill="#bc664f" stroke="#8c95a3"/>
+<text x="60" y="155" font-size="15" fill="#1f2328" font-weight="600">град</text>
+<text x="155" y="155" font-size="14" fill="#5b6270">градови, зграде</text>
+<rect x="16" y="170" width="34" height="20" rx="3" fill="#3d72b7" stroke="#8c95a3"/>
+<text x="60" y="185" font-size="15" fill="#1f2328" font-weight="600">вода</text>
+<text x="155" y="185" font-size="14" fill="#5b6270">реке, језера</text>
+<rect x="16" y="200" width="34" height="20" rx="3" fill="#dbcc9e" stroke="#8c95a3"/>
+<text x="60" y="215" font-size="15" fill="#1f2328" font-weight="600">песак</text>
+<text x="155" y="215" font-size="14" fill="#5b6270">плаже</text>
+<rect x="426" y="50" width="34" height="20" rx="3" fill="#8c877f" stroke="#8c95a3"/>
+<text x="470" y="65" font-size="15" fill="#1f2328" font-weight="600">стена</text>
+<text x="565" y="65" font-size="14" fill="#5b6270">стена</text>
+<rect x="426" y="80" width="34" height="20" rx="3" fill="#99a560" stroke="#8c95a3"/>
+<text x="470" y="95" font-size="15" fill="#1f2328" font-weight="600">поље</text>
+<text x="565" y="95" font-size="14" fill="#5b6270">поља, трава</text>
+<rect x="426" y="110" width="34" height="20" rx="3" fill="#49683a" stroke="#8c95a3"/>
+<text x="470" y="125" font-size="15" fill="#1f2328" font-weight="600">шума</text>
+<text x="565" y="125" font-size="14" fill="#5b6270">шуме, дрвеће</text>
+<rect x="426" y="140" width="34" height="20" rx="3" fill="#a0967c" stroke="#8c95a3"/>
+<text x="470" y="155" font-size="15" fill="#1f2328" font-weight="600">копно</text>
+<text x="565" y="155" font-size="14" fill="#5b6270">остало</text>
+<rect x="426" y="170" width="34" height="20" rx="3" fill="#546d87" stroke="#8c95a3"/>
+<text x="470" y="185" font-size="15" fill="#1f2328" font-weight="600">морско дно</text>
+<text x="565" y="185" font-size="14" fill="#5b6270">само са --seabed</text>
+</svg>

@@ -21,7 +21,7 @@ The colours are the classes below:
 
 ![Ground classes and their colours](assets/img/classes.svg)
 
-The colours show with **Captured colour** in the viewer's level panel. Each
+The colours show with **Captured colour** in the viewer's Background / level panel. Each
 ground triangle takes the class of the overlay the game draws it with:
 
 | Class | Colour | From the game's overlay |
