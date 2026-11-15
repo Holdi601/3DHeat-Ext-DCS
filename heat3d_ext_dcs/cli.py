@@ -315,9 +315,9 @@ def cmd_fit(args) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     try:
-        import heat3d_update
+        from . import update
 
-        heat3d_update.startup("heat3d_ext_dcs")
+        update.startup("heat3d_ext_dcs")
     except Exception:  # an update check never stops an export
         pass
     ap = argparse.ArgumentParser(prog="heat3d-dcs-maps", description="DCS World theatres into 3DHeat levels")

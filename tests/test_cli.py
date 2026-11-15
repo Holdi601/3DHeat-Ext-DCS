@@ -22,7 +22,7 @@ def dcs(tmp_path, monkeypatch):
     root = synth.theatre(tmp_path / "DCS", towns=TOWNS)
     # The origin on the equator and the prime meridian: "Inland" is about 1195 m north, 2015 m east - in tile one.
     monkeypatch.setitem(projection.THEATRES, "TestTheatre", Projection(0, 0.0, 0.0))
-    monkeypatch.setattr("heat3d_update.startup", lambda *a, **k: None)
+    monkeypatch.setattr("heat3d_ext_dcs.update.startup", lambda *a, **k: None)
     return root
 
 
