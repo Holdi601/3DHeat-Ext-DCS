@@ -1,7 +1,7 @@
 ---
 title: "맵 찾기: list"
 nav_order: 2
-lang: ko
+lang: "ko"
 source: list.md
 source_hash: "334e2f7ab2b2"
 nav_exclude: true

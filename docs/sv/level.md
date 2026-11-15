@@ -1,7 +1,7 @@
 ---
 title: "Bygga en nivå: level"
 nav_order: 3
-lang: sv
+lang: "sv"
 source: level.md
 source_hash: "994b156c7213"
 nav_exclude: true

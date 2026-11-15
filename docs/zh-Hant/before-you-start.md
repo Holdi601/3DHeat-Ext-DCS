@@ -1,7 +1,7 @@
 ---
 title: "開始之前"
 nav_order: 1.5
-lang: zh-Hant
+lang: "zh-Hant"
 source: before-you-start.md
 source_hash: "64346abe88e5"
 nav_exclude: true

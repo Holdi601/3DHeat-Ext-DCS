@@ -1,7 +1,7 @@
 ---
 title: "Leibhéal a thógáil: level"
 nav_order: 3
-lang: ga
+lang: "ga"
 source: level.md
 source_hash: "994b156c7213"
 nav_exclude: true

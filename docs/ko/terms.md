@@ -1,7 +1,7 @@
 ---
 title: "약관과 라이선스"
 nav_order: 8
-lang: ko
+lang: "ko"
 source: terms.md
 source_hash: "677b443e2bb8"
 nav_exclude: true

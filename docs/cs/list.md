@@ -1,7 +1,7 @@
 ---
 title: "Hledání území: list"
 nav_order: 2
-lang: cs
+lang: "cs"
 source: list.md
 source_hash: "334e2f7ab2b2"
 nav_exclude: true

@@ -1,7 +1,7 @@
 ---
 title: "关卡文件"
 nav_order: 4
-lang: zh
+lang: "zh"
 source: output.md
 source_hash: "e587235daf30"
 nav_exclude: true

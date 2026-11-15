@@ -1,7 +1,7 @@
 ---
 title: "Kuidas faile loetakse"
 nav_order: 7
-lang: et
+lang: "et"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

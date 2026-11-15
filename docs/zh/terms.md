@@ -1,7 +1,7 @@
 ---
 title: "条款与许可证"
 nav_order: 8
-lang: zh
+lang: "zh"
 source: terms.md
 source_hash: "677b443e2bb8"
 nav_exclude: true

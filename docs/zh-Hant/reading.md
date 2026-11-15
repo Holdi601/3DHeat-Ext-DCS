@@ -1,7 +1,7 @@
 ---
 title: "檔案如何被讀取"
 nav_order: 7
-lang: zh-Hant
+lang: "zh-Hant"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

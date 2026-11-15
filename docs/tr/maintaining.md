@@ -1,7 +1,7 @@
 ---
 title: "Bu belgelerin bakımı"
 nav_order: 91
-lang: tr
+lang: "tr"
 source: maintaining.md
 source_hash: "a46a9c52f45e"
 nav_exclude: true

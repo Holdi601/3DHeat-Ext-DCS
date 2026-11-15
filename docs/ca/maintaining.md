@@ -1,7 +1,7 @@
 ---
 title: Mantenir aquesta documentació
 nav_order: 91
-lang: ca
+lang: "ca"
 source: maintaining.md
 source_hash: "a46a9c52f45e"
 nav_exclude: true

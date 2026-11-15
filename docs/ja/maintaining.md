@@ -1,7 +1,7 @@
 ---
 title: "このドキュメントの保守"
 nav_order: 91
-lang: ja
+lang: "ja"
 source: maintaining.md
 source_hash: "a46a9c52f45e"
 nav_exclude: true

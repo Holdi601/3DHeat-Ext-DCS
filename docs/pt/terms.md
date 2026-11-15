@@ -1,7 +1,7 @@
 ---
 title: Termos e licença
 nav_order: 8
-lang: pt
+lang: "pt"
 source: terms.md
 source_hash: "677b443e2bb8"
 nav_exclude: true

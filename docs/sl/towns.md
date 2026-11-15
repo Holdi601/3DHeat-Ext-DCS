@@ -1,7 +1,7 @@
 ---
 title: "Imena krajev: towns"
 nav_order: 5
-lang: sl
+lang: "sl"
 source: towns.md
 source_hash: "80a352aef3e8"
 nav_exclude: true

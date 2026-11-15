@@ -1,7 +1,7 @@
 ---
 title: "레벨 만들기: level"
 nav_order: 3
-lang: ko
+lang: "ko"
 source: level.md
 source_hash: "994b156c7213"
 nav_exclude: true

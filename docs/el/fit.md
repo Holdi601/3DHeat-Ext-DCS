@@ -1,7 +1,7 @@
 ---
 title: "Προβολές: fit"
 nav_order: 6
-lang: el
+lang: "el"
 source: fit.md
 source_hash: "eb9303fc94ef"
 nav_exclude: true

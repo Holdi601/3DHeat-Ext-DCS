@@ -1,7 +1,7 @@
 ---
 title: "Si lexohen skedarët"
 nav_order: 7
-lang: sq
+lang: "sq"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

@@ -1,7 +1,7 @@
 ---
 title: "Montar um nível: level"
 nav_order: 3
-lang: pt
+lang: "pt"
 source: level.md
 source_hash: "994b156c7213"
 nav_exclude: true

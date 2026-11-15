@@ -1,7 +1,7 @@
 ---
 title: "Condiții și licență"
 nav_order: 8
-lang: ro
+lang: "ro"
 source: terms.md
 source_hash: "677b443e2bb8"
 nav_exclude: true

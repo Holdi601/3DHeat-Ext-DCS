@@ -1,7 +1,7 @@
 ---
 title: Kif jinqraw il-fajls
 nav_order: 7
-lang: mt
+lang: "mt"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

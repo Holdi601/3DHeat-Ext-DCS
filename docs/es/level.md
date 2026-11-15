@@ -1,7 +1,7 @@
 ---
 title: "Construir un nivel: level"
 nav_order: 3
-lang: es
+lang: "es"
 source: level.md
 source_hash: "994b156c7213"
 nav_exclude: true

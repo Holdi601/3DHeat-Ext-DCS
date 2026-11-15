@@ -1,7 +1,7 @@
 ---
 title: "如何读取文件"
 nav_order: 7
-lang: zh
+lang: "zh"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

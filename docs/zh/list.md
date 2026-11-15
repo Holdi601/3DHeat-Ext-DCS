@@ -1,7 +1,7 @@
 ---
 title: "查找战区：list"
 nav_order: 2
-lang: zh
+lang: "zh"
 source: list.md
 source_hash: "334e2f7ab2b2"
 nav_exclude: true

@@ -1,7 +1,7 @@
 ---
 title: "Noms de llocs: towns"
 nav_order: 5
-lang: ca
+lang: "ca"
 source: towns.md
 source_hash: "80a352aef3e8"
 nav_exclude: true

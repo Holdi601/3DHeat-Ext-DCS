@@ -1,7 +1,7 @@
 ---
 title: "Encontrar teatros: list"
 nav_order: 2
-lang: pt
+lang: "pt"
 source: list.md
 source_hash: "334e2f7ab2b2"
 nav_exclude: true

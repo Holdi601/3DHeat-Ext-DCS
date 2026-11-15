@@ -1,7 +1,7 @@
 ---
 title: "Nombres de lugares: towns"
 nav_order: 5
-lang: es
+lang: "es"
 source: towns.md
 source_hash: "80a352aef3e8"
 nav_exclude: true

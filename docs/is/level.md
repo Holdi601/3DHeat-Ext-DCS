@@ -1,7 +1,7 @@
 ---
 title: "Að smíða borð: level"
 nav_order: 3
-lang: is
+lang: "is"
 source: level.md
 source_hash: "994b156c7213"
 nav_exclude: true

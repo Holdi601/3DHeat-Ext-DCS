@@ -1,7 +1,7 @@
 ---
 title: "Cum se citesc fișierele"
 nav_order: 7
-lang: ro
+lang: "ro"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

@@ -1,7 +1,7 @@
 ---
 title: Како се датотеке читају
 nav_order: 7
-lang: sr
+lang: "sr"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

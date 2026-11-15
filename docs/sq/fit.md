@@ -1,7 +1,7 @@
 ---
 title: "Projeksionet: fit"
 nav_order: 6
-lang: sq
+lang: "sq"
 source: fit.md
 source_hash: "eb9303fc94ef"
 nav_exclude: true

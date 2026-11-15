@@ -1,7 +1,7 @@
 ---
 title: Com es llegeixen els fitxers
 nav_order: 7
-lang: ca
+lang: "ca"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

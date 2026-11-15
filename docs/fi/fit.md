@@ -1,7 +1,7 @@
 ---
 title: "Projektiot: fit"
 nav_order: 6
-lang: fi
+lang: "fi"
 source: fit.md
 source_hash: "eb9303fc94ef"
 nav_exclude: true

@@ -1,7 +1,7 @@
 ---
 title: Условия и лицензия
 nav_order: 8
-lang: ru
+lang: "ru"
 source: terms.md
 source_hash: "677b443e2bb8"
 nav_exclude: true

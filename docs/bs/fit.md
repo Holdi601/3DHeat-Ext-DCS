@@ -1,7 +1,7 @@
 ---
 title: "Projekcije: fit"
 nav_order: 6
-lang: bs
+lang: "bs"
 source: fit.md
 source_hash: "eb9303fc94ef"
 nav_exclude: true

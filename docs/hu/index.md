@@ -1,7 +1,7 @@
 ---
 title: "Kezdőlap"
 nav_order: 1
-lang: hu
+lang: "hu"
 source: index.md
 source_hash: "a6572e6ff335"
 nav_exclude: true

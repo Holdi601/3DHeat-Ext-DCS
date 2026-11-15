@@ -1,7 +1,7 @@
 ---
 title: Cómo se leen los archivos
 nav_order: 7
-lang: es
+lang: "es"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

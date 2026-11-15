@@ -1,7 +1,7 @@
 ---
 title: "Vetítések: fit"
 nav_order: 6
-lang: hu
+lang: "hu"
 source: fit.md
 source_hash: "eb9303fc94ef"
 nav_exclude: true

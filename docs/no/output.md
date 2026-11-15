@@ -1,7 +1,7 @@
 ---
 title: Nivåfilene
 nav_order: 4
-lang: no
+lang: "no"
 source: output.md
 source_hash: "e587235daf30"
 nav_exclude: true

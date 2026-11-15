@@ -1,7 +1,7 @@
 ---
 title: "Пабудова ўзроўню: level"
 nav_order: 3
-lang: be
+lang: "be"
 source: level.md
 source_hash: "994b156c7213"
 nav_exclude: true

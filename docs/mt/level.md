@@ -1,7 +1,7 @@
 ---
 title: "Nibnu livell: level"
 nav_order: 3
-lang: mt
+lang: "mt"
 source: level.md
 source_hash: "994b156c7213"
 nav_exclude: true

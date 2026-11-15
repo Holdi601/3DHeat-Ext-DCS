@@ -1,7 +1,7 @@
 ---
 title: "Projektiounen: fit"
 nav_order: 6
-lang: lb
+lang: "lb"
 source: fit.md
 source_hash: "eb9303fc94ef"
 nav_exclude: true

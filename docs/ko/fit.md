@@ -1,7 +1,7 @@
 ---
 title: "투영: fit"
 nav_order: 6
-lang: ko
+lang: "ko"
 source: fit.md
 source_hash: "eb9303fc94ef"
 nav_exclude: true

@@ -1,7 +1,7 @@
 ---
 title: "A pályafájlok"
 nav_order: 4
-lang: hu
+lang: "hu"
 source: output.md
 source_hash: "e587235daf30"
 nav_exclude: true

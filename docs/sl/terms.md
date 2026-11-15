@@ -1,7 +1,7 @@
 ---
 title: "Pogoji in licenca"
 nav_order: 8
-lang: sl
+lang: "sl"
 source: terms.md
 source_hash: "677b443e2bb8"
 nav_exclude: true

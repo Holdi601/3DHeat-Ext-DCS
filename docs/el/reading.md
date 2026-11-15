@@ -1,7 +1,7 @@
 ---
 title: Πώς διαβάζονται τα αρχεία
 nav_order: 7
-lang: el
+lang: "el"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

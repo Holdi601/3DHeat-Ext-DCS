@@ -1,7 +1,7 @@
 ---
 title: "Pliki poziomu"
 nav_order: 4
-lang: pl
+lang: "pl"
 source: output.md
 source_hash: "e587235daf30"
 nav_exclude: true

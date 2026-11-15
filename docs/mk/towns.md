@@ -1,7 +1,7 @@
 ---
 title: "Имиња на места: towns"
 nav_order: 5
-lang: mk
+lang: "mk"
 source: towns.md
 source_hash: "80a352aef3e8"
 nav_exclude: true

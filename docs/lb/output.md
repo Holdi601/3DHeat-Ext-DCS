@@ -1,7 +1,7 @@
 ---
 title: "D'Level-Dateien"
 nav_order: 4
-lang: lb
+lang: "lb"
 source: output.md
 source_hash: "e587235daf30"
 nav_exclude: true

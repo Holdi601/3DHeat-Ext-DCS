@@ -1,7 +1,7 @@
 ---
 title: Slik leses filene
 nav_order: 7
-lang: no
+lang: "no"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

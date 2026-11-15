@@ -1,7 +1,7 @@
 ---
 title: "Seviye oluşturma: level"
 nav_order: 3
-lang: tr
+lang: "tr"
 source: level.md
 source_hash: "994b156c7213"
 nav_exclude: true

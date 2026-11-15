@@ -1,7 +1,7 @@
 ---
 title: "Градење ниво: level"
 nav_order: 3
-lang: mk
+lang: "mk"
 source: level.md
 source_hash: "994b156c7213"
 nav_exclude: true

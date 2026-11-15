@@ -1,7 +1,7 @@
 ---
 title: Condiciones y licencia
 nav_order: 8
-lang: es
+lang: "es"
 source: terms.md
 source_hash: "677b443e2bb8"
 nav_exclude: true

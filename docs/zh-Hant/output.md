@@ -1,7 +1,7 @@
 ---
 title: "關卡檔案"
 nav_order: 4
-lang: zh-Hant
+lang: "zh-Hant"
 source: output.md
 source_hash: "e587235daf30"
 nav_exclude: true

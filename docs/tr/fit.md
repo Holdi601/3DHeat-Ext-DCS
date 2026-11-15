@@ -1,7 +1,7 @@
 ---
 title: "İzdüşümler: fit"
 nav_order: 6
-lang: tr
+lang: "tr"
 source: fit.md
 source_hash: "eb9303fc94ef"
 nav_exclude: true

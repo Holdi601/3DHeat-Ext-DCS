@@ -1,7 +1,7 @@
 ---
 title: "Kako se datoteke čitaju"
 nav_order: 7
-lang: bs
+lang: "bs"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

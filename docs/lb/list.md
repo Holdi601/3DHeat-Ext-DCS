@@ -1,7 +1,7 @@
 ---
 title: "Theatere fannen: list"
 nav_order: 2
-lang: lb
+lang: "lb"
 source: list.md
 source_hash: "334e2f7ab2b2"
 nav_exclude: true

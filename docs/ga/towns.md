@@ -1,7 +1,7 @@
 ---
 title: "Logainmneacha: towns"
 nav_order: 5
-lang: ga
+lang: "ga"
 source: towns.md
 source_hash: "80a352aef3e8"
 nav_exclude: true

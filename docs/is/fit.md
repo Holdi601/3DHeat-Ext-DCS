@@ -1,7 +1,7 @@
 ---
 title: "Vörpun: fit"
 nav_order: 6
-lang: is
+lang: "is"
 source: fit.md
 source_hash: "eb9303fc94ef"
 nav_exclude: true

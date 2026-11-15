@@ -1,7 +1,7 @@
 ---
 title: "Podmínky a licence"
 nav_order: 8
-lang: cs
+lang: "cs"
 source: terms.md
 source_hash: "677b443e2bb8"
 nav_exclude: true

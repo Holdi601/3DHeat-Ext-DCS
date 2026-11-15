@@ -1,7 +1,7 @@
 ---
 title: "Insibu t-teatri: list"
 nav_order: 2
-lang: mt
+lang: "mt"
 source: list.md
 source_hash: "334e2f7ab2b2"
 nav_exclude: true

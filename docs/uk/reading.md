@@ -1,7 +1,7 @@
 ---
 title: Як читаються файли
 nav_order: 7
-lang: uk
+lang: "uk"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

@@ -1,7 +1,7 @@
 ---
 title: "Teilgeanna: fit"
 nav_order: 6
-lang: ga
+lang: "ga"
 source: fit.md
 source_hash: "eb9303fc94ef"
 nav_exclude: true

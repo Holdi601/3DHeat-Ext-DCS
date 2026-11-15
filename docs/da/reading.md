@@ -1,7 +1,7 @@
 ---
 title: Sådan læses filerne
 nav_order: 7
-lang: da
+lang: "da"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

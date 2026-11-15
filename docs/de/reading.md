@@ -1,7 +1,7 @@
 ---
 title: "Wie die Dateien gelesen werden"
 nav_order: 7
-lang: de
+lang: "de"
 source: reading.md
 source_hash: "51a7963aff87"
 nav_exclude: true

@@ -1,7 +1,7 @@
 ---
 title: "Borðaskrárnar"
 nav_order: 4
-lang: is
+lang: "is"
 source: output.md
 source_hash: "e587235daf30"
 nav_exclude: true

@@ -1,7 +1,7 @@
 ---
 title: "Kohanimed: towns"
 nav_order: 5
-lang: et
+lang: "et"
 source: towns.md
 source_hash: "80a352aef3e8"
 nav_exclude: true

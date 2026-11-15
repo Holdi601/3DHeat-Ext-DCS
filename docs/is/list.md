@@ -1,7 +1,7 @@
 ---
 title: "Að finna leiksvæði: list"
 nav_order: 2
-lang: is
+lang: "is"
 source: list.md
 source_hash: "334e2f7ab2b2"
 nav_exclude: true

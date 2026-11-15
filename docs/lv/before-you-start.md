@@ -1,7 +1,7 @@
 ---
 title: Pirms sākat
 nav_order: 1.5
-lang: lv
+lang: "lv"
 source: before-you-start.md
 source_hash: "64346abe88e5"
 nav_exclude: true
