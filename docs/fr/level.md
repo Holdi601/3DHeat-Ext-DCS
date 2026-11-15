@@ -10,7 +10,7 @@ search_exclude: true
 # Construire un niveau : `level` {#building-a-level-level}
 
 ```text
-heat3d-dcs-maps level <théâtre> -o <dossier> [--dcs DOSSIER] [--name NOM]
+heat3d-dcs-maps level <théâtre> -o <dossier> [--dcs FOLDER] [--name NAME]
                       [--around LAT LON KM | --bounds X0 Z0 X1 Z1] [--cell M]
                       [--seabed] [--no-water] [--no-buildings] [--force]
                       [--projection LON0 FE FN]
@@ -43,8 +43,8 @@ Une région du même théâtre synthétique, en mètres DCS :
 |---|---|---|
 | `théâtre` | - | le nom du dossier sous `Mods\terrains`, tel que `list` l'affiche (quelle que soit la casse) |
 | `-o`, `--out` | obligatoire | le dossier où écrire `<nom>.glb` et `<nom>.json` |
-| `--dcs DOSSIER` | trouvé | le dossier de DCS World ([où il est trouvé](list.md#où-linstallation-est-trouvée)) |
-| `--name NOM` | celui du théâtre | le nom du niveau, et celui de ses fichiers |
+| `--dcs FOLDER` | trouvé | le dossier de DCS World ([où il est trouvé](list.md#where-the-install-is-found)) |
+| `--name NAME` | celui du théâtre | le nom du niveau, et celui de ses fichiers |
 | `--around LAT LON KM` | - | seulement un carré de ce nombre de km de part et d'autre d'un point |
 | `--bounds X0 Z0 X1 Z1` | - | seulement cette boîte, en mètres DCS (x vers le nord, z vers l'est) |
 | `--cell M` | `0` | alléger le maillage : chaque sommet à moins de *M* mètres devient un seul sommet (0 : les triangles du jeu) |
@@ -71,7 +71,7 @@ trouvé (les théâtres trouvés sont listés).
 
 ```bash
 heat3d-dcs-maps level <théâtre> -o levels                                       # en entier, pleine finesse
-heat3d-dcs-maps level <théâtre> --around <lat> <lon> 12 -o levels --name Partie # un carré de 24 km
+heat3d-dcs-maps level <théâtre> --around <lat> <lon> 12 -o levels --name Part # un carré de 24 km
 heat3d-dcs-maps level <théâtre> --bounds 1000 2000 1390 2390 -o levels          # une boîte en mètres DCS
 heat3d-dcs-maps level <théâtre> --cell 50 -o levels                             # en entier, allégé à 50 m
 heat3d-dcs-maps level <théâtre> --no-buildings --no-water -o levels             # le sol seul

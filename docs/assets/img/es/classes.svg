@@ -3,12 +3,12 @@
 <text x="16" y="32" font-size="18" fill="#1f2328" font-weight="600">Clases de terreno y sus colores</text>
 <rect x="16" y="50" width="34" height="20" rx="3" fill="#191919" stroke="#8c95a3"/>
 <text x="60" y="65" font-size="15" fill="#1f2328" font-weight="600">pista</text>
-<text x="155" y="65" font-size="14" fill="#5b6270">pistas, calles de rodaje</text>
+<text x="155" y="65" font-size="14" fill="#5b6270">pistas, rodaje</text>
 <rect x="16" y="80" width="34" height="20" rx="3" fill="#474747" stroke="#8c95a3"/>
-<text x="60" y="95" font-size="15" fill="#1f2328" font-weight="600">calle</text>
-<text x="155" y="95" font-size="14" fill="#5b6270">calles</text>
+<text x="60" y="95" font-size="15" fill="#1f2328" font-weight="600">ruta</text>
+<text x="155" y="95" font-size="14" fill="#5b6270">rutas</text>
 <rect x="16" y="110" width="34" height="20" rx="3" fill="#604c42" stroke="#8c95a3"/>
-<text x="60" y="125" font-size="15" fill="#1f2328" font-weight="600">tren</text>
+<text x="60" y="125" font-size="15" fill="#1f2328" font-weight="600">vía</text>
 <text x="155" y="125" font-size="14" fill="#5b6270">vías</text>
 <rect x="16" y="140" width="34" height="20" rx="3" fill="#bc664f" stroke="#8c95a3"/>
 <text x="60" y="155" font-size="15" fill="#1f2328" font-weight="600">pueblo</text>

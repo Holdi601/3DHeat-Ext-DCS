@@ -10,7 +10,7 @@ search_exclude: true
 # Trouver les théâtres : `list` {#finding-theatres-list}
 
 ```text
-heat3d-dcs-maps list [--dcs DOSSIER]
+heat3d-dcs-maps list [--dcs FOLDER]
 ```
 
 Vous débutez avec la ligne de commande ? Lisez d'abord [Avant de commencer](before-you-start.md).
@@ -35,6 +35,6 @@ sinon, le registre, les bibliothèques Steam et les dossiers habituels sont cher
 
 | Option | Effet |
 |---|---|
-| `--dcs DOSSIER` | le dossier de DCS World, celui qui contient `Mods\terrains` |
+| `--dcs FOLDER` | le dossier de DCS World, celui qui contient `Mods\terrains` |
 
 Code de sortie : 0 terminé, 2 aucune installation ou aucun théâtre trouvé.

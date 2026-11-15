@@ -55,8 +55,8 @@ de glTF son los mismos (X = x, Y = y, Z = z). La telemetría en metros de DCS - 
 **Latitud y longitud:** cada teatro es una proyección Transversal de Mercator con sus propias
 constantes; `<name>.json` las lleva, junto con las esquinas del nivel en latitud y longitud, y cada
 pueblo con su latitud/longitud y su x/z de DCS. Cuando las constantes de un teatro no están
-publicadas, se ajustan a los balizas que da su propio `beacons.lua` en ambos sistemas (unos pocos cm
-de error cuadrático medio de la raíz; el mismo ajuste devuelve las constantes publicadas de otros
+publicadas, se ajustan a las balizas que da su propio `beacons.lua` en ambos sistemas (unos pocos cm
+de la raíz del error cuadrático medio; el mismo ajuste devuelve las constantes publicadas de otros
 teatros hasta el milímetro). Para un teatro sin constantes, [`fit`](fit.md) las encuentra a partir de
 cualquier grabación que contenga ambas, como una sesión de Watcher de un vuelo.
 
@@ -66,7 +66,7 @@ mar); `--seabed` lo conserva como terreno. `--no-water` deja fuera el mar plano.
 **Tamaño.** Ver [Construir un nivel: Tamaño](level.md#size).
 
 **Aeródromos.** Cada `AirfieldsTaxiways/<name>.rn4` contiene la red de rodaje de un aeródromo,
-con el nombre de este; sus puntos son dobles (x, y, z) en metros de DCS. El `.json` del nivel
+con el nombre de este; sus puntos son números de doble precisión (x, y, z) en metros de DCS. El `.json` del nivel
 enumera cada aeródromo dentro de la región con su nombre (el del archivo), el centro de la caja de
 sus puntos, la caja, y el terreno allí. En el teatro probado, se leyó cada archivo de aeródromo, y
 cada uno cayó sobre su campo (a unos pocos cientos de metros del punto de referencia del aeropuerto
@@ -76,7 +76,7 @@ medido: el centro de las calles de rodaje, no el de la pista).
 vallas, cables, casas). Los que son edificios por su nombre y tamaño (casas, pisos, cobertizos,
 hangares, fábricas, torres, terminales: una fracción de los modelos, cientos de miles de
 colocaciones) se dibujan como cajas: la caja envolvente propia de cada modelo a partir del archivo,
-girada según su rumbo y colocada donde la pone el juego, desde hasta 3 m por debajo de su origen
+girada según su rumbo y colocada donde la pone el juego, desde 3 m por debajo de su origen
 (su base en una pendiente) hasta su cima. Árboles, arbustos, luces, postes, cables, vallas, muros,
 señales, vehículos, vagones, barcos, grúas, mástiles, torres de tendido y puentes se dejan fuera. No
 se copia ninguna forma ni textura de modelo del juego: una caja por edificio, coloreada por tipo

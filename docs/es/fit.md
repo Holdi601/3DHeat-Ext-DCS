@@ -39,5 +39,5 @@ recupera hasta el milímetro.
 La proyección es la serie de Krüger tal como la da C. F. F. Karney ("Transverse
 Mercator with an accuracy of a few nanometers", Journal of Geodesy 85, 2011).
 
-Estado de salida: 0 un buen ajuste (menos de 5 m de error cuadrático medio de la raíz); 1 un
+Estado de salida: 0 un buen ajuste (raíz del error cuadrático medio menor de 5 m); 1 un
 ajuste pobre, o menos de tres filas útiles; 2 no se encontró el archivo.

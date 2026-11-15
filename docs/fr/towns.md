@@ -10,7 +10,7 @@ search_exclude: true
 # Noms de lieux : `towns` {#place-names-towns}
 
 ```text
-heat3d-dcs-maps towns <théâtre> [--dcs DOSSIER]
+heat3d-dcs-maps towns <théâtre> [--dcs FOLDER]
 ```
 
 Affiche les noms de lieux du théâtre, tirés de son `map/towns.lua` (lu comme du texte,
@@ -26,7 +26,7 @@ jamais exécuté), en JSON : le nom de chaque ville, sa latitude et sa longitude
 | Option | Effet |
 |---|---|
 | `théâtre` | le nom du dossier sous `Mods\terrains` |
-| `--dcs DOSSIER` | le dossier de DCS World |
+| `--dcs FOLDER` | le dossier de DCS World |
 
 Les villes situées dans la région d'un niveau figurent aussi dans son `<nom>.json`, avec la
 hauteur du sol sous chacune ([Les fichiers de niveau](output.md)).

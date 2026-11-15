@@ -74,8 +74,8 @@ ordinateur**, pour les consulter, et non pour les partager ou les publier ([Cond
   documentation sur [holdi601.github.io/3DHeat](https://holdi601.github.io/3DHeat/).
 - Télémétrie pour ces niveaux : le [3DHeat Watcher](https://holdi601.github.io/3DHeat-Watcher/)
   enregistre les vols DCS ; les formats de fichiers de la visionneuse, dont son
-  conteneur d'un fichier par partie, sont décrits dans
-  [Un fichier par partie (.3dheat)](https://holdi601.github.io/3DHeat/container.html).
+  conteneur d'un fichier par match, sont décrits dans
+  [Un fichier par match (.3dheat)](https://holdi601.github.io/3DHeat/container.html).
 
 ## Les outils 3DHeat {#the-3dheat-tools}
 

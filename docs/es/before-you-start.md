@@ -84,7 +84,7 @@ Siguiente: [Buscar teatros: list](list.md), y después [Construir un nivel: leve
 | `'heat3d-dcs-maps' is not recognized` | Repite el paso 4 en la carpeta de la herramienta, o escribe `python -m heat3d_ext_dcs` en lugar de `heat3d-dcs-maps`: hace lo mismo. |
 | `No module named heat3d_ext_dcs` | No estás en la carpeta de la herramienta, o el paso 4 falló: entra con `cd` y repite el paso 4. |
 | `No module named pip` | Ejecuta `python -m ensurepip` y después el paso 4. |
-| cualquier otra cosa | Lee la última línea del mensaje y abre un issue en GitHub con ella. |
+| cualquier otra cosa | Lee la última línea del mensaje y abre una incidencia (issue) en GitHub con ella. |
 
 Cada comando termina también con un **código de salida**: 0 significa que funcionó. Para verlo,
 escribe `echo $LASTEXITCODE` en PowerShell o `echo $?` en macOS y Linux.

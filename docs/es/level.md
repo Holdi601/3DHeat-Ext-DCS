@@ -46,7 +46,7 @@ Una región del mismo teatro sintético, por metros de DCS:
 | `--name NAME` | la del teatro | el nombre del nivel, y el de sus archivos |
 | `--around LAT LON KM` | - | solo un cuadrado de tantos km a cada lado de un punto |
 | `--bounds X0 Z0 X1 Z1` | - | solo esta caja, en metros de DCS (x norte, z este) |
-| `--cell M` | `0` | aclara la malla: cada vértice a menos de *M* metros se convierte en uno (0: los triángulos propios del juego) |
+| `--cell M` | `0` | reduce la malla: cada vértice a menos de *M* metros se convierte en uno (0: los triángulos propios del juego) |
 | `--seabed` | desactivada | conserva el fondo del mar como terreno (por defecto se deja fuera) |
 | `--no-water` | desactivada | deja fuera el mar plano |
 | `--no-buildings` | desactivada | deja fuera los edificios de la escena del teatro |
@@ -71,7 +71,7 @@ teatro (se listan los teatros encontrados).
 heat3d-dcs-maps level <theatre> -o levels                                       # entero, detalle completo
 heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name Part   # un cuadrado de 24 km
 heat3d-dcs-maps level <theatre> --bounds 1000 2000 1390 2390 -o levels          # una caja en metros de DCS
-heat3d-dcs-maps level <theatre> --cell 50 -o levels                             # entero, aclarado a 50 m
+heat3d-dcs-maps level <theatre> --cell 50 -o levels                             # entero, reducido a 50 m
 heat3d-dcs-maps level <theatre> --no-buildings --no-water -o levels             # solo el terreno
 ```
 

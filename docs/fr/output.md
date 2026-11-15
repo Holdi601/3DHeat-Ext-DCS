@@ -63,7 +63,7 @@ comme une session Watcher d'un vol.
 **Le fond de la mer** est omis (une carte de chaleur de simulateur de vol n'a pas besoin du fond de la mer) ;
 `--seabed` le garde comme sol. `--no-water` omet la mer plate.
 
-**Taille.** Voir [Construire un niveau : Taille](level.md#taille).
+**Taille.** Voir [Construire un niveau : Taille](level.md#size).
 
 **Aérodromes.** Chaque `AirfieldsTaxiways/<nom>.rn4` contient le réseau de circulation d'un aérodrome, nommé d'après lui ;
 ses points sont des doubles (x, y, z) en mètres DCS. Le `.json` du niveau liste chaque aérodrome
