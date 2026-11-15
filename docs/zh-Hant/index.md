@@ -3,7 +3,7 @@ title: "首頁"
 nav_order: 1
 lang: zh-Hant
 source: index.md
-source_hash: "b9c49c779477"
+source_hash: "a6572e6ff335"
 nav_exclude: true
 search_exclude: true
 permalink: /zh-Hant/
@@ -28,7 +28,7 @@ permalink: /zh-Hant/
 ## 快速開始 {#quick-start}
 
 第一次使用命令列？請先閱讀[開始之前](before-you-start.md)。
-在你複製或解壓縮的資料夾中執行以下命令：
+在你複製或解壓縮的資料夾中執行以下指令：
 
 ```bash
 python -m pip install -e .                         # installs the heat3d-dcs-maps command
@@ -38,7 +38,7 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 ```
 
 `list` 會為每個戰區印出一行，結尾為 `readable`。
-接著在檢視器的關卡面板中載入 `levels/<name>.glb`（[關卡](https://holdi601.github.io/3DHeat/levels.html)）。
+接著在檢視器的背景／關卡面板中載入 `levels/<name>.glb`（[關卡](https://holdi601.github.io/3DHeat/levels.html)）。
 
 它所寫出的關卡是由遊戲的資料建成的，只能**留在你的電腦上**供檢視，不可分享或發布（[條款](terms.md)）。
 
@@ -54,7 +54,7 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 | [投影：fit](fit.md) | 從錄製中找出戰區的投影 |
 | [檔案如何被讀取](reading.md) | 格式、已驗證的內容、未被讀取的內容 |
 | [條款與授權](terms.md) | Eagle Dynamics 的授權，以及為何這是獨立的套件 |
-| [命令參考](../cli-reference.md) | 每個選項，由程式碼產生 |
+| [指令參考](../cli-reference.md) | 每個選項，由程式碼產生 |
 | [維護這些文件](maintaining.md) | 發行檢查清單 |
 
 ## 相關連結 {#related}

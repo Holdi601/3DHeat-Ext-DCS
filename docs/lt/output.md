@@ -25,7 +25,7 @@ Spalvos yra žemiau nurodytos klasės:
 
 ![Žemės klasės ir jų spalvos](../assets/img/lt/classes.svg)
 
-Spalvos rodomos su **Captured colour** žiūrintojo lygio skydelyje. Kiekvienas žemės trikampis
+Spalvos rodomos su **Captured colour** žiūryklės lygio skydelyje. Kiekvienas žemės trikampis
 paima tos perdangos klasę, kuria jį piešia žaidimas:
 
 | Klasė | Spalva | Iš žaidimo perdangos |
@@ -48,7 +48,7 @@ kiekvienai bandytų teatrų klasei, ir visi sutapo – todėl klasės tikslios, 
 
 **Koordinatės** yra DCS pačios pasaulio metrai: x – į šiaurę, y – aukštyn, z – į rytus, o glTF ašys yra tos pačios
 (X = x, Y = y, Z = z). Telemetrija DCS metrais – 3DHeat Watcher DCS jungtis rašo būtent tai – patenka į lygį
-su žiūrintojo numatytosiomis reikšmėmis (Y aukštyn, mastelis 1) ir be vietos parinkimo.
+su žiūryklės numatytosiomis reikšmėmis (Y aukštyn, mastelis 1) ir be vietos parinkimo.
 
 **Platuma ir ilguma:** kiekvienas teatras yra Transverse Mercator projekcija su savo konstantomis; `<name>.json`
 jas saugo, lygio kampus platuma ir ilguma, ir kiekvieną miestą su jo platuma/ilguma bei DCS x/z.
@@ -70,15 +70,15 @@ pastatytas savo lauke (per kelis šimtus metrų nuo išmatuoto oro uosto orienty
 **Pastatai.** `Scenes/<theatre>.scn5` deda kiekvieną teatro objektą (milijonus – medžius, lempas, tvoras, laidus, namus). Tie,
 kurie pagal pavadinimą ir dydį yra pastatai (namai, butai, kluonai, angarai, gamyklos, bokštai, terminalai: dalis modelių, šimtai
 tūkstančių vietų), piešiami kaip dėžutės: kiekvieno modelio paties apibrėžiamoji dėžė iš failo, pasukta pagal kryptį ir
-stovinti ten, kur ją deda žaidimas – nuo iki 3 m žemiau jo pradžios (pamatas ant šlaito) iki viršaus. Medžiai, krūmai,
+stovinti ten, kur ją deda žaidimas – ne daugiau kaip 3 m žemiau jo pradžios (pamatas ant šlaito) iki viršaus. Medžiai, krūmai,
 šviesos, stulpai, laidai, tvoros, sienos, ženklai, transporto priemonės, vagonai, laivai, kranai, stiebai, atramos ir tiltai
 praleidžiami. Jokia žaidimo modelio forma ar tekstūra nekopijuojama: po dėžutę kiekvienam pastatui, nudažytą pagal rūšį
 (namas, blokas, pramoninis, oro uostas, bokštas, kita). `<name>.json` juos taip pat išvardija (`buildings.rows`: x, z, pagrindas,
-aukštis, pusiau ilgiai, kryptis, rūšis) žiūrintojo hibridiniam fonui, kuris piešia juos žaidimo miestuose vietoj
+aukštis, pusiau ilgiai, kryptis, rūšis) žiūryklės hibridiniam fonui, kuris piešia juos žaidimo miestuose vietoj
 susietų pastatų. `--no-buildings` juos praleidžia.
 
 `<name>.json` taip pat įrašo šaltinio failą, jo dydį ir datą, nuskaitytas plyteles, trikampių skaičių
 pagal klasę ir kiek teatro miestų patenka ant žemės – projekcijos patikrinimas, kuris turėtų rodyti „N iš N“.
 
-Lygis yra glTF dvejetainis failas su pavadintomis dalimis, kaip ir visi 3DHeat lygiai; žiūrintojo
+Lygis yra glTF dvejetainis failas su pavadintomis dalimis, kaip ir visi 3DHeat lygiai; žiūryklės
 [Lygiai](https://holdi601.github.io/3DHeat/levels.html) puslapis aprašo, kaip jie įkeliami.

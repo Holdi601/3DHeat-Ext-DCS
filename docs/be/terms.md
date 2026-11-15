@@ -11,7 +11,7 @@ search_exclude: true
 
 ## Умовы Eagle Dynamics {#eagle-dynamics-terms}
 
-Прачытана 2026-11-07 з `Doc/license_en.txt` устаноўкі (DCS World
+Прачытана 2026-11-07 з `Doc/license_en.txt` усталёўкі (DCS World
 End-User Licence Agreement, The Fighter Collection Ltd). Ліцэнзаваная
 «Program» уключае «THE DATA SUPPLIED WITH IT». Пункт 3.1:
 

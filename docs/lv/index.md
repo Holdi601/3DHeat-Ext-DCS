@@ -3,14 +3,14 @@ title: Sākums
 nav_order: 1
 lang: lv
 source: index.md
-source_hash: "b9c49c779477"
+source_hash: "a6572e6ff335"
 nav_exclude: true
 search_exclude: true
 permalink: /lv/
 ---
 # 3DHeat DCS {#dheat-dcs}
 
-**Kas tas ir?** Teātris ir DCS World vārds kartei: reģions pasaulē, pa kuru lido. Šis rīks pārvērš viena teātra zemi, nolasītu no **tava paša uzstādījuma**, par 3D līmeni - modeli, pār kuru var lidot - [3DHeat](https://github.com/Holdi601/3DHeat) skatītājam
+**Kas tas ir?** Teātris ir DCS World vārds kartei: reģions pasaulē, pa kuru lido. Šis rīks pārvērš viena teātra zemi, nolasītu no **jūsu paša uzstādījuma**, par 3D līmeni - modeli, pār kuru var lidot - [3DHeat](https://github.com/Holdi601/3DHeat) skatītājam
 ([dokumentācija](https://holdi601.github.io/3DHeat/)).
 
 **Kāpēc to lietot?** Lai redzētu savus DCS lidojumus pār spēles pašu karti: tās kalniem, krastu, lidlaukiem, ceļiem, dzelzceļiem, pilsētām un ēkām.
@@ -28,8 +28,8 @@ Kam tas noder:
 
 ## Ātrais sākums {#quick-start}
 
-Nekad nav strādāts ar komandrindu? Vispirms izlasi [Pirms sākat](before-you-start.md).
-Palaid šīs komandas mapē, kurā klonēji vai izpakoji rīku:
+Nekad neesat strādājis ar komandrindu? Vispirms izlasiet [Pirms sākat](before-you-start.md).
+Palaidiet šīs komandas mapē, kurā klonējāt vai izpakojāt rīku:
 
 ```bash
 python -m pip install -e .                         # uzstāda komandu heat3d-dcs-maps
@@ -38,17 +38,17 @@ heat3d-dcs-maps level <theatre> -o levels          # viens viss (mazs) teātris
 heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name>   # 12 km uz katru pusi no punkta
 ```
 
-No `list` redzēsi vienu rindu katram teātrim, beidzoties ar `readable`.
-Pēc tam ielādē `levels/<name>.glb` skatītāja Līmeņa panelī
+No `list` redzēsiet vienu rindu katram teātrim, beidzoties ar `readable`.
+Pēc tam ielādējiet `levels/<name>.glb` skatītāja Līmeņa panelī
 ([Līmeņi](https://holdi601.github.io/3DHeat/levels.html)).
 
-Līmeņi, ko tas raksta, veidoti no spēles datiem un paliek **tavā datorā**, lai tos skatītos, nevis lai kopīgotu vai publicētu ([Noteikumi](terms.md)).
+Līmeņi, ko tas raksta, veidoti no spēles datiem un paliek **jūsu datorā**, lai tos skatītos, nevis lai kopīgotu vai publicētu ([Noteikumi](terms.md)).
 
 ## Lapas {#pages}
 
 | Lapa | Ko tā aptver |
 |---|---|
-| [Pirms sākat](before-you-start.md) | Python, terminālis, pirmā palaišana |
+| [Pirms sākat](before-you-start.md) | Python, termināls, pirmā palaišana |
 | [Teātru meklēšana: list](list.md) | kur atrast uzstādījumu, ko izdrukā `list` |
 | [Līmeņa veidošana: level](level.md) | katra iespēja, reģioni, izmērs, soli pa solim |
 | [Līmeņa faili](output.md) | `.glb` daļas, zemes klases un to krāsas, `.json`, koordinātes |
@@ -65,7 +65,7 @@ Līmeņi, ko tas raksta, veidoti no spēles datiem un paliek **tavā datorā**, 
   dokumentācija vietnē [holdi601.github.io/3DHeat](https://holdi601.github.io/3DHeat/).
 - Telemetrija šiem līmeņiem: [3DHeat Watcher](https://holdi601.github.io/3DHeat-Watcher/)
   ieraksta DCS lidojumus; skatītāja failu formāti, tostarp tā viena faila mača konteiners,
-  aprakstīti lapā [Viens fails vienam maču (.3dheat)](https://holdi601.github.io/3DHeat/container.html).
+  aprakstīti lapā [Viens fails vienam mačam (.3dheat)](https://holdi601.github.io/3DHeat/container.html).
 
 ## 3DHeat rīki {#the-3dheat-tools}
 
@@ -76,7 +76,7 @@ Līmeņi, ko tas raksta, veidoti no spēles datiem un paliek **tavā datorā**, 
 | GameCapture | telemetrija no apļiem un līmeņi, atjaunoti no spēles video | [3DHeat-GameCapture](https://github.com/Holdi601/3DHeat-GameCapture) | [dokumentācija](https://holdi601.github.io/3DHeat-GameCapture/) |
 | Unreal Exporter | Unreal Editor spraudnis: līmenis kā viens `.glb` | [3DHeat-UnrealExporter](https://github.com/Holdi601/3DHeat-UnrealExporter) | [dokumentācija](https://holdi601.github.io/3DHeat-UnrealExporter/) |
 | CS2 | Counter-Strike 2 demo un kartes | [3DHeat-CS2](https://github.com/Holdi601/3DHeat-CS2) | [dokumentācija](https://holdi601.github.io/3DHeat-CS2/) |
-| Watcher | ieraksta to, ko spēles publicē, kamēr tu spēlē | [3DHeat-Watcher](https://github.com/Holdi601/3DHeat-Watcher) | [dokumentācija](https://holdi601.github.io/3DHeat-Watcher/) |
+| Watcher | ieraksta to, ko spēles publicē, kamēr jūs spēlējat | [3DHeat-Watcher](https://github.com/Holdi601/3DHeat-Watcher) | [dokumentācija](https://holdi601.github.io/3DHeat-Watcher/) |
 | Ext-WarThunder | War Thunder ieraksti | [3DHeat-Ext-WarThunder](https://github.com/Holdi601/3DHeat-Ext-WarThunder) | [dokumentācija](https://holdi601.github.io/3DHeat-Ext-WarThunder/) |
 | Ext-WoT | World of Tanks ieraksti | [3DHeat-Ext-WoT](https://github.com/Holdi601/3DHeat-Ext-WoT) | [dokumentācija](https://holdi601.github.io/3DHeat-Ext-WoT/) |
 | Ext-WoWs | World of Warships ieraksti | [3DHeat-Ext-WoWs](https://github.com/Holdi601/3DHeat-Ext-WoWs) | [dokumentācija](https://holdi601.github.io/3DHeat-Ext-WoWs/) |

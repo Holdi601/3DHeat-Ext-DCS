@@ -18,13 +18,13 @@ les coneix per als teatres amb què es va comprovar; per a un que no coneix,
 `fit` les troba a partir de qualsevol gravació que tingui tant latitud/longitud com
 metres de DCS, com una sessió d'un vol del Watcher de 3DHeat.
 
-1. Gravi un vol al teatre amb el Watcher de 3DHeat (o faci qualsevol gravació amb les columnes
+1. Grava un vol al teatre amb el Watcher de 3DHeat (o fes qualsevol gravació amb les columnes
    `lat`, `lon`, `x`, `z` en metres de DCS: x són metres cap al nord, z metres cap a l'est,
    com en tot DCS).
-2. Executi `heat3d-dcs-maps fit "<sessió>/heat.parquet"` (o un `.jsonl` o `.csv`).
+2. Executa `heat3d-dcs-maps fit "<sessió>/heat.parquet"` (o un `.jsonl` o `.csv`).
 3. Imprimeix la projecció ajustada en JSON, l'error quadràtic mitjà arrel sobre
-   els punts, i els arguments de `--projection` que cal utilitzar.
-4. Construeixi el nivell amb ells:
+   els punts, i els arguments de `--projection` que cal fer servir.
+4. Construeix el nivell amb ells:
    `heat3d-dcs-maps level <teatre> --projection <LON0> <FE> <FN> -o levels`.
 
 ![fit sobre una gravació sintètica](../assets/img/fit.svg)

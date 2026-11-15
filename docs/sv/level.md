@@ -3,7 +3,7 @@ title: "Bygga en nivå: level"
 nav_order: 3
 lang: sv
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -25,7 +25,7 @@ Har du aldrig använt kommandoraden förut? Läs [Innan du börjar](before-you-s
 3. För en stor, välj en region: `--around <lat> <lon> <km>` (en kvadrat så många km åt vardera hållet från en punkt) eller `--bounds X0 Z0 X1 Z1` i DCS-meter.
    Ge den ett namn med `--name`.
 4. Kommandot skriver ut kakelrutorna när det läser dem, antalet trianglar, filen som skrivs, och hur många av teaterns städer som hamnar på marken - en kontroll av projektionen som bör visa "N av N".
-5. Läs in `<folder>/<name>.glb` i visarens nivåpanel och slå på **Fångad färg** för att se markklasserna.
+5. Läs in `<folder>/<name>.glb` i visarens panel Bakgrund / nivå och slå på **Fångad färg** för att se markklasserna.
 
 ![level på en syntetisk installation](../assets/img/level.svg)
 

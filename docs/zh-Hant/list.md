@@ -17,7 +17,7 @@ heat3d-dcs-maps list [--dcs FOLDER]
 
 1. 安裝一次：`git clone https://github.com/Holdi601/3DHeat-Ext-DCS`，在該資料夾中開啟終端機，然後執行 `python -m pip install -e .`（Python 3.10 或更新版本；它會帶入 numpy，而若要對 `.parquet` 使用 `fit`，還會帶入 pyarrow）。
 2. 執行 `heat3d-dcs-maps list`。
-3. 每個已安裝的戰區會印出一行：它的資料夾名稱（其他命令所使用的名稱）、地面檔案的大小、它的網格與頂點數、其經緯度投影是否已知，以及它是否可以讀取。每一行的結尾都應該看到 `readable`。
+3. 每個已安裝的戰區會印出一行：它的資料夾名稱（其他指令所使用的名稱）、地面檔案的大小、它的網格與頂點數、其經緯度投影是否已知，以及它是否可以讀取。每一行的結尾都應該看到 `readable`。
 
 ![在合成安裝上執行 list](../assets/img/list.svg)
 

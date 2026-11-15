@@ -40,8 +40,8 @@ Mitä tämä lukija tekee: se lukee datatiedostoja omalla koneellasi sen jälkee
 olet asentanut ne, pelin ulkopuolella. Se ei muuta mitään pelissä, ei riko salausta
 (terrain-kansion yksi salattu tiedosto jätetään rauhaan) eikä ota yhteyttä mihinkään palvelimeen.
 Datatiedoston asettelun selvittäminen on kohdan 3.1 (c) tarkoittamaa käänteistekniikkaa, ja
-pelin maastosta rakennettu taso on väitettävästi johdannainen teos. Lukijan käyttö on sinun
-päätöksesi, omaan käyttöösi; tasot, joita se kirjoittaa, ovat sinun katseltaviksi, eivät jaettaviksi
+pelin maastosta rakennettu kenttä on väitettävästi johdannainen teos. Lukijan käyttö on sinun
+päätöksesi, omaan käyttöösi; kentät, joita se kirjoittaa, ovat sinun katseltaviksi, eivät jaettaviksi
 tai julkaistaviksi. Siksi se on erillinen paketti.
 
 Hyväksytty vaihtoehto, joka ei lue yhtään tiedostoa: simulaattorin oma tehtäväskriptaus voi

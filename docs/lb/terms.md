@@ -38,7 +38,7 @@ Program or any of its parts commercially“.
 
 Wat dëse Reader mécht: en liest Datendateien op Ärem eegene Rechner, nodeems Dir se
 installéiert hutt, ausserhalb vum Spill. Hie ännert näischt am Spill, brécht keng
-Verschlësselung (déi eenzeg verschlësselt Datei an engem Terrain-Ordner gëtt a Rou gelooss) a
+Verschlësselung (déi eenzeg verschlësselt Datei an engem Terrain-Dossier gëtt a Rou gelooss) a
 schwätzt mat kengem Server. D'Layout vun enger Datendatei erauszefannen ass Reverse
 Engineering am Sënn vun 3.1 (c), an e Level, dat aus dem Terrain vum Spill gebaut gëtt, ass
 mat Grond e Derivat-Wierk. De Reader ze benotzen ass Är Entscheedung,

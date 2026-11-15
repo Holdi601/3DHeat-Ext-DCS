@@ -3,7 +3,7 @@ title: "Δημιουργία επιπέδου: level"
 nav_order: 3
 lang: el
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -53,7 +53,7 @@ heat3d-dcs-maps level <theatre> -o <folder> [--dcs FOLDER] [--name NAME]
 | `--force` | ανενεργό | εξάγει ένα πολύ μεγάλο χάρτη ολόκληρο, σε πλήρη λεπτομέρεια |
 | `--projection LON0 FE FN` | του θεάτρου | σταθερές Transverse Mercator για ένα θέατρο που αυτό το εργαλείο δεν γνωρίζει ([fit](fit.md)) |
 
-Κάθε επιλογή, όπως τη τυπώνει το πρόγραμμα: [Αναφορά εντολών](../cli-reference.md).
+Κάθε επιλογή, όπως την τυπώνει το πρόγραμμα: [Αναφορά εντολών](../cli-reference.md).
 
 ## Μέγεθος {#size}
 

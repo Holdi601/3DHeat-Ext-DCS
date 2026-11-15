@@ -30,14 +30,14 @@ luokat antavat peittokuvat.
   teatteria kohden), ja jokainen tarkistettu laatta dekoodautui uskottaviksi metreiksi.
 - Kahden teatterin alueilla `towns.lua`:n kaupungit osuivat metrien päähän maakärjestä, maalla, N of N;
   korkein maasto osui todelliseen huippuun kymmenen metrin tarkkuudella; lentokentät, joet, kylät ja tiet
-  näkyivät luokissaan. Molemmat tasot latautuivat katselimeen, ja kaupunkimerkit samoissa DCS-metreissä
+  näkyivät luokissaan. Molemmat kentät latautuivat katselimeen, ja kaupunkimerkit samoissa DCS-metreissä
   istuivat maassa.
 - Maisemalueella rakennussijoitukset osuivat maahansa; kiitotievalot seurasivat pelin kiitorataa, ja vaunut
   ja seinäosat asettuivat luetun suunnan mukaan, kaikki.
 - `tests/` rakentaa `.surface5`-tiedostoja samaan asetteluun, joten pelin dataa ei säilytetä täällä;
   `tests/test_real_install.py` ajaa testikoneen asennuksella, ja se ohitetaan ilman sitä.
 
-**Ei tarkistettu:** koko suurta teatteria yhdessä tasossa (koon suoja yllä on olemassa syystä), ja
+**Ei tarkistettu:** koko suurta teatteria yhdessä kentässä (koon suoja yllä on olemassa syystä), ja
 muut DCS-versiot kuin kokeiltu.
 
 ## Ei luettu {#not-read}

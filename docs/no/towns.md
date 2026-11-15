@@ -19,7 +19,7 @@ DCS-`x` (nord) og `z` (øst) i meter, gjennom teaterets projeksjon.
 
 1. Finn teaterets mappenavn med [`list`](list.md).
 2. Kjør `heat3d-dcs-maps towns <theatre> > towns.json`.
-3. Bruk `x`/`z` til å merke en bane, eller til å kontrollere et opptaks posisjoner.
+3. Bruk `x`/`z` til å merke et nivå, eller til å kontrollere et opptaks posisjoner.
 
 ![byer på en syntetisk installasjon](../assets/img/towns.svg)
 
@@ -28,5 +28,5 @@ DCS-`x` (nord) og `z` (øst) i meter, gjennom teaterets projeksjon.
 | `theatre` | mappenavnet under `Mods\terrains` |
 | `--dcs FOLDER` | DCS World-mappen |
 
-Byene innenfor en banes region står også i dens `<name>.json`, med
-høyden på bakken under hver ([Banefilene](output.md)).
+Byene innenfor et nivås område står også i dens `<name>.json`, med
+høyden på bakken under hver ([Nivåfilene](output.md)).

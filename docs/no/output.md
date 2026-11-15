@@ -1,5 +1,5 @@
 ---
-title: Banefilene
+title: Nivåfilene
 nav_order: 4
 lang: no
 source: output.md
@@ -7,9 +7,9 @@ source_hash: "e587235daf30"
 nav_exclude: true
 search_exclude: true
 ---
-# Banefilene {#the-level-files}
+# Nivåfilene {#the-level-files}
 
-En bane er en 3D-modell av bakken; et teater er DCS World sitt ord for et kart.
+Et nivå er en 3D-modell av bakken; et teater er DCS World sitt ord for et kart.
 
 `<out>/<name>.glb` og `<name>.json` ved siden av den.
 
@@ -19,13 +19,13 @@ En bane er en 3D-modell av bakken; et teater er DCS World sitt ord for et kart.
 | `water:<Level>` | hver trekant spillet markerer som under havet, lagt flatt på havnivå |
 | `structure:<Level>` | teaterets bygninger som bokser, der spillet plasserer dem (under) |
 
-![Et syntetisk teaters bane ovenfra, farget etter bakkeklasse](../assets/img/no/level-top.svg)
+![Et syntetisk teaters nivå ovenfra, farget etter bakkeklasse](../assets/img/no/level-top.svg)
 
 Fargene er klassene under:
 
 ![Bakkeklasser og deres farger](../assets/img/no/classes.svg)
 
-Fargene vises med **Captured colour** i visningsprogrammets banepanel. Hver bakketrekant
+Fargene vises med **Registrert farge** i visningsprogrammets Bakgrunn / nivå-panel. Hver bakketrekant
 får klassen til overlegget spillet tegner den med:
 
 | Klasse | Farge | Fra spillets overlegg |
@@ -49,11 +49,11 @@ klassene er nøyaktige, ikke gjettet ut fra nærliggende punkter.
 
 **Koordinater** er DCS sine egne verdensmeter: x nord, y opp, z øst, og glTF-aksene
 er de samme (X = x, Y = y, Z = z). Telemetri i DCS-meter - 3DHeat Watchers DCS-hook
-skriver nettopp det - havner på banen med visningsprogrammets standarder (Y opp, skala 1)
+skriver nettopp det - havner på nivået med visningsprogrammets standarder (Y opp, skala 1)
 og uten plasseringssteg.
 
 **Breddegrad og lengdegrad:** hvert teater er en Transverse Mercator-projeksjon med
-sine egne konstanter; `<name>.json` bærer dem, banens hjørner i
+sine egne konstanter; `<name>.json` bærer dem, nivåets hjørner i
 breddegrad og lengdegrad, og hver by med både sin breddegrad/lengdegrad og
 sin DCS x/z. Der et teaters konstanter ikke er publisert, tilpasses de
 til fyrtårnene som dets egen `beacons.lua` gir i begge koordinatsystemene (noen cm i
@@ -65,10 +65,10 @@ opptak som har begge, som en Watcher-økt med én flyvning.
 **Havbunnen** utelates (et flysimulator-varmekart trenger ikke havbunnen); `--seabed`
 beholder den som bakke. `--no-water` utelater det flate havet.
 
-**Størrelse.** Se [Bygge en bane: Størrelse](level.md#size).
+**Størrelse.** Se [Bygge et nivå: Størrelse](level.md#size).
 
 **Flyplasser.** Hver `AirfieldsTaxiways/<name>.rn4` holder en flyplass sitt rulleveisnett, oppkalt
-etter den; dets punkter er (x, y, z) som doble tall i DCS-meter. Banens `.json` lister hver
+etter den; dets punkter er (x, y, z) som tall med dobbel presisjon i DCS-meter. Nivåets `.json` lister hver
 flyplass innenfor regionen med sitt navn (filens), midtpunktet av punktenes
 boks, boksen, og bakken der. På teatret som ble prøvd, ble hver flyplassfil lest, hver plassert på sitt
 område (innen noen hundre meter fra flyplassens oppmålte referansepunkt: midten av
@@ -81,7 +81,7 @@ fabrikker, tårn, terminaler: en brøkdel av modellene, hundretusener av plasser
 omgivende boks fra filen, vridd til sin retning og stående der spillet plasserer den, fra opptil
 3 m under sitt utgangspunkt (fundamentet i en skråning) til toppen. Trær, busker,
 lys, stolper, ledninger, gjerder, murer, skilt, kjøretøy, vogner, båter, kraner,
-master, master og broer utelates. Ingen modellform eller tekstur fra
+master, høyspentmaster og broer utelates. Ingen modellform eller tekstur fra
 spillet kopieres: en boks per bygning, farget etter type (hus, blokk,
 industri, flyplass, tårn, annet). `<name>.json` lister dem også
 (`buildings.rows`: x, z, base, height, halve lengder, retning, type) for
@@ -92,5 +92,5 @@ de kartlagte bygningene. `--no-buildings` utelater dem.
 antall trekanter per klasse, og hvor mange av teaterets byer som havner
 på bakken - en kontroll av projeksjonen som bør si «N av N».
 
-Banen er en glTF-binærfil med navngitte deler, slik alle 3DHeat-baner er; visningsprogrammets
-[Baner](https://holdi601.github.io/3DHeat/levels.html)-side sier hvordan de lastes inn.
+Nivået er en glTF-binærfil med navngitte deler, slik alle 3DHeat-nivåer er; visningsprogrammets
+[Nivåer](https://holdi601.github.io/3DHeat/levels.html)-side sier hvordan de lastes inn.

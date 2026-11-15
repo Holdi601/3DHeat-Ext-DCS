@@ -13,15 +13,15 @@ search_exclude: true
 heat3d-dcs-maps list [--dcs CARPETA]
 ```
 
-Si és nou amb la línia d'ordres, llegeixi primer [Abans de començar](before-you-start.md).
+Si ets nou amb la línia d'ordres, llegeix primer [Abans de començar](before-you-start.md).
 
-1. Instal·li-la una vegada: `git clone https://github.com/Holdi601/3DHeat-Ext-DCS`, obri
-   una terminal en aquesta carpeta i executi `python -m pip install -e .` (Python 3.10
+1. Instal·la-la una vegada: `git clone https://github.com/Holdi601/3DHeat-Ext-DCS`, obre
+   una terminal en aquesta carpeta i executa `python -m pip install -e .` (Python 3.10
    o posterior; porta numpy, i pyarrow per a `fit` amb un `.parquet`).
-2. Executi `heat3d-dcs-maps list`.
+2. Executa `heat3d-dcs-maps list`.
 3. Cada teatre instal·lat imprimeix una línia: el nom de la seva carpeta (el nom que
    prenen les altres ordres), la mida del seu fitxer de terreny, els seus mosaics i vèrtexs,
-   si es coneix la seva projecció de latitud/longitud, i si es pot llegir. Hauria de veure
+   si es coneix la seva projecció de latitud/longitud, i si es pot llegir. Hauries de veure
    `readable` al final de cada línia.
 
 ![list sobre una instal·lació sintètica](../assets/img/list.svg)

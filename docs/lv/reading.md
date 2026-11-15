@@ -11,8 +11,8 @@ search_exclude: true
 
 Tiek lasīti tikai `Mods/terrains/<theatre>/surface/*.surface5` (zemes tīkls),
 `Scenes/*.scn5` (kur stāv objekti un katra modeļa kaste), `AirfieldsTaxiways/*.rn4` un
-`map/towns.lua` (vietu nosaukumi, lasīti kā teksts, nekad nepalaisti). Nē šifrētais
-`terrain.cfg.lua.pak.crypt`, nē `manifest.bin`, nekas no programmas.
+`map/towns.lua` (vietu nosaukumi, lasīti kā teksts, nekad nepalaisti). Ne šifrētais
+`terrain.cfg.lua.pak.crypt`, ne `manifest.bin`, nekas no programmas.
 
 `.surface5` formāts nav dokumentēts; izkārtojums, kā tas nolasīts no failiem, ir uzrakstīts
 [`heat3d_ext_dcs/surface5.py`](https://github.com/Holdi601/3DHeat-Ext-DCS/blob/main/heat3d_ext_dcs/surface5.py).

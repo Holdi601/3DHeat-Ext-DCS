@@ -43,7 +43,7 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 ```
 
 You should see one line per theatre from `list`, ending `readable`.
-Then load `levels/<name>.glb` in the viewer's Background / Background / level panel
+Then load `levels/<name>.glb` in the viewer's Background / level panel
 ([Levels](https://holdi601.github.io/3DHeat/levels.html)).
 
 The levels it writes are built from the game's data: they stay **on your

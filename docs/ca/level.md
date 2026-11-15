@@ -3,7 +3,7 @@ title: "Construir un nivell: level"
 nav_order: 3
 lang: ca
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -18,17 +18,17 @@ heat3d-dcs-maps level <teatre> -o <carpeta> [--dcs CARPETA] [--name NOM]
 
 ## Pas a pas {#step-by-step}
 
-Si és nou amb la línia d'ordres, llegeixi primer [Abans de començar](before-you-start.md).
+Si ets nou amb la línia d'ordres, llegeix primer [Abans de començar](before-you-start.md).
 
-1. Trobi el nom de la carpeta del teatre amb [`list`](list.md).
-2. Per a un teatre petit, construeixi'l sencer: `heat3d-dcs-maps level <teatre> -o levels`.
-3. Per a un de gran, triï una regió: `--around <lat> <lon> <km>` (un quadrat de tants km a
+1. Troba el nom de la carpeta del teatre amb [`list`](list.md).
+2. Per a un teatre petit, construeix-lo sencer: `heat3d-dcs-maps level <teatre> -o levels`.
+3. Per a un de gran, tria una regió: `--around <lat> <lon> <km>` (un quadrat de tants km a
    cada costat d'un punt) o `--bounds X0 Z0 X1 Z1` en metres de DCS.
-   Doni-li un nom amb `--name`.
+   Dona-li un nom amb `--name`.
 4. L'ordre imprimeix els mosaics a mesura que els llegeix, el recompte de triangles, el
    fitxer escrit, i quants dels pobles del teatre cauen sobre el terreny: una comprovació
    de la projecció que hauria de dir «N de N».
-5. Carregui `<carpeta>/<nom>.glb` al panell Fons / nivell del visualitzador i activi
+5. Carrega `<carpeta>/<nom>.glb` al panell Fons / nivell del visualitzador i activa
    **Color capturat** per veure les classes de terreny.
 
 ![level sobre una instal·lació sintètica](../assets/img/level.svg)

@@ -3,7 +3,7 @@ title: "Līmeņa veidošana: level"
 nav_order: 3
 lang: lv
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -18,13 +18,13 @@ heat3d-dcs-maps level <theatre> -o <folder> [--dcs FOLDER] [--name NAME]
 
 ## Soli pa solim {#step-by-step}
 
-Nekad nav strādāts ar komandrindu? Vispirms izlasi [Pirms sākat](before-you-start.md).
+Nekad neesat strādājis ar komandrindu? Vispirms izlasiet [Pirms sākat](before-you-start.md).
 
-1. Atrodi teātra mapes nosaukumu ar [`list`](list.md).
-2. Mazam teātrim izveido visu: `heat3d-dcs-maps level <theatre> -o levels`.
-3. Lielam izvēlies reģionu: `--around <lat> <lon> <km>` (kvadrāts, cik km uz katru pusi no punkta) vai `--bounds X0 Z0 X1 Z1` DCS metros. Nosauc to ar `--name`.
+1. Atrodiet teātra mapes nosaukumu ar [`list`](list.md).
+2. Mazam teātrim izveidojiet visu: `heat3d-dcs-maps level <theatre> -o levels`.
+3. Lielam izvēlieties reģionu: `--around <lat> <lon> <km>` (kvadrāts, cik km uz katru pusi no punkta) vai `--bounds X0 Z0 X1 Z1` DCS metros. Nosauc to ar `--name`.
 4. Komanda izdrukā trīsstūrus, kad tos nolasa, trijstūru skaitu, saglabāto failu un to, cik no teātra pilsētām nokrīt uz zemes - projekcijas pārbaude, kurai vajadzētu rādīt "N no N".
-5. Ielādē `<folder>/<name>.glb` skatītāja Līmeņa panelī un ieslēdz **Captured colour**, lai redzētu zemes klases.
+5. Ielādējiet `<folder>/<name>.glb` skatītāja Līmeņa panelī un ieslēdziet **Captured colour**, lai redzētu zemes klases.
 
 ![level uz sintētiska uzstādījuma](../assets/img/level.svg)
 

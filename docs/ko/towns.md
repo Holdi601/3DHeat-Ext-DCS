@@ -13,9 +13,9 @@ search_exclude: true
 heat3d-dcs-maps towns <theatre> [--dcs FOLDER]
 ```
 
-지도의 지명을 `map/towns.lua`에서 찾아 JSON으로 출력합니다(텍스트로만 읽으며 실행하지 않습니다). 각 마을의 이름, 위도와 경도, 그리고 지도의 투영을 거친 DCS `x`(북쪽)와 `z`(동쪽) 미터 값을 담습니다.
+맵의 지명을 `map/towns.lua`에서 찾아 JSON으로 출력합니다(텍스트로만 읽으며 실행하지 않습니다). 각 마을의 이름, 위도와 경도, 그리고 맵의 투영을 거친 DCS `x`(북쪽)와 `z`(동쪽) 미터 값을 담습니다.
 
-1. [`list`](list.md)로 지도의 폴더 이름을 찾으세요.
+1. [`list`](list.md)로 맵의 폴더 이름을 찾으세요.
 2. `heat3d-dcs-maps towns <theatre> > towns.json`을 실행하세요.
 3. `x`/`z` 값으로 레벨에 이름표를 달거나, 기록의 위치를 확인하세요.
 

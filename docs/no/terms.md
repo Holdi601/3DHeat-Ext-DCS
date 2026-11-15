@@ -40,8 +40,8 @@ Hva denne leseren gjør: den leser datafiler på din egen maskin, etter at du
 installerte dem, utenfor spillet. Den endrer ingenting i spillet, bryter ingen
 kryptering (den ene krypterte filen i en terrengmappe blir liggende urørt) og
 snakker ikke med noen server. Å finne ut oppsettet til en datafil er reverse engineering i
-betydningen 3.1 (c), og en bane bygget fra spillets terreng er trolig et avledet verk. Å bruke
-leseren er din egen avgjørelse, til eget bruk; banene den skriver er dine å se på, ikke å dele eller
+betydningen 3.1 (c), og et nivå bygget fra spillets terreng er trolig et avledet verk. Å bruke
+leseren er din egen avgjørelse, til eget bruk; nivåene den skriver er dine å se på, ikke å dele eller
 publisere. Derfor er den en egen pakke.
 
 Det godkjente alternativet, som ikke leser noen fil: simulatorens egen oppdragsscripting kan

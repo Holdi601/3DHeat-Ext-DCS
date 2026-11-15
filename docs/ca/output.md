@@ -11,7 +11,7 @@ search_exclude: true
 
 Un nivell és un model 3D del terreny; un teatre és la paraula de DCS World per a un mapa.
 
-`<sortida>/<nom>.glb` i `<nom>.json` al costat.
+Els fitxers són `<sortida>/<nom>.glb` i `<nom>.json`, un al costat de l'altre.
 
 | Part | Què és |
 |---|---|
@@ -65,7 +65,7 @@ gravació que tingui les dues, com una sessió del Watcher d'un vol.
 el fons del mar); `--seabed` el conserva com a terreny. `--no-water` deixa fora el
 mar pla.
 
-**Mida.** Vegi [Construir un nivell: Mida](level.md#size).
+**Mida.** Mira [Construir un nivell: Mida](level.md#size).
 
 **Aeròdroms.** Cada `AirfieldsTaxiways/<nom>.rn4` conté la xarxa de rodatge d'un aeròdrom,
 amb el seu nom; els seus punts són dobles (x, y, z) en metres de DCS. El `.json` del
@@ -78,8 +78,7 @@ metres del punt de referència de l'aeroport topografiat: el centre de les rodac
 (milions —arbres, fanals, tanques, cables, cases). Els que són edificis pel seu nom i la seva
 mida (cases, pisos, cobertes, hangars, fàbriques, torres, terminals: una fracció dels models,
 centenars de milers de col·locacions) es dibuixen com a caixes: la caixa envolupant pròpia de cada
-model, del fitxer, girada segons el seu rumb i situada on la posa el joc, des de fins a
-3 m per sota del seu origen (el seu peu en un pendent) fins al seu capdamunt. Queden fora els arbres,
+model, del fitxer, girada segons el seu rumb i situada on la posa el joc, des de 3 m per sota del seu origen (el seu peu en un pendent) fins al seu capdamunt. Queden fora els arbres,
 arbustos, llums, pals, cables, tanques, murs, senyals, vehicles, vagons, vaixells, grues,
 mastos, pilones i ponts. No es copia cap forma ni textura de model del joc: una caixa per edifici,
 acolorida segons el tipus (casa, bloc, industrial, aeròdrom, torre, altre). `<nom>.json` també

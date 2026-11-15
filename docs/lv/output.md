@@ -51,7 +51,7 @@ Ja vairāki pārklājumi zīmē to pašu trijstūri, izšķir tabulas kārtība
 
 **Jūras dibens** tiek izlaists (lidojumu simulatora siltumkartei jūras dibens nav vajadzīgs); `--seabed` to paglabā kā zemi. `--no-water` izlaiž plakano jūru.
 
-**Izmērs.** Skatīt [Līmeņa veidošana: Izmērs](level.md#size).
+**Izmērs.** Skatiet [Līmeņa veidošana: Izmērs](level.md#size).
 
 **Lidlauki.** Katrs `AirfieldsTaxiways/<name>.rn4` satur viena lidlauka rulēšanas tīklu, nosauktu pēc tā; tā punkti ir (x, y, z) dubultā precizitāte DCS metros. Līmeņa `.json` uzskaita katru lidlauku reģionā ar tā nosaukumu (faila), tā punktu kastes vidu, kasti un zemi tur. Izmēģinātajā teātrī katrs lidlauka fails tika nolasīts, katrs novietots uz sava lauka (dažu simtu metru robežās no uzmērītā lidostas atsauces punkta: rulēšanas ceļu vidus, nevis skrejceļa).
 

@@ -23,10 +23,10 @@ mažiausias bitas žymi jūrą; kitos grupės yra perdangos, kurios suteikia auk
 ## Patikrinta {#verified}
 
 - `list` perskaitė kiekvieno įdiegto teatro indeksą (kiekvienas – nuo milijonų iki dešimčių milijonų reljefo viršūnių),
-  kiekviena pavyzdinė plytelė iškoduota į tikslius metrus.
+  kiekviena pavyzdinė plytelė iškoduota į tikėtinus metrus.
 - Dviejų teatrų regionuose miestai iš `towns.lua` atsidūrė per kelis metrus nuo reljefo viršūnės, sausumoje, N iš N;
   aukščiausias reljefas sutapo su tikra viršūne iki dešimties metrų; oro uostai, upės, kaimai ir keliai atsirado savo klasėse.
-  Abu lygiai buvo įkelti žiūrintojuje, o miestų žymekliai tose pačiose DCS metrų vietose stovėjo ant žemės.
+  Abu lygiai buvo įkelti žiūryklėje, o miestų žymekliai tose pačiose DCS metrų vietose stovėjo ant žemės.
 - Scenos regione pastatų vietos atsidūrė ant savo žemės; kilimo tako šviesos atkartojo žaidimo kilimo taką, o vagonai ir sienų
   atkarpos sulygiavo su iškoduota kryptimi – visi.
 - `tests/` sukuria `.surface5` failus tokiu pačiu išdėstymu, todėl žaidimo duomenys čia nelaikomi; `tests/test_real_install.py`

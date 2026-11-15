@@ -3,7 +3,7 @@ title: "Pálya építése: level"
 nav_order: 3
 lang: hu
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -18,18 +18,18 @@ heat3d-dcs-maps level <theatre> -o <folder> [--dcs FOLDER] [--name NAME]
 
 ## Lépésről lépésre {#step-by-step}
 
-Még nem használt parancssort? Előbb olvassa el a [Mielőtt elkezdi](before-you-start.md) oldalt.
+Még nem használt parancssort? Előbb olvasd el a [Mielőtt elkezded](before-you-start.md) oldalt.
 
-1. Keresse meg a színház mappanevét a [`list`](list.md) paranccsal.
-2. Kis színház esetén építse egészben: `heat3d-dcs-maps level <theatre> -o levels`.
-3. Nagy színháznál válasszon egy régiót: `--around <lat> <lon> <km>` (egy négyzet, amely egy pont
-   két oldalán ennyi km-re terjed), vagy `--bounds X0 Z0 X1 Z1` DCS-méterben. Nevezze el a
+1. Keresd meg a színház mappanevét a [`list`](list.md) paranccsal.
+2. Kis színház esetén építsd egészben: `heat3d-dcs-maps level <theatre> -o levels`.
+3. Nagy színháznál válassz egy régiót: `--around <lat> <lon> <km>` (egy négyzet, amely egy pont
+   két oldalán ennyi km-re terjed), vagy `--bounds X0 Z0 X1 Z1` DCS-méterben. Nevezd el a
    `--name` kapcsolóval.
 4. A parancs kiírja a csempéket, ahogy olvassa őket, a háromszögek számát, a megírt fájlt, és azt,
    hogy a színház városaiból hány esik a talajra – ez a vetítés ellenőrzése, amelynek „N of N”
    értéket kell mutatnia.
-5. Töltse be a `<folder>/<name>.glb` fájlt a megjelenítő Háttér / pálya paneljén, és kapcsolja be a
-   **Rögzített szín** (Captured colour) lehetőséget, hogy lássa a talajosztályokat.
+5. Töltsd be a `<folder>/<name>.glb` fájlt a megjelenítő Háttér / pálya paneljén, és kapcsold be a
+   **Rögzített szín** (Captured colour) lehetőséget, hogy lásd a talajosztályokat.
 
 ![level egy szintetikus telepítésen](../assets/img/level.svg)
 

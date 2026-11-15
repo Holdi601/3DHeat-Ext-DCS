@@ -23,7 +23,7 @@ tallenteesta, jossa on sekä leveys- ja pituusaste että DCS-metrit, kuten yhden
 2. Suorita `heat3d-dcs-maps fit "<session>/heat.parquet"` (tai `.jsonl`- tai `.csv`-tiedosto).
 3. Se tulostaa sovitetun projektion JSON-muodossa, pisteiden juuren keskineliövirheen ja
    `--projection`-argumentit, joita käytetään.
-4. Rakenna taso niillä:
+4. Rakenna kenttä niillä:
    `heat3d-dcs-maps level <theatre> --projection <LON0> <FE> <FN> -o levels`.
 
 ![fit synteettisellä tallenteella](../assets/img/fit.svg)

@@ -3,7 +3,7 @@ title: "Lygio kūrimas: level"
 nav_order: 3
 lang: lt
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -26,7 +26,7 @@ Nesate įpratę prie komandinės eilutės? Pirmiausia perskaitykite [Prieš prad
    arba `--bounds X0 Z0 X1 Z1` DCS metrais. Pavadinkite jį `--name`.
 4. Komanda rodo plytelės, kai jas skaito, trikampių skaičių, įrašytą failą ir kiek teatro miestų
    patenka ant žemės – projekcijos patikrinimas, kuris turėtų rodyti „N iš N“.
-5. Įkelkite `<folder>/<name>.glb` žiūrintojo Lygio skydelyje ir įjunkite **Captured colour**, kad matytumėte žemės klases.
+5. Įkelkite `<folder>/<name>.glb` žiūryklės Lygio skydelyje ir įjunkite **Captured colour**, kad matytumėte žemės klases.
 
 ![level ant sintetinio įdiegimo](../assets/img/level.svg)
 

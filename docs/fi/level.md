@@ -1,13 +1,13 @@
 ---
-title: "Tason rakentaminen: level"
+title: "Kentän rakentaminen: level"
 nav_order: 3
 lang: fi
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
-# Tason rakentaminen: `level` {#building-a-level-level}
+# Kentän rakentaminen: `level` {#building-a-level-level}
 
 ```text
 heat3d-dcs-maps level <theatre> -o <folder> [--dcs FOLDER] [--name NAME]
@@ -26,14 +26,14 @@ Uusi komentorivin kanssa? Lue ensin [Ennen aloittamista](before-you-start.md).
    kumpaankin suuntaan) tai `--bounds X0 Z0 X1 Z1` DCS-metreinä. Anna sille nimi `--name`-asetuksella.
 4. Komento tulostaa ruudut lukiessaan, kolmioiden määrän, kirjoitetun tiedoston ja sen, montako
    teatterin kaupunkia osuu maastoon – projektion tarkistus, jonka pitäisi näyttää "N of N".
-5. Lataa `<folder>/<name>.glb` katselimen tasopaneeliin (Tausta / kenttä) ja kytke päälle
+5. Lataa `<folder>/<name>.glb` katselimen Tausta / kenttä -paneeliin ja kytke päälle
    **Tallennettu väri** nähdäksesi maaluokat.
 
-![taso synteettisessä asennuksessa](../assets/img/level.svg)
+![kenttä synteettisessä asennuksessa](../assets/img/level.svg)
 
 Sama synteettinen teatteri, alue DCS-metreinä:
 
-![taso --bounds- ja --name-asetuksilla](../assets/img/level-bounds.svg)
+![kenttä --bounds- ja --name-asetuksilla](../assets/img/level-bounds.svg)
 
 ## Asetukset {#options}
 
@@ -42,7 +42,7 @@ Sama synteettinen teatteri, alue DCS-metreinä:
 | `theatre` | - | kansion nimi kohdassa `Mods\terrains`, kuten `list` sen tulostaa (kirjainkoolla ei väliä) |
 | `-o`, `--out` | pakollinen | kansio, johon `<name>.glb` ja `<name>.json` kirjoitetaan |
 | `--dcs FOLDER` | löytyy | DCS World -kansio ([missä se löytyy](list.md#where-the-install-is-found)) |
-| `--name NAME` | teatterin | tason nimi ja sen tiedostojen nimi |
+| `--name NAME` | teatterin | kentän nimi ja sen tiedostojen nimi |
 | `--around LAT LON KM` | - | vain neliö näin monen km:n päässä pisteestä kumpaankin suuntaan |
 | `--bounds X0 Z0 X1 Z1` | - | vain tämä laatikko DCS-metreinä (x pohjoiseen, z itään) |
 | `--cell M` | `0` | harvenna verkkoa: jokainen kärki *M* metrin säteellä muuttuu yhdeksi (0: pelin omat kolmiot) |
@@ -74,4 +74,4 @@ heat3d-dcs-maps level <theatre> --cell 50 -o levels                             
 heat3d-dcs-maps level <theatre> --no-buildings --no-water -o levels             # pelkkä maa
 ```
 
-Mitä tiedostoissa on: [Tasotiedostot](output.md).
+Mitä tiedostoissa on: [Kenttätiedostot](output.md).

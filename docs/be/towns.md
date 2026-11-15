@@ -21,7 +21,7 @@ heat3d-dcs-maps towns <theatre> [--dcs FOLDER]
 2. Выканайце `heat3d-dcs-maps towns <theatre> > towns.json`.
 3. Выкарыстоўвайце `x`/`z`, каб падпісаць узровень або праверыць пазіцыі запісу.
 
-![towns на сінтэтычнай устаноўцы](../assets/img/towns.svg)
+![towns на сінтэтычнай усталёўцы](../assets/img/towns.svg)
 
 | Опцыя | Што робіць |
 |---|---|

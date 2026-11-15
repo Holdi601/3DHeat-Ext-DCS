@@ -20,18 +20,18 @@ filerne, er nedskrevet i [`heat3d_ext_dcs/surface5.py`](https://github.com/Holdi
 Kort fortalt: et indeks af flisepost (en transformation, grænser og lister af typede
 bytestrømme, hver liste efterfulgt af den shader og det materiale, den tegnes
 med), derefter de rå data. Det er hverken komprimeret eller krypteret. Flisens
-`Pbase`-strøm holder dens vertices; gruppen tegnet som `Land` holder
+`Pbase`-strøm holder dens hjørnepunkter; gruppen tegnet som `Land` holder
 trekanterne og en `TRITYPE` pr. trekant, hvis laveste bit markerer havet; de
 andre grupper er overlays, der giver klasserne ovenfor.
 
 ## Verificeret {#verified}
 
 - `list` læste indekset for hvert installeret teater (millioner til titalsmillioner
-  jordvertices hver), hver stikprøvet flise afkodet til plausible meter.
+  jordhjørnepunkter hver), hver stikprøvet flise afkodet til plausible meter.
 - På områder i to teatre landede byerne fra `towns.lua` inden for meter
-  fra en jordvertex, på land, N af N; den højeste jord passede med den rigtige
+  fra en jordhjørnepunkt, på land, N af N; den højeste jord passede med den rigtige
   top inden for ti meter; flyvepladser, floder, landsbyer og veje viste sig
-  i deres klasser. Begge baner blev indlæst i fremviseren, med bymarkører i
+  i deres klasser. Begge baner blev indlæst i vieweren, med bymarkører i
   de samme DCS-meter, siddende på jorden.
 - På et scene-område landede bygningsplaceringerne på deres jord; banelys fulgte
   spillets start- og landingsbane, og vogne og muresegmenter flugtede med den

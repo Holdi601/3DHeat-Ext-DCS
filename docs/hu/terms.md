@@ -40,8 +40,8 @@ célra hasznosítani).
 Mit csinál ez az olvasó: a telepítés után, a játékon kívül, a saját gépén lévő adatfájlokat olvassa. Semmit
 nem módosít a játékban, nem tör fel titkosítást (a terepmappában lévő egyetlen titkosított fájlhoz nem nyúl),
 és nem kommunikál semmilyen szerverrel. Egy adatfájl elrendezésének kitalálása a 3.1. (c) pont szerinti
-visszafejtés, és a játék terepéből épített pálya vitathatóan származékos mű. Az olvasó használata az Ön döntése,
-a saját használatára; az általa írt pályák az Önéi, megtekintésre, de nem megosztásra vagy közzétételre. Ezért
+visszafejtés, és a játék terepéből épített pálya vitathatóan származékos mű. Az olvasó használata a te döntésed,
+a saját használatodra; az általad írt pályák a tieid, megtekintésre, de nem megosztásra vagy közzétételre. Ezért
 külön csomag.
 
 Az engedélyezett alternatíva, amely nem olvas fájlt: a szimulátor saját küldetés-szkriptelése mintavételezheti a

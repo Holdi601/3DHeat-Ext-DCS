@@ -25,7 +25,7 @@ Farverne er klasserne nedenfor:
 
 ![Jordklasser og deres farver](../assets/img/da/classes.svg)
 
-Farverne vises med **Optaget farve** i fremviserens baggrund / bane-panel. Hver jordtrekant
+Farverne vises med **Optaget farve** i viewerens baggrund / bane-panel. Hver jordtrekant
 får klassen af det overlay, spillet tegner den med:
 
 | Klasse | Farve | Fra spillets overlay |
@@ -48,8 +48,8 @@ kontrolleret for hver klasse i de testede teatre, og hver enkelt passede - så
 klasserne er nøjagtige, ikke gættet ud fra nærliggende punkter.
 
 **Koordinater** er DCS' egne verdensmeter: x nord, y op, z øst, og glTF-akserne er de samme
-(X = x, Y = y, Z = z). Telemetri i DCS-meter - 3DHeat Watchers DCS-hook skriver netop det -
-lander på banen med fremviserens standarder (Y op, skala 1) og uden et placeringstrin.
+(X = x, Y = y, Z = z). Telemetri i DCS-meter - 3DHeat Watcherens DCS-hook skriver netop det -
+lander på banen med viewerens standarder (Y op, skala 1) og uden et placeringstrin.
 
 **Breddegrad og længdegrad:** hvert teater er en Transverse Mercator-projektion
 med sine egne konstanter; `<name>.json` bærer dem, banens hjørner i
@@ -66,7 +66,7 @@ den som jord. `--no-water` udelader det flade hav.
 
 **Størrelse.** Se [Byg en bane: Størrelse](level.md#size).
 
-**Flyvepladser.** Hver `AirfieldsTaxiways/<name>.rn4` indeholder én flyvepladss taxinet,
+**Flyvepladser.** Hver `AirfieldsTaxiways/<name>.rn4` indeholder én flyvepladses taxinet,
 navngivet efter den; dens punkter er (x, y, z) doubles i DCS-meter. Banens
 `.json` lister hver flyveplads inden for området med dens navn (filens), midten af
 dens punkters boks, boksen og jorden der. På det testede teater blev hver flyvepladsfil læst, hver
@@ -84,12 +84,12 @@ master, pyloner og broer udelades. Ingen modelform eller tekstur fra
 spillet kopieres: én kasse pr. bygning, farvet efter type (hus, blok,
 industri, flyveplads, tårn, andet). `<name>.json` lister dem også
 (`buildings.rows`: x, z, base, height, halve længder, retning, type) til
-fremviserens hybride baggrund, som tegner dem i spillets byer i stedet for
+viewerens hybride baggrund, som tegner dem i spillets byer i stedet for
 de kortlagte bygninger. `--no-buildings` udelader dem.
 
 `<name>.json` noterer også kildefilen, dens størrelse og dato, de læste flager,
 antallet af trekanter pr. klasse, og hvor mange af teatrets byer der lander
 på jorden - en kontrol af projektionen, som bør stå "N af N".
 
-Banen er en glTF-binærfil med navngivne dele, som alle 3DHeat-baner er; fremviserens
+Banen er en glTF-binærfil med navngivne dele, som alle 3DHeat-baner er; viewerens
 side [Baner](https://holdi601.github.io/3DHeat/levels.html) forklarer, hvordan den indlæses.

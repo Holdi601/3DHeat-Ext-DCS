@@ -15,9 +15,9 @@ heat3d-dcs-maps towns <theatre> [--dcs FOLDER]
 
 Gëtt d'Uertsnimm vum Theater aus senger `map/towns.lua` (als Text gelies,
 ni ausgeféiert) als JSON aus: den Numm vun all Stad, hire Breeden- a Längtegrad, a säin
-DCS-`x` (Norden) an `z` (Osten) a Meter, duerch d'Projektioun vum Theater.
+DCS-`x` (Norden) an `z` (Ouschten) a Meter, duerch d'Projektioun vum Theater.
 
-1. Fannt den Ordnernumm vum Theater mat [`list`](list.md).
+1. Fannt den Dossiernumm vum Theater mat [`list`](list.md).
 2. `heat3d-dcs-maps towns <theatre> > towns.json` ausféieren.
 3. De `x`/`z` benotzen, fir e Level ze beschrëften, oder d'Positioune vun enger Opnam ze préiwen.
 
@@ -25,8 +25,8 @@ DCS-`x` (Norden) an `z` (Osten) a Meter, duerch d'Projektioun vum Theater.
 
 | Optioun | Mécht |
 |---|---|
-| `theatre` | den Ordnernumm ënner `Mods\terrains` |
-| `--dcs FOLDER` | den DCS-World-Ordner |
+| `theatre` | den Dossiernumm ënner `Mods\terrains` |
+| `--dcs FOLDER` | den DCS-World-Dossier |
 
 D'Stied an der Regioun vun engem Level sinn och a sengem `<name>.json`, mat der
 Héicht vum Buedem ënner all enger ([D'Level-Dateien](output.md)).

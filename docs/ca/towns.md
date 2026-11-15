@@ -17,9 +17,9 @@ Imprimeix els noms de llocs del teatre, a partir del seu `map/towns.lua` (llegit
 mai executat), com a JSON: el nom de cada poble, la seva latitud i longitud, i
 la seva `x` (nord) i `z` (est) de DCS en metres, a través de la projecció del teatre.
 
-1. Trobi el nom de la carpeta del teatre amb [`list`](list.md).
-2. Executi `heat3d-dcs-maps towns <teatre> > towns.json`.
-3. Utilitzi les `x`/`z` per posar etiquetes a un nivell, o per comprovar les posicions d'una gravació.
+1. Troba el nom de la carpeta del teatre amb [`list`](list.md).
+2. Executa `heat3d-dcs-maps towns <teatre> > towns.json`.
+3. Fes servir les `x`/`z` per posar etiquetes a un nivell, o per comprovar les posicions d'una gravació.
 
 ![pobles sobre una instal·lació sintètica](../assets/img/towns.svg)
 

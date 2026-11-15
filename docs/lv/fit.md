@@ -17,13 +17,13 @@ Katrs teātris ir Transversālā Merkatora projekcija ar savām konstantēm. Rī
 teātriem, uz kuriem tas ir pārbaudīts; citam, kuru tas nezina, `fit` tās atrod no jebkura
 ieraksta, kurā ir gan platuma/garuma, gan DCS metri, piemēram, 3DHeat Watcher sesija vienam lidojumam.
 
-1. Ieraksti lidojumu uz šā teātra ar 3DHeat Watcher (vai izveido jebkuru ierakstu
+1. Ierakstiet lidojumu uz šā teātra ar 3DHeat Watcher (vai izveidojiet jebkuru ierakstu
    ar kolonnām `lat`, `lon`, `x`, `z` DCS metros: x ir metri uz ziemeļiem, z metri uz austrumiem,
    kā visur DCS).
-2. Palaid `heat3d-dcs-maps fit "<session>/heat.parquet"` (vai `.jsonl` vai `.csv`).
+2. Palaidiet `heat3d-dcs-maps fit "<session>/heat.parquet"` (vai `.jsonl` vai `.csv`).
 3. Tas izdrukā atrasto projekciju kā JSON, punktu vidējo kvadrātisko kļūdu (root mean square)
    un `--projection` argumentus, ko izmantot.
-4. Izveido līmeni ar tiem:
+4. Izveidojiet līmeni ar tiem:
    `heat3d-dcs-maps level <theatre> --projection <LON0> <FE> <FN> -o levels`.
 
 ![fit uz sintētiska ieraksta](../assets/img/fit.svg)

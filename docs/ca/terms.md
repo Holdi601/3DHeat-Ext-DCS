@@ -37,11 +37,11 @@ adapt, vary, modify the Program» sense consentiment, i (e) prohibeix «exploit 
 Program or any of its parts commercially».
 
 Què fa aquest lector: llegeix fitxers de dades a la seva pròpia màquina, després que els
-hàgiu instal·lat, fora del joc. No canvia res del joc, no trenca cap xifratge (l'únic fitxer
+hagis instal·lat, fora del joc. No canvia res del joc, no trenca cap xifratge (l'únic fitxer
 xifrat d'una carpeta de terreny es deixa en pau) i no parla amb cap servidor. Esbrinar la
 disposició d'un fitxer de dades és enginyeria inversa en el sentit de 3.1 (c), i un nivell
 construït a partir del terreny del joc es pot considerar una obra derivada. Usar el lector és
-una decisió vostra, per al vostre propi ús; els nivells que escriu són vostres per veure'ls, no per
+una decisió teva, per al teu propi ús; els nivells que escrius són teus per veure'ls, no per
 compartir-los ni publicar-los. Per això és un paquet separat.
 
 L'alternativa autoritzada, que no llegeix cap fitxer: el propi scripting de missions del simulador

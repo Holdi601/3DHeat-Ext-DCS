@@ -29,7 +29,7 @@ metra DCS, si një seancë e 3DHeat Watcher për një fluturim.
 
 ![fit mbi një regjistrim sintetik](../assets/img/fit.svg)
 
-Regjistrimi në foto është nëntë pika të bëra nga një projeksion i njohur,
+Regjistrimi në pamje është nëntë pika të bëra nga një projeksion i njohur,
 të cilin `fit` e gjen prapë deri në milimetër.
 
 | Argumenti | Çfarë bën |
@@ -39,5 +39,5 @@ të cilin `fit` e gjen prapë deri në milimetër.
 Projeksioni është seria e Krüger-it siç e jep C. F. F. Karney ("Transverse
 Mercator with an accuracy of a few nanometers", Journal of Geodesy 85, 2011).
 
-Kodi i daljes: 0 përshtatje e mirë (nën 5 m gabim mesatar katror); 1 përshtatje e dobët, ose
+Statusi i daljes: 0 përshtatje e mirë (nën 5 m gabim mesatar katror); 1 përshtatje e dobët, ose
 më pak se tre rreshta të përdorshëm; 2 skedari nuk u gjet.

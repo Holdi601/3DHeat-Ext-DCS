@@ -18,7 +18,7 @@ teatrite puhul, mille peal see on kontrollitud; kui teatrit ei tunta, leiab `fit
 iga salvestuse põhjal, mis sisaldab nii laiuskraadi/pikkuskraadi kui ka DCS-i meetreid,
 näiteks ühe lennu 3DHeat Watcheri seanssi.
 
-1. Salvesta lend teatril 3DHeat Watcheriga (või tee mis tahes salvestus veergudega `lat`, `lon`, `x`, `z` DCS-i meetrites: x on meetrit põhja, z meetrit ida, nagu kõikjal DCS-is).
+1. Salvesta lend teatril 3DHeat Watcheriga (või tee mis tahes salvestus veergudega `lat`, `lon`, `x`, `z` DCS-i meetrites: x on põhja poole meetrites, z ida poole meetrites, nagu kõikjal DCS-is).
 2. Käivita `heat3d-dcs-maps fit "<session>/heat.parquet"` (või `.jsonl` või `.csv`).
 3. See prindib sobitatud projektsiooni JSON-ina, punktide ruutkeskmise vea ja argumendid `--projection`, mida kasutada.
 4. Ehita nendega tase:

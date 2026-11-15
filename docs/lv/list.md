@@ -13,12 +13,12 @@ search_exclude: true
 heat3d-dcs-maps list [--dcs FOLDER]
 ```
 
-Nekad nav strādāts ar komandrindu? Vispirms izlasi [Pirms sākat](before-you-start.md).
+Nekad neesat strādājis ar komandrindu? Vispirms izlasiet [Pirms sākat](before-you-start.md).
 
-1. Uzstādi vienreiz: `git clone https://github.com/Holdi601/3DHeat-Ext-DCS`, atver
-   terminali šajā mapē un palaid `python -m pip install -e .` (Python 3.10
+1. Uzstādiet vienreiz: `git clone https://github.com/Holdi601/3DHeat-Ext-DCS`, atveriet
+   termināli šajā mapē un palaidiet `python -m pip install -e .` (Python 3.10
    vai jaunāks; tas atnes numpy un pyarrow priekš `fit` ar `.parquet`).
-2. Palaid `heat3d-dcs-maps list`.
+2. Palaidiet `heat3d-dcs-maps list`.
 3. Katrs uzstādītais teātris izdrukā vienu rindu: tā mapes nosaukumu (nosaukumu, ko pieņem citas komandas), tā zemes faila izmēru, tā flīzes un virsotnes, to, vai tā platuma/garuma projekcija ir zināma, un vai tas ir nolasāms.
    Katras rindas beigās vajadzētu redzēt `readable`.
 
@@ -32,6 +32,6 @@ Attēls ir palaišana uz uzstādījuma, ko veido testi (`tests/synth.py`), nevis
 
 | Iespēja | Ko dara |
 |---|---|
-| `--dcs FOLDER` | DCS World mape, ta, kurā ir `Mods\terrains` |
+| `--dcs FOLDER` | DCS World mape, tā, kurā ir `Mods\terrains` |
 
 Izejas statuss: 0 pabeigts; 2 uzstādījums vai teātris nav atrasts.

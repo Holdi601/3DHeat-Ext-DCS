@@ -24,7 +24,7 @@ DCS-meter, for eksempel en 3DHeat Watcher-økt med én flyvning.
 2. Kjør `heat3d-dcs-maps fit "<session>/heat.parquet"` (eller en `.jsonl`- eller `.csv`-fil).
 3. Den skriver ut den tilpassede projeksjonen som JSON, rotmiddelkvadratfeilen over
    punktene, og `--projection`-argumentene å bruke.
-4. Bygg banen med dem:
+4. Bygg nivået med dem:
    `heat3d-dcs-maps level <theatre> --projection <LON0> <FE> <FN> -o levels`.
 
 ![fit på et syntetisk opptak](../assets/img/fit.svg)

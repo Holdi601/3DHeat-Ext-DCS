@@ -9,7 +9,7 @@ search_exclude: true
 ---
 # Tasemefailid {#the-level-files}
 
-Vtase on maapinna 3D-mudel; teater on DCS World'i sõna kaardi kohta.
+Tase on maapinna 3D-mudel; teater on DCS Worldi nimetus kaardile.
 
 `<out>/<name>.glb` ja selle kõrval `<name>.json`.
 
@@ -25,7 +25,7 @@ Värvid on allpool olevad klassid:
 
 ![Maapinna klassid ja nende värvid](../assets/img/et/classes.svg)
 
-Värvid näed vaataja tasemepaneelis valikuga **Jäädvustatud värv**. Iga maapinna
+Värvid näed vaataja paneelil **Taust / tase** valikuga **Jäädvustatud värv**. Iga maapinna
 kolmnurk saab klassi selle kattekihi järgi, millega mäng ta joonistab:
 
 | Klass | Värv | Mängu kattekihist |
@@ -66,7 +66,7 @@ Teatrile ilma konstantideta leiab [`fit`](fit.md) need mis tahes salvestuse põh
 **Lennuväljad.** Iga `AirfieldsTaxiways/<name>.rn4` sisaldab ühe lennuvälja rullteede
 võrku, mis on nime järgi nimetatud; selle punktid on (x, y, z) topeltarvud DCS-i meetrites.
 Taseme `.json` loetleb iga lennuvälja piirkonnas koos tema nimega (faili oma),
-tema punktide kasti keskpunktiga, kastiga ja seal oleva maapinnaga. Proovitud teatril loeti iga lennuvälja fail ja iga see asetati tema väljale
+tema punktide kasti keskpunktiga, kastiga ja seal oleva maapinnaga. Proovitud teatril loeti iga lennuvälja fail ja iga asetati oma väljale
 (mõne sajas meetri piires mõõdetud lennujaama viiteprojektsioonist: rullteede keskel, mitte rajal).
 
 **Hooned.** `Scenes/<theatre>.scn5` paigutab iga teatri objekti

@@ -3,7 +3,7 @@ title: "Kezdőlap"
 nav_order: 1
 lang: hu
 source: index.md
-source_hash: "b9c49c779477"
+source_hash: "a6572e6ff335"
 nav_exclude: true
 search_exclude: true
 permalink: /hu/
@@ -11,11 +11,11 @@ permalink: /hu/
 # 3DHeat DCS {#dheat-dcs}
 
 **Mi ez?** A theatre (színház) a DCS World szava a térképre: a világnak egy területe, amely
-felett repül. Ez az eszköz egy színház talaját, amelyet **az Ön saját telepítéséből** olvas be,
+felett repülsz. Ez az eszköz egy színház talaját, amelyet **a saját telepítésedből** olvas be,
 3D pályává alakítja: olyan modellé, amely felett repülni lehet, a [3DHeat](https://github.com/Holdi601/3DHeat)
 megjelenítőhöz ([dokumentáció](https://holdi601.github.io/3DHeat/)).
 
-**Mire jó?** Hogy a DCS-repüléseit a játék saját térképén lássa: a dombokat, a partvonalat,
+**Mire jó?** Hogy a DCS-repüléseidet a játék saját térképén lásd: a dombokat, a partvonalat,
 a repülőtereket, utakat, vasútvonalakat, városokat és épületeket.
 
 **Példa:** `heat3d-dcs-maps level <theatre> -o levels` ->
@@ -36,8 +36,8 @@ Mire használható:
 
 ## Gyors kezdés {#quick-start}
 
-Még nem használt parancssort? Előbb olvassa el a [Mielőtt elkezdi](before-you-start.md) oldalt.
-Ezeket a mappában futtassa, ahová klónozta vagy kicsomagolta:
+Még nem használt parancssort? Előbb olvasd el a [Mielőtt elkezded](before-you-start.md) oldalt.
+Ezeket a mappában futtasd, ahová klónoztad vagy kicsomagoltad:
 
 ```bash
 python -m pip install -e .                         # telepíti a heat3d-dcs-maps parancsot
@@ -47,18 +47,18 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 ```
 
 A `list` parancs színházanként egy sort ír ki, a végén `readable` szóval.
-Ezután töltse be a `levels/<name>.glb` fájlt a megjelenítő Háttér / pálya paneljén
+Ezután töltsd be a `levels/<name>.glb` fájlt a megjelenítő Háttér / pálya paneljén
 ([Pályák](https://holdi601.github.io/3DHeat/levels.html)).
 
-Az általa írt pályák a játék adataiból készülnek, ezért **az Ön gépén maradnak**: megtekintésre
+Az általad írt pályák a játék adataiból készülnek, ezért **a te gépeden maradnak**: megtekintésre
 valók, megosztásra vagy közzétételre nem ([Feltételek](terms.md)).
 
 ## Oldalak {#pages}
 
 | Oldal | Mit tartalmaz |
 |---|---|
-| [Mielőtt elkezdi](before-you-start.md) | Python, egy terminál, az első futtatás |
-| [Színházak keresése: list](list.md) | hol találja a telepítést, mit ír ki a `list` |
+| [Mielőtt elkezded](before-you-start.md) | Python, egy terminál, az első futtatás |
+| [Színházak keresése: list](list.md) | hol találod a telepítést, mit ír ki a `list` |
 | [Pálya építése: level](level.md) | minden kapcsoló, régiók, méret, lépésről lépésre |
 | [A pályafájlok](output.md) | a `.glb` részei, a talajosztályok és színeik, a `.json`, a koordináták |
 | [Helynevek: towns](towns.md) | egy színház városai DCS-koordinátákkal |

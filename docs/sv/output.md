@@ -25,7 +25,7 @@ Färgerna är klasserna nedan:
 
 ![Markklasser och deras färger](../assets/img/sv/classes.svg)
 
-Färgerna visas med **Fångad färg** i visarens nivåpanel. Varje marktriangel får klassen för överlagringen som spelet ritar den med:
+Färgerna visas med **Fångad färg** i visarens panel Bakgrund / nivå. Varje marktriangel får klassen för överlagringen som spelet ritar den med:
 
 | Klass | Färg | Från spelets överlagring |
 |---|---|---|
@@ -45,7 +45,7 @@ Där flera överlagringar ritar samma triangel avgör tabellens ordning (en väg
 
 **Koordinaterna** är DCS egna världsmeter: x norrut, y uppåt, z österut, och glTF-axlarna är desamma (X = x, Y = y, Z = z). Telemetri i DCS-meter - 3DHeat Watcher:s DCS-krok skriver exakt det - hamnar på nivån med visarens standardinställningar (Y uppåt, skala 1) och utan något placeringssteg.
 
-**Latitud och longitud:** varje teater är en Transversal Mercator-projektion med egna konstanter; `<name>.json` bär dem, nivåns hörn i latitud och longitud, och varje stad med både sin latitud/longitud och sina DCS x/z. Där en teaters konstanter inte är publicerade anpassas de till de fyrar som dess egen `beacons.lua` ger i båda koordinatsystemen (några cm medelkvadratfel; samma anpassning ger de publicerade konstanterna för andra teatrar tillbaka ner till millimetern).
+**Latitud och longitud:** varje teater är en Transversal Mercator-projektion med egna konstanter; `<name>.json` bär dem, nivåns hörn i latitud och longitud, och varje stad med både sin latitud/longitud och sina DCS x/z. Där en teaters konstanter inte är publicerade anpassas de till de radiofyrar som dess egen `beacons.lua` ger i båda koordinatsystemen (några cm medelkvadratfel; samma anpassning ger de publicerade konstanterna för andra teatrar tillbaka ner till millimetern).
 För en teater utan konstanter hittar [`fit`](fit.md) dem från en inspelning som innehåller båda, till exempel en Watcher-session från en flygning.
 
 **Havsbotten** utelämnas (en karta för flygsimulatorn behöver inte havsbotten); `--seabed` behåller den som mark. `--no-water` utelämnar det platta havet.

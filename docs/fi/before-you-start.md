@@ -62,7 +62,7 @@ DCS World at C:\Games\DCS World
   <theatre>    <n> GB    <n> tiles    <n> M vertices  lat/lon    readable
 ```
 
-Seuraavaksi: [Teatterien etsiminen: list](list.md), sitten [Tason rakentaminen: level](level.md).
+Seuraavaksi: [Teatterien etsiminen: list](list.md), sitten [Kentän rakentaminen: level](level.md).
 
 ## Miten näitä komentoja luetaan {#how-to-read-the-commands-on-these-pages}
 

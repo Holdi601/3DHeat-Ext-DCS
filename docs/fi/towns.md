@@ -19,7 +19,7 @@ suoritettuna) JSON-muodossa: jokaisen kaupungin nimen, sen leveys- ja pituusaste
 
 1. Selvitä teatterin kansion nimi komennolla [`list`](list.md).
 2. Suorita `heat3d-dcs-maps towns <theatre> > towns.json`.
-3. Käytä `x`/`z`-arvoja nimeämään taso tai tarkistamaan tallenteen sijainteja.
+3. Käytä `x`/`z`-arvoja nimeämään kenttä tai tarkistamaan tallenteen sijainteja.
 
 ![kaupungit synteettisessä asennuksessa](../assets/img/towns.svg)
 
@@ -28,5 +28,5 @@ suoritettuna) JSON-muodossa: jokaisen kaupungin nimen, sen leveys- ja pituusaste
 | `theatre` | kansion nimi kohdassa `Mods\terrains` |
 | `--dcs FOLDER` | DCS World -kansio |
 
-Tason alueen sisällä olevat kaupungit ovat myös sen `<name>.json`-tiedostossa, kunkin alla olevan
-maan korkeuden kanssa ([Tasotiedostot](output.md)).
+Kentän alueen sisällä olevat kaupungit ovat myös sen `<name>.json`-tiedostossa, kunkin alla olevan
+maan korkeuden kanssa ([Kenttätiedostot](output.md)).

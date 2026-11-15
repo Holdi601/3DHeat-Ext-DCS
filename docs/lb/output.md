@@ -25,7 +25,7 @@ D'Faarwe si d'Klassen hei ënnen:
 
 ![Buedemklassen an hir Faarwen](../assets/img/lb/classes.svg)
 
-D'Faarwe weisen sech mat **Captured colour** am Level-Panneau vum Viewer. All
+D'Faarwe weisen sech mat **Captured colour** am Panel „Hannergrond / Level“ vum Viewer. All
 Buedem-Dräieck kritt d'Klass vum Overlay, mat deem d'Spill et zeechent:
 
 | Klass | Faarf | Vum Overlay vum Spill |
@@ -47,7 +47,7 @@ Wou e puer Overlays dat selwecht Dräieck zeechnen, entscheet d'Reihenfolleg vun
 eegenen vum Buedem - gepréift bei all Klass vun den Theatere, déi probéiert goufen, all ee huet gepasst - also
 sinn d'Klassen exakt, net aus Punkten an der Noperschaft geroden.
 
-**Koordinaten** sinn dem DCS seng eegen Weltmeter: x Norden, y no uewen, z Osten, an
+**Koordinaten** sinn dem DCS seng eegen Weltmeter: x Norden, y no uewen, z Ouschten, an
 d'glTF-Achse sinn déiselwecht (X = x, Y = y, Z = z). Telemetrie a DCS-Meter - dem
 3DHeat Watcher säin DCS-Hook schreift genau dat - landet mat de Standarde vum
 Viewer (Y no uewen, Skala 1) um Level, ouni Placement-Schrëtt.

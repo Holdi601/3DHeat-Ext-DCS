@@ -13,7 +13,7 @@ search_exclude: true
 heat3d-dcs-maps list [--dcs FOLDER]
 ```
 
-Ny til kommandolinjen? Les [Før du begynner](before-you-start.md) først.
+Ny til kommandolinjen? Les [Før du starter](before-you-start.md) først.
 
 1. Installer én gang: `git clone https://github.com/Holdi601/3DHeat-Ext-DCS`, åpne
    en terminal i den mappen og kjør `python -m pip install -e .` (Python 3.10

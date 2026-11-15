@@ -3,7 +3,7 @@ title: Baile
 nav_order: 1
 lang: ga
 source: index.md
-source_hash: "b9c49c779477"
+source_hash: "a6572e6ff335"
 nav_exclude: true
 search_exclude: true
 permalink: /ga/
@@ -12,7 +12,7 @@ permalink: /ga/
 
 **Cad é?** Is é téatar focal DCS World ar léarscáil: réigiún den
 domhan a eitlíonn tú os a chionn. Casann an uirlis seo talamh téatair amháin, léite ó
-**do shuiteáil féin**, ina leibhéal 3D - samhail a fhéadann tú eitilt os a chionn - don lucht féachana
+**do shuiteáil féin**, ina leibhéal 3D - samhail a fhéadann tú eitilt os a chionn - don amharcán
 [3DHeat](https://github.com/Holdi601/3DHeat)
 ([doiciméadúchán](https://holdi601.github.io/3DHeat/)).
 
@@ -29,7 +29,7 @@ Cad chuige a bhfuil sé úsáideach:
   an domhan ó shonraí oscailte; tarraingíonn an uirlis seo an téatar mar a tharraingíonn DCS é.
 - **Gan céim chuir i bhfeidhm.** Tá an leibhéal i méadair dhomhain DCS féin, mar sin tuirlingíonn telemetry
   i méadair DCS (scríobhann crúca DCS de chuid 3DHeat Watcher go beacht é sin) air
-  le réamhshocruithe an lucht féachana.
+  le réamhshocruithe an amharcáin.
 - **Domhanleithead agus domhanfhad.** Iompraíonn gach leibhéal a theilgean, a rinn
   agus a bhailte sa dá fhráma.
 
@@ -48,7 +48,7 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 ```
 
 Ba chóir duit líne amháin a fheiceáil in aghaidh an téatair ó `list`, ag críochnú `readable`.
-Ansin lódáil `levels/<name>.glb` i bpainéal Cúlra / leibhéal an lucht féachana
+Ansin lódáil `levels/<name>.glb` i bpainéal Cúlra / leibhéal an amharcáin
 ([Leibhéil](https://holdi601.github.io/3DHeat/levels.html)).
 
 Tógtar na leibhéil a scríobhann sé ó shonraí an chluiche: fanann siad **ar do
@@ -71,10 +71,10 @@ mheaisín**, le féachaint orthu, ní le roinnt ná le foilsiú ([Téarmaí](ter
 
 ## Gaolmhar {#related}
 
-- An lucht féachana 3DHeat: [github.com/Holdi601/3DHeat](https://github.com/Holdi601/3DHeat),
+- An t-amharcán 3DHeat: [github.com/Holdi601/3DHeat](https://github.com/Holdi601/3DHeat),
   doiciméadúchán ag [holdi601.github.io/3DHeat](https://holdi601.github.io/3DHeat/).
 - Telemetry do na leibhéil seo: taifeadann [3DHeat Watcher](https://holdi601.github.io/3DHeat-Watcher/)
-  eitiltí DCS; tá formáidí comhad an lucht féachana, lena n-áirítear a
+  eitiltí DCS; tá formáidí comhad an amharcáin, lena n-áirítear a
   choimeádán comhad-amháin-in-aghaidh-an-chluiche, curtha síos in
   [Comhad amháin in aghaidh an chluiche (.3dheat)](https://holdi601.github.io/3DHeat/container.html).
 
@@ -82,7 +82,7 @@ mheaisín**, le féachaint orthu, ní le roinnt ná le foilsiú ([Téarmaí](ter
 
 | Uirlis | Cad a dhéanann sí | Cód | Doiciméid |
 |---|---|---|---|
-| Lucht féachana 3DHeat | taispeánann sé na sonraí: léarscáileanna teasa, anailís rása, athbhreithniú cluiche | [3DHeat](https://github.com/Holdi601/3DHeat) | [docs](https://holdi601.github.io/3DHeat/) |
+| Amharcán 3DHeat | taispeánann sé na sonraí: léarscáileanna teasa, anailís rása, athbhreithniú cluiche | [3DHeat](https://github.com/Holdi601/3DHeat) | [docs](https://holdi601.github.io/3DHeat/) |
 | GameFiles | leibhéil agus cúrsaí ó chomhaid féin cluiche | [3DHeat-GameFiles](https://github.com/Holdi601/3DHeat-GameFiles) | [docs](https://holdi601.github.io/3DHeat-GameFiles/) |
 | GameCapture | telemetry cuarta, agus leibhéil atógtha ó fhíseán cluiche | [3DHeat-GameCapture](https://github.com/Holdi601/3DHeat-GameCapture) | [docs](https://holdi601.github.io/3DHeat-GameCapture/) |
 | Unreal Exporter | breiseán d'Unreal Editor: leibhéal mar `.glb` amháin | [3DHeat-UnrealExporter](https://github.com/Holdi601/3DHeat-UnrealExporter) | [docs](https://holdi601.github.io/3DHeat-UnrealExporter/) |

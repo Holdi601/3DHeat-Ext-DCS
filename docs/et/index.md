@@ -3,14 +3,14 @@ title: "Avaleht"
 nav_order: 1
 lang: et
 source: index.md
-source_hash: "b9c49c779477"
+source_hash: "a6572e6ff335"
 nav_exclude: true
 search_exclude: true
 permalink: /et/
 ---
 # 3DHeat DCS {#dheat-dcs}
 
-**Mis see on?** Teater on DCS Worldi sõna kaardi kohta: piirkond maailmas, mille kohal lendad. See tööriist muudab ühe teatri maapinna, loetuna **sinu enda installist**, 3D-tasemeks — mudeliks, mille kohal saab lennata — [3DHeat](https://github.com/Holdi601/3DHeat) vaataja jaoks
+**Mis see on?** Teater on DCS Worldi nimetus kaardile: piirkond maailmas, mille kohal lendad. See tööriist muudab ühe teatri maapinna, loetuna **sinu enda installist**, 3D-tasemeks — mudeliks, mille kohal saab lennata — [3DHeat](https://github.com/Holdi601/3DHeat) vaataja jaoks
 ([dokumentatsioon](https://holdi601.github.io/3DHeat/)).
 
 **Miks ma seda kasutaksin?** Et näha oma DCS-i lende mängu enda kaardil: selle mägesid, rannajooni, lennuvälju, teid, raudteid, linnu ja hooneid.
@@ -29,7 +29,7 @@ Milleks see kasulik on:
 
 ## Kiire algus {#quick-start}
 
-Pole sul käsurealt kogemust? Loe enne [Enne alustamist](before-you-start.md).
+Pole sul käsurealt kogemust? Loe esmalt [Enne alustamist](before-you-start.md).
 Käivita need kaustas, kuhu kloonisid või lahti pakkisid:
 
 ```bash
@@ -40,7 +40,7 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 ```
 
 `list` näitab ühe rea teatri kohta ja lõpeb sõnaga `readable`.
-Seejärel laadi `levels/<name>.glb` vaataja Taseme paneelis
+Seejärel laadi `levels/<name>.glb` vaataja paneelis **Taust / tase**
 ([Tasemed](https://holdi601.github.io/3DHeat/levels.html)).
 
 Tasemed, mida see kirjutab, on tehtud mängu andmetest, nii et need jäävad **sinu masinasse**,
@@ -80,9 +80,9 @@ vaatamiseks, mitte jagamiseks ega avaldamiseks ([Tingimused](terms.md)).
 | Unreal Exporter | Unreal Editori plugin: tase ühe `.glb` failina | [3DHeat-UnrealExporter](https://github.com/Holdi601/3DHeat-UnrealExporter) | [dokumentatsioon](https://holdi601.github.io/3DHeat-UnrealExporter/) |
 | CS2 | Counter-Strike 2 demod ja kaardid | [3DHeat-CS2](https://github.com/Holdi601/3DHeat-CS2) | [dokumentatsioon](https://holdi601.github.io/3DHeat-CS2/) |
 | Watcher | salvestab, mida mängud avaldavad, kui sa mängid | [3DHeat-Watcher](https://github.com/Holdi601/3DHeat-Watcher) | [dokumentatsioon](https://holdi601.github.io/3DHeat-Watcher/) |
-| Ext-WarThunder | War Thunderi replayd | [3DHeat-Ext-WarThunder](https://github.com/Holdi601/3DHeat-Ext-WarThunder) | [dokumentatsioon](https://holdi601.github.io/3DHeat-Ext-WarThunder/) |
-| Ext-WoT | World of Tanksi replayd | [3DHeat-Ext-WoT](https://github.com/Holdi601/3DHeat-Ext-WoT) | [dokumentatsioon](https://holdi601.github.io/3DHeat-Ext-WoT/) |
-| Ext-WoWs | World of Warshipsi replayd | [3DHeat-Ext-WoWs](https://github.com/Holdi601/3DHeat-Ext-WoWs) | [dokumentatsioon](https://holdi601.github.io/3DHeat-Ext-WoWs/) |
+| Ext-WarThunder | War Thunderi kordused | [3DHeat-Ext-WarThunder](https://github.com/Holdi601/3DHeat-Ext-WarThunder) | [dokumentatsioon](https://holdi601.github.io/3DHeat-Ext-WarThunder/) |
+| Ext-WoT | World of Tanksi kordused | [3DHeat-Ext-WoT](https://github.com/Holdi601/3DHeat-Ext-WoT) | [dokumentatsioon](https://holdi601.github.io/3DHeat-Ext-WoT/) |
+| Ext-WoWs | World of Warshipsi kordused | [3DHeat-Ext-WoWs](https://github.com/Holdi601/3DHeat-Ext-WoWs) | [dokumentatsioon](https://holdi601.github.io/3DHeat-Ext-WoWs/) |
 | Ext-Squad | Squadi serverdemod | [3DHeat-Ext-Squad](https://github.com/Holdi601/3DHeat-Ext-Squad) | [dokumentatsioon](https://holdi601.github.io/3DHeat-Ext-Squad/) |
 | Ext-DCS | DCS World'i kaardid 3D-tasemetena | [3DHeat-Ext-DCS](https://github.com/Holdi601/3DHeat-Ext-DCS) | [dokumentatsioon](https://holdi601.github.io/3DHeat-Ext-DCS/) |
 | Ext-IL2 | IL-2 Sturmovik'i kaardid 3D-tasemetena | [3DHeat-Ext-IL2](https://github.com/Holdi601/3DHeat-Ext-IL2) | [dokumentatsioon](https://holdi601.github.io/3DHeat-Ext-IL2/) |

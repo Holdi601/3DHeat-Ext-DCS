@@ -35,8 +35,8 @@ il-logħba.
 `DCS_PATH`; inkella jitfittxu r-registry, il-libreriji ta' Steam u l-folders
 tas-soltu.
 
-| Għażla | Tagħmel |
+| Għażla | X'jagħmel |
 |---|---|
 | `--dcs FOLDER` | il-folder ta' DCS World, dak li fih `Mods\terrains` |
 
-Exit status: 0 lest, 2 ebda installazzjoni jew teatru ma nstab.
+Status tal-ħruġ: 0 lest, 2 ebda installazzjoni jew teatru ma nstab.

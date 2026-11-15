@@ -25,7 +25,7 @@ Renkler aşağıdaki sınıflardır:
 
 ![Zemin sınıfları ve renkleri](../assets/img/tr/classes.svg)
 
-Renkler, görüntüleyicinin seviye panelinde **Yakalanan renk** ile görünür. Her zemin üçgeni, oyunun onu çizdiği katmanın sınıfını alır:
+Renkler, görüntüleyicinin Arka plan / bölüm panelinde **Yakalanan renk** ile görünür. Her zemin üçgeni, oyunun onu çizdiği katmanın sınıfını alır:
 
 | Sınıf | Renk | Oyunun katmanından |
 |---|---|---|

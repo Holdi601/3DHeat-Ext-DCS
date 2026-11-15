@@ -3,7 +3,7 @@ title: "Kryefaqja"
 nav_order: 1
 lang: sq
 source: index.md
-source_hash: "b9c49c779477"
+source_hash: "a6572e6ff335"
 nav_exclude: true
 search_exclude: true
 permalink: /sq/
@@ -35,10 +35,10 @@ Për çfarë është e dobishme:
 
 ![Nga një instalim DCS te një nivel 3DHeat](../assets/img/sq/flow.svg)
 
-## Fillim i shpejtë {#quick-start}
+## Fillimi i shpejtë {#quick-start}
 
-Je i ri me vijën e komandës? Lexo së pari [Para se të fillosh](before-you-start.md).
-Ekzekuto këto në dosjen që klonove ose çzipove:
+Je i ri me rreshtin e komandave? Lexo së pari [Para se të fillosh](before-you-start.md).
+Ekzekuto këto në dosjen që klonove ose shpaketove:
 
 ```bash
 python -m pip install -e .                         # installs the heat3d-dcs-maps command

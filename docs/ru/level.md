@@ -3,7 +3,7 @@ title: "Построение уровня: level"
 nav_order: 3
 lang: ru
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -26,7 +26,7 @@ heat3d-dcs-maps level <theatre> -o <folder> [--dcs FOLDER] [--name NAME]
    стороны от точки) или `--bounds X0 Z0 X1 Z1` в метрах DCS. Назовите его через `--name`.
 4. Команда выводит тайлы по мере чтения, число треугольников, записанный файл и сколько городов
    театра попадает на землю — проверка проекции, которая должна показать «N из N».
-5. Загрузите `<folder>/<name>.glb` в панель «Фон / уровень» визуализатора и включите
+5. Загрузите `<folder>/<name>.glb` в панель «Фон / уровень» просмотрщика и включите
    **Снятый цвет**, чтобы увидеть классы поверхности.
 
 ![level на синтетической установке](../assets/img/level.svg)
@@ -41,7 +41,7 @@ heat3d-dcs-maps level <theatre> -o <folder> [--dcs FOLDER] [--name NAME]
 |---|---|---|
 | `theatre` | - | имя папки в `Mods\terrains`, как его выводит `list` (любой регистр) |
 | `-o`, `--out` | обязателен | папка, куда писать `<name>.glb` и `<name>.json` |
-| `--dcs FOLDER` | находится сам | папка DCS World ([где её ищут](list.md#где-находится-установка)) |
+| `--dcs FOLDER` | находится сам | папка DCS World ([где её ищут](list.md#where-the-install-is-found)) |
 | `--name NAME` | название театра | имя уровня и его файлов |
 | `--around LAT LON KM` | - | только квадрат такого размера в километрах в обе стороны от точки |
 | `--bounds X0 Z0 X1 Z1` | - | только этот прямоугольник, в метрах DCS (x — север, z — восток) |

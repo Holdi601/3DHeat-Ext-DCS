@@ -20,7 +20,7 @@ DCS-Meter hält, zum Beispill eng 3DHeat-Watcher-Sessioun vun engem Fluch.
 
 1. Een Fluch op dem Theater mam 3DHeat Watcher opzeechnen (oder eng
    Opnam mat de Kolonnen `lat`, `lon`, `x`, `z` an DCS-Meter maachen: x ass Meter
-   no Norden, z Meter no Osten, wéi iwwerall an DCS).
+   no Norden, z Meter no Ouschten, wéi iwwerall an DCS).
 2. `heat3d-dcs-maps fit "<session>/heat.parquet"` ausféieren (oder eng `.jsonl` oder `.csv`).
 3. Et gëtt déi gefëttte Projektioun als JSON aus, de Root-Mean-Square-Feeler iwwer
    d'Punkten, an d'`--projection`-Argumenter, déi ze benotze sinn.

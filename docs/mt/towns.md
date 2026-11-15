@@ -23,7 +23,7 @@ qatt ma jitħaddem), bħala JSON: l-isem ta' kull raħal, il-latitudni u l-lonġ
 
 ![towns fuq installazzjoni sintetika](../assets/img/towns.svg)
 
-| Għażla | Tagħmel |
+| Għażla | X'jagħmel |
 |---|---|
 | `theatre` | l-isem tal-folder taħt `Mods\terrains` |
 | `--dcs FOLDER` | il-folder ta' DCS World |

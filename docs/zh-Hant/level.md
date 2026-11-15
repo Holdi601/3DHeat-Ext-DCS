@@ -3,7 +3,7 @@ title: "建立關卡：level"
 nav_order: 3
 lang: zh-Hant
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -24,8 +24,8 @@ heat3d-dcs-maps level <theatre> -o <folder> [--dcs FOLDER] [--name NAME]
 2. 對於小型戰區，整個建立：`heat3d-dcs-maps level <theatre> -o levels`。
 3. 對於大型戰區，選一個區域：`--around <lat> <lon> <km>`（以某點為中心、每邊各 km 的正方形），或以 DCS 公尺表示的 `--bounds X0 Z0 X1 Z1`。
    用 `--name` 為它命名。
-4. 此命令會在讀取時印出網格、三角形數量、寫入的檔案，以及有多少個戰區城鎮落在地面上——這是投影的檢查，應顯示「N of N」。
-5. 在檢視器的關卡面板中載入 `<folder>/<name>.glb`，並開啟 **Captured colour** 以查看地面類別。
+4. 此指令會在讀取時印出網格、三角形數量、寫入的檔案，以及有多少個戰區城鎮落在地面上——這是投影的檢查，應顯示「N of N」。
+5. 在檢視器的背景／關卡面板中載入 `<folder>/<name>.glb`，並開啟 **Captured colour** 以查看地面類別。
 
 ![在合成安裝上的 level](../assets/img/level.svg)
 
@@ -50,7 +50,7 @@ heat3d-dcs-maps level <theatre> -o <folder> [--dcs FOLDER] [--name NAME]
 | `--force` | 關閉 | 以完整細節整個匯出非常大的地圖 |
 | `--projection LON0 FE FN` | 戰區自身的 | 本工具不認識的戰區所使用的橫向麥卡托常數（[fit](fit.md)） |
 
-程式列出的每個選項：[命令參考](../cli-reference.md)。
+程式列出的每個選項：[指令參考](../cli-reference.md)。
 
 ## 大小 {#size}
 

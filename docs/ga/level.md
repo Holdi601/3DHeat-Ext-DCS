@@ -3,7 +3,7 @@ title: "Leibhéal a thógáil: level"
 nav_order: 3
 lang: ga
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -28,7 +28,7 @@ An bhfuil tú nua leis an líne ordaithe? Léigh [Sula dtosaíonn tú](before-yo
 4. Priontálann an t-ordú na tíleanna de réir mar a léann sé iad, líon na dtriantán, an
    comhad a scríobhadh, agus cé mhéad de bhailte an téatair a thagann ar an talamh - seic
    ar an teilgean ba chóir a léamh "N de N".
-5. Lódáil `<folder>/<name>.glb` i bpainéal Cúlra / leibhéal an lucht féachana agus cuir
+5. Lódáil `<folder>/<name>.glb` i bpainéal Cúlra / leibhéal an amharcáin agus cuir
    **Dath gafa** air chun na haicmí talún a fheiceáil.
 
 ![level ar shuiteáil sintéiseach](../assets/img/level.svg)

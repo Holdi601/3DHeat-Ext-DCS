@@ -3,7 +3,7 @@ title: "Taseme ehitamine: level"
 nav_order: 3
 lang: et
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -18,14 +18,14 @@ heat3d-dcs-maps level <theatre> -o <folder> [--dcs FOLDER] [--name NAME]
 
 ## Samm-sammult {#step-by-step}
 
-Pole sul käsurealt kogemust? Loe enne [Enne alustamist](before-you-start.md).
+Pole sul käsurealt kogemust? Loe esmalt [Enne alustamist](before-you-start.md).
 
 1. Leia teatri kausta nimi käsuga [`list`](list.md).
 2. Väikese teatri puhul ehita see tervena: `heat3d-dcs-maps level <theatre> -o levels`.
 3. Suure puhul vali piirkond: `--around <lat> <lon> <km>` (ruut nii mitme km kaugusel punktist mõlemal pool) või `--bounds X0 Z0 X1 Z1` DCS-i meetrites.
    Nimeta see valikuga `--name`.
 4. Käsk prindib kahhelid nende lugemisel, kolmnurkade arvu, kirjutatud faili ja selle, mitu teatri linna jääb maapinnale — projektsiooni kontroll, mis peaks ütlema "N of N".
-5. Laadi `<folder>/<name>.glb` vaataja Taseme paneelis ja lülita sisse
+5. Laadi `<folder>/<name>.glb` vaataja paneelis **Taust / tase** ja lülita sisse
    **Jäädvustatud värv**, et näha maapinna klasse.
 
 ![level sünteetilisel installil](../assets/img/level.svg)

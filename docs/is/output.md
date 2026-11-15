@@ -25,7 +25,7 @@ Litirnir eru flokkarnir hér að neðan:
 
 ![Landflokkar og litir þeirra](../assets/img/is/classes.svg)
 
-Litirnir birtast með **Skráður litur** í borðaspjaldi skoðarans. Hver
+Litirnir birtast með **Skráður litur** í spjaldinu Bakgrunnur / borð í skoðaranum. Hver
 landþríhyrningur fær flokk yfirlagsins sem leikurinn teiknar hann með:
 
 | Flokkur | Litur | Úr yfirlagi leiksins |

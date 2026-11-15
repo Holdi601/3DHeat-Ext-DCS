@@ -3,7 +3,7 @@ title: "Seviye oluşturma: level"
 nav_order: 3
 lang: tr
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -60,11 +60,11 @@ Oyunun ağı uyarlanabilirdir: açık denizde kilometrelerce üçgenler, kıyıl
 ## Örnekler {#examples}
 
 ```bash
-heat3d-dcs-maps level <theatre> -o levels                                       # whole, full detail
-heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name Part   # a 24 km square
-heat3d-dcs-maps level <theatre> --bounds 1000 2000 1390 2390 -o levels          # a box in DCS metres
-heat3d-dcs-maps level <theatre> --cell 50 -o levels                             # whole, thinned to 50 m
-heat3d-dcs-maps level <theatre> --no-buildings --no-water -o levels             # the ground alone
+heat3d-dcs-maps level <theatre> -o levels                                       # tamamı, tam ayrıntıyla
+heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name Part   # 24 km'lik bir kare
+heat3d-dcs-maps level <theatre> --bounds 1000 2000 1390 2390 -o levels          # DCS metrelerinde bir kutu
+heat3d-dcs-maps level <theatre> --cell 50 -o levels                             # tamamı, 50 m'ye seyreltilmiş
+heat3d-dcs-maps level <theatre> --no-buildings --no-water -o levels             # yalnızca zemin
 ```
 
 Dosyalarda ne var: [Seviye dosyaları](output.md).

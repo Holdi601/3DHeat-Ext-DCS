@@ -3,14 +3,14 @@ title: Start
 nav_order: 1
 lang: da
 source: index.md
-source_hash: "b9c49c779477"
+source_hash: "a6572e6ff335"
 nav_exclude: true
 search_exclude: true
 permalink: /da/
 ---
 # 3DHeat DCS {#dheat-dcs}
 
-**Hvad er det?** Et teater er DCS World's ord for et kort: en region af verden, du flyver over. Dette værktøj laver jorden i ét teater, læst fra **din egen installation**, om til en 3D-bane - en model, du kan flyve over - til [3DHeat](https://github.com/Holdi601/3DHeat)-fremviseren
+**Hvad er det?** Et teater er DCS World's ord for et kort: en region af verden, du flyver over. Dette værktøj laver jorden i ét teater, læst fra **din egen installation**, om til en 3D-bane - en model, du kan flyve over - til [3DHeat](https://github.com/Holdi601/3DHeat)-vieweren
 ([dokumentation](https://holdi601.github.io/3DHeat/)).
 
 **Hvorfor skulle jeg bruge det?** For at se dine DCS-flyvninger over spillets eget kort: dets bakker, kyst, flyvepladser, veje, jernbaner, byer og bygninger.
@@ -24,8 +24,8 @@ Det er nyttigt til:
 - **Flyvninger på spillets eget kort.** 3DHeat-verdenens baggrund tegner i dag jorden
   ud fra åbne data; dette tegner teatret, sådan som DCS tegner det.
 - **Ingen placeringstrin.** Banen ligger i DCS' egne verdensmeter, så telemetri
-  i DCS-meter (3DHeat Watchers DCS-hook skriver netop det) lander på
-  den med fremviserens standarder.
+  i DCS-meter (3DHeat Watcherens DCS-hook skriver netop det) lander på
+  den med viewerens standarder.
 - **Breddegrad og længdegrad.** Hver bane har sin projektion, sine hjørner
   og sine byer i begge koordinatsystemer.
 
@@ -44,7 +44,7 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 ```
 
 Du bør se én linje pr. teater fra `list`, der slutter med `readable`.
-Indlæs derefter `levels/<name>.glb` i fremviserens Baggrund / bane-panel
+Indlæs derefter `levels/<name>.glb` i viewerens Baggrund / bane-panel
 ([Baner](https://holdi601.github.io/3DHeat/levels.html)).
 
 De baner, den skriver, er bygget af spillets data: de bliver **på din maskine**,
@@ -67,10 +67,10 @@ til visning, ikke til deling eller publicering ([Vilkår](terms.md)).
 
 ## Relateret {#related}
 
-- 3DHeat-fremviseren: [github.com/Holdi601/3DHeat](https://github.com/Holdi601/3DHeat),
+- 3DHeat-vieweren: [github.com/Holdi601/3DHeat](https://github.com/Holdi601/3DHeat),
   dokumentation på [holdi601.github.io/3DHeat](https://holdi601.github.io/3DHeat/).
 - Telemetri til disse baner: [3DHeat Watcher](https://holdi601.github.io/3DHeat-Watcher/)
-  optager DCS-flyvninger; fremviserens filformater, inklusive dens
+  optager DCS-flyvninger; viewerens filformater, inklusive dens
   container med én fil pr. kamp, beskrives i
   [Én fil pr. kamp (.3dheat)](https://holdi601.github.io/3DHeat/container.html).
 
@@ -78,7 +78,7 @@ til visning, ikke til deling eller publicering ([Vilkår](terms.md)).
 
 | Værktøj | Hvad det gør | Kode | Dokumentation |
 |---|---|---|---|
-| 3DHeat-fremviser | viser data: varmekort, løbsanalyse, kampgennemgang | [3DHeat](https://github.com/Holdi601/3DHeat) | [dokumentation](https://holdi601.github.io/3DHeat/) |
+| 3DHeat-viewer | viser data: varmekort, løbsanalyse, kampgennemgang | [3DHeat](https://github.com/Holdi601/3DHeat) | [dokumentation](https://holdi601.github.io/3DHeat/) |
 | GameFiles | baner og løb fra et spils egne filer | [3DHeat-GameFiles](https://github.com/Holdi601/3DHeat-GameFiles) | [dokumentation](https://holdi601.github.io/3DHeat-GameFiles/) |
 | GameCapture | telemetri fra omgange, og baner genskabt ud fra spilvideo | [3DHeat-GameCapture](https://github.com/Holdi601/3DHeat-GameCapture) | [dokumentation](https://holdi601.github.io/3DHeat-GameCapture/) |
 | Unreal Exporter | et plugin til Unreal Editor: en bane som én `.glb` | [3DHeat-UnrealExporter](https://github.com/Holdi601/3DHeat-UnrealExporter) | [dokumentation](https://holdi601.github.io/3DHeat-UnrealExporter/) |

@@ -25,7 +25,7 @@ Is iad na dathanna na haicmí thíos:
 
 ![Aicmí talún agus a ndathanna](../assets/img/ga/classes.svg)
 
-Taispeántar na dathanna le **Dath gafa** i bpainéal leibhéil an lucht féachana. Glacann gach
+Taispeántar na dathanna le **Dath gafa** i bpainéal Cúlra / leibhéal an amharcáin. Glacann gach
 triantán talún aicme an forleagain lena dtarraingíonn an cluiche é:
 
 | Aicme | Dath | Ó fhorleagan an chluiche |
@@ -49,7 +49,7 @@ tá na haicmí beacht, gan buille faoi thuairim ó phointí in aice láimhe.
 **Comhordanáidí** is méadair domhain DCS féin iad: x ó thuaidh, y suas, z soir, agus tá
 na haiseanna glTF mar an gcéanna (X = x, Y = y, Z = z). Tuirlingíonn telemetry i méadair DCS - scríobhann
 crúca DCS de chuid 3DHeat Watcher é sin go beacht - ar an leibhéal le
-réamhshocruithe an lucht féachana (Y suas, scála 1) agus gan aon chéim chuir i bhfeidhm.
+réamhshocruithe an amharcáin (Y suas, scála 1) agus gan aon chéim chuir i bhfeidhm.
 
 **Domhanleithead agus domhanfhad:** is teilgean Transverse Mercator é gach téatar
 lena sheasmhachtaí féin; iompraíonn `<name>.json` iad, rinn an leibhéil i
@@ -86,7 +86,7 @@ crainn árdáin, pioláin agus droichid ar lár. Ní chóipeáiltear aon chruth 
 chluiche: bosca amháin in aghaidh an fhoirgnimh, daite de réir cineáil (teach, bloc,
 tionsclaíoch, aerpháirc, túr, eile). Liostaíonn `<name>.json` iad freisin
 (`buildings.rows`: x, z, base, height, leath-fhaid, heading, kind) do chúlra
-hibrideach an lucht féachana, a tharraingíonn iad i mbailte an chluiche in ionad
+hibrideach an amharcáin, a tharraingíonn iad i mbailte an chluiche in ionad
 na bhfoirgneamh mapáilte. Fágann `--no-buildings` ar lár iad.
 
 Taifeadann `<name>.json` freisin an comhad foinse, a mhéid agus a dháta, na tíleanna
@@ -94,4 +94,4 @@ a léadh, líon na dtriantán in aghaidh na haicme, agus cé mhéad de bhailte a
 ar an talamh - seic ar an teilgean ba chóir a léamh "N de N".
 
 Is glTF dénártha le codanna ainmnithe é an leibhéal, mar atá gach leibhéal 3DHeat; insíonn leathanach
-[Leibhéil](https://holdi601.github.io/3DHeat/levels.html) an lucht féachana conas a lódálann sé iad.
+[Leibhéil](https://holdi601.github.io/3DHeat/levels.html) an amharcán conas a lódálann sé iad.

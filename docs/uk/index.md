@@ -3,16 +3,16 @@ title: Головна
 nav_order: 1
 lang: uk
 source: index.md
-source_hash: "b9c49c779477"
+source_hash: "a6572e6ff335"
 nav_exclude: true
 search_exclude: true
 permalink: /uk/
 ---
 # 3DHeat DCS {#dheat-dcs}
 
-**Що це?** Театр - це назва карти в DCS World: ділянка світу, над якою ви летите.
+**Що це?** Театр — це назва карти в DCS World: ділянка світу, над якою ви летите.
 Цей інструмент перетворює землю одного театру, прочитану з **вашої власної
-інсталяції**, на 3D-рівень - модель, над якою можна летіти, - для переглядача
+інсталяції**, на 3D-рівень — модель, над якою можна летіти, — для переглядача
 [3DHeat](https://github.com/Holdi601/3DHeat)
 ([документація](https://holdi601.github.io/3DHeat/)).
 
@@ -49,7 +49,7 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 ```
 
 Після `list` ви маєте побачити по одному рядку на театр, який закінчується словом
-`readable`. Потім завантажте `levels/<name>.glb` у панелі Level переглядача
+`readable`. Потім завантажте `levels/<name>.glb` у панелі «Тло / рівень» переглядача
 ([Рівні](https://holdi601.github.io/3DHeat/levels.html)).
 
 Рівні, які він записує, побудовано з даних гри, тож вони лишаються **на вашому

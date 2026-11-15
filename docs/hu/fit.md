@@ -18,14 +18,14 @@ ezeket azokhoz a színházakhoz, amelyeken ellenőrizték; egy ismeretlenhez a `
 határozza meg őket, amely szélességet és hosszúságot is tartalmaz, valamint DCS-métereket, például
 egy 3DHeat Watcher munkamenetből egy repülésről.
 
-1. Rögzítsen egy repülést a színházon a 3DHeat Watcherrel (vagy készítsen bármilyen felvételt,
+1. Rögzíts egy repülést a színházon a 3DHeat Watcherrel (vagy készíts bármilyen felvételt,
    amelynek oszlopai `lat`, `lon`, `x`, `z`, DCS-méterekben: az x méter észak felé, a z méter
    kelet felé, ahogy a DCS-ben mindenütt).
-2. Futtassa a `heat3d-dcs-maps fit "<session>/heat.parquet"` parancsot (vagy egy `.jsonl`
+2. Futtasd a `heat3d-dcs-maps fit "<session>/heat.parquet"` parancsot (vagy egy `.jsonl`
    vagy `.csv` fájlt).
 3. Kiírja az illesztett vetítést JSON-ként, a pontokra vett átlagos négyzetes hibát (root mean
    square), és a használandó `--projection` argumentumokat.
-4. Építse meg vele a pályát:
+4. Építsd meg vele a pályát:
    `heat3d-dcs-maps level <theatre> --projection <LON0> <FE> <FN> -o levels`.
 
 ![fit egy szintetikus felvételen](../assets/img/fit.svg)

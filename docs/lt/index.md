@@ -3,7 +3,7 @@ title: "Pradžia"
 nav_order: 1
 lang: lt
 source: index.md
-source_hash: "b9c49c779477"
+source_hash: "a6572e6ff335"
 nav_exclude: true
 search_exclude: true
 permalink: /lt/
@@ -12,7 +12,7 @@ permalink: /lt/
 
 **Kas tai?** Teatras – tai DCS World žodis žemėlapiui: vietovės regionas, virš kurio skraidote. Šis
 įrankis paverčia vieno teatro žemę, perskaitytą iš **jūsų pačių įdiegimo**, 3D lygiu – modeliu, virš kurio galima
-skraidyti – skirtu [3DHeat](https://github.com/Holdi601/3DHeat) žiūrintojui
+skraidyti – skirtu [3DHeat](https://github.com/Holdi601/3DHeat) žiūryklei
 ([dokumentacija](https://holdi601.github.io/3DHeat/)).
 
 **Kam tai naudoti?** Kad matytumėte savo DCS skrydžius ant paties žaidimo žemėlapio: jo kalvas, pakrantę,
@@ -26,7 +26,7 @@ Kam tai naudinga:
 - **Skrydžiai ant paties žaidimo žemėlapio.** 3DHeat pasaulio fonas šiandien piešia Žemę pagal atvirus
   duomenis; šis įrankis piešia teatrą taip, kaip jį piešia DCS.
 - **Nereikia vietos parinkimo.** Lygis yra DCS pasaulio metrais, todėl telemetrija DCS metrais
-  (3DHeat Watcher DCS jungtis rašo būtent tai) į jį patenka su žiūrintojo numatytosiomis reikšmėmis.
+  (3DHeat Watcher DCS jungtis rašo būtent tai) į jį patenka su žiūryklės numatytosiomis reikšmėmis.
 - **Platuma ir ilguma.** Kiekvienas lygis turi savo projekciją, kampus ir miestus abiejose sistemose.
 
 ![Nuo DCS įdiegimo iki 3DHeat lygio](../assets/img/lt/flow.svg)
@@ -44,7 +44,7 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 ```
 
 Iš `list` turėtumėte matyti po vieną eilutę kiekvienam teatrui, baigiančią `readable`.
-Tada įkelkite `levels/<name>.glb` žiūrintojo lygių skydelyje
+Tada įkelkite `levels/<name>.glb` žiūryklės lygių skydelyje
 ([Lygiai](https://holdi601.github.io/3DHeat/levels.html)).
 
 Lygiai, kuriuos jis įrašo, sukurti iš žaidimo duomenų, todėl jie lieka **jūsų kompiuteryje**: žiūrėti, o ne dalintis
@@ -67,17 +67,17 @@ ar skelbti ([Sąlygos](terms.md)).
 
 ## Susiję {#related}
 
-- 3DHeat žiūrintojas: [github.com/Holdi601/3DHeat](https://github.com/Holdi601/3DHeat),
+- 3DHeat žiūryklė: [github.com/Holdi601/3DHeat](https://github.com/Holdi601/3DHeat),
   dokumentacija – [holdi601.github.io/3DHeat](https://holdi601.github.io/3DHeat/).
 - Šių lygių telemetrija: [3DHeat Watcher](https://holdi601.github.io/3DHeat-Watcher/)
-  įrašo DCS skrydžius; žiūrintojo failų formatai, įskaitant vieno failo rungtynių konteinerį, aprašyti
+  įrašo DCS skrydžius; žiūryklės failų formatai, įskaitant vieno failo rungtynių konteinerį, aprašyti
   [Vienas failas rungtynėms (.3dheat)](https://holdi601.github.io/3DHeat/container.html).
 
 ## 3DHeat įrankiai {#the-3dheat-tools}
 
 | Įrankis | Ką daro | Kodas | Dokumentacija |
 |---|---|---|---|
-| 3DHeat žiūrintojas | rodo duomenis: šilumos žemėlapius, lenktynių analizę, rungtynių apžvalgą | [3DHeat](https://github.com/Holdi601/3DHeat) | [dokumentacija](https://holdi601.github.io/3DHeat/) |
+| 3DHeat žiūryklė | rodo duomenis: šilumos žemėlapius, lenktynių analizę, rungtynių apžvalgą | [3DHeat](https://github.com/Holdi601/3DHeat) | [dokumentacija](https://holdi601.github.io/3DHeat/) |
 | GameFiles | lygiai ir trasos iš žaidimo pačio failų | [3DHeat-GameFiles](https://github.com/Holdi601/3DHeat-GameFiles) | [dokumentacija](https://holdi601.github.io/3DHeat-GameFiles/) |
 | GameCapture | ratų telemetrija ir lygiai, atkurti iš žaidimo vaizdo | [3DHeat-GameCapture](https://github.com/Holdi601/3DHeat-GameCapture) | [dokumentacija](https://holdi601.github.io/3DHeat-GameCapture/) |
 | Unreal Exporter | Unreal Editor papildinys: lygis kaip vienas `.glb` | [3DHeat-UnrealExporter](https://github.com/Holdi601/3DHeat-UnrealExporter) | [dokumentacija](https://holdi601.github.io/3DHeat-UnrealExporter/) |

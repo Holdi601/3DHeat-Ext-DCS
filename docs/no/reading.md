@@ -32,7 +32,7 @@ andre gruppene er overleggene som gir klassene over.
 - På regioner av to teatre landet byene fra `towns.lua` innen meter
   fra et bakketoppunkt, på land, N av N; den høyeste bakken traff den virkelige
   toppen innen ti meter; flyplasser, elver, landsbyer og veier viste seg i
-  sine klasser. Begge banene lastet i visningsprogrammet, med bymarkører i de
+  sine klasser. Begge nivåene lastet i visningsprogrammet, med bymarkører i de
   samme DCS-meterne som sitter på bakken.
 - På en scene-region landet bygningsplasseringene på sin bakke; rullebanelys
   fulgte spillets rullebane, og vogner og murseksjoner stemte overens med den
@@ -41,7 +41,7 @@ andre gruppene er overleggene som gir klassene over.
   lagres her; `tests/test_real_install.py` kjører på installasjonen på maskinen
   som kjører testene, og hoppes over uten en.
 
-**Ikke kontrollert:** et helt stort teater i én bane (størrelsesvakten
+**Ikke kontrollert:** et helt stort teater i ett nivå (størrelsesvakten
 over finnes av en grunn), og versjoner av DCS annet enn den som ble prøvd.
 
 ## Ikke lest {#not-read}

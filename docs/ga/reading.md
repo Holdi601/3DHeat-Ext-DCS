@@ -30,7 +30,7 @@ a mharcálann a ghiotán is ísle an fharraige; is iad na grúpaí eile na forle
 - Ar réigiúin de dhá théatar, thuirling na bailte ó `towns.lua` laistigh de mhéadair
   de rinn talún, ar thalamh, N de N; mheaitseáil an talamh is airde an
   bhuaic fhíor laistigh de dheich méadar; léirigh aerpháirceanna, aibhneacha, sráidbhailte agus bóithre
-  ina n-aicmí. Lódáladh an dá leibhéal sa lucht féachana, le marcóirí bailte sna
+  ina n-aicmí. Lódáladh an dá leibhéal san amharcán, le marcóirí bailte sna
   méadair DCS chéanna ina suí ar an talamh.
 - Ar réigiún radhairc, thuirling na cuir foirgneamh ar a dtalamh; lorg soilse rúidbhealaigh
   rúidbhealach an chluiche, agus rinne vaigíní agus ballphíosaí

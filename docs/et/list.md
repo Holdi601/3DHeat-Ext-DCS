@@ -13,7 +13,7 @@ search_exclude: true
 heat3d-dcs-maps list [--dcs FOLDER]
 ```
 
-Pole sul käsurealt kogemust? Loe enne [Enne alustamist](before-you-start.md).
+Pole sul käsurealt kogemust? Loe esmalt [Enne alustamist](before-you-start.md).
 
 1. Paigalda üks kord: `git clone https://github.com/Holdi601/3DHeat-Ext-DCS`, ava
    terminal selles kaustas ja käivita `python -m pip install -e .` (Python 3.10

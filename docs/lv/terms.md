@@ -36,13 +36,13 @@ End-User Licence Agreement, The Fighter Collection Ltd). Licencētajā "Program"
 adapt, vary, modify the Program" bez atļaujas, un (e) apakšpunkts - "exploit this
 Program or any of its parts commercially".
 
-Ko dara šis lasītājs: tas nolasa datu failus tavā datorā, pēc tam kad tu esi tos
-uzstādījis, ārpus spēles. Tas nemaina neko spēlē, nelauž šifrējumu (vienīgais šifrētais
+Ko dara šis lasītājs: tas nolasa datu failus jūsu datorā, pēc tam, kad tie ir uzstādīti,
+ārpus spēles. Tas nemaina neko spēlē, nelauž šifrējumu (vienīgais šifrētais
 fails teātra mapē tiek atstāts neskarts) un nesazinās ar serveri. Datu faila izkārtojuma
 noskaidrošana ir reversā inženierija 3.1. punkta (c) izpratnē, un līmenis, kas veidots no
-spēles teātra, iespējams ir atvasināts darbs. Lasītāja izmantošana ir tavs lēmums, tavam pašam
-lietojumam; līmeņi, ko tas raksta, ir tavi, lai tos skatītos, nevis lai kopīgotu vai publicētu.
-Tāpēc tas ir atsevišķs pakotne.
+spēles teātra, iespējams ir atvasināts darbs. Lasītāja izmantošana ir jūsu lēmums, jūsu pašu
+lietojumam; līmeņi, ko tas raksta, ir jūsu, lai tos skatītu, nevis lai kopīgotu vai publicētu.
+Tāpēc tas ir atsevišķa pakotne.
 
 Sankcionētā alternatīva, kas nelasa nevienu failu: pašas simulatora misiju skriptēšana var paraugot zemi (`land.getHeight`, `land.getSurfaceType`) un uzskaitīt lidlaukus (`world.getAirbases`), kamēr darbojas misija. Tam vajag DCS darbību stundām katram teātrim un tas dod rupjāku režģi; tas netika veidots, jo faili izrādījās lasāmi.
 

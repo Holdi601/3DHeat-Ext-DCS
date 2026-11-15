@@ -3,7 +3,7 @@ title: "Nibnu livell: level"
 nav_order: 3
 lang: mt
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -39,7 +39,7 @@ Reġjun tal-istess teatru sintetiku, f'metri ta' DCS:
 
 ## Għażliet {#options}
 
-| Għażla | Default | Tagħmel |
+| Għażla | Default | X'jagħmel |
 |---|---|---|
 | `theatre` | - | l-isem tal-folder taħt `Mods\terrains`, kif jistampah `list` (kwalunkwe każ) |
 | `-o`, `--out` | meħtieġa | il-folder fejn jinkitbu `<name>.glb` u `<name>.json` |
@@ -64,7 +64,7 @@ huma għexieren ta' miljuni ta' vertiċi. 'Il fuq minn 30 miljun vertiċi biex j
 jieqaf (exit status 1) u jitlob reġjun, mesh irqaq (`--cell 50`) jew
 `--force`.
 
-Exit status: 0 lest; 1 falla jew kbir wisq; 2 l-installazzjoni jew it-teatru
+Status tal-ħruġ: 0 lest; 1 falla jew kbir wisq; 2 l-installazzjoni jew it-teatru
 ma nstabux (it-teatri misjuba jiġu elenkati).
 
 ## Eżempji {#examples}

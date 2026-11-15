@@ -13,7 +13,7 @@ search_exclude: true
 heat3d-dcs-maps list [--dcs FOLDER]
 ```
 
-Ertu ný/r í skipanalínunni? Lestu fyrst [Áður en þú byrjar](before-you-start.md).
+Hefurðu aldrei notað skipanalínu? Lestu fyrst [Áður en þú byrjar](before-you-start.md).
 
 1. Settu upp einu sinni: `git clone https://github.com/Holdi601/3DHeat-Ext-DCS`, opnaðu
    skipanalínu í þeirri möppu og keyrðu `python -m pip install -e .` (Python 3.10

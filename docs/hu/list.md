@@ -13,15 +13,15 @@ search_exclude: true
 heat3d-dcs-maps list [--dcs FOLDER]
 ```
 
-Még nem használt parancssort? Előbb olvassa el a [Mielőtt elkezdi](before-you-start.md) oldalt.
+Még nem használt parancssort? Előbb olvasd el a [Mielőtt elkezded](before-you-start.md) oldalt.
 
-1. Telepítés egyszer: `git clone https://github.com/Holdi601/3DHeat-Ext-DCS`, nyisson terminált
-   ebben a mappában, és futtassa a `python -m pip install -e .` parancsot (Python 3.10 vagy
+1. Telepítés egyszer: `git clone https://github.com/Holdi601/3DHeat-Ext-DCS`, nyiss terminált
+   ebben a mappában, és futtasd a `python -m pip install -e .` parancsot (Python 3.10 vagy
    újabb; ez hozza a numpy-t, és a pyarrow-t a `fit` parancshoz `.parquet` fájlon).
-2. Futtassa a `heat3d-dcs-maps list` parancsot.
+2. Futtasd a `heat3d-dcs-maps list` parancsot.
 3. Minden telepített színház egy sort ír ki: a mappanevét (ezt veszik át a többi parancs), a talajfájl
    méretét, a csempéit és csúcsait, azt, hogy ismert-e a szélességi/hosszúsági vetítése, és hogy
-   olvasható-e. Minden sor végén `readable` szót kell látnia.
+   olvasható-e. Minden sor végén `readable` szót kell látnod.
 
 ![list egy szintetikus telepítésen](../assets/img/list.svg)
 

@@ -3,7 +3,7 @@ title: "Ndërtimi i një niveli: level"
 nav_order: 3
 lang: sq
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -18,7 +18,7 @@ heat3d-dcs-maps level <theatre> -o <folder> [--dcs FOLDER] [--name NAME]
 
 ## Hap pas hapi {#step-by-step}
 
-Je i ri me vijën e komandës? Lexo së pari [Para se të fillosh](before-you-start.md).
+Je i ri me rreshtin e komandave? Lexo së pari [Para se të fillosh](before-you-start.md).
 
 1. Gjej emrin e dosjes së teatrit me [`list`](list.md).
 2. Për një teatër të vogël, ndërtoje të tërin: `heat3d-dcs-maps level <theatre> -o levels`.
@@ -48,10 +48,10 @@ Një rajon i të njëjtit teatër sintetik, sipas metrave DCS:
 | `--around LAT LON KM` | - | vetëm një katror aq km në çdo anë të një pike |
 | `--bounds X0 Z0 X1 Z1` | - | vetëm kjo kuti, në metra DCS (x veri, z lindje) |
 | `--cell M` | `0` | e rrallon rrjetin: çdo kulm brenda *M* metrash bëhet një (0: trekëndëshat e vetë lojës) |
-| `--seabed` | off | e mban shtratin e detit si tokë (si parazgjedhje lihet jashtë) |
-| `--no-water` | off | lë jashtë detin e sheshtë |
-| `--no-buildings` | off | lë jashtë ndërtesat e skenës së teatrit |
-| `--force` | off | eksporton një hartë shumë të madhe të plotë me detaje të plota |
+| `--seabed` | joaktiv | e mban shtratin e detit si tokë (si parazgjedhje lihet jashtë) |
+| `--no-water` | joaktiv | lë jashtë detin e sheshtë |
+| `--no-buildings` | joaktiv | lë jashtë ndërtesat e skenës së teatrit |
+| `--force` | joaktiv | eksporton një hartë shumë të madhe të plotë me detaje të plota |
 | `--projection LON0 FE FN` | ai i teatrit | konstantet Transverse Mercator për një teatër që ky mjet nuk e njeh ([fit](fit.md)) |
 
 Çdo opsion, ashtu siç e shtyp programi: [Referenca e komandave](../cli-reference.md).
@@ -61,10 +61,10 @@ Një rajon i të njëjtit teatër sintetik, sipas metrave DCS:
 Rrjeti i lojës është adaptiv - det i hapur në trekëndësha kilometra të gjerë, bregdete
 dhe rrugë në disa metra. Një teatër i vogël është disa milionë trekëndësha; të mëdhenjtë
 janë dhjetëra milionë kulme. Mbi 30 milionë kulme për t'u lexuar, `level`
-ndalon (kodi i daljes 1) dhe kërkon një rajon, një rrjet më të rrallë (`--cell 50`) ose
+ndalon (statusi i daljes 1) dhe kërkon një rajon, një rrjet më të rrallë (`--cell 50`) ose
 `--force`.
 
-Kodi i daljes: 0 u krye; 1 dështoi ose është shumë i madh; 2 instalimi ose teatri nuk u
+Statusi i daljes: 0 u krye; 1 dështoi ose është shumë i madh; 2 instalimi ose teatri nuk u
 gjet (teatrot e gjetur listohen).
 
 ## Shembuj {#examples}

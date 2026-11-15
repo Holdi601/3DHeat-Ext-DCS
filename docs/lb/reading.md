@@ -21,7 +21,7 @@ Kuerz: en Index vu Kachel-Records (eng Transformatioun, Grenzen, a Lëschte vun 
 Byte-Streams, jidd Lëscht gefollegt vum Shader a Material, mat deem se gezeechent
 gëtt), dann d'Rohdaten. Et ass weder komprimiert nach verschlësselt. Dem Kachel säi
 `Pbase`-Stream hält seng Vertices; d'Grupp, déi als `Land` gezeechent gëtt, hält d'
-Dräiecker an en `TRITYPE` pro Dräieck, dessen niddregst Bit d'Mier markéiert; déi
+Dräiecker an en `TRITYPE` pro Dräieck, deem säin niddregst Bit d'Mier markéiert; déi
 aner Gruppen sinn d'Overlays, déi d'Klassen hei uewen ginn.
 
 ## Gepréift {#verified}

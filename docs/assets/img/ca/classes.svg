@@ -32,6 +32,6 @@
 <text x="470" y="155" font-size="15" fill="#1f2328" font-weight="600">terra</text>
 <text x="565" y="155" font-size="14" fill="#5b6270">la resta</text>
 <rect x="426" y="170" width="34" height="20" rx="3" fill="#546d87" stroke="#8c95a3"/>
-<text x="470" y="185" font-size="15" fill="#1f2328" font-weight="600">fons del mar</text>
+<text x="470" y="185" font-size="15" fill="#1f2328" font-weight="600">fons marí</text>
 <text x="565" y="185" font-size="14" fill="#5b6270">només amb --seabed</text>
 </svg>

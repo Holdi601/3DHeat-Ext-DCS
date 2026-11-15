@@ -3,7 +3,7 @@ title: "Byg en bane: level"
 nav_order: 3
 lang: da
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -25,10 +25,10 @@ Ny til kommandolinjen? Læs [Før du går i gang](before-you-start.md) først.
 3. For et stort et vælger du en region: `--around <lat> <lon> <km>` (et kvadrat
    så mange km til hver side af et punkt) eller `--bounds X0 Z0 X1 Z1` i DCS-meter.
    Giv den et navn med `--name`.
-4. Kommandoen udskriver flagene, mens den læser dem, antallet af trekanter, den
+4. Kommandoen udskriver fliserne, mens den læser dem, antallet af trekanter, den
    skrevne fil, og hvor mange af teatrets byer der lander på jorden - en kontrol
    af projektionen, som bør stå "N af N".
-5. Indlæs `<folder>/<name>.glb` i fremviserens Baggrund / bane-panel, og slå
+5. Indlæs `<folder>/<name>.glb` i viewerens Baggrund / bane-panel, og slå
    **Optaget farve** til for at se jordklasserne.
 
 ![level på en syntetisk installation](../assets/img/level.svg)
@@ -47,7 +47,7 @@ En region af det samme syntetiske teater, efter DCS-meter:
 | `--name NAME` | teatrets | banens navn, og dens filers |
 | `--around LAT LON KM` | - | kun et kvadrat så mange km til hver side af et punkt |
 | `--bounds X0 Z0 X1 Z1` | - | kun denne boks, i DCS-meter (x nord, z øst) |
-| `--cell M` | `0` | tynd nettet ud: hver vertex inden for *M* meter bliver til én (0: spillets egne trekanter) |
+| `--cell M` | `0` | tynder nettet ud: hvert hjørnepunkt inden for *M* meter bliver til ét (0: spillets egne trekanter) |
 | `--seabed` | fra | behold havbunden som jord (som standard udelades den) |
 | `--no-water` | fra | udelad det flade hav |
 | `--no-buildings` | fra | udelad teatrets bygninger i scenen |
@@ -60,7 +60,7 @@ Hver valgmulighed, som programmet udskriver den: [Kommandoreference](../cli-refe
 
 Spillets net er adaptivt - åbent hav i trekanter flere kilometer på tværs, kyster
 og veje i få meter. Et lille teater er nogle få millioner trekanter; de store
-er titalls millioner vertices. Over 30 millioner vertices at læse stopper `level`
+er titalls millioner hjørnepunkter. Over 30 millioner hjørnepunkter at læse stopper `level`
 (exit-status 1) og beder om en region, et tyndere net (`--cell 50`) eller
 `--force`.
 

@@ -3,7 +3,7 @@ title: "E Level bauen: level"
 nav_order: 3
 lang: lb
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -20,7 +20,7 @@ heat3d-dcs-maps level <theatre> -o <folder> [--dcs FOLDER] [--name NAME]
 
 Nei op der Kommandozeil? Liest fir d'éischt [Ier Dir ufänkt](before-you-start.md).
 
-1. Fannt den Ordnernumm vum Theater mat [`list`](list.md).
+1. Fannt den Dossiernumm vum Theater mat [`list`](list.md).
 2. Fir e klengt Theater: ganz bauen: `heat3d-dcs-maps level <theatre> -o levels`.
 3. Fir e grousst: eng Regioun auswielen: `--around <lat> <lon> <km>` (e Quadrat, dat
    sou vill km op all Säit vun engem Punkt geet) oder `--bounds X0 Z0 X1 Z1` a DCS-Meter.
@@ -28,7 +28,7 @@ Nei op der Kommandozeil? Liest fir d'éischt [Ier Dir ufänkt](before-you-start.
 4. De Kommando gëtt d'Kachele aus, wéi en se liest, d'Dräieckszuel, d'Datei,
    déi geschriwwe gouf, a wéi vill vun de Stied vum Theater um Buedem landen - e
    Check vun der Projektioun, dee "N of N" soe soll.
-5. Lued `<folder>/<name>.glb` am Level-Panneau vum Viewer a schalt
+5. Lued `<folder>/<name>.glb` am Panel „Hannergrond / Level“ vum Viewer a schalt
    **Captured colour** un, fir d'Buedemklassen ze gesinn.
 
 ![level op enger syntheteschen Installatioun](../assets/img/level.svg)
@@ -41,12 +41,12 @@ Eng Regioun vum selwechte syntheteschen Theater, no DCS-Meter:
 
 | Optioun | Standard | Mécht |
 |---|---|---|
-| `theatre` | - | den Ordnernumm ënner `Mods\terrains`, wéi `list` en ausgëtt (all Schreifweis) |
-| `-o`, `--out` | erfuerderlech | den Ordner, an deen `<name>.glb` an `<name>.json` geschriwwe ginn |
-| `--dcs FOLDER` | fonnt | den DCS-World-Ordner ([wou en fonnt gëtt](list.md#where-the-install-is-found)) |
+| `theatre` | - | den Dossiernumm ënner `Mods\terrains`, wéi `list` en ausgëtt (all Schreifweis) |
+| `-o`, `--out` | erfuerderlech | den Dossier, an deen `<name>.glb` an `<name>.json` geschriwwe ginn |
+| `--dcs FOLDER` | fonnt | den DCS-World-Dossier ([wou en fonnt gëtt](list.md#where-the-install-is-found)) |
 | `--name NAME` | dee vum Theater | den Numm vum Level, a vu senge Dateien |
 | `--around LAT LON KM` | - | nëmmen e Quadrat, dat sou vill km op all Säit vun engem Punkt geet |
-| `--bounds X0 Z0 X1 Z1` | - | nëmmen dës Këscht, a DCS-Meter (x Norden, z Osten) |
+| `--bounds X0 Z0 X1 Z1` | - | nëmmen dës Këscht, a DCS-Meter (x Norden, z Ouschten) |
 | `--cell M` | `0` | d'Mesh verdënnen: all Vertex bannent *M* Meter gëtt een (0: dem Spill seng eegen Dräiecker) |
 | `--seabed` | aus | de Mieresbuedem als Buedem halen (standardméisseg gëtt en ausgelooss) |
 | `--no-water` | aus | dat flaacht Mier auslooss |

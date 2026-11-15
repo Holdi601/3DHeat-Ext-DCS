@@ -13,7 +13,7 @@ search_exclude: true
 heat3d-dcs-maps fit <recording>
 ```
 
-Sérhvert leiksvæði er Transverse Mercator vörpun með eigin fasta. Tólið
+Sérhvert leiksvæði er Transverse Mercator vörpun með eigin fasta. Verkfærið
 þekkir þá fyrir leiksvæðin sem það var prófað á; fyrir svæði sem það þekkir ekki
 finnur `fit` þá úr hvaða upptöku sem er sem geymir bæði breiddar-/lengdargráðu
 og DCS-metra, til dæmis 3DHeat Watcher lotu af einu flugi.

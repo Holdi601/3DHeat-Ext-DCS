@@ -20,7 +20,7 @@ Ny til kommandolinjen? Læs [Før du går i gang](before-you-start.md) først.
    eller nyere; det henter numpy med sig, og pyarrow til `fit` på en `.parquet`).
 2. Kør `heat3d-dcs-maps list`.
 3. Hvert installeret teater udskriver én linje: dets mappenavn (det navn de andre
-   kommandoer tager), størrelsen af dets jordfil, dets flager og vertices,
+   kommandoer tager), størrelsen af dets jordfil, dets fliser og hjørnepunkter,
    om dets breddegrad/længdegrad-projektion er kendt, og om det kan læses.
    Du bør se `readable` til sidst på hver linje.
 

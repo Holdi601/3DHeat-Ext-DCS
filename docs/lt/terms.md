@@ -43,7 +43,7 @@ išvestinis kūrinys. Skaitytuvo naudojimas yra jūsų sprendimas, skirtas jūs�
 žiūrėti, o ne dalintis ar skelbti. Todėl tai atskiras paketas.
 
 Sankcionuota alternatyva, kuri neskaito failų: pačios simuliacijos misijų scenarijai gali išmatuoti reljefą (`land.getHeight`,
-`land.getSurfaceType`) ir išvardyti oro bazes (`world.getAirbases`), kol misija vykdoma. Tam reikia DCS veikiančio valandas kiekvienam
+`land.getSurfaceType`) ir išvardyti oro bazes (`world.getAirbases`), kol misija vykdoma. Tam reikia DCS veikiančio kelias valandas kiekvienam
 teatrui ir jis duoda grubesnį tinklelį; jis nebuvo sukurtas, nes failai pasirodė skaitomi.
 
 ## Licencija ir šaltiniai {#licence-and-sources}

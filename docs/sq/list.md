@@ -13,7 +13,7 @@ search_exclude: true
 heat3d-dcs-maps list [--dcs FOLDER]
 ```
 
-Je i ri me vijën e komandës? Lexo së pari [Para se të fillosh](before-you-start.md).
+Je i ri me rreshtin e komandave? Lexo së pari [Para se të fillosh](before-you-start.md).
 
 1. Instalo një herë: `git clone https://github.com/Holdi601/3DHeat-Ext-DCS`, hap
    një terminal në atë dosje dhe ekzekuto `python -m pip install -e .` (Python 3.10
@@ -26,7 +26,7 @@ Je i ri me vijën e komandës? Lexo së pari [Para se të fillosh](before-you-st
 
 ![list mbi një instalim sintetik](../assets/img/list.svg)
 
-Fotoja është një ekzekutim mbi një instalim që e ndërtojnë testet (`tests/synth.py`), jo mbi
+Pamja është një ekzekutim mbi një instalim që e ndërtojnë testet (`tests/synth.py`), jo mbi
 lojën.
 
 ## Ku gjendet instalimi {#where-the-install-is-found}
@@ -39,4 +39,4 @@ dosjet e zakonshme.
 |---|---|
 | `--dcs FOLDER` | dosja e DCS World, ajo që mban `Mods\terrains` |
 
-Kodi i daljes: 0 u krye, 2 nuk u gjet instalim ose teatër.
+Statusi i daljes: 0 u krye, 2 nuk u gjet instalim ose teatër.

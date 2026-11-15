@@ -3,7 +3,7 @@ title: "Að smíða borð: level"
 nav_order: 3
 lang: is
 source: level.md
-source_hash: "4035671e5fed"
+source_hash: "994b156c7213"
 nav_exclude: true
 search_exclude: true
 ---
@@ -18,7 +18,7 @@ heat3d-dcs-maps level <theatre> -o <folder> [--dcs FOLDER] [--name NAME]
 
 ## Skref fyrir skref {#step-by-step}
 
-Ertu ný/r í skipanalínunni? Lestu fyrst [Áður en þú byrjar](before-you-start.md).
+Hefurðu aldrei notað skipanalínu? Lestu fyrst [Áður en þú byrjar](before-you-start.md).
 
 1. Finndu möppuheiti leiksvæðisins með [`list`](list.md).
 2. Fyrir lítið leiksvæði, smíðaðu það í heild: `heat3d-dcs-maps level <theatre> -o levels`.
@@ -52,7 +52,7 @@ Svæði af sama gervileiksvæði, eftir DCS-metrum:
 | `--no-water` | af | sleppa flata sjónum |
 | `--no-buildings` | af | sleppa byggingum senu leiksvæðisins |
 | `--force` | af | flytja út mjög stórt kort í heild í fullum smáatriðum |
-| `--projection LON0 FE FN` | leiksvæðisins | Transverse Mercator fastar fyrir leiksvæði sem þetta tól þekkir ekki ([fit](fit.md)) |
+| `--projection LON0 FE FN` | leiksvæðisins | Transverse Mercator fastar fyrir leiksvæði sem þetta verkfæri þekkir ekki ([fit](fit.md)) |
 
 Hver valkostur, eins og forritið prentar hann: [Skipanayfirlit](../cli-reference.md).
 

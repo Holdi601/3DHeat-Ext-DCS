@@ -32,12 +32,12 @@ metri ta' DCS, bħal sessjoni tal-Watcher ta' 3DHeat ta' titjira waħda.
 Ir-reġistrazzjoni fl-istampa hija disa' punti magħmulin minn projezzjoni magħrufa,
 li `fit` isibha lura sal-millimetru.
 
-| Argument | Tagħmel |
+| Argument | X'jagħmel |
 |---|---|
 | `recording` | `.parquet`, `.jsonl` jew `.csv` b'kolonni `lat`, `lon`, `x`, `z` (metri ta' DCS); ringieli li ma jinqrawx jitqabżu |
 
 Il-projezzjoni hija s-serje ta' Krüger kif tagħtha C. F. F. Karney ("Transverse
 Mercator with an accuracy of a few nanometers", Journal of Geodesy 85, 2011).
 
-Exit status: 0 fit tajjeb (taħt 5 m root mean square); 1 fit ħażin, jew
+Status tal-ħruġ: 0 fit tajjeb (taħt 5 m root mean square); 1 fit ħażin, jew
 inqas minn tliet ringieli użabbli; 2 il-fajl ma nstabx.
