@@ -9,12 +9,16 @@ nav_order: 2
 heat3d-dcs-maps list [--dcs FOLDER]
 ```
 
-1. Install once, from a clone of this repository: `pip install -e .`
-   (Python 3.10 or later; needs numpy, and pyarrow for `fit` on a `.parquet`).
+New to the command line? Read [Before you start](before-you-start.md) first.
+
+1. Install once: `git clone https://github.com/Holdi601/3DHeat-Ext-DCS`, open
+   a terminal in that folder and run `python -m pip install -e .` (Python 3.10
+   or later; it brings numpy, and pyarrow for `fit` on a `.parquet`).
 2. Run `heat3d-dcs-maps list`.
 3. Each installed theatre prints one line: its folder name (the name the other
    commands take), the size of its ground file, its tiles and vertices,
    whether its latitude/longitude projection is known, and whether it reads.
+   You should see `readable` at the end of each line.
 
 ![list on a synthetic install](assets/img/list.svg)
 

@@ -4,9 +4,7 @@ the ground mesh every theatre since terrain version 5 ships in.
 
 Eagle Dynamics documents none of this. What follows was read from the files
 themselves (the data, never the program), and holds for every theatre
-installed at the time of writing: Afghanistan, Caucasus, Falklands, Germany
-Cold War, Iraq, Kola, Mariana Islands, Marianas WWII, Nevada, Normandy 2,
-Persian Gulf, Sinai, Syria, The Channel. The file is not compressed and not
+installed at the time of writing. The file is not compressed and not
 enciphered.
 
     0x00  u32 2, u32 0x30

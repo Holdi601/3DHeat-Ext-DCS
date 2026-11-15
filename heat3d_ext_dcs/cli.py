@@ -329,7 +329,7 @@ def main(argv: list[str] | None = None) -> int:
     p.set_defaults(run=cmd_list)
 
     p = sub.add_parser("level", help="one theatre's ground and sea as a .glb level")
-    p.add_argument("theatre", help="the folder name under Mods\\terrains, e.g. MarianasWWII")
+    p.add_argument("theatre", help="the folder name under Mods\\terrains, as list prints it")
     p.add_argument("-o", "--out", required=True, help="folder to write <name>.glb and <name>.json into")
     p.add_argument("--dcs", help="the DCS World folder")
     p.add_argument("--name", help="the level's name (default: the theatre's)")

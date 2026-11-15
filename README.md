@@ -1,28 +1,66 @@
-# DCS World theatres
+# 3DHeat DCS: DCS World maps as 3D levels
 
-The ground of a DCS World theatre - Normandy 1944, The Channel, Marianas WWII,
-Germany Cold War and the rest - as a 3D level for the 3DHeat viewer, read from
-**your own install**. The 3DHeat world backdrop draws today's earth from open
-data; this draws the game's own map: its terrain, its coast, and the
-airfields, roads, railways and towns of the period the theatre shows.
+**What is it?** A theatre is DCS World's word for a map: a region of the
+world you fly over. This tool turns the ground of one theatre, read from your
+own DCS install, into a 3D model you can fly over in the
+[3DHeat](https://github.com/Holdi601/3DHeat) viewer.
+
+**Why would I use it?** To see your DCS flights over the game's own map -
+its hills, coast, airfields, roads and towns - instead of today's earth.
+
+**Example:** `heat3d-dcs-maps level <theatre> -o levels` -> `levels/<theatre>.glb`
+(the 3D level) + `levels/<theatre>.json` (where it lies on the earth, its
+towns and airfields).
+
+![From a DCS install to a 3DHeat level](docs/assets/img/flow.svg)
+
+**Documentation:** [holdi601.github.io/3DHeat-Ext-DCS](https://holdi601.github.io/3DHeat-Ext-DCS/), a page per
+command with step-by-step use and example output. Part of
+[3DHeat](https://github.com/Holdi601/3DHeat) ([documentation](https://holdi601.github.io/3DHeat/)).
 
 This reader is kept outside the 3DHeat tools on purpose: it reads Eagle
-Dynamics' terrain files, and their licence (below) is strict about that. If it
-ever has to go, nothing else goes with it. The levels it writes stay on your
-machine.
+Dynamics' terrain files, and their licence (below) is strict about that. If
+it ever has to go, nothing else goes with it. The levels it writes stay on
+your machine.
+
+## Install
+
+New to the command line? Read [Before you start](https://holdi601.github.io/3DHeat-Ext-DCS/before-you-start.html) first.
+
+1. Install Python 3.10 or later, and DCS World.
+2. `git clone https://github.com/Holdi601/3DHeat-Ext-DCS` (or download the
+   ZIP) and open a terminal in that folder.
+3. Install the command and list your theatres:
 
 ```bash
-pip install -e .                                          # installs the heat3d-dcs-maps command
-heat3d-dcs-maps list                                      # the theatres installed, and whether each can be read
-heat3d-dcs-maps level MarianasWWII -o levels              # a whole theatre
-heat3d-dcs-maps level Normandy --around 49.19 -0.37 12 -o levels --name Caen   # 12 km either side of Caen
-heat3d-dcs-maps towns TheChannel                          # its place names, with DCS coordinates
+python -m pip install -e .        # installs the heat3d-dcs-maps command
+heat3d-dcs-maps list              # the theatres installed, and whether each can be read
 ```
 
-The install is found from the registry, the Steam libraries and the usual
-folders; `--dcs <folder>` (the one holding `Mods\terrains`) or the `DCS_PATH`
-environment variable say where it is otherwise. Exit status: 0 done, 1
-failed, 2 nothing found.
+You should see one line per installed theatre: its name, its size, and `readable`.
+
+![list on a synthetic install](docs/assets/img/list.svg)
+
+## Commands
+
+| Command | Does | Page |
+|---|---|---|
+| `list [--dcs FOLDER]` | the theatres installed, and whether each can be read | [list](https://holdi601.github.io/3DHeat-Ext-DCS/list.html) |
+| `level <theatre> -o <folder>` | one theatre's ground, sea and buildings as a `.glb` level | [level](https://holdi601.github.io/3DHeat-Ext-DCS/level.html) |
+| `towns <theatre>` | the theatre's place names, with DCS coordinates, as JSON | [towns](https://holdi601.github.io/3DHeat-Ext-DCS/towns.html) |
+| `fit <recording>` | find a theatre's projection from a recording | [fit](https://holdi601.github.io/3DHeat-Ext-DCS/fit.html) |
+
+```bash
+heat3d-dcs-maps level <theatre> -o levels                                      # a whole (small) theatre
+heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name>  # 12 km either side of a point
+heat3d-dcs-maps towns <theatre>                                                # its place names
+```
+
+`<theatre>` is the name `list` prints. The install is found from the
+registry, the Steam libraries and the usual folders; `--dcs <folder>` (the
+one holding `Mods\terrains`) or the `DCS_PATH` environment variable say
+where it is otherwise. Exit status: 0 done; 1 failed (or too large, or for
+`fit` a poor fit); 2 nothing found.
 
 | `level` option | Does |
 |---|---|
@@ -32,25 +70,25 @@ failed, 2 nothing found.
 | `--around LAT LON KM` / `--bounds X0 Z0 X1 Z1` | only a square around a point / a box in DCS metres |
 | `--cell M` | thin the mesh to *M* metres (default 0: the game's own triangles) |
 | `--seabed`, `--no-water`, `--no-buildings` | keep the sea floor; leave out the flat sea; leave out the buildings |
-| `--force` | export a very large map whole at full detail |
+| `--force` | export a very large theatre whole at full detail |
 | `--projection LON0 FE FN` | Transverse Mercator constants for a theatre this tool does not know (see `fit`) |
 
-**Documentation:** [holdi601.github.io/3DHeat-Ext-DCS](https://holdi601.github.io/3DHeat-Ext-DCS/), a page per command with step-by-step use and example output. This converter is part of [3DHeat](https://github.com/Holdi601/3DHeat) ([documentation](https://holdi601.github.io/3DHeat/)); the telemetry these levels carry, and the viewer's one-file-a-match container, are described in [One file a match (.3dheat)](https://holdi601.github.io/3DHeat/container.html).
-
-![From a DCS install to a 3DHeat level](docs/assets/img/flow.svg)
+Every option, as the program prints it: [Command reference](https://holdi601.github.io/3DHeat-Ext-DCS/cli-reference.html).
 
 ## What comes out
 
-`<out>/<name>.glb` and `<name>.json` beside it.
+`<out>/<name>.glb` (a glTF binary level) and `<name>.json` beside it. Levels
+are not match files: the viewer's one-file-a-match container
+([One file a match (.3dheat)](https://holdi601.github.io/3DHeat/container.html))
+holds the telemetry you load on top.
 
 | Part | What it is |
 |---|---|
 | `ground:<Level>` | the terrain's own triangles, coloured by what the game draws over each |
 | `water:<Level>` | every triangle the game marks as under the sea, laid flat at sea level |
-| `structure:<Level>` | the theatre's buildings as boxes, where the game places them (below) |
+| `structure:<Level>` | the theatre's buildings as boxes, where the game places them |
 
-The colours show with **Captured colour** in the viewer's level panel. Each
-ground triangle takes the class of the overlay the game draws it with:
+The colours show with **Captured colour** in the viewer's level panel:
 
 | Class | Colour | From the game's overlay |
 |---|---|---|
@@ -64,128 +102,31 @@ ground triangle takes the class of the overlay the game draws it with:
 | field | light green | `Field`, `Grass` |
 | forest | dark green | `Forest`, `Trees` |
 | land | khaki | none of these |
+| seabed | slate blue | only with `--seabed` |
 
-Where several overlays draw the same triangle, the order of the table decides
-(a road through a forest is road). Every overlay triangle is one of the
-ground's own - checked on all classes of two theatres, every one matched - so
-the classes are exact, not guessed from nearby points.
+**Coordinates** are DCS's own world metres: x north, y up, z east, the same
+as the glTF axes. Telemetry in DCS metres - the 3DHeat Watcher's DCS hook
+writes exactly that - lands on the level with no placement step.
+`<name>.json` carries the theatre's projection, the level's corners in
+latitude and longitude, and its towns, airfields and buildings: see
+[The level files](https://holdi601.github.io/3DHeat-Ext-DCS/output.html).
 
-**Coordinates** are DCS's own world metres: x north, y up, z east, and the
-glTF axes are the same (X = x, Y = y, Z = z). Telemetry in DCS metres - the
-3DHeat Watcher's DCS hook writes exactly that - lands on the level with the
-viewer's defaults (Y up, scale 1) and no placement step.
+## The 3DHeat tools
 
-**Latitude and longitude:** every theatre is a Transverse Mercator projection
-with its own constants; `<name>.json` carries them, the level's corners in
-latitude and longitude, and every town with both its latitude/longitude and
-its DCS x/z. Iraq's constants are not published; the ones used are fitted to
-the 43 beacons the theatre's own `beacons.lua` gives both ways (4 cm root mean
-square; the same fit gives Caucasus, Syria and Sinai back to the millimetre).
-For a theatre without constants, `fit` finds them from any recording that
-holds both, such as a Watcher session of one flight:
-
-```bash
-heat3d-dcs-maps fit "<session>/heat.parquet"   # or .jsonl / .csv with lat, lon, x, z
-heat3d-dcs-maps level <theatre> --projection <LON0> <FE> <FN> -o levels --around 33.3 44.4 30
-```
-
-**The sea floor** is left out (a flight-sim heatmap does not need the bottom
-of the Pacific); `--seabed` keeps it as ground. `--no-water` leaves out the
-flat sea.
-
-**Size.** The game's mesh is adaptive - open sea in triangles kilometres
-across, coasts and roads in a few metres - and the whole of a small theatre
-is a few million triangles (Marianas WWII: 5.7 million vertices). The big ones
-are 35 to 90 million vertices; for those, `level` asks for a region
-(`--around LAT LON KM`, or `--bounds X0 Z0 X1 Z1` in DCS metres) or a thinner
-mesh (`--cell 50`: every vertex within 50 m becomes one), or `--force`.
-
-**Airfields.** Each `AirfieldsTaxiways/<name>.rn4` holds one airfield's taxi
-network, named after it; its points are (x, y, z) doubles in DCS metres. The
-level's `.json` lists every airfield inside the region with its name (the
-file's), the middle of its points' box, the box, and the ground there. On
-Caucasus all 21 files read, each placed on its field (Beslan 89 m, Kutaisi
-191 m from the surveyed airport reference point: the middle of the taxiways,
-not the runway's).
-
-**Buildings.** `Scenes/<theatre>.scn5` places every object of the theatre
-(Caucasus: 15.6 million - trees, lamps, fences, wires, houses). The ones
-that are buildings by name and size (houses, flats, sheds, hangars,
-factories, towers, terminals: 171 of Caucasus' 615 models, 568,000
-placements) are drawn as boxes: each model's own bounding box from the
-file, turned to its heading and standing where the game puts it, from up to
-3 m below its origin (its footing on a slope) to its top. Trees, shrubs,
-lights, poles, wires, fences, walls, signs, vehicles, wagons, boats, cranes,
-masts, pylons and bridges are left out. No model shape or texture of the
-game is copied: a box per building, coloured by kind (house, block,
-industrial, airfield, tower, other). `<name>.json` lists them too
-(`buildings.rows`: x, z, base, height, half lengths, heading, kind) for the
-viewer's hybrid backdrop, which draws them in the game's towns instead of
-the mapped buildings. `--no-buildings` leaves them out.
-
-`<name>.json` also records the source file, its size and date, the tiles
-read, the triangle count per class, and how many of the theatre's towns land
-on the ground - a check of the projection that should read "N of N".
-
-## What it reads, and how
-
-Only `Mods/terrains/<theatre>/surface/*.surface5` (the ground mesh),
-`Scenes/*.scn5` (where objects stand, and each model's box),
-`AirfieldsTaxiways/*.rn4` and `map/towns.lua` (place names, read as text,
-never run). Not the encrypted
-`terrain.cfg.lua.pak.crypt`, not `manifest.bin`, nothing of the program.
-
-The `.surface5` format is undocumented; the layout, as read from the files,
-is written down in [`heat3d_ext_dcs/surface5.py`](heat3d_ext_dcs/surface5.py).
-In short: an index of tile records (a transform, bounds, and lists of typed
-byte streams, each list followed by the shader and material it is drawn
-with), then the raw data. It is neither compressed nor enciphered. The tile's
-`Pbase` stream holds its vertices; the group drawn as `Land` holds the
-triangles and a `TRITYPE` per triangle, whose lowest bit marks the sea; the
-other groups are the overlays that give the classes above.
-
-## Verified
-
-On the theatres installed on 2026-11-07 (DCS 2.9.30.28738, standalone):
-
-- `list` reads the index of all fourteen: Afghanistan, Caucasus, Falklands,
-  Germany Cold War, Iraq, Kola, Mariana Islands, Marianas WWII, Nevada,
-  Normandy 2, Persian Gulf, Sinai, Syria, The Channel - 5.6 to 91 million
-  ground vertices each, every sampled tile decoding to plausible metres.
-- Marianas WWII, Saipan and Tinian (28 km square): 1.58 million triangles.
-  The 1944 towns from `towns.lua` land 3 to 12 m from a ground vertex, at
-  9 to 63 m above the sea; 6 of 6 on land. The highest ground of the theatre
-  is 973 m (Agrihan's summit is 965 m). Isely Field and the Tinian strips show
-  as runway.
-- Normandy 2, Caen (24 km square): 508,000 triangles, 64 of 64 towns on
-  land (Caen at 3 m on the Orne, Ouistreham 8 m on the coast); Carpiquet
-  airfield, the Orne and its canal, the villages and the roads show in their
-  classes.
-- Both loaded in the viewer (WebGL2 in software), with town markers in the
-  same DCS metres sitting on the ground.
-- Caucasus scene, Beslan and Vladikavkaz (60 km square): 20,887 buildings.
-  Placements land on their ground (an instance's height is the ground's);
-  runway lights trace the game's runway (Beslan: 53 m beside the surveyed
-  one and about 85 m along it, as the runway-coloured ground says too), and
-  wagons and wall segments line up with the decoded heading (297 of 297 and
-  381 of 381).
-- `tests/` builds `.surface5` files to the same layout, so no game data is
-  kept here; `tests/test_real_install.py` runs on the install of the machine
-  running the tests, and is skipped without one.
-
-**Not checked:** the whole of a large theatre in one level (the size guard
-above exists for a reason), and versions of DCS other than the one above.
-
-## Not read
-
-- **Buildings as shapes** (the models are `.edm` in `Models/`): boxes only,
-  on purpose. Their layout, and the scene's, is written down in
-  [`heat3d_ext_dcs/scene5.py`](heat3d_ext_dcs/scene5.py); every theatre
-  installed reads (two older ones, Nevada and The Channel, in a variant
-  layout the reader knows too).
-- Trees, lights and the other objects of the scene: read, not drawn.
-- **The road network as a graph** (`roads/*.rn4`): not decoded.
-- Textures, trees, the sea's waves, the terrain's own lower levels of detail.
+| Tool | What it does | Code | Docs |
+|---|---|---|---|
+| 3DHeat viewer | shows the data: heatmaps, race analysis, match review | [3DHeat](https://github.com/Holdi601/3DHeat) | [docs](https://holdi601.github.io/3DHeat/) |
+| GameFiles | levels and courses from a game's own files | [3DHeat-GameFiles](https://github.com/Holdi601/3DHeat-GameFiles) | [docs](https://holdi601.github.io/3DHeat-GameFiles/) |
+| GameCapture | lap telemetry, and levels rebuilt from gameplay video | [3DHeat-GameCapture](https://github.com/Holdi601/3DHeat-GameCapture) | [docs](https://holdi601.github.io/3DHeat-GameCapture/) |
+| Unreal Exporter | an Unreal Editor plugin: a level as one `.glb` | [3DHeat-UnrealExporter](https://github.com/Holdi601/3DHeat-UnrealExporter) | [docs](https://holdi601.github.io/3DHeat-UnrealExporter/) |
+| CS2 | Counter-Strike 2 demos and maps | [3DHeat-CS2](https://github.com/Holdi601/3DHeat-CS2) | [docs](https://holdi601.github.io/3DHeat-CS2/) |
+| Watcher | records what games publish while you play | [3DHeat-Watcher](https://github.com/Holdi601/3DHeat-Watcher) | [docs](https://holdi601.github.io/3DHeat-Watcher/) |
+| Ext-WarThunder | War Thunder replays | [3DHeat-Ext-WarThunder](https://github.com/Holdi601/3DHeat-Ext-WarThunder) | [docs](https://holdi601.github.io/3DHeat-Ext-WarThunder/) |
+| Ext-WoT | World of Tanks replays | [3DHeat-Ext-WoT](https://github.com/Holdi601/3DHeat-Ext-WoT) | [docs](https://holdi601.github.io/3DHeat-Ext-WoT/) |
+| Ext-WoWs | World of Warships replays | [3DHeat-Ext-WoWs](https://github.com/Holdi601/3DHeat-Ext-WoWs) | [docs](https://holdi601.github.io/3DHeat-Ext-WoWs/) |
+| Ext-Squad | Squad server demos | [3DHeat-Ext-Squad](https://github.com/Holdi601/3DHeat-Ext-Squad) | [docs](https://holdi601.github.io/3DHeat-Ext-Squad/) |
+| Ext-DCS | DCS World maps as 3D levels | [3DHeat-Ext-DCS](https://github.com/Holdi601/3DHeat-Ext-DCS) | [docs](https://holdi601.github.io/3DHeat-Ext-DCS/) |
+| Ext-IL2 | IL-2 Sturmovik maps as 3D levels | [3DHeat-Ext-IL2](https://github.com/Holdi601/3DHeat-Ext-IL2) | [docs](https://holdi601.github.io/3DHeat-Ext-IL2/) |
 
 ## Eagle Dynamics' terms
 

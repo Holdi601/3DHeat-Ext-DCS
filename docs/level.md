@@ -14,6 +14,8 @@ heat3d-dcs-maps level <theatre> -o <folder> [--dcs FOLDER] [--name NAME]
 
 ## Step by step
 
+New to the command line? Read [Before you start](before-you-start.md) first.
+
 1. Find the theatre's folder name with [`list`](list.md).
 2. For a small theatre, build it whole: `heat3d-dcs-maps level <theatre> -o levels`.
 3. For a large one, pick a region: `--around <lat> <lon> <km>` (a square that
@@ -48,11 +50,13 @@ A region of the same synthetic theatre, by DCS metres:
 | `--force` | off | export a very large map whole at full detail |
 | `--projection LON0 FE FN` | the theatre's | Transverse Mercator constants for a theatre this tool does not know ([fit](fit.md)) |
 
+Every option, as the program prints it: [Command reference](cli-reference.md).
+
 ## Size
 
 The game's mesh is adaptive - open sea in triangles kilometres across, coasts
 and roads in a few metres. A small theatre is a few million triangles; the big
-ones are 35 to 90 million vertices. Above 30 million vertices to read, `level`
+ones are tens of millions of vertices. Above 30 million vertices to read, `level`
 stops (exit status 1) and asks for a region, a thinner mesh (`--cell 50`) or
 `--force`.
 

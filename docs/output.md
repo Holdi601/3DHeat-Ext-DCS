@@ -5,6 +5,8 @@ nav_order: 4
 
 # The level files
 
+A level is a 3D model of the ground; a theatre is DCS World's word for a map.
+
 `<out>/<name>.glb` and `<name>.json` beside it.
 
 | Part | What it is |
@@ -13,7 +15,9 @@ nav_order: 4
 | `water:<Level>` | every triangle the game marks as under the sea, laid flat at sea level |
 | `structure:<Level>` | the theatre's buildings as boxes, where the game places them (below) |
 
-![A synthetic theatre's level from above: land, a road, the sea](assets/img/level-top.svg)
+![A synthetic theatre's level from above, coloured by ground class](assets/img/level-top.svg)
+
+The colours are the classes below:
 
 ![Ground classes and their colours](assets/img/classes.svg)
 
@@ -32,10 +36,11 @@ ground triangle takes the class of the overlay the game draws it with:
 | field | light green | `Field`, `Grass` |
 | forest | dark green | `Forest`, `Trees` |
 | land | khaki | none of these |
+| seabed | slate blue | only with `--seabed` |
 
 Where several overlays draw the same triangle, the order of the table decides
 (a road through a forest is road). Every overlay triangle is one of the
-ground's own - checked on all classes of two theatres, every one matched - so
+ground's own - checked on every class of the theatres tried, every one matched - so
 the classes are exact, not guessed from nearby points.
 
 **Coordinates** are DCS's own world metres: x north, y up, z east, and the
@@ -46,37 +51,31 @@ viewer's defaults (Y up, scale 1) and no placement step.
 **Latitude and longitude:** every theatre is a Transverse Mercator projection
 with its own constants; `<name>.json` carries them, the level's corners in
 latitude and longitude, and every town with both its latitude/longitude and
-its DCS x/z. Iraq's constants are not published; the ones used are fitted to
-the 43 beacons the theatre's own `beacons.lua` gives both ways (4 cm root mean
-square; the same fit gives Caucasus, Syria and Sinai back to the millimetre).
+its DCS x/z. Where a theatre's constants are not published, they are fitted
+to the beacons its own `beacons.lua` gives in both frames (a few cm root mean
+square; the same fit gives the published constants of other theatres back to
+the millimetre).
 For a theatre without constants, [`fit`](fit.md) finds them from any
 recording that holds both, such as a Watcher session of one flight.
 
-
-**The sea floor** is left out (a flight-sim heatmap does not need the bottom
-of the Pacific); `--seabed` keeps it as ground. `--no-water` leaves out the
+**The sea floor** is left out (a flight-sim heatmap does not need the sea
+floor); `--seabed` keeps it as ground. `--no-water` leaves out the
 flat sea.
 
-**Size.** The game's mesh is adaptive - open sea in triangles kilometres
-across, coasts and roads in a few metres - and the whole of a small theatre
-is a few million triangles (Marianas WWII: 5.7 million vertices). The big ones
-are 35 to 90 million vertices; for those, `level` asks for a region
-(`--around LAT LON KM`, or `--bounds X0 Z0 X1 Z1` in DCS metres) or a thinner
-mesh (`--cell 50`: every vertex within 50 m becomes one), or `--force`.
+**Size.** See [Building a level: Size](level.md#size).
 
 **Airfields.** Each `AirfieldsTaxiways/<name>.rn4` holds one airfield's taxi
 network, named after it; its points are (x, y, z) doubles in DCS metres. The
 level's `.json` lists every airfield inside the region with its name (the
-file's), the middle of its points' box, the box, and the ground there. On
-Caucasus all 21 files read, each placed on its field (Beslan 89 m, Kutaisi
-191 m from the surveyed airport reference point: the middle of the taxiways,
-not the runway's).
+file's), the middle of its points' box, the box, and the ground there. On the theatre tried, every airfield file read, each placed on its field
+(within a few hundred metres of the surveyed airport reference point: the
+middle of the taxiways, not the runway's).
 
 **Buildings.** `Scenes/<theatre>.scn5` places every object of the theatre
-(Caucasus: 15.6 million - trees, lamps, fences, wires, houses). The ones
+(millions of them - trees, lamps, fences, wires, houses). The ones
 that are buildings by name and size (houses, flats, sheds, hangars,
-factories, towers, terminals: 171 of Caucasus' 615 models, 568,000
-placements) are drawn as boxes: each model's own bounding box from the
+factories, towers, terminals: a fraction of the models, hundreds of
+thousands of placements) are drawn as boxes: each model's own bounding box from the
 file, turned to its heading and standing where the game puts it, from up to
 3 m below its origin (its footing on a slope) to its top. Trees, shrubs,
 lights, poles, wires, fences, walls, signs, vehicles, wagons, boats, cranes,
