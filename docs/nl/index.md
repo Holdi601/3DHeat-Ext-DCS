@@ -51,6 +51,8 @@ Laad daarna `levels/<name>.glb` in het paneel Achtergrond / level van de viewer
 De levels die het schrijft, zijn gemaakt uit de gegevens van het spel: ze blijven **op jouw computer**,
 om te bekijken, niet om te delen of te publiceren ([Voorwaarden](terms.md)).
 
+Elke spellezer is een eigen klein project met een eigen licentiebestand, eigen releases en een eigen issuetracker, zodat hij los kan worden geïnstalleerd, bijgewerkt, onderhouden - of op verzoek van een rechthebbende teruggetrokken - zonder dat de viewer of de andere tools daar last van hebben.
+
 ## Pagina's {#pages}
 
 | Pagina | Wat die behandelt |
@@ -62,7 +64,7 @@ om te bekijken, niet om te delen of te publiceren ([Voorwaarden](terms.md)).
 | [Plaatsnamen: towns](towns.md) | de steden van een thema met DCS-coördinaten |
 | [Projecties: fit](fit.md) | de projectie van een thema vinden uit een opname |
 | [Hoe de bestanden worden gelezen](reading.md) | de formaten, wat is gecontroleerd, wat niet wordt gelezen |
-| [Voorwaarden en licentie](terms.md) | de licentie van Eagle Dynamics, en waarom dit een apart pakket is |
+| [Voorwaarden en licentie](terms.md) | wat er gelezen wordt, wat er niet meegeleverd wordt, de licentie |
 | [Commandoreferentie](../cli-reference.md) | elke optie, gegenereerd uit de code |
 | [Deze documentatie onderhouden](maintaining.md) | de checklist per release |
 

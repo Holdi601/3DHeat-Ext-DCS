@@ -52,6 +52,8 @@ Nato naloži `levels/<ime>.glb` na plošči Ozadje / nivo pregledovalnika
 Ravni, ki jih zapiše, so zgrajene iz igrinih podatkov in ostanejo **na tvojem računalniku**, za
 ogled, ne za deljenje ali objavo ([Pogoji](terms.md)).
 
+Vsak bralnik igre je samostojen majhen projekt z lastno licenčno datoteko, lastnimi izdajami in lastnim sledilnikom težav, zato ga je mogoče namestiti, posodobiti, vzdrževati - ali na zahtevo imetnika pravic umakniti - samostojno, ne da bi to vplivalo na pregledovalnik ali druga orodja.
+
 ## Strani {#pages}
 
 | Stran | Kaj obravnava |
@@ -63,7 +65,7 @@ ogled, ne za deljenje ali objavo ([Pogoji](terms.md)).
 | [Imena krajev: towns](towns.md) | mesta teatra z DCS koordinatami |
 | [Projekcije: fit](fit.md) | iskanje projekcije teatra iz posnetka |
 | [Kako se datoteke berejo](reading.md) | formati, kaj je bilo preverjeno, kaj ni prebrano |
-| [Pogoji in licenca](terms.md) | licenca podjetja Eagle Dynamics in zakaj je to ločen paket |
+| [Pogoji in licenca](terms.md) | kaj se bere, kaj ni priloženo, licenca |
 | [Priročnik ukazov](../cli-reference.md) | vsaka možnost, ustvarjena iz kode |
 | [Vzdrževanje teh strani](maintaining.md) | kontrolni seznam ob izdaji |
 

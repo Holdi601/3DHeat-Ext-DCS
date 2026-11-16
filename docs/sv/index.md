@@ -44,6 +44,8 @@ Läs sedan in `levels/<name>.glb` i visarens panel Bakgrund / nivå
 
 Nivåerna den skriver är byggda av spelets data: de stannar på **din dator**, för att titta på, inte för att dela eller publicera ([Villkor](terms.md)).
 
+Varje spelläsare är ett eget litet projekt med egen licensfil, egna releaser och egen ärendehantering, så att den kan installeras, uppdateras, underhållas - eller dras tillbaka på begäran av en rättighetsinnehavare - för sig själv, utan att visaren eller de andra verktygen påverkas.
+
 ## Sidor {#pages}
 
 | Sida | Vad den täcker |
@@ -55,7 +57,7 @@ Nivåerna den skriver är byggda av spelets data: de stannar på **din dator**, 
 | [Ortnamn: towns](towns.md) | en teaters städer med DCS-koordinater |
 | [Projektioner: fit](fit.md) | att hitta en teaters projektion från en inspelning |
 | [Så läses filerna](reading.md) | formaten, vad som kontrollerats, vad som inte läses |
-| [Villkor och licens](terms.md) | Eagle Dynamics licens, och varför detta är ett separat paket |
+| [Villkor och licens](terms.md) | vad som läses, vad som inte följer med, licensen |
 | [Kommandoreferens](../cli-reference.md) | varje alternativ, genererat från koden |
 | [Underhålla dokumentationen](maintaining.md) | checklistan för utgivning |
 

@@ -54,6 +54,8 @@ Hladdu síðan `levels/<name>.glb` í spjaldinu Bakgrunnur / borð í skoðaranu
 Borðin sem það skrifar eru smíðuð úr gögnum leiksins: þau haldast **á þinni
 vél**, til að skoða, ekki til að deila eða birta ([Skilmálar](terms.md)).
 
+Hver leikjalesari er sitt eigið litla verkefni með eigin leyfisskrá, eigin útgáfur og eigin verkbeiðnalista, svo hægt er að setja hann upp, uppfæra, viðhalda - eða draga hann til baka að beiðni rétthafa - einan og sér, án þess að það hafi áhrif á skoðarann eða hin verkfærin.
+
 ## Síður {#pages}
 
 | Síða | Hvað hún fjallar um |
@@ -65,7 +67,7 @@ vél**, til að skoða, ekki til að deila eða birta ([Skilmálar](terms.md)).
 | [Staðarnöfn: towns](towns.md) | bæir leiksvæðis með DCS-hnitum |
 | [Vörpun: fit](fit.md) | að finna vörpun leiksvæðis úr upptöku |
 | [Hvernig skrárnar eru lesnar](reading.md) | sniðin, hvað var staðfest, hvað er ekki lesið |
-| [Skilmálar og leyfi](terms.md) | leyfi Eagle Dynamics og hvers vegna þetta er sérstakur pakki |
+| [Skilmálar og leyfi](terms.md) | hvað er lesið, hvað fylgir ekki með, leyfið |
 | [Skipanayfirlit](../cli-reference.md) | hver valkostur, búið til úr kóðanum |
 | [Viðhald þessara skjala](maintaining.md) | gátlisti útgáfu |
 

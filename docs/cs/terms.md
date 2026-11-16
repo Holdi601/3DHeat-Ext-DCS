@@ -3,51 +3,21 @@ title: "Podmínky a licence"
 nav_order: 8
 lang: "cs"
 source: terms.md
-source_hash: "677b443e2bb8"
+source_hash: "5b8e45352dae"
 nav_exclude: true
 search_exclude: true
 ---
 # Podmínky a licence {#terms-and-licence}
 
-## Podmínky Eagle Dynamics {#eagle-dynamics-terms}
+## Co čtečka čte {#what-the-reader-reads}
 
-Přečteno 2026-11-07 ze souboru `Doc/license_en.txt` instalace (DCS World
-End-User Licence Agreement, The Fighter Collection Ltd). Licencovaný „Program“
-zahrnuje „THE DATA SUPPLIED WITH IT“. Článek 3.1:
+Čtečka čte datové soubory vaší vlastní instalace DCS World na vašem počítači ([Jak se soubory čtou](reading.md)). Ve hře nic nemění a s žádným serverem nekomunikuje.
 
-> Except as expressly set out in this Licence or in clauses 4.1 and 4.2
-> below, or as permitted by any local law, you undertake to use the Program
-> for your own personal use, and you shall not: [...]
->
-> (c) not to disassemble, decompile, reverse engineer or create derivative
-> works based on the whole, or any part, of the Program nor attempt to do any
-> such things except to the extent that (by virtue of section 296A of the
-> Copyright, Designs and Patents Act 1988) such actions cannot be prohibited
-> because they are essential for the purpose of achieving inter-operability
-> of the Program with another software program, and provided that the
-> information obtained by you during such activities: (i) is used only for
-> the purpose of achieving inter-operability of the Program with another
-> software program; and (ii) is not unnecessarily disclosed or communicated
-> to any third party without the TFC's prior written consent; and (iii) is
-> not used to create any software which is substantially similar to the
-> Program.
+Nic ze hry se nedodává ani dále nešíří: žádné soubory hry, žádný kód hry, žádné knihovny DLL; testy si každý soubor, který čtou, vytvoří samy. Úrovně, které zapíše, zůstávají na vašem počítači.
 
-Článek 3.1 (a) zakazuje „sell, trade, rent, lease, sub-license, merge,
-adapt, vary, modify the Program“ bez souhlasu a (e) zakazuje „exploit this
-Program or any of its parts commercially“ (komerčně využívat tento Program
-nebo jakoukoli jeho část).
+3DHeat DCS není přidružen k Eagle Dynamics ani jím schválen. DCS World a související názvy a ochranné známky patří jejich vlastníkům.
 
-Co tato čtečka dělá: čte datové soubory na vašem počítači, poté co jste je nainstalovali, mimo
-hru. Nic ve hře nemění, nelame žádné šifrování (jediný šifrovaný soubor ve složce terénu zůstává
-nedotčen) a nekomunikuje s žádným serverem. Zjišťování rozložení datového souboru je zpětné
-inženýrství ve smyslu článku 3.1 (c) a úroveň postavená z terénu hry je sporně odvozené dílo.
-Použití čtečky je vaše rozhodnutí, pro vaše vlastní účely; úrovně, které zapisuje, si smíte
-prohlížet, ne sdílet nebo zveřejňovat. Proto je to samostatný balíček.
-
-Schválená alternativa, která žádný soubor nečte: vlastní skriptování mise v simulátoru umí
-vzorkovat terén (`land.getHeight`, `land.getSurfaceType`) a vypsat letiště (`world.getAirbases`),
-dokud mise běží. Vyžaduje to běžící DCS po hodiny na území a dává hrubší mřížku; nebylo to
-postaveno, protože soubory se ukázaly jako čitelné.
+Držitelé práv: založte hlášení na [github.com/Holdi601/3DHeat-Ext-DCS/issues](https://github.com/Holdi601/3DHeat-Ext-DCS/issues) - odpovídáme rychle a na požádání cokoli odstraníme.
 
 ## Licence a zdroje {#licence-and-sources}
 

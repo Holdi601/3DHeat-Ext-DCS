@@ -3,52 +3,21 @@ title: "Voorwaarden en licentie"
 nav_order: 8
 lang: "nl"
 source: terms.md
-source_hash: "677b443e2bb8"
+source_hash: "5b8e45352dae"
 nav_exclude: true
 search_exclude: true
 ---
 # Voorwaarden en licentie {#terms-and-licence}
 
-## De voorwaarden van Eagle Dynamics {#eagle-dynamics-terms}
+## Wat de lezer leest {#what-the-reader-reads}
 
-Gelezen op 2026-11-07 uit `Doc/license_en.txt` van de installatie (DCS World
-End-User Licence Agreement, The Fighter Collection Ltd). Het gelicentieerde
-"Program" omvat "THE DATA SUPPLIED WITH IT". Clausule 3.1:
+De lezer leest gegevensbestanden van je eigen DCS World-installatie op je computer ([Hoe de bestanden worden gelezen](reading.md)). Hij verandert niets aan het spel en praat met geen enkele server.
 
-> Except as expressly set out in this Licence or in clauses 4.1 and 4.2
-> below, or as permitted by any local law, you undertake to use the Program
-> for your own personal use, and you shall not: [...]
->
-> (c) not to disassemble, decompile, reverse engineer or create derivative
-> works based on the whole, or any part, of the Program nor attempt to do any
-> such things except to the extent that (by virtue of section 296A of the
-> Copyright, Designs and Patents Act 1988) such actions cannot be prohibited
-> because they are essential for the purpose of achieving inter-operability
-> of the Program with another software program, and provided that the
-> information obtained by you during such activities: (i) is used only for
-> the purpose of achieving inter-operability of the Program with another
-> software program; and (ii) is not unnecessarily disclosed or communicated
-> to any third party without the TFC's prior written consent; and (iii) is
-> not used to create any software which is substantially similar to the
-> Program.
+Niets uit het spel wordt meegeleverd of verspreid: geen spelbestanden, geen spelcode, geen DLL's; de tests bouwen elk bestand dat ze lezen zelf. De levels die hij schrijft blijven op je computer.
 
-Clausule 3.1 (a) verbiedt om het Programma "sell, trade, rent, lease, sub-license, merge,
-adapt, vary, modify the Program" te verkopen, verhandelen, verhuren, in sublicentie geven, samenvoegen,
-aanpassen, wijzigen zonder toestemming, en (e) om "exploit this
-Program or any of its parts commercially" commercieel te exploiteren.
+3DHeat DCS is niet verbonden aan en niet goedgekeurd door Eagle Dynamics. DCS World en bijbehorende namen en handelsmerken zijn van hun eigenaars.
 
-Wat deze lezer doet: hij leest gegevensbestanden op je eigen computer, nadat je ze hebt geïnstalleerd,
-buiten het spel. Hij verandert niets aan het spel, breekt geen versleuteling (het ene versleutelde
-bestand in een terreinmap wordt met rust gelaten) en praat met geen server. Uitzoeken hoe een
-gegevensbestand is opgebouwd, is reverse engineering in de zin van 3.1 (c), en een level dat uit het
-terrein van het spel is gebouwd, is naar alle waarschijnlijkheid een afgeleid werk. Het gebruik van de
-lezer is jouw beslissing, voor eigen gebruik; de levels die hij schrijft mag jij bekijken, niet delen
-of publiceren. Daarom is het een apart pakket.
-
-Het toegestane alternatief, dat geen bestand leest: het eigen missiescript van de simulator kan de grond
-bemonsteren (`land.getHeight`, `land.getSurfaceType`) en luchthavens opsommen (`world.getAirbases`)
-terwijl een missie draait. Dat vraagt uren DCS-gebruik per thema en geeft een grover raster; het is
-niet gebouwd, omdat de bestanden leesbaar bleken.
+Rechthebbenden: open een issue op [github.com/Holdi601/3DHeat-Ext-DCS/issues](https://github.com/Holdi601/3DHeat-Ext-DCS/issues) - we reageren snel en verwijderen alles op verzoek.
 
 ## Licentie en bronnen {#licence-and-sources}
 

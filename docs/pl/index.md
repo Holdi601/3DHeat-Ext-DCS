@@ -50,6 +50,8 @@ Potem wczytaj `levels/<name>.glb` w panelu **Tło / poziom** przeglądarki
 Poziomy, które narzędzie zapisuje, są zbudowane z danych gry: zostają **na twoim komputerze**,
 do oglądania, a nie do udostępniania ani publikowania ([Warunki](terms.md)).
 
+Każdy czytnik gry to osobny mały projekt z własnym plikiem licencji, własnymi wydaniami i własnym systemem zgłoszeń, więc można go instalować, aktualizować, utrzymywać - albo wycofać na prośbę właściciela praw - osobno, bez wpływu na przeglądarkę i pozostałe narzędzia.
+
 ## Strony {#pages}
 
 | Strona | Czego dotyczy |
@@ -61,7 +63,7 @@ do oglądania, a nie do udostępniania ani publikowania ([Warunki](terms.md)).
 | [Nazwy miejsc: towns](towns.md) | miasta teatru ze współrzędnymi DCS |
 | [Projekcje: fit](fit.md) | wyznaczanie projekcji teatru z nagrania |
 | [Jak czytane są pliki](reading.md) | formaty, co zostało sprawdzone, czego nie odczytujemy |
-| [Warunki i licencja](terms.md) | licencja Eagle Dynamics i to, dlaczego to osobny pakiet |
+| [Warunki i licencja](terms.md) | co jest czytane, czego nie dołączamy, licencja |
 | [Opis poleceń](../cli-reference.md) | każda opcja, generowana z kodu |
 | [Utrzymanie tych stron](maintaining.md) | lista kontrolna wydania |
 

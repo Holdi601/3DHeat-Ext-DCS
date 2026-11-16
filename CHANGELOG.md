@@ -24,6 +24,6 @@ Where each feature is documented
 | Place names (`towns`) | [Place names: towns](docs/towns.md) |
 | Projections (`fit`, `--projection`) | [Projections: fit](docs/fit.md) |
 | How the files are read, what was checked, what is not read | [How the files are read](docs/reading.md) |
-| Eagle Dynamics' licence | [Terms and licence](docs/terms.md) |
+| What is read, what is not shipped, the licence | [Terms and licence](docs/terms.md) |
 | Every option and output key, generated | [Command reference](docs/cli-reference.md) |
 | Release checklist for the docs | [Maintaining these docs](docs/maintaining.md) |

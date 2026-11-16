@@ -54,6 +54,8 @@ Imbagħad tgħabbi `levels/<name>.glb` fil-pannell Sfond / livell tal-viewer
 Il-livelli li tikteb huma mibnija mid-dejta tal-logħba: jibqgħu **fuq il-magna tiegħek**,
 biex tarahom, mhux biex taqsamhom jew tippubblikahom ([Termini](terms.md)).
 
+Kull qarrej ta' logħba huwa proġett żgħir għalih, bil-fajl tal-liċenzja tiegħu, ir-rilaxxi tiegħu u s-sistema tal-kwistjonijiet tiegħu, sabiex ikun jista' jiġi installat, aġġornat, miżmum - jew irtirat fuq talba ta' detentur tad-drittijiet - waħdu, mingħajr ma jolqot lill-viewer jew l-għodod l-oħra.
+
 ## Paġni {#pages}
 
 | Paġna | X'tkopri |
@@ -65,7 +67,7 @@ biex tarahom, mhux biex taqsamhom jew tippubblikahom ([Termini](terms.md)).
 | [Ismijiet tal-postijiet: towns](towns.md) | l-irħula ta' teatru b'koordinati ta' DCS |
 | [Projezzjonijiet: fit](fit.md) | insibu l-projezzjoni ta' teatru minn reġistrazzjoni |
 | [Kif jinqraw il-fajls](reading.md) | il-formati, x'ġie vverifikat, x'ma jinqarax |
-| [Termini u liċenzja](terms.md) | il-liċenzja ta' Eagle Dynamics, u għaliex dan huwa pakkett separat |
+| [Termini u liċenzja](terms.md) | x'jinqara, x'ma jintbagħatx, il-liċenzja |
 | [Referenza tal-kmandi](../cli-reference.md) | kull għażla, iġġenerata mill-kodiċi |
 | [Iżżomm dawn id-dokumenti](maintaining.md) | il-lista ta' kontroll tar-rilaxx |
 

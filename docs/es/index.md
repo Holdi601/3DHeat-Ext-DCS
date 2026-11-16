@@ -3,7 +3,7 @@ title: "Inicio"
 nav_order: 1
 lang: "es"
 source: index.md
-source_hash: "2aae647cf882"
+source_hash: "cd080455c40f"
 nav_exclude: true
 search_exclude: true
 permalink: /es/
@@ -54,6 +54,8 @@ Después carga `levels/<name>.glb` en el panel Fondo / nivel del visor
 Los niveles que escribe se construyen con los datos del juego: se quedan **en tu equipo**, para
 verlos, no para compartirlos ni publicarlos ([Condiciones](terms.md)).
 
+Cada lector de juego es un pequeño proyecto propio, con su propio archivo de licencia, sus versiones y su gestor de incidencias, de modo que puede instalarse, actualizarse, mantenerse - o retirarse a petición de un titular de derechos - por separado, sin afectar al visor ni a las demás herramientas.
+
 ## Páginas {#pages}
 
 | Página | Qué cubre |
@@ -65,7 +67,7 @@ verlos, no para compartirlos ni publicarlos ([Condiciones](terms.md)).
 | [Nombres de lugares: towns](towns.md) | los pueblos de un teatro con coordenadas de DCS |
 | [Proyecciones: fit](fit.md) | encontrar la proyección de un teatro a partir de una grabación |
 | [Cómo se leen los archivos](reading.md) | los formatos, lo verificado, lo que no se lee |
-| [Condiciones y licencia](terms.md) | la licencia de Eagle Dynamics, y por qué esto es un paquete aparte |
+| [Condiciones y licencia](terms.md) | qué se lee, qué no se incluye, la licencia |
 | [Referencia de comandos](../cli-reference.md) | cada opción, generada desde el código |
 | [Mantenimiento de estas páginas](maintaining.md) | la lista de comprobación de cada versión |
 

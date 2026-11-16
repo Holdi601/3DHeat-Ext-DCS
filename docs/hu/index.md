@@ -53,6 +53,8 @@ Ezután töltsd be a `levels/<name>.glb` fájlt a megjelenítő Háttér / pály
 Az általad írt pályák a játék adataiból készülnek, ezért **a te gépeden maradnak**: megtekintésre
 valók, megosztásra vagy közzétételre nem ([Feltételek](terms.md)).
 
+Minden játékolvasó önálló kis projekt saját licencfájllal, saját kiadásokkal és saját hibakövetővel, így külön telepíthető, frissíthető, karbantartható - vagy egy jogtulajdonos kérésére visszavonható -, anélkül hogy a megjelenítőt vagy a többi eszközt érintené.
+
 ## Oldalak {#pages}
 
 | Oldal | Mit tartalmaz |
@@ -64,7 +66,7 @@ valók, megosztásra vagy közzétételre nem ([Feltételek](terms.md)).
 | [Helynevek: towns](towns.md) | egy színház városai DCS-koordinátákkal |
 | [Vetítések: fit](fit.md) | egy színház vetítésének megtalálása egy felvételből |
 | [Hogyan olvasódnak be a fájlok](reading.md) | a formátumok, mi lett ellenőrizve, mi nem olvasódik be |
-| [Feltételek és licenc](terms.md) | az Eagle Dynamics licence, és hogy miért külön csomag ez |
+| [Feltételek és licenc](terms.md) | mit olvas, mit nem tartalmaz, a licenc |
 | [Parancsleírás](../cli-reference.md) | minden kapcsoló, a kódból generálva |
 | [A dokumentáció karbantartása](maintaining.md) | a kiadási ellenőrzőlista |
 

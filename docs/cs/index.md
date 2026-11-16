@@ -54,6 +54,8 @@ Potom načtěte `levels/<name>.glb` do panelu Pozadí / úroveň v prohlížeči
 Úrovně, které nástroj zapisuje, jsou postaveny z dat hry, takže zůstávají **na vašem počítači**,
 abyste si je mohli prohlédnout, ne sdílet nebo zveřejňovat ([Podmínky](terms.md)).
 
+Každá čtečka hry je samostatný malý projekt s vlastním licenčním souborem, vlastními vydáními a vlastním systémem hlášení, takže ji lze instalovat, aktualizovat, udržovat - nebo na žádost držitele práv stáhnout - samostatně, aniž by to ovlivnilo prohlížeč nebo ostatní nástroje.
+
 ## Stránky {#pages}
 
 | Stránka | Co obsahuje |
@@ -65,7 +67,7 @@ abyste si je mohli prohlédnout, ne sdílet nebo zveřejňovat ([Podmínky](term
 | [Názvy míst: towns](towns.md) | města území se souřadnicemi DCS |
 | [Projekce: fit](fit.md) | nalezení projekce území ze záznamu |
 | [Jak se soubory čtou](reading.md) | formáty, co bylo ověřeno, co se nečte |
-| [Podmínky a licence](terms.md) | licence Eagle Dynamics a proč je to samostatný balíček |
+| [Podmínky a licence](terms.md) | co se čte, co se nedodává, licence |
 | [Přehled příkazů](../cli-reference.md) | každá možnost, vygenerováno z kódu |
 | [Údržba těchto dokumentů](maintaining.md) | kontrolní seznam pro vydání |
 

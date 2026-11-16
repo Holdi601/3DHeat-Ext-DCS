@@ -44,6 +44,8 @@ Pēc tam ielādējiet `levels/<name>.glb` skatītāja Līmeņa panelī
 
 Līmeņi, ko tas raksta, veidoti no spēles datiem un paliek **jūsu datorā**, lai tos skatītos, nevis lai kopīgotu vai publicētu ([Noteikumi](terms.md)).
 
+Katrs spēles lasītājs ir atsevišķs mazs projekts ar savu licences failu, saviem laidieniem un savu problēmu sekotāju, tāpēc to var instalēt, atjaunināt, uzturēt - vai pēc tiesību īpašnieka lūguma atsaukt - atsevišķi, neietekmējot skatītāju vai citus rīkus.
+
 ## Lapas {#pages}
 
 | Lapa | Ko tā aptver |
@@ -55,7 +57,7 @@ Līmeņi, ko tas raksta, veidoti no spēles datiem un paliek **jūsu datorā**, 
 | [Vietu nosaukumi: towns](towns.md) | teātra pilsētas ar DCS koordinātēm |
 | [Projekcijas: fit](fit.md) | teātra projekcijas atrašana no ieraksta |
 | [Kā tiek nolasīti faili](reading.md) | formāti, kas ir pārbaudīts, kas netiek nolasīts |
-| [Noteikumi un licence](terms.md) | Eagle Dynamics licence un kāpēc šī ir atsevišķa pakotne |
+| [Noteikumi un licence](terms.md) | ko lasa, ko nepiegādā, licence |
 | [Komandu atsauce](../cli-reference.md) | katra iespēja, ģenerēta no koda |
 | [Šo lapu uzturēšana](maintaining.md) | izlaides kontrolsaraksts |
 

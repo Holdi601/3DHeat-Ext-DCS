@@ -3,52 +3,21 @@ title: "Condiții și licență"
 nav_order: 8
 lang: "ro"
 source: terms.md
-source_hash: "677b443e2bb8"
+source_hash: "5b8e45352dae"
 nav_exclude: true
 search_exclude: true
 ---
 # Condiții și licență {#terms-and-licence}
 
-## Condițiile Eagle Dynamics {#eagle-dynamics-terms}
+## Ce citește cititorul {#what-the-reader-reads}
 
-Citite pe 2026-11-07 din `Doc/license_en.txt` al instalării (DCS World
-End-User Licence Agreement, The Fighter Collection Ltd). „Program”-ul licențiat
-include „THE DATA SUPPLIED WITH IT”. Clauza 3.1:
+Cititorul citește fișiere de date din propria dumneavoastră instalare DCS World, de pe calculatorul dumneavoastră ([Cum se citesc fișierele](reading.md)). Nu schimbă nimic în joc și nu comunică cu niciun server.
 
-> Except as expressly set out in this Licence or in clauses 4.1 and 4.2
-> below, or as permitted by any local law, you undertake to use the Program
-> for your own personal use, and you shall not: [...]
->
-> (c) not to disassemble, decompile, reverse engineer or create derivative
-> works based on the whole, or any part, of the Program nor attempt to do any
-> such things except to the extent that (by virtue of section 296A of the
-> Copyright, Designs and Patents Act 1988) such actions cannot be prohibited
-> because they are essential for the purpose of achieving inter-operability
-> of the Program with another software program, and provided that the
-> information obtained by you during such activities: (i) is used only for
-> the purpose of achieving inter-operability of the Program with another
-> software program; and (ii) is not unnecessarily disclosed or communicated
-> to any third party without the TFC's prior written consent; and (iii) is
-> not used to create any software which is substantially similar to the
-> Program.
+Nimic din joc nu este livrat sau redistribuit: niciun fișier al jocului, niciun cod al jocului, niciun DLL; testele construiesc singure fiecare fișier pe care îl citesc. Nivelurile pe care le scrie rămân pe calculatorul dumneavoastră.
 
-Clauza 3.1 (a) interzice să „sell, trade, rent, lease, sub-license, merge,
-adapt, vary, modify the Program” fără consimțământ, iar (e) interzice să
-„exploit this Program or any of its parts commercially”.
+3DHeat DCS nu este afiliat cu Eagle Dynamics și nu este aprobat de aceasta. DCS World și numele și mărcile asociate aparțin proprietarilor lor.
 
-Ce face acest cititor: citește fișiere de date de pe propriul calculator, după ce ați
-instalat jocul, în afara jocului. Nu schimbă nimic în joc, nu sparge nicio criptare (singurul
-fișier criptat dintr-un dosar de teren este lăsat în pace) și nu vorbește cu niciun server.
-Aflarea aspectului unui fișier de date este inginerie inversă în sensul clauzei 3.1 (c), iar un
-nivel construit din terenul jocului poate fi considerat o operă derivată. Folosirea cititorului
-este decizia dumneavoastră, pentru uzul propriu; nivelurile pe care le scrie sunt ale
-dumneavoastră pentru vizualizare, nu pentru a fi distribuite sau publicate. De aceea este un pachet separat.
-
-Alternativa aprobată, care nu citește niciun fișier: scripturile de misiune ale simulatorului
-pot măsura solul (`land.getHeight`, `land.getSurfaceType`) și pot lista aerodromurile
-(`world.getAirbases`) cât rulează o misiune. Are nevoie de DCS pornit ore întregi pentru fiecare
-teatru și dă o grilă mai grosieră; nu a fost construită, pentru că fișierele s-au dovedit
-lizibile.
+Deținători de drepturi: deschideți un tichet la [github.com/Holdi601/3DHeat-Ext-DCS/issues](https://github.com/Holdi601/3DHeat-Ext-DCS/issues) - răspundem repede și eliminăm orice la cerere.
 
 ## Licență și surse {#licence-and-sources}
 

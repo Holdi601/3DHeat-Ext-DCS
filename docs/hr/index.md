@@ -46,6 +46,8 @@ Zatim učitajte `levels/<name>.glb` u panel Pozadina / razina preglednika
 
 Razine koje alat piše izrađene su iz podataka igre, pa **ostaju na vašem računalu**, za gledanje, a ne za dijeljenje ili objavljivanje ([Uvjeti](terms.md)).
 
+Svaki čitač igre zaseban je mali projekt s vlastitom datotekom licence, vlastitim izdanjima i vlastitim sustavom prijava, pa ga je moguće instalirati, ažurirati, održavati - ili povući na zahtjev nositelja prava - zasebno, bez utjecaja na preglednik i ostale alate.
+
 ## Stranice {#pages}
 
 | Stranica | Što obuhvaća |
@@ -57,7 +59,7 @@ Razine koje alat piše izrađene su iz podataka igre, pa **ostaju na vašem rač
 | [Nazivi mjesta: towns](towns.md) | gradovi karte s DCS koordinatama |
 | [Projekcije: fit](fit.md) | pronalaženje projekcije karte iz snimke |
 | [Kako se datoteke čitaju](reading.md) | formati, što je provjereno, što se ne čita |
-| [Uvjeti i licenca](terms.md) | licenca tvrtke Eagle Dynamics i zašto je ovo zaseban paket |
+| [Uvjeti i licenca](terms.md) | što se čita, što se ne isporučuje, licenca |
 | [Referenca naredbi](../cli-reference.md) | svaka opcija, generirano iz koda |
 | [Održavanje ovih stranica](maintaining.md) | popis za izdavanje verzije |
 

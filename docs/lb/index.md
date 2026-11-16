@@ -54,6 +54,8 @@ Dann lued `levels/<name>.glb` am Panel „Hannergrond / Level“ vum Viewer
 D'Levelen, déi et schreift, si vun de Daten vum Spill gebaut: si bleiwen **op Ärem
 Rechner**, fir ze kucken, net fir ze deelen oder ze publizéieren ([Bedingungen](terms.md)).
 
+All Spill-Lieser ass e klengt eegent Projet mat enger eegener Lizenzdatei, eegene Releases an engem eegenen Issue-Tracker, sou datt e fir sech eleng installéiert, aktualiséiert, gefleegt - oder op Ufro vun engem Rechteinhaber zréckgezunn - ka ginn, ouni de Viewer oder déi aner Tools ze beréieren.
+
 ## Säiten {#pages}
 
 | Säit | Wat se ofdeckt |
@@ -65,7 +67,7 @@ Rechner**, fir ze kucken, net fir ze deelen oder ze publizéieren ([Bedingungen]
 | [Uertsnimm: towns](towns.md) | d'Stied vun engem Theater mat DCS-Koordinaten |
 | [Projektiounen: fit](fit.md) | d'Projektioun vun engem Theater aus enger Opnam fannen |
 | [Wéi d'Dateie gelies ginn](reading.md) | d'Formater, wat gepréift gouf, wat net gelies gëtt |
-| [Bedingungen a Lizenz](terms.md) | d'Lizenz vun Eagle Dynamics, a firwat dëst e getrennte Package ass |
+| [Bedingungen a Lizenz](terms.md) | wat gelies gëtt, wat net matgeliwwert gëtt, d'Lizenz |
 | [Kommando-Referenz](../cli-reference.md) | all Optioun, aus dem Code generéiert |
 | [Dës Dokumentatioun ënnerhalen](maintaining.md) | d'Release-Checklëscht |
 

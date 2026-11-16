@@ -54,6 +54,8 @@ Zatim učitaj `levels/<name>.glb` u panelu Pozadina / nivo preglednika
 Nivoi koje piše izgrađeni su od podataka igre: ostaju **na tvom
 računaru**, za gledanje, ne za dijeljenje ni objavljivanje ([Uvjeti](terms.md)).
 
+Svaki čitač igre je zaseban mali projekat s vlastitom datotekom licence, vlastitim izdanjima i vlastitim sistemom prijava, pa se može instalirati, ažurirati, održavati - ili povući na zahtjev nosioca prava - zasebno, bez uticaja na preglednik i ostale alate.
+
 ## Stranice {#pages}
 
 | Stranica | Šta pokriva |
@@ -65,7 +67,7 @@ računaru**, za gledanje, ne za dijeljenje ni objavljivanje ([Uvjeti](terms.md))
 | [Nazivi mjesta: towns](towns.md) | gradovi teatra s DCS koordinatama |
 | [Projekcije: fit](fit.md) | pronalaženje projekcije teatra iz snimka |
 | [Kako se datoteke čitaju](reading.md) | formati, šta je provjereno, šta se ne čita |
-| [Uvjeti i licenca](terms.md) | licenca kompanije Eagle Dynamics i zašto je ovo poseban paket |
+| [Uvjeti i licenca](terms.md) | šta se čita, šta se ne isporučuje, licenca |
 | [Referenca naredbi](../cli-reference.md) | sve opcije, generirane iz koda |
 | [Održavanje ove dokumentacije](maintaining.md) | lista za provjeru pri izdanju |
 

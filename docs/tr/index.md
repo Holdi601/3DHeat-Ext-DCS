@@ -39,6 +39,8 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 
 Yazdığı seviyeler oyunun verilerinden yapılır: **kendi makinenizde** kalırlar, görüntülemek içindir; paylaşmak ya da yayımlamak için değil ([Koşullar](terms.md)).
 
+Her oyun okuyucusu kendi lisans dosyası, kendi sürümleri ve kendi sorun takipçisi olan ayrı küçük bir projedir; bu sayede görüntüleyiciyi ya da diğer araçları etkilemeden tek başına kurulabilir, güncellenebilir, bakımı yapılabilir - ya da bir hak sahibinin isteği üzerine geri çekilebilir.
+
 ## Sayfalar {#pages}
 
 | Sayfa | Neyi anlatır |
@@ -50,7 +52,7 @@ Yazdığı seviyeler oyunun verilerinden yapılır: **kendi makinenizde** kalır
 | [Yer adları: towns](towns.md) | bir tiyatronun kasabaları, DCS koordinatlarıyla |
 | [İzdüşümler: fit](fit.md) | bir kayıttan tiyatronun izdüşümünü bulmak |
 | [Dosyalar nasıl okunur](reading.md) | biçimler, neyin doğrulandığı, neyin okunmadığı |
-| [Koşullar ve lisans](terms.md) | Eagle Dynamics'in lisansı ve bunun neden ayrı bir paket olduğu |
+| [Koşullar ve lisans](terms.md) | neyin okunduğu, neyin gönderilmediği, lisans |
 | [Komut başvurusu](../cli-reference.md) | her seçenek, koddan üretilmiş |
 | [Bu belgelerin bakımı](maintaining.md) | sürüm kontrol listesi |
 

@@ -3,7 +3,7 @@ title: "Startseite"
 nav_order: 1
 lang: "de"
 source: index.md
-source_hash: "2aae647cf882"
+source_hash: "cd080455c40f"
 nav_exclude: true
 search_exclude: true
 permalink: /de/
@@ -50,6 +50,8 @@ Lade dann `levels/<name>.glb` im Panel „Hintergrund / Level“ des Viewers
 Die Levels, die es schreibt, entstehen aus den Daten des Spiels: Sie bleiben **auf deinem Rechner**,
 zum Ansehen, nicht zum Teilen oder Veröffentlichen ([Bedingungen](terms.md)).
 
+Jeder Spiel-Leser ist ein eigenes kleines Projekt mit eigener Lizenzdatei, eigenen Releases und eigenem Issue-Tracker. So lässt er sich für sich allein installieren, aktualisieren, pflegen - oder auf Wunsch eines Rechteinhabers zurückziehen -, ohne den Viewer oder die anderen Werkzeuge zu berühren.
+
 ## Seiten {#pages}
 
 | Seite | Was sie behandelt |
@@ -61,7 +63,7 @@ zum Ansehen, nicht zum Teilen oder Veröffentlichen ([Bedingungen](terms.md)).
 | [Ortsnamen: towns](towns.md) | die Städte eines Schauplatzes mit DCS-Koordinaten |
 | [Projektionen: fit](fit.md) | die Projektion eines Schauplatzes aus einer Aufnahme finden |
 | [Wie die Dateien gelesen werden](reading.md) | die Formate, was geprüft wurde, was nicht gelesen wird |
-| [Bedingungen und Lizenz](terms.md) | die Lizenz von Eagle Dynamics, und warum dies ein eigenes Paket ist |
+| [Bedingungen und Lizenz](terms.md) | was gelesen wird, was nicht mitgeliefert wird, die Lizenz |
 | [Befehlsreferenz](../cli-reference.md) | jede Option, aus dem Code erzeugt |
 | [Diese Doku pflegen](maintaining.md) | die Checkliste für Releases |
 

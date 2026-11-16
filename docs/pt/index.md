@@ -54,6 +54,8 @@ Depois carregue `levels/<nome>.glb` no painel Fundo / nível do visualizador
 Os níveis que ela grava são montados a partir dos dados do jogo: eles ficam na **sua
 máquina**, para ver, não para compartilhar ou publicar ([Termos](terms.md)).
 
+Cada leitor de jogo é um pequeno projeto próprio, com seu próprio arquivo de licença, versões e rastreador de issues, para que possa ser instalado, atualizado, mantido - ou retirado a pedido de um titular de direitos - de forma independente, sem afetar o visualizador nem as outras ferramentas.
+
 ## Páginas {#pages}
 
 | Página | O que cobre |
@@ -65,7 +67,7 @@ máquina**, para ver, não para compartilhar ou publicar ([Termos](terms.md)).
 | [Nomes de lugares: towns](towns.md) | as cidades de um teatro com coordenadas do DCS |
 | [Projeções: fit](fit.md) | encontrar a projeção de um teatro a partir de uma gravação |
 | [Como os arquivos são lidos](reading.md) | os formatos, o que foi verificado, o que não é lido |
-| [Termos e licença](terms.md) | a licença da Eagle Dynamics, e por que este é um pacote separado |
+| [Termos e licença](terms.md) | o que é lido, o que não é incluído, a licença |
 | [Referência de comandos](../cli-reference.md) | cada opção, gerada a partir do código |
 | [Manutenção destas páginas](maintaining.md) | a lista de verificação de cada versão |
 

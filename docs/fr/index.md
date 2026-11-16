@@ -3,7 +3,7 @@ title: "Accueil"
 nav_order: 1
 lang: "fr"
 source: index.md
-source_hash: "2aae647cf882"
+source_hash: "cd080455c40f"
 nav_exclude: true
 search_exclude: true
 permalink: /fr/
@@ -53,6 +53,8 @@ Chargez ensuite `levels/<nom>.glb` dans le panneau Arrière-plan / niveau du vis
 Les niveaux écrits sont construits à partir des données du jeu : ils restent **sur votre
 ordinateur**, pour les consulter, et non pour les partager ou les publier ([Conditions](terms.md)).
 
+Chaque lecteur de jeu est un petit projet à part, avec son propre fichier de licence, ses propres versions et son propre suivi des tickets : il peut être installé, mis à jour, maintenu - ou retiré à la demande d'un ayant droit - séparément, sans toucher au visualiseur ni aux autres outils.
+
 ## Pages {#pages}
 
 | Page | Ce qu'elle explique |
@@ -64,7 +66,7 @@ ordinateur**, pour les consulter, et non pour les partager ou les publier ([Cond
 | [Noms de lieux : towns](towns.md) | les villes d'un théâtre avec leurs coordonnées DCS |
 | [Projections : fit](fit.md) | trouver la projection d'un théâtre à partir d'un enregistrement |
 | [Comment les fichiers sont lus](reading.md) | les formats, ce qui a été vérifié, ce qui n'est pas lu |
-| [Conditions et licence](terms.md) | la licence d'Eagle Dynamics, et pourquoi c'est un paquet séparé |
+| [Conditions et licence](terms.md) | ce qui est lu, ce qui n'est pas livré, la licence |
 | [Référence des commandes](../cli-reference.md) | chaque option, générée depuis le code |
 | [Maintenir ces documents](maintaining.md) | la liste de contrôle des versions |
 

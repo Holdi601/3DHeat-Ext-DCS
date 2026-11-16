@@ -3,53 +3,21 @@ title: "Умовы і ліцэнзія"
 nav_order: 8
 lang: "be"
 source: terms.md
-source_hash: "677b443e2bb8"
+source_hash: "5b8e45352dae"
 nav_exclude: true
 search_exclude: true
 ---
 # Умовы і ліцэнзія {#terms-and-licence}
 
-## Умовы Eagle Dynamics {#eagle-dynamics-terms}
+## Што чытае чытальнік {#what-the-reader-reads}
 
-Прачытана 2026-11-07 з `Doc/license_en.txt` усталёўкі (DCS World
-End-User Licence Agreement, The Fighter Collection Ltd). Ліцэнзаваная
-«Program» уключае «THE DATA SUPPLIED WITH IT». Пункт 3.1:
+Чытальнік чытае файлы даных вашай уласнай усталёўкі DCS World на вашым камп'ютары ([Як чытаюцца файлы](reading.md)). Ён нічога не мяняе ў гульні і не звязваецца ні з якім серверам.
 
-> Except as expressly set out in this Licence or in clauses 4.1 and 4.2
-> below, or as permitted by any local law, you undertake to use the Program
-> for your own personal use, and you shall not: [...]
->
-> (c) not to disassemble, decompile, reverse engineer or create derivative
-> works based on the whole, or any part, of the Program nor attempt to do any
-> such things except to the extent that (by virtue of section 296A of the
-> Copyright, Designs and Patents Act 1988) such actions cannot be prohibited
-> because they are essential for the purpose of achieving inter-operability
-> of the Program with another software program, and provided that the
-> information obtained by you during such activities: (i) is used only for
-> the purpose of achieving inter-operability of the Program with another
-> software program; and (ii) is not unnecessarily disclosed or communicated
-> to any third party without the TFC's prior written consent; and (iii) is
-> not used to create any software which is substantially similar to the
-> Program.
+Нічога з гульні не пастаўляецца і не распаўсюджваецца: ні файлаў гульні, ні кода гульні, ні DLL; тэсты самі ствараюць кожны файл, які чытаюць. Узроўні, якія ён запісвае, застаюцца на вашым камп'ютары.
 
-Пункт 3.1 (a) забараняе «sell, trade, rent, lease, sub-license, merge,
-adapt, vary, modify the Program» без згоды, а (e) — «exploit this
-Program or any of its parts commercially».
+3DHeat DCS не звязаны з кампаніяй Eagle Dynamics і не ўхвалены ёю. DCS World і звязаныя з ёй назвы і гандлёвыя маркі належаць іх уладальнікам.
 
-Што робіць гэты чытач: ён чытае файлы даных на вашым кампутары, пасля таго як вы
-іх усталявалі, па-за гульнёй. Ён нічога не змяняе ў гульні, не ломіць ніякага
-шыфравання (адзіны зашыфраваны файл у папцы рэльефу застаецца недакранутым) і
-не звязваецца ні з якім серверам. Высвятленне структуры файла даных — гэта зваротная
-інжынерыя ў сэнсе 3.1 (c), а ўзровень, пабудаваны з рэльефу гульні, —
-магчыма, вытворная праца. Выкарыстанне чытача — ваша рашэнне,
-для ўласнага карыстання; узроўні, якія ён піша, вы можаце глядзець, але не дзяліцца імі і не
-публікаваць іх. Таму гэта асобны пакет.
-
-Дазволеная альтэрнатыва, што не чытае ніводнага файла: уласныя скрыпты місій
-сімулятара могуць здымаць зямлю (`land.getHeight`, `land.getSurfaceType`)
-і пералічваць аэрадромы (`world.getAirbases`), пакуль ідзе місія. Ёй патрэбны DCS,
-які працуе гадзінамі на тэатр, і яна дае грубейшую сетку; яе не пабудавалі,
-бо файлы аказаліся чытэльнымі.
+Праваўладальнікі: адкрыйце задачу на [github.com/Holdi601/3DHeat-Ext-DCS/issues](https://github.com/Holdi601/3DHeat-Ext-DCS/issues) - мы хутка адказваем і на просьбу прыбіраем што заўгодна.
 
 ## Ліцэнзія і крыніцы {#licence-and-sources}
 

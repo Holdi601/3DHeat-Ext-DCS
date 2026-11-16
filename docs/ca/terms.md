@@ -3,52 +3,21 @@ title: Condicions i llicència
 nav_order: 8
 lang: "ca"
 source: terms.md
-source_hash: "677b443e2bb8"
+source_hash: "5b8e45352dae"
 nav_exclude: true
 search_exclude: true
 ---
 # Condicions i llicència {#terms-and-licence}
 
-## Les condicions d'Eagle Dynamics {#eagle-dynamics-terms}
+## Què llegeix el lector {#what-the-reader-reads}
 
-Llegit el 2026-11-07 de `Doc/license_en.txt` de la instal·lació (DCS World
-End-User Licence Agreement, The Fighter Collection Ltd). El
-«Programa» inclòs en la llicència inclou «THE DATA SUPPLIED WITH IT». Clàusula 3.1:
+El lector llegeix fitxers de dades de la teva pròpia instal·lació de DCS World a l'ordinador ([Com es llegeixen els fitxers](reading.md)). No canvia res del joc i no es comunica amb cap servidor.
 
-> Except as expressly set out in this Licence or in clauses 4.1 and 4.2
-> below, or as permitted by any local law, you undertake to use the Program
-> for your own personal use, and you shall not: [...]
->
-> (c) not to disassemble, decompile, reverse engineer or create derivative
-> works based on the whole, or any part, of the Program nor attempt to do any
-> such things except to the extent that (by virtue of section 296A of the
-> Copyright, Designs and Patents Act 1988) such actions cannot be prohibited
-> because they are essential for the purpose of achieving inter-operability
-> of the Program with another software program, and provided that the
-> information obtained by you during such activities: (i) is used only for
-> the purpose of achieving inter-operability of the Program with another
-> software program; and (ii) is not unnecessarily disclosed or communicated
-> to any third party without the TFC's prior written consent; and (iii) is
-> not used to create any software which is substantially similar to the
-> Program.
+No s'inclou ni es redistribueix res del joc: cap fitxer del joc, cap codi del joc, cap DLL; les proves generen elles mateixes cada fitxer que llegeixen. Els nivells que escriu es queden al teu equip.
 
-La clàusula 3.1 (a) prohibeix «sell, trade, rent, lease, sub-license, merge,
-adapt, vary, modify the Program» sense consentiment, i (e) prohibeix «exploit this
-Program or any of its parts commercially».
+3DHeat DCS no està afiliat a Eagle Dynamics ni té el seu aval. DCS World i els noms i marques relacionats pertanyen als seus propietaris.
 
-Què fa aquest lector: llegeix fitxers de dades a la seva pròpia màquina, després que els
-hagis instal·lat, fora del joc. No canvia res del joc, no trenca cap xifratge (l'únic fitxer
-xifrat d'una carpeta de terreny es deixa en pau) i no parla amb cap servidor. Esbrinar la
-disposició d'un fitxer de dades és enginyeria inversa en el sentit de 3.1 (c), i un nivell
-construït a partir del terreny del joc es pot considerar una obra derivada. Usar el lector és
-una decisió teva, per al teu propi ús; els nivells que escrius són teus per veure'ls, no per
-compartir-los ni publicar-los. Per això és un paquet separat.
-
-L'alternativa autoritzada, que no llegeix cap fitxer: el propi scripting de missions del simulador
-pot mostrejar el terreny (`land.getHeight`, `land.getSurfaceType`) i enumerar les bases aèries
-(`world.getAirbases`) mentre s'executa una missió. Necessita DCS en marxa durant hores per
-teatre i dona una quadrícula més grollera; no es va construir, perquè els fitxers van resultar
-llegibles.
+Titulars de drets: obriu una incidència a [github.com/Holdi601/3DHeat-Ext-DCS/issues](https://github.com/Holdi601/3DHeat-Ext-DCS/issues) - responem ràpidament i retirem qualsevol cosa que se'ns demani.
 
 ## Llicència i fonts {#licence-and-sources}
 

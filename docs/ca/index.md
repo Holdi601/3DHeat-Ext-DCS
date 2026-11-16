@@ -54,6 +54,8 @@ Després carrega `levels/<nom>.glb` al panell Fons / nivell del visualitzador
 Els nivells que escrius estan construïts a partir de les dades del joc: es queden a la **teva
 màquina**, per veure'ls, no per compartir-los ni publicar-los ([Condicions](terms.md)).
 
+Cada lector de joc és un petit projecte propi, amb el seu fitxer de llicència, les seves versions i el seu gestor d'incidències, de manera que es pot instal·lar, actualitzar, mantenir - o retirar a petició d'un titular de drets - per separat, sense afectar el visor ni les altres eines.
+
 ## Pàgines {#pages}
 
 | Pàgina | Què cobreix |
@@ -65,7 +67,7 @@ màquina**, per veure'ls, no per compartir-los ni publicar-los ([Condicions](ter
 | [Noms de llocs: towns](towns.md) | els pobles d'un teatre amb les coordenades de DCS |
 | [Projeccions: fit](fit.md) | trobar la projecció d'un teatre a partir d'una gravació |
 | [Com es llegeixen els fitxers](reading.md) | els formats, què s'ha verificat, què no es llegeix |
-| [Condicions i llicència](terms.md) | la llicència d'Eagle Dynamics, i per què és un paquet separat |
+| [Condicions i llicència](terms.md) | què es llegeix, què no s'inclou, la llicència |
 | [Referència de l'ordre](../cli-reference.md) | cada opció, generada a partir del codi |
 | [Mantenir aquesta documentació](maintaining.md) | la llista de comprovació de publicació |
 

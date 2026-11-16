@@ -41,6 +41,8 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 
 이 도구가 쓰는 레벨은 게임의 데이터로 만든 것입니다. 그러므로 보는 용도로 **본인의 컴퓨터에만** 두고, 공유하거나 게시하지 마세요 ([약관](terms.md)).
 
+각 게임 리더는 자체 라이선스 파일, 릴리스, 이슈 트래커를 가진 작은 독립 프로젝트입니다. 그래서 뷰어나 다른 도구에 영향을 주지 않고 따로 설치, 업데이트, 유지 관리하거나 권리자의 요청에 따라 철회할 수 있습니다.
+
 ## 페이지 {#pages}
 
 | 페이지 | 내용 |
@@ -52,7 +54,7 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 | [지명: 마을](towns.md) | 맵의 마을들과 DCS 좌표 |
 | [투영: fit](fit.md) | 기록에서 맵의 투영 찾기 |
 | [파일을 읽는 방법](reading.md) | 형식, 검증한 내용, 읽지 않는 것 |
-| [약관과 라이선스](terms.md) | Eagle Dynamics의 라이선스, 그리고 이것이 별도의 패키지인 이유 |
+| [약관과 라이선스](terms.md) | 무엇을 읽는지, 무엇을 함께 배포하지 않는지, 라이선스 |
 | [명령 참조](../cli-reference.md) | 코드에서 만든, 모든 옵션 |
 | [문서 관리](maintaining.md) | 릴리스 체크리스트 |
 

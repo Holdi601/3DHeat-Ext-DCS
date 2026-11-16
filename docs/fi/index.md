@@ -53,6 +53,8 @@ Lataa sitten `levels/<name>.glb` katselimen Tausta / kenttä -paneeliin
 Kentät, jotka se kirjoittaa, on rakennettu pelin tiedoista: ne pysyvät **koneellasi**,
 katseltaviksi, eivät jaettaviksi tai julkaistaviksi ([Ehdot](terms.md)).
 
+Jokainen pelinlukija on oma pieni projektinsa, jolla on oma lisenssitiedosto, omat julkaisut ja oma vikaseuranta, joten sen voi asentaa, päivittää, ylläpitää - tai vetää pois oikeudenhaltijan pyynnöstä - erikseen ilman, että katseluohjelma tai muut työkalut muuttuvat.
+
 ## Sivut {#pages}
 
 | Sivu | Mitä se kattaa |
@@ -64,7 +66,7 @@ katseltaviksi, eivät jaettaviksi tai julkaistaviksi ([Ehdot](terms.md)).
 | [Paikannimet: towns](towns.md) | teatterin kaupungit DCS-koordinaatteina |
 | [Projektiot: fit](fit.md) | teatterin projektion löytäminen tallenteesta |
 | [Miten tiedostot luetaan](reading.md) | muodot, mitä on todennettu, mitä ei lueta |
-| [Ehdot ja lisenssi](terms.md) | Eagle Dynamicsin lisenssi ja miksi tämä on erillinen paketti |
+| [Ehdot ja lisenssi](terms.md) | mitä luetaan, mitä ei toimiteta, lisenssi |
 | [Komentoviite](../cli-reference.md) | jokainen asetus, luotu koodista |
 | [Dokumentaation ylläpito](maintaining.md) | julkaisun tarkistuslista |
 

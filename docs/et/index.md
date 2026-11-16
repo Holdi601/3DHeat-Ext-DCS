@@ -46,6 +46,8 @@ Seejärel laadi `levels/<name>.glb` vaataja paneelis **Taust / tase**
 Tasemed, mida see kirjutab, on tehtud mängu andmetest, nii et need jäävad **sinu masinasse**,
 vaatamiseks, mitte jagamiseks ega avaldamiseks ([Tingimused](terms.md)).
 
+Iga mängulugeja on omaette väike projekt, millel on oma litsentsifail, oma väljalasked ja oma veahaldus, nii et seda saab eraldi paigaldada, uuendada, hooldada - või õiguste omaja palvel tagasi võtta -, ilma et see mõjutaks vaaturit või teisi tööriistu.
+
 ## Lehed {#pages}
 
 | Leht | Mida see käsitleb |
@@ -57,7 +59,7 @@ vaatamiseks, mitte jagamiseks ega avaldamiseks ([Tingimused](terms.md)).
 | [Kohanimed: towns](towns.md) | teatri linnad DCS-i koordinaatidega |
 | [Projektsioonid: fit](fit.md) | teatri projektsiooni leidmine salvestusest |
 | [Kuidas faile loetakse](reading.md) | vormingud, mida kontrolliti, mida ei loeta |
-| [Tingimused ja litsents](terms.md) | Eagle Dynamicsi litsents ja miks see on eraldi pakett |
+| [Tingimused ja litsents](terms.md) | mida loetakse, mida ei tarnita, litsents |
 | [Käsu viide](../cli-reference.md) | iga valik, koodist genereeritud |
 | [Nende dokumentide hooldamine](maintaining.md) | väljalaske kontrollnimekiri |
 

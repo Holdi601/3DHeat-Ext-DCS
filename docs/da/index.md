@@ -50,6 +50,8 @@ Indlæs derefter `levels/<name>.glb` i viewerens Baggrund / bane-panel
 De baner, den skriver, er bygget af spillets data: de bliver **på din maskine**,
 til visning, ikke til deling eller publicering ([Vilkår](terms.md)).
 
+Hver spillæser er sit eget lille projekt med egen licensfil, egne udgivelser og egen issue-tracker, så den kan installeres, opdateres, vedligeholdes - eller trækkes tilbage på en rettighedshavers anmodning - for sig selv, uden at det påvirker vieweren eller de andre værktøjer.
+
 ## Sider {#pages}
 
 | Side | Hvad den dækker |
@@ -61,7 +63,7 @@ til visning, ikke til deling eller publicering ([Vilkår](terms.md)).
 | [Stednavne: towns](towns.md) | et teaters byer med DCS-koordinater |
 | [Projektioner: fit](fit.md) | at finde et teaters projektion ud fra en optagelse |
 | [Sådan læses filerne](reading.md) | formaterne, hvad der blev verificeret, hvad der ikke læses |
-| [Vilkår og licens](terms.md) | Eagle Dynamics' licens, og hvorfor dette er en separat pakke |
+| [Vilkår og licens](terms.md) | hvad der læses, hvad der ikke følger med, licensen |
 | [Kommandoreference](../cli-reference.md) | alle valgmuligheder, genereret ud fra koden |
 | [Vedligeholdelse af disse dokumenter](maintaining.md) | tjeklisten til udgivelser |
 

@@ -54,6 +54,8 @@ Ansin lódáil `levels/<name>.glb` i bpainéal Cúlra / leibhéal an amharcáin
 Tógtar na leibhéil a scríobhann sé ó shonraí an chluiche: fanann siad **ar do
 mheaisín**, le féachaint orthu, ní le roinnt ná le foilsiú ([Téarmaí](terms.md)).
 
+Is tionscadal beag ann féin é gach léitheoir cluiche, lena chomhad ceadúnais féin, a eisiúintí féin agus a rianaitheoir saincheisteanna féin, ionas gur féidir é a shuiteáil, a nuashonrú, a chothabháil - nó a tharraingt siar ar iarratas ó shealbhóir ceart - leis féin, gan tionchar ar an amharcán ná ar na huirlisí eile.
+
 ## Leathanaigh {#pages}
 
 | Leathanach | Cad a chlúdaíonn sé |
@@ -65,7 +67,7 @@ mheaisín**, le féachaint orthu, ní le roinnt ná le foilsiú ([Téarmaí](ter
 | [Logainmneacha: towns](towns.md) | bailte téatair le comhordanáidí DCS |
 | [Teilgeanna: fit](fit.md) | teilgean téatair a aimsiú ó thaifeadadh |
 | [Conas a léitear na comhaid](reading.md) | na formáidí, cad a fíoraíodh, cad nach léitear |
-| [Téarmaí agus ceadúnas](terms.md) | ceadúnas Eagle Dynamics, agus cén fáth gur pacáiste ar leith é seo |
+| [Téarmaí agus ceadúnas](terms.md) | cad a léitear, cad nach seoltar, an ceadúnas |
 | [Tagairt orduithe](../cli-reference.md) | gach rogha, ginte ón gcód |
 | [Na doiciméid seo a chothabháil](maintaining.md) | an seicliosta eisiúna |
 

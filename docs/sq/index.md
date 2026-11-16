@@ -54,6 +54,8 @@ Pastaj ngarko `levels/<name>.glb` te paneli Sfondi / niveli i shikuesit
 Nivelet që shkruan ndërtohen nga të dhënat e lojës: ato mbeten **në kompjuterin
 tënd**, për t'u parë, jo për t'u ndarë ose botuar ([Kushtet](terms.md)).
 
+Çdo lexues loje është një projekt i vogël më vete, me skedarin e vet të licencës, versionet e veta dhe gjurmuesin e vet të problemeve, kështu që mund të instalohet, përditësohet, mirëmbahet - ose tërhiqet me kërkesë të një mbajtësi të drejtash - më vete, pa prekur shikuesin ose mjetet e tjera.
+
 ## Faqet {#pages}
 
 | Faqja | Çfarë mbulon |
@@ -65,7 +67,7 @@ tënd**, për t'u parë, jo për t'u ndarë ose botuar ([Kushtet](terms.md)).
 | [Emrat e vendeve: towns](towns.md) | qytetet e një teatri me koordinata DCS |
 | [Projeksionet: fit](fit.md) | gjetja e projeksionit të një teatri nga një regjistrim |
 | [Si lexohen skedarët](reading.md) | formatet, çfarë u verifikua, çfarë nuk lexohet |
-| [Kushtet dhe licenca](terms.md) | licenca e Eagle Dynamics, dhe pse ky është një paketë më vete |
+| [Kushtet dhe licenca](terms.md) | çfarë lexohet, çfarë nuk shpërndahet, licenca |
 | [Referenca e komandave](../cli-reference.md) | çdo opsion, e gjeneruar nga kodi |
 | [Mirëmbajtja e këtyre dokumenteve](maintaining.md) | lista e kontrollit të botimit |
 

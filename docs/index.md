@@ -49,6 +49,11 @@ Then load `levels/<name>.glb` in the viewer's Background / level panel
 The levels it writes are built from the game's data: they stay **on your
 machine**, to view, not to share or publish ([Terms](terms.md)).
 
+Each game reader is its own small project with its own licence file, releases
+and issue tracker, so it can be installed, updated, maintained - or withdrawn
+on a rights holder's request - on its own, without affecting the viewer or the
+other tools.
+
 ## Pages
 
 | Page | What it covers |
@@ -60,7 +65,7 @@ machine**, to view, not to share or publish ([Terms](terms.md)).
 | [Place names: towns](towns.md) | a theatre's towns with DCS coordinates |
 | [Projections: fit](fit.md) | finding a theatre's projection from a recording |
 | [How the files are read](reading.md) | the formats, what was verified, what is not read |
-| [Terms and licence](terms.md) | Eagle Dynamics' licence, and why this is a separate package |
+| [Terms and licence](terms.md) | what is read, what is not shipped, the licence |
 | [Command reference](cli-reference.md) | every option, generated from the code |
 | [Maintaining these docs](maintaining.md) | the release checklist |
 

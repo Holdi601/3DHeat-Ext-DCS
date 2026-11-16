@@ -5,47 +5,22 @@ nav_order: 8
 
 # Terms and licence
 
-## Eagle Dynamics' terms
+## What the reader reads
 
-Read on 2026-11-07 from `Doc/license_en.txt` of the install (DCS World
-End-User Licence Agreement, The Fighter Collection Ltd). The licensed
-"Program" includes "THE DATA SUPPLIED WITH IT". Clause 3.1:
+The reader reads data files of your own DCS World installation on your
+computer ([How the files are read](reading.md)). It changes nothing in the
+game and talks to no server.
 
-> Except as expressly set out in this Licence or in clauses 4.1 and 4.2
-> below, or as permitted by any local law, you undertake to use the Program
-> for your own personal use, and you shall not: [...]
->
-> (c) not to disassemble, decompile, reverse engineer or create derivative
-> works based on the whole, or any part, of the Program nor attempt to do any
-> such things except to the extent that (by virtue of section 296A of the
-> Copyright, Designs and Patents Act 1988) such actions cannot be prohibited
-> because they are essential for the purpose of achieving inter-operability
-> of the Program with another software program, and provided that the
-> information obtained by you during such activities: (i) is used only for
-> the purpose of achieving inter-operability of the Program with another
-> software program; and (ii) is not unnecessarily disclosed or communicated
-> to any third party without the TFC's prior written consent; and (iii) is
-> not used to create any software which is substantially similar to the
-> Program.
+Nothing from the game is shipped or redistributed: no game files, no game
+code, no DLLs; the tests build every file they read. The levels it writes stay
+on your machine.
 
-Clause 3.1 (a) forbids to "sell, trade, rent, lease, sub-license, merge,
-adapt, vary, modify the Program" without consent, and (e) to "exploit this
-Program or any of its parts commercially".
+3DHeat DCS is not affiliated with or endorsed by Eagle Dynamics. DCS World and
+related names and trademarks belong to their owners.
 
-What this reader does: it reads data files on your own machine, after you
-installed them, outside the game. It changes nothing in the game, breaks no
-encryption (the one enciphered file in a terrain folder is left alone) and
-talks to no server. Working out the layout of a data file is reverse
-engineering in the sense of 3.1 (c), and a level built from the game's
-terrain is arguably a derivative work. Using the reader is your decision,
-for your own use; the levels it writes are yours to view, not to share or
-publish. That is why it is a separate package.
-
-The sanctioned alternative, which reads no file: the sim's own mission
-scripting can sample the ground (`land.getHeight`, `land.getSurfaceType`)
-and list airbases (`world.getAirbases`) while a mission runs. It needs DCS
-running for hours per theatre and gives a coarser grid; it was not built,
-because the files proved readable.
+Rights holders: open an issue at
+[github.com/Holdi601/3DHeat-Ext-DCS/issues](https://github.com/Holdi601/3DHeat-Ext-DCS/issues) -
+we respond quickly and remove anything on request.
 
 ## Licence and sources
 

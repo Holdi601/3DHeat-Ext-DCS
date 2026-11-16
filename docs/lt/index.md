@@ -50,6 +50,8 @@ Tada įkelkite `levels/<name>.glb` žiūryklės lygių skydelyje
 Lygiai, kuriuos jis įrašo, sukurti iš žaidimo duomenų, todėl jie lieka **jūsų kompiuteryje**: žiūrėti, o ne dalintis
 ar skelbti ([Sąlygos](terms.md)).
 
+Kiekvienas žaidimo skaitytuvas yra atskiras nedidelis projektas su savo licencijos failu, leidimais ir klaidų sekimo sistema, todėl jį galima įdiegti, atnaujinti, prižiūrėti - arba teisių turėtojo prašymu atšaukti - atskirai, nepaveikiant peržiūros programos ar kitų įrankių.
+
 ## Puslapiai {#pages}
 
 | Puslapis | Ką jame rasite |
@@ -61,7 +63,7 @@ ar skelbti ([Sąlygos](terms.md)).
 | [Vietovardžiai: miestai](towns.md) | teatro miestai su DCS koordinatėmis |
 | [Projekcijos: fit](fit.md) | teatro projekcijos radimas pagal įrašą |
 | [Kaip skaitomi failai](reading.md) | formatai, kas patikrinta, kas neskaitoma |
-| [Sąlygos ir licencija](terms.md) | Eagle Dynamics licencija ir kodėl tai atskiras paketas |
+| [Sąlygos ir licencija](terms.md) | kas skaitoma, kas nepateikiama, licencija |
 | [Komandų nuoroda](../cli-reference.md) | kiekviena parinktis, sugeneruota iš kodo |
 | [Šių dokumentų priežiūra](maintaining.md) | išleidimo kontrolinis sąrašas |
 

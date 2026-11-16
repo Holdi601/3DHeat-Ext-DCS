@@ -42,6 +42,8 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 
 它所寫出的關卡是由遊戲的資料建成的，只能**留在你的電腦上**供檢視，不可分享或發布（[條款](terms.md)）。
 
+每個遊戲讀取器都是一個獨立的小專案，有自己的授權檔案、發行版本和問題追蹤，因此可以單獨安裝、更新、維護——或應權利人的要求撤下——而不影響檢視器或其他工具。
+
 ## 頁面 {#pages}
 
 | 頁面 | 內容 |
@@ -53,7 +55,7 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 | [地名：towns](towns.md) | 戰區的城鎮與其 DCS 座標 |
 | [投影：fit](fit.md) | 從錄製中找出戰區的投影 |
 | [檔案如何被讀取](reading.md) | 格式、已驗證的內容、未被讀取的內容 |
-| [條款與授權](terms.md) | Eagle Dynamics 的授權，以及為何這是獨立的套件 |
+| [條款與授權](terms.md) | 讀取什麼、不隨附什麼、授權 |
 | [指令參考](../cli-reference.md) | 每個選項，由程式碼產生 |
 | [維護這些文件](maintaining.md) | 發行檢查清單 |
 

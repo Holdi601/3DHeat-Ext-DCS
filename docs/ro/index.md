@@ -52,6 +52,8 @@ Apoi încărcați `levels/<name>.glb` în panoul Fundal / nivel al vizualizatoru
 Nivelurile pe care le scrie sunt construite din datele jocului: ele rămân **pe calculatorul
 dumneavoastră**, pentru vizualizare, nu pentru a fi distribuite sau publicate ([Condiții](terms.md)).
 
+Fiecare cititor de joc este un mic proiect separat, cu propriul fișier de licență, propriile versiuni și propriul sistem de tichete, astfel încât poate fi instalat, actualizat, întreținut - sau retras la cererea unui deținător de drepturi - separat, fără să afecteze vizualizatorul sau celelalte instrumente.
+
 ## Pagini {#pages}
 
 | Pagina | Ce acoperă |
@@ -63,7 +65,7 @@ dumneavoastră**, pentru vizualizare, nu pentru a fi distribuite sau publicate (
 | [Nume de locuri: towns](towns.md) | orașele unui teatru, cu coordonatele DCS |
 | [Proiecții: fit](fit.md) | aflarea proiecției unui teatru dintr-o înregistrare |
 | [Cum se citesc fișierele](reading.md) | formatele, ce s-a verificat, ce nu se citește |
-| [Condiții și licență](terms.md) | licența Eagle Dynamics și de ce acesta este un pachet separat |
+| [Condiții și licență](terms.md) | ce se citește, ce nu se livrează, licența |
 | [Referința comenzilor](../cli-reference.md) | fiecare opțiune, generată din cod |
 | [Întreținerea acestor documente](maintaining.md) | lista de verificare pentru lansare |
 

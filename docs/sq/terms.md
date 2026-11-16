@@ -3,53 +3,21 @@ title: "Kushtet dhe licenca"
 nav_order: 8
 lang: "sq"
 source: terms.md
-source_hash: "677b443e2bb8"
+source_hash: "5b8e45352dae"
 nav_exclude: true
 search_exclude: true
 ---
 # Kushtet dhe licenca {#terms-and-licence}
 
-## Kushtet e Eagle Dynamics {#eagle-dynamics-terms}
+## Çfarë lexon lexuesi {#what-the-reader-reads}
 
-Lexuar më 2026-11-07 nga `Doc/license_en.txt` i instalimit (DCS World
-End-User Licence Agreement, The Fighter Collection Ltd). "Programi" i licencuar
-përfshin "THE DATA SUPPLIED WITH IT". Klauzola 3.1:
+Lexuesi lexon skedarë të dhënash nga instalimi yt i DCS World në kompjuterin tënd ([Si lexohen skedarët](reading.md)). Nuk ndryshon asgjë në lojë dhe nuk flet me asnjë server.
 
-> Except as expressly set out in this Licence or in clauses 4.1 and 4.2
-> below, or as permitted by any local law, you undertake to use the Program
-> for your own personal use, and you shall not: [...]
->
-> (c) not to disassemble, decompile, reverse engineer or create derivative
-> works based on the whole, or any part, of the Program nor attempt to do any
-> such things except to the extent that (by virtue of section 296A of the
-> Copyright, Designs and Patents Act 1988) such actions cannot be prohibited
-> because they are essential for the purpose of achieving inter-operability
-> of the Program with another software program, and provided that the
-> information obtained by you during such activities: (i) is used only for
-> the purpose of achieving inter-operability of the Program with another
-> software program; and (ii) is not unnecessarily disclosed or communicated
-> to any third party without the TFC's prior written consent; and (iii) is
-> not used to create any software which is substantially similar to the
-> Program.
+Asgjë nga loja nuk shpërndahet as nuk rishpërndahet: asnjë skedar loje, asnjë kod loje, asnjë DLL; testet e ndërtojnë vetë çdo skedar që lexojnë. Nivelet që shkruan mbeten në kompjuterin tënd.
 
-Klauzola 3.1 (a) ndalon të "sell, trade, rent, lease, sub-license, merge,
-adapt, vary, modify the Program" pa pëlqim, dhe (e) të "exploit this
-Program or any of its parts commercially".
+3DHeat DCS nuk është i lidhur me Eagle Dynamics dhe nuk miratohet prej saj. DCS World dhe emrat e markat tregtare përkatëse u përkasin pronarëve të tyre.
 
-Çfarë bën ky lexues: lexon skedarë të dhënash në kompjuterin tënd, pasi
-i ke instaluar, jashtë lojës. Nuk ndryshon asgjë në lojë, nuk thyen asnjë
-enkriptim (skedari i vetëm i enkriptuar në një dosje terreni lihet i paprekur) dhe
-nuk flet me asnjë server. Nxjerrja e skemës së një skedari të dhënash është inxhinieri
-e kundërt në kuptimin e 3.1 (c), dhe një nivel i ndërtuar nga terreni i lojës është
-me arsye një vepër e derivuar. Përdorimi i lexuesit është vendimi yt,
-për përdorimin tënd; nivelet që shkruan janë të tuat për t'i parë, jo për t'i ndarë ose
-botuar. Prandaj është një paketë më vete.
-
-Alternativa e lejuar, që nuk lexon asnjë skedar: skriptimi i misioneve të vetë simulatorit
-mund të mostrojë tokën (`land.getHeight`, `land.getSurfaceType`)
-dhe të listojë bazat ajrore (`world.getAirbases`) ndërsa një mision është në ecuri. Kërkon që DCS
-të jetë i ndezur me orë për teatër dhe jep një rrjetë më të ashpër; nuk u ndërtua,
-sepse skedarët u treguan të lexueshëm.
+Mbajtës të drejtash: hapni një çështje në [github.com/Holdi601/3DHeat-Ext-DCS/issues](https://github.com/Holdi601/3DHeat-Ext-DCS/issues) - përgjigjemi shpejt dhe heqim çdo gjë me kërkesë.
 
 ## Licenca dhe burimet {#licence-and-sources}
 

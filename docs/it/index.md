@@ -3,7 +3,7 @@ title: Home
 nav_order: 1
 lang: "it"
 source: index.md
-source_hash: "2aae647cf882"
+source_hash: "cd080455c40f"
 nav_exclude: true
 search_exclude: true
 permalink: /it/
@@ -53,6 +53,8 @@ Poi carica `levels/<nome>.glb` nel pannello Sfondo / livello del visualizzatore
 I livelli che scrive sono costruiti con i dati del gioco: restano **sul tuo computer**, per
 visualizzarli, non per condividerli o pubblicarli ([Condizioni](terms.md)).
 
+Ogni lettore di gioco è un piccolo progetto a sé, con il proprio file di licenza, le proprie release e il proprio tracker delle segnalazioni: può quindi essere installato, aggiornato, mantenuto - o ritirato su richiesta di un titolare dei diritti - da solo, senza toccare il visualizzatore o gli altri strumenti.
+
 ## Pagine {#pages}
 
 | Pagina | Cosa contiene |
@@ -64,7 +66,7 @@ visualizzarli, non per condividerli o pubblicarli ([Condizioni](terms.md)).
 | [Nomi di luoghi: towns](towns.md) | le città di un teatro con le coordinate di DCS |
 | [Proiezioni: fit](fit.md) | trovare la proiezione di un teatro da una registrazione |
 | [Come vengono letti i file](reading.md) | i formati, cosa è stato verificato, cosa non viene letto |
-| [Condizioni e licenza](terms.md) | la licenza di Eagle Dynamics, e perché questo è un pacchetto separato |
+| [Condizioni e licenza](terms.md) | che cosa viene letto, che cosa non viene distribuito, la licenza |
 | [Riferimento dei comandi](../cli-reference.md) | ogni opzione, generata dal codice |
 | [Manutenzione di questa documentazione](maintaining.md) | la lista di controllo per ogni rilascio |
 

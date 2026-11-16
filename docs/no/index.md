@@ -54,6 +54,8 @@ Last deretter inn `levels/<name>.glb` i visningsprogrammets Bakgrunn / nivå-pan
 Nivåene den skriver er laget av spillets data: de blir **på din egen
 maskin**, for å se på, ikke for å dele eller publisere ([Vilkår](terms.md)).
 
+Hver spilleser er sitt eget lille prosjekt med egen lisensfil, egne utgivelser og egen saksliste, slik at den kan installeres, oppdateres, vedlikeholdes - eller trekkes tilbake på forespørsel fra en rettighetshaver - for seg selv, uten at det påvirker visningsprogrammet eller de andre verktøyene.
+
 ## Sider {#pages}
 
 | Side | Hva den dekker |
@@ -65,7 +67,7 @@ maskin**, for å se på, ikke for å dele eller publisere ([Vilkår](terms.md)).
 | [Stedsnavn: towns](towns.md) | et teaters byer med DCS-koordinater |
 | [Projeksjoner: fit](fit.md) | å finne et teaters projeksjon fra et opptak |
 | [Slik leses filene](reading.md) | formatene, hva som ble kontrollert, hva som ikke leses |
-| [Vilkår og lisens](terms.md) | Eagle Dynamics sin lisens, og hvorfor dette er en egen pakke |
+| [Vilkår og lisens](terms.md) | hva som leses, hva som ikke følger med, lisensen |
 | [Kommandoreferanse](../cli-reference.md) | hvert alternativ, generert fra koden |
 | [Vedlikeholde dokumentasjonen](maintaining.md) | sjekklisten for utgivelse |
 
