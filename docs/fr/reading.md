@@ -29,8 +29,8 @@ marque la mer ; les autres groupes sont les superpositions qui donnent les class
   de sol chacun), chaque tuile échantillonnée se décodant en mètres plausibles.
 - Sur des régions de deux théâtres, les villes de `towns.lua` tombaient à quelques mètres
   d'un sommet du sol, sur la terre, N sur N ; le point le plus haut correspondait au vrai sommet à dix mètres près ;
-  aérodromes, rivières, villages et routes apparaissaient dans leurs classes. Les deux niveaux se sont chargés dans la
-  visionneuse, avec des repères de villes aux mêmes mètres DCS posés sur le sol.
+  aérodromes, rivières, villages et routes apparaissaient dans leurs classes. Les deux niveaux se sont chargés dans le
+  visualiseur, avec des repères de villes aux mêmes mètres DCS posés sur le sol.
 - Sur une région de scène, les placements de bâtiments tombaient sur leur sol ; les feux de piste suivaient la
   piste du jeu, et les wagons et segments de mur s'alignaient sur le cap décodé, tous.
 - `tests/` construit des fichiers `.surface5` selon la même disposition, donc aucune donnée du jeu n'est

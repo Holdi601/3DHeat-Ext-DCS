@@ -22,13 +22,13 @@ Vous débutez avec la ligne de commande ? Lisez d'abord [Avant de commencer](bef
 
 1. Trouvez le nom du dossier du théâtre avec [`list`](list.md).
 2. Pour un petit théâtre, construisez-le en entier : `heat3d-dcs-maps level <théâtre> -o levels`.
-3. Pour un grand, choisissez une région : `--around <lat> <lon> <km>` (un carré de
-   autant de km de part et d'autre d'un point) ou `--bounds X0 Z0 X1 Z1` en mètres DCS.
+3. Pour un grand, choisissez une région : `--around <lat> <lon> <km>` (un carré s'étendant sur
+   ce nombre de km de part et d'autre d'un point) ou `--bounds X0 Z0 X1 Z1` en mètres DCS.
    Donnez-lui un nom avec `--name`.
 4. La commande affiche les tuiles au fur et à mesure de leur lecture, le nombre de triangles, le
    fichier écrit, et combien des villes du théâtre tombent sur le sol - un contrôle de la
    projection qui doit afficher « N sur N ».
-5. Chargez `<dossier>/<nom>.glb` dans le panneau Arrière-plan / niveau de la visionneuse et activez
+5. Chargez `<dossier>/<nom>.glb` dans le panneau Arrière-plan / niveau du visualiseur et activez
    **Couleur capturée** pour voir les classes de sol.
 
 ![level sur une installation synthétique](../assets/img/level.svg)

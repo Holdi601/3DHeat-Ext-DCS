@@ -3,7 +3,7 @@ title: "Accueil"
 nav_order: 1
 lang: "fr"
 source: index.md
-source_hash: "a6572e6ff335"
+source_hash: "2aae647cf882"
 nav_exclude: true
 search_exclude: true
 permalink: /fr/
@@ -12,8 +12,8 @@ permalink: /fr/
 
 **Qu'est-ce que c'est ?** Un théâtre (theatre) est le mot de DCS World pour une carte : une
 région du monde au-dessus de laquelle on vole. Cet outil transforme le sol d'un théâtre, lu depuis
-**votre propre installation**, en un niveau 3D - un modèle au-dessus duquel on peut voler - pour la
-visionneuse [3DHeat](https://github.com/Holdi601/3DHeat)
+**votre propre installation**, en un niveau 3D - un modèle au-dessus duquel on peut voler - pour le
+visualiseur [3DHeat](https://github.com/Holdi601/3DHeat)
 ([documentation](https://holdi601.github.io/3DHeat/)).
 
 **À quoi ça sert ?** À voir vos vols DCS sur la carte propre au jeu : ses collines, sa côte, ses
@@ -23,13 +23,13 @@ aérodromes, ses routes, ses voies ferrées, ses villes et ses bâtiments.
 `levels/<théâtre>.glb` (le niveau) + `levels/<théâtre>.json` (où il se trouve sur
 la Terre, ses villes et ses aérodromes).
 
-À quoi il sert :
+Ce qu'il apporte :
 
 - **Des vols sur la carte propre au jeu.** Le fond de carte du monde de 3DHeat dessine la Terre
   d'aujourd'hui à partir de données ouvertes ; celui-ci dessine le théâtre tel que DCS le dessine.
 - **Aucune étape de placement.** Le niveau est dans les mètres du monde de DCS, donc la télémétrie
   en mètres DCS (le crochet DCS du 3DHeat Watcher écrit exactement cela) s'y pose avec les réglages par défaut
-  de la visionneuse.
+  du visualiseur.
 - **Latitude et longitude.** Chaque niveau porte sa projection, ses coins et ses villes dans les deux repères.
 
 ![D'une installation DCS à un niveau 3DHeat](../assets/img/fr/flow.svg)
@@ -47,7 +47,7 @@ heat3d-dcs-maps level <théâtre> --around <lat> <lon> 12 -o levels --name <nom>
 ```
 
 Vous devez voir une ligne par théâtre avec `list`, se terminant par `readable`.
-Chargez ensuite `levels/<nom>.glb` dans le panneau Arrière-plan / niveau de la visionneuse
+Chargez ensuite `levels/<nom>.glb` dans le panneau Arrière-plan / niveau du visualiseur
 ([Niveaux](https://holdi601.github.io/3DHeat/levels.html)).
 
 Les niveaux écrits sont construits à partir des données du jeu : ils restent **sur votre
@@ -70,10 +70,10 @@ ordinateur**, pour les consulter, et non pour les partager ou les publier ([Cond
 
 ## Voir aussi {#related}
 
-- La visionneuse 3DHeat : [github.com/Holdi601/3DHeat](https://github.com/Holdi601/3DHeat),
+- Le visualiseur 3DHeat : [github.com/Holdi601/3DHeat](https://github.com/Holdi601/3DHeat),
   documentation sur [holdi601.github.io/3DHeat](https://holdi601.github.io/3DHeat/).
 - Télémétrie pour ces niveaux : le [3DHeat Watcher](https://holdi601.github.io/3DHeat-Watcher/)
-  enregistre les vols DCS ; les formats de fichiers de la visionneuse, dont son
+  enregistre les vols DCS ; les formats de fichiers du visualiseur, dont son
   conteneur d'un fichier par match, sont décrits dans
   [Un fichier par match (.3dheat)](https://holdi601.github.io/3DHeat/container.html).
 
@@ -81,7 +81,7 @@ ordinateur**, pour les consulter, et non pour les partager ou les publier ([Cond
 
 | Outil | Ce qu'il fait | Code | Documentation |
 |---|---|---|---|
-| Visionneuse 3DHeat | affiche les données : cartes de chaleur, analyse de course, revue de partie | [3DHeat](https://github.com/Holdi601/3DHeat) | [documentation](https://holdi601.github.io/3DHeat/) |
+| Visualiseur 3DHeat | affiche les données : cartes de chaleur, analyse de course, revue de partie | [3DHeat](https://github.com/Holdi601/3DHeat) | [documentation](https://holdi601.github.io/3DHeat/) |
 | GameFiles | niveaux et circuits tirés des fichiers du jeu | [3DHeat-GameFiles](https://github.com/Holdi601/3DHeat-GameFiles) | [documentation](https://holdi601.github.io/3DHeat-GameFiles/) |
 | GameCapture | télémétrie de tour, et niveaux reconstruits à partir de vidéos de jeu | [3DHeat-GameCapture](https://github.com/Holdi601/3DHeat-GameCapture) | [documentation](https://holdi601.github.io/3DHeat-GameCapture/) |
 | Unreal Exporter | un plugin de l'éditeur Unreal : un niveau en un seul `.glb` | [3DHeat-UnrealExporter](https://github.com/Holdi601/3DHeat-UnrealExporter) | [documentation](https://holdi601.github.io/3DHeat-UnrealExporter/) |
@@ -93,3 +93,12 @@ ordinateur**, pour les consulter, et non pour les partager ou les publier ([Cond
 | Ext-Squad | démos de serveurs Squad | [3DHeat-Ext-Squad](https://github.com/Holdi601/3DHeat-Ext-Squad) | [documentation](https://holdi601.github.io/3DHeat-Ext-Squad/) |
 | Ext-DCS | cartes de DCS World sous forme de niveaux 3D | [3DHeat-Ext-DCS](https://github.com/Holdi601/3DHeat-Ext-DCS) | [documentation](https://holdi601.github.io/3DHeat-Ext-DCS/) |
 | Ext-IL2 | cartes d'IL-2 Sturmovik sous forme de niveaux 3D | [3DHeat-Ext-IL2](https://github.com/Holdi601/3DHeat-Ext-IL2) | [documentation](https://holdi601.github.io/3DHeat-Ext-IL2/) |
+| Ext-Dota | la carte de Dota 2 de votre propre installation, en niveau 3D | [3DHeat-Ext-Dota](https://github.com/Holdi601/3DHeat-Ext-Dota) | [documentation](https://holdi601.github.io/3DHeat-Ext-Dota/) |
+| Ext-DotaReplay | replays de Dota 2 | [3DHeat-Ext-DotaReplay](https://github.com/Holdi601/3DHeat-Ext-DotaReplay) | [documentation](https://holdi601.github.io/3DHeat-Ext-DotaReplay/) |
+| Ext-Riot | replays de League of Legends et VALORANT (ce qu'ils transportent en clair) | [3DHeat-Ext-Riot](https://github.com/Holdi601/3DHeat-Ext-Riot) | [documentation](https://holdi601.github.io/3DHeat-Ext-Riot/) |
+| Ext-Forza | parcours, courses et voitures de Forza de votre propre installation | [3DHeat-Ext-Forza](https://github.com/Holdi601/3DHeat-Ext-Forza) | [documentation](https://holdi601.github.io/3DHeat-Ext-Forza/) |
+| Ext-Battlefield | niveaux Battlefield (Frostbite) en niveaux 3D | [3DHeat-Ext-Battlefield](https://github.com/Holdi601/3DHeat-Ext-Battlefield) | [documentation](https://holdi601.github.io/3DHeat-Ext-Battlefield/) |
+| Ext-BeamNG | parcours de BeamNG.drive | [3DHeat-Ext-BeamNG](https://github.com/Holdi601/3DHeat-Ext-BeamNG) | [documentation](https://holdi601.github.io/3DHeat-Ext-BeamNG/) |
+| Ext-ACRally | étapes d'Assetto Corsa Rally en parcours | [3DHeat-Ext-ACRally](https://github.com/Holdi601/3DHeat-Ext-ACRally) | [documentation](https://holdi601.github.io/3DHeat-Ext-ACRally/) |
+| Ext-Reforger | mondes d'Arma Reforger (Enfusion) en niveaux 3D | [3DHeat-Ext-Reforger](https://github.com/Holdi601/3DHeat-Ext-Reforger) | [documentation](https://holdi601.github.io/3DHeat-Ext-Reforger/) |
+| Ext-R6 | replays de matchs Rainbow Six Siege | [3DHeat-Ext-R6](https://github.com/Holdi601/3DHeat-Ext-R6) | [documentation](https://holdi601.github.io/3DHeat-Ext-R6/) |

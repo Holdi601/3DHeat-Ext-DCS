@@ -28,7 +28,7 @@ Non hai mai usato la riga di comando? Leggi prima [Prima di iniziare](before-you
    quante città del teatro cadono sul terreno - un controllo della proiezione che dovrebbe dire
    "N di N".
 5. Carica `<cartella>/<nome>.glb` nel pannello Sfondo / livello del visualizzatore e attiva
-   **Colore catturato** per vedere le classi di terreno.
+   **Colore acquisito** per vedere le classi di terreno.
 
 ![level su un'installazione sintetica](../assets/img/level.svg)
 

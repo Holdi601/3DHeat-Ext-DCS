@@ -15,9 +15,9 @@ Un livello è un modello 3D del terreno; un teatro è la parola di DCS World per
 
 | Parte | Cosa è |
 |---|---|
-| `ground:<Livello>` | i triangoli stessi del terreno, colorati in base a ciò che il gioco disegna sopra ciascuno |
-| `water:<Livello>` | ogni triangolo che il gioco segna come sott'acqua, appiattito al livello del mare |
-| `structure:<Livello>` | gli edifici del teatro come scatole, dove il gioco li colloca (sotto) |
+| `ground:<Level>` | i triangoli stessi del terreno, colorati in base a ciò che il gioco disegna sopra ciascuno |
+| `water:<Level>` | ogni triangolo che il gioco segna come sott'acqua, appiattito al livello del mare |
+| `structure:<Level>` | gli edifici del teatro come scatole, dove il gioco li colloca (sotto) |
 
 ![Il livello di un teatro sintetico visto dall'alto, colorato per classe di terreno](../assets/img/it/level-top.svg)
 
@@ -25,7 +25,7 @@ I colori sono le classi qui sotto:
 
 ![Classi di terreno e i loro colori](../assets/img/it/classes.svg)
 
-I colori si vedono con **Colore catturato** nel pannello Sfondo / livello del visualizzatore. Ogni
+I colori si vedono con **Colore acquisito** nel pannello Sfondo / livello del visualizzatore. Ogni
 triangolo del terreno prende la classe della sovrapposizione con cui il gioco lo disegna:
 
 | Classe | Colore | Dalla sovrapposizione del gioco |
