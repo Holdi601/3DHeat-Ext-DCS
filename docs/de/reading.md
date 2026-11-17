@@ -3,7 +3,7 @@ title: "Wie die Dateien gelesen werden"
 nav_order: 7
 lang: "de"
 source: reading.md
-source_hash: "51a7963aff87"
+source_hash: "855885faeb73"
 nav_exclude: true
 search_exclude: true
 ---
@@ -14,6 +14,8 @@ Nur `Mods/terrains/<theatre>/surface/*.surface5` (das Bodennetz),
 `AirfieldsTaxiways/*.rn4` und `map/towns.lua` (Ortsnamen, als Text gelesen,
 nie ausgeführt). Nicht die verschlüsselte
 `terrain.cfg.lua.pak.crypt`, nicht `manifest.bin`, nichts vom Programm.
+Für [`ranges`](ranges.md) zusätzlich die `.lua`-Definitionen der Module und
+Asset-Pakete (unten).
 
 Das `.surface5`-Format ist nicht dokumentiert; der Aufbau, wie er aus den Dateien gelesen wurde,
 ist beschrieben in [`heat3d_ext_dcs/surface5.py`](https://github.com/Holdi601/3DHeat-Ext-DCS/blob/main/heat3d_ext_dcs/surface5.py).
@@ -39,6 +41,21 @@ anderen Gruppen sind die Überlagerungen, die die Klassen oben ergeben.
 
 **Nicht geprüft:** ein großer Schauplatz als ganzes Level in einem Stück (die Größengrenze
 oben gibt es aus gutem Grund), und andere DCS-Versionen als die getestete.
+
+## Die Definitionen, die `ranges` liest {#the-definitions-read-by-ranges}
+
+Die Definitionen von Waffen, Sensoren und Einheiten sind Lua-Tabellen. Sie
+werden vom eigenen kleinen Leser des Werkzeugs gelesen
+([`heat3d_ext_dcs/lua.py`](https://github.com/Holdi601/3DHeat-Ext-DCS/blob/main/heat3d_ext_dcs/lua.py)),
+nicht von Lua: Er liest Tabellen, Zahlen, Zeichenketten und Rechnungen, folgt
+Namen und `dofile` innerhalb der Installation, geht den Rumpf einer Funktion
+durch, wenn sie aufgerufen wird, und wiederholt eine Schleife nur über eine
+Tabelle, die er kennt. Er öffnet keine anderen Dateien, startet nichts und
+verändert nichts. Was er nicht wissen kann - ein Wert aus der gepackten
+Kerndatenbank des Spiels - bleibt unbekannt und fehlt im Katalog. Geprüft an
+einer vollständigen Installation: Die angegebenen Reichweiten, Winkel und
+Namen der Waffen, Sensoren und Einheiten kamen so heraus, wie die Dateien sie
+angeben.
 
 ## Nicht gelesen {#not-read}
 

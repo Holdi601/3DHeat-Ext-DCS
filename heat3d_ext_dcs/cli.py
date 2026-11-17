@@ -3,6 +3,7 @@ heat3d-dcs-maps list                     the theatres installed, and whether eac
 heat3d-dcs-maps level <theatre> -o <out> one theatre's ground and sea as a 3DHeat level
 heat3d-dcs-maps towns <theatre>          its place names, with DCS coordinates
 heat3d-dcs-maps fit <recording>          a theatre's projection from a flight that recorded x, z, lat and lon
+heat3d-dcs-maps ranges -o <ranges.json>  weapon and sensor ranges from your own install, for the match replay
 
 `level` writes `<out>/<name>.glb` and `<name>.json` beside it (what was read,
 the projection, the bounds, the towns and how many sit on land).
@@ -21,7 +22,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from . import __version__
-from . import airfields, buildings, glb, install, projection, towns
+from . import airfields, buildings, glb, install, projection, ranges, towns
 from .level import COLOURS, Region, around, build, estimate_vertices, fmt_bounds, ground_height
 from .scene5 import Scene5
 from .surface5 import FormatError, Surface5
@@ -313,6 +314,24 @@ def cmd_fit(args) -> int:
     return 0 if err < 5 else 1
 
 
+def cmd_ranges(args) -> int:
+    dcs = _dcs(args)
+    if dcs is None:
+        return 2
+    extra = [] if args.no_saved_games else ([Path(args.saved_games)] if args.saved_games else ranges.saved_games())
+    print(f"DCS World at {dcs}" + (f"; mods from {', '.join(map(str, extra))}" if extra else ""))
+    started = time.monotonic()
+    cat, summary = ranges.build(dcs, extra)
+    out = Path(args.out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(cat, separators=(",", ":"), sort_keys=True, ensure_ascii=False), encoding="utf-8")
+    print(f"{len(cat['weapons'])} weapons, {len(cat['sensors'])} sensors ({summary['sensors_with_numbers']} with "
+          f"their numbers), {len(cat['units'])} units from {summary['files']} files in "
+          f"{time.monotonic() - started:.1f} s -> {out}")
+    print(f"  not drawn: {summary['skipped']['weapons_without_range']} weapons that state no range")
+    return 0 if cat["weapons"] or cat["sensors"] else 1
+
+
 def main(argv: list[str] | None = None) -> int:
     try:
         from . import update
@@ -355,6 +374,13 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("fit", help="a theatre's projection from a recording holding x, z, lat and lon")
     p.add_argument("recording", help=".parquet, .jsonl or .csv with columns lat, lon, x, z (DCS metres)")
     p.set_defaults(run=cmd_fit)
+
+    p = sub.add_parser("ranges", help="weapon and sensor ranges from your own install, as JSON for the match replay")
+    p.add_argument("-o", "--out", default="ranges.json", help="the .json to write (default: ranges.json here)")
+    p.add_argument("--dcs", help="the DCS World folder")
+    p.add_argument("--saved-games", help="the DCS Saved Games folder whose Mods to read too (default: found)")
+    p.add_argument("--no-saved-games", action="store_true", help="read the install only, not mods in Saved Games")
+    p.set_defaults(run=cmd_ranges)
 
     args = ap.parse_args(argv)
     return args.run(args)

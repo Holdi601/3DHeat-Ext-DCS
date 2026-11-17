@@ -3,7 +3,7 @@ title: "Startseite"
 nav_order: 1
 lang: "de"
 source: index.md
-source_hash: "cd080455c40f"
+source_hash: "b71766e30af6"
 nav_exclude: true
 search_exclude: true
 permalink: /de/
@@ -61,6 +61,7 @@ Jeder Spiel-Leser ist ein eigenes kleines Projekt mit eigener Lizenzdatei, eigen
 | [Ein Level bauen: level](level.md) | jede Option, Regionen, Größe, Schritt für Schritt |
 | [Die Level-Dateien](output.md) | die `.glb`-Teile, die Bodenklassen und ihre Farben, die `.json`, die Koordinaten |
 | [Ortsnamen: towns](towns.md) | die Städte eines Schauplatzes mit DCS-Koordinaten |
+| [Waffen- und Sensorreichweiten: ranges](ranges.md) | ein Katalog der Waffen- und Sensorreichweiten für die Match-Wiedergabe |
 | [Projektionen: fit](fit.md) | die Projektion eines Schauplatzes aus einer Aufnahme finden |
 | [Wie die Dateien gelesen werden](reading.md) | die Formate, was geprüft wurde, was nicht gelesen wird |
 | [Bedingungen und Lizenz](terms.md) | was gelesen wird, was nicht mitgeliefert wird, die Lizenz |

@@ -60,3 +60,18 @@ def test_scene_reads(t):
         # Every placement inside its node's bounds (x, z), metres.
         x, z = inst.position[:, 0], inst.position[:, 2]
         assert ((x >= b[0] - 1) & (x <= b[3] + 1) & (z >= b[2] - 1) & (z <= b[5] + 1)).all()
+
+
+def test_ranges_catalogue():
+    from heat3d_ext_dcs import ranges
+
+    cat, summary = ranges.build(DCS)
+    assert cat["weapons"] and cat["units"] and summary["sensors_with_numbers"]
+    ids = [w["id"] for w in cat["weapons"]]
+    assert len(ids) == len(set(ids))
+    for w in cat["weapons"]:
+        lo, best, hi = w["range"]
+        assert 0 <= lo <= best <= hi and w["labels"]
+    known = set(ids)
+    for u in cat["units"]:
+        assert u["names"] and set(u["weapons"]) <= known and set(u["sensors"]) <= set(cat["sensors"])

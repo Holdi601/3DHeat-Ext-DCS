@@ -63,6 +63,7 @@ other tools.
 | [Building a level: level](level.md) | every option, regions, size, step by step |
 | [The level files](output.md) | the `.glb` parts, the ground classes and their colours, the `.json`, the coordinates |
 | [Place names: towns](towns.md) | a theatre's towns with DCS coordinates |
+| [Weapon and sensor ranges: ranges](ranges.md) | a catalogue of weapon and sensor ranges for the match replay |
 | [Projections: fit](fit.md) | finding a theatre's projection from a recording |
 | [How the files are read](reading.md) | the formats, what was verified, what is not read |
 | [Terms and licence](terms.md) | what is read, what is not shipped, the licence |

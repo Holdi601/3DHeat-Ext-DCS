@@ -13,7 +13,8 @@ game and talks to no server.
 
 Nothing from the game is shipped or redistributed: no game files, no game
 code, no DLLs; the tests build every file they read. The levels it writes stay
-on your machine.
+on your machine, and so does the catalogue `ranges` builds from your own
+installation.
 
 3DHeat DCS is not affiliated with or endorsed by Eagle Dynamics. DCS World and
 related names and trademarks belong to their owners.

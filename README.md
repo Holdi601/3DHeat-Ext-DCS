@@ -50,12 +50,14 @@ You should see one line per installed theatre: its name, its size, and `readable
 | `list [--dcs FOLDER]` | the theatres installed, and whether each can be read | [list](https://holdi601.github.io/3DHeat-Ext-DCS/list.html) |
 | `level <theatre> -o <folder>` | one theatre's ground, sea and buildings as a `.glb` level | [level](https://holdi601.github.io/3DHeat-Ext-DCS/level.html) |
 | `towns <theatre>` | the theatre's place names, with DCS coordinates, as JSON | [towns](https://holdi601.github.io/3DHeat-Ext-DCS/towns.html) |
+| `ranges -o <file>` | a catalogue of weapon and sensor ranges from your own installation, for the match replay | [ranges](https://holdi601.github.io/3DHeat-Ext-DCS/ranges.html) |
 | `fit <recording>` | find a theatre's projection from a recording | [fit](https://holdi601.github.io/3DHeat-Ext-DCS/fit.html) |
 
 ```bash
 heat3d-dcs-maps level <theatre> -o levels                                      # a whole (small) theatre
 heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name>  # 12 km either side of a point
 heat3d-dcs-maps towns <theatre>                                                # its place names
+heat3d-dcs-maps ranges -o ranges.json                                          # weapon and sensor ranges
 ```
 
 `<theatre>` is the name `list` prints. The install is found from the

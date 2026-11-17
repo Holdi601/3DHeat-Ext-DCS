@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- `ranges`: builds a catalogue of weapon and sensor ranges, and the units that carry them, from your own installation, for the viewer's match replay.
+
 ## 0.2.0
 
 - Buildings from the theatre's scene, as boxes (`structure` part, `buildings` in the `.json`; `--no-buildings`).
@@ -22,6 +26,7 @@ Where each feature is documented
 | Building a level, regions, size (`level` and its options) | [Building a level: level](docs/level.md) |
 | The `.glb` parts, ground classes and colours, the `.json`, coordinates, airfields, buildings | [The level files](docs/output.md) |
 | Place names (`towns`) | [Place names: towns](docs/towns.md) |
+| Weapon and sensor ranges (`ranges`) | [Weapon and sensor ranges: ranges](docs/ranges.md) |
 | Projections (`fit`, `--projection`) | [Projections: fit](docs/fit.md) |
 | How the files are read, what was checked, what is not read | [How the files are read](docs/reading.md) |
 | What is read, what is not shipped, the licence | [Terms and licence](docs/terms.md) |

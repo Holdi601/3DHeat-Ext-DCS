@@ -19,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs" / "cli-reference.md"
 COMMAND = "heat3d-dcs-maps"
-VERBS = ["list", "level", "towns", "fit"]
+VERBS = ["list", "level", "towns", "fit", "ranges"]
 
 
 def run(args):

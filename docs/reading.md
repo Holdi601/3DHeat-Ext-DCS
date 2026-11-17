@@ -10,6 +10,8 @@ Only `Mods/terrains/<theatre>/surface/*.surface5` (the ground mesh),
 `AirfieldsTaxiways/*.rn4` and `map/towns.lua` (place names, read as text,
 never run). Not the encrypted
 `terrain.cfg.lua.pak.crypt`, not `manifest.bin`, nothing of the program.
+For [`ranges`](ranges.md), also the `.lua` definitions of the modules and
+asset packs (below).
 
 The `.surface5` format is undocumented; the layout, as read from the files,
 is written down in [`heat3d_ext_dcs/surface5.py`](https://github.com/Holdi601/3DHeat-Ext-DCS/blob/main/heat3d_ext_dcs/surface5.py).
@@ -39,6 +41,18 @@ other groups are the overlays that give the classes above.
 
 **Not checked:** the whole of a large theatre in one level (the size guard
 above exists for a reason), and versions of DCS other than the one tried.
+
+## The definitions read by `ranges`
+
+The weapon, sensor and unit definitions are Lua tables. They are read by the
+tool's own small reader ([`heat3d_ext_dcs/lua.py`](https://github.com/Holdi601/3DHeat-Ext-DCS/blob/main/heat3d_ext_dcs/lua.py)),
+not by Lua: it reads tables, numbers, strings and arithmetic, follows names
+and `dofile` inside the install, walks a function's body when it is called
+and repeats a loop only over a table it knows. It opens no other files,
+starts nothing and changes nothing. What it cannot know - a value from the
+game's packed core database - stays unknown and is left out of the
+catalogue. Checked on a full install: the stated ranges, angles and names of
+the weapons, sensors and units came out as the files give them.
 
 ## Not read
 

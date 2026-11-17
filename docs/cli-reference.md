@@ -11,17 +11,19 @@ The other pages explain each command step by step.
 ## `heat3d-dcs-maps`
 
 ```text
-usage: heat3d-dcs-maps [-h] [--version] {list,level,towns,fit} ...
+usage: heat3d-dcs-maps [-h] [--version] {list,level,towns,fit,ranges} ...
 
 DCS World theatres into 3DHeat levels
 
 positional arguments:
-  {list,level,towns,fit}
+  {list,level,towns,fit,ranges}
     list                the theatres installed, and whether each can be read
     level               one theatre's ground and sea as a .glb level
     towns               a theatre's place names with DCS coordinates, as JSON
     fit                 a theatre's projection from a recording holding x, z, lat and
                         lon
+    ranges              weapon and sensor ranges from your own install, as JSON for
+                        the match replay
 
 options:
   -h, --help            show this help message and exit
@@ -91,6 +93,22 @@ positional arguments:
 
 options:
   -h, --help  show this help message and exit
+```
+
+## `ranges`
+
+```text
+usage: heat3d-dcs-maps ranges [-h] [-o OUT] [--dcs DCS] [--saved-games SAVED_GAMES]
+                              [--no-saved-games]
+
+options:
+  -h, --help            show this help message and exit
+  -o, --out OUT         the .json to write (default: ranges.json here)
+  --dcs DCS             the DCS World folder
+  --saved-games SAVED_GAMES
+                        the DCS Saved Games folder whose Mods to read too (default:
+                        found)
+  --no-saved-games      read the install only, not mods in Saved Games
 ```
 
 ## Output
