@@ -3,7 +3,7 @@ title: "Startseite"
 nav_order: 1
 lang: "de"
 source: index.md
-source_hash: "b71766e30af6"
+source_hash: "e3bab88b09d4"
 nav_exclude: true
 search_exclude: true
 permalink: /de/
@@ -33,22 +33,35 @@ Wofür es nützlich ist:
 
 ## Schnellstart {#quick-start}
 
-Neu in der Kommandozeile? Lies zuerst [Bevor du anfängst](before-you-start.md).
-Führe diese Befehle in dem Ordner aus, in den du geklont oder entpackt hast:
+Du brauchst Windows, Python 3.10 oder neuer (im Installer "Add python.exe to PATH"
+ankreuzen), DCS World installiert (wird von selbst gefunden) und etwa 800 MB Platz für
+den ganzen Kaukasus; Git ist nicht nötig. Neu in der Kommandozeile? Lies zuerst
+[Bevor du anfängst](before-you-start.md).
 
 ```bash
-python -m pip install -e .                         # installs the heat3d-dcs-maps command
-heat3d-dcs-maps list                               # the theatres installed, and whether each can be read
-heat3d-dcs-maps level <theatre> -o levels          # a whole (small) theatre
-heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name>   # 12 km either side of a point
+python -m pip install https://github.com/Holdi601/3DHeat-Ext-DCS/archive/refs/tags/v0.2.0.zip
+heat3d-dcs-maps list                               # die installierten Schauplätze, und ob jeder lesbar ist
+heat3d-dcs-maps level Caucasus -o levels           # ein ganzer (kleiner) Schauplatz
+heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name>   # 12 km um einen Punkt
 ```
 
 Du solltest von `list` pro Schauplatz eine Zeile sehen, die mit `readable` endet.
-Lade dann `levels/<name>.glb` im Panel „Hintergrund / Level“ des Viewers
-([Levels](https://holdi601.github.io/3DHeat/levels.html)).
+`level` schreibt `levels\Caucasus.glb` (das Level, etwa 710 MB) und daneben
+`levels\Caucasus.json` (wo es auf der Erde liegt, seine Städte und Flugplätze); der ganze
+Kaukasus dauert etwa 3 Minuten. Ein großer Schauplatz (über 30 Millionen Eckpunkte, wie
+`list` zeigt) hält an und fragt nach einem Ausschnitt, etwa dem `--around`-Quadrat oben.
+Wird der DCS-Ordner nicht gefunden, nenne ihn mit `--dcs "<DCS-World-Ordner>"` (den mit
+`Mods\terrains`).
 
-Die Levels, die es schreibt, entstehen aus den Daten des Spiels: Sie bleiben **auf deinem Rechner**,
-zum Ansehen, nicht zum Teilen oder Veröffentlichen ([Bedingungen](terms.md)).
+Dann öffne die `.glb` im [3DHeat-Viewer](https://github.com/Holdi601/3DHeat#quick-start):
+herunterladen (**Code -> Download ZIP**, entpacken), `start.bat` doppelklicken (es bietet
+an, Node.js zu installieren, wenn es fehlt, und öffnet `http://127.0.0.1:5273`), dann
+**Hintergrund / Level -> 3D-Modell...** und die Datei wählen
+([Levels](https://holdi601.github.io/3DHeat/levels.html)); **Erfasste Farbe** im selben
+Panel zeigt die Bodenklassen. Das Level bleibt auf deinem Rechner.
+
+Wenn ein neues Release erscheint, sagt das Werkzeug es beim Start und bietet an, sich
+selbst zu aktualisieren.
 
 Jeder Spiel-Leser ist ein eigenes kleines Projekt mit eigener Lizenzdatei, eigenen Releases und eigenem Issue-Tracker. So lässt er sich für sich allein installieren, aktualisieren, pflegen - oder auf Wunsch eines Rechteinhabers zurückziehen -, ohne den Viewer oder die anderen Werkzeuge zu berühren.
 

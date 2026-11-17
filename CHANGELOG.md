@@ -1,14 +1,14 @@
 # Changelog
 
-## Unreleased
+## 0.2.0
 
 - `ranges`: builds a catalogue of weapon and sensor ranges, and the units that carry them, from your own installation, for the viewer's match replay.
-
-## 0.2.0
 
 - Buildings from the theatre's scene, as boxes (`structure` part, `buildings` in the `.json`; `--no-buildings`).
 - Airfields: names and positions from the taxiway files.
 - A theatre's projection fitted to its own beacons where none is published; `fit` for any other.
+- Installs with one pip line from the release zip, no Git needed; a pip install knows its version and updates itself with pip when a newer release is out.
+- README: a quick start for new users.
 
 ## 0.1.0
 

@@ -32,22 +32,35 @@ What it is useful for:
 
 ## Quick start
 
-New to the command line? Read [Before you start](before-you-start.md) first.
-Run these in the folder you cloned or unzipped:
+You need Windows, Python 3.10 or later ("Add python.exe to PATH" ticked in its
+installer), DCS World installed (found by itself) and about 800 MB of disk
+space for a whole Caucasus; no Git. New to the command line? Read
+[Before you start](before-you-start.md) first.
 
 ```bash
-python -m pip install -e .                         # installs the heat3d-dcs-maps command
+python -m pip install https://github.com/Holdi601/3DHeat-Ext-DCS/archive/refs/tags/v0.2.0.zip
 heat3d-dcs-maps list                               # the theatres installed, and whether each can be read
-heat3d-dcs-maps level <theatre> -o levels          # a whole (small) theatre
+heat3d-dcs-maps level Caucasus -o levels           # a whole (small) theatre
 heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name>   # 12 km either side of a point
 ```
 
-You should see one line per theatre from `list`, ending `readable`.
-Then load `levels/<name>.glb` in the viewer's Background / level panel
-([Levels](https://holdi601.github.io/3DHeat/levels.html)).
+You should see one line per theatre from `list`, ending `readable`. `level`
+writes `levels\Caucasus.glb` (the level, about 710 MB) and
+`levels\Caucasus.json` beside it (where it lies on the earth, its towns and
+airfields); the whole Caucasus takes about 3 minutes. A large theatre (above 30
+million vertices, as `list` shows) stops and asks for a region, such as the
+`--around` square above. A DCS folder that is not found needs
+`--dcs "<DCS World folder>"` (the one holding `Mods\terrains`).
 
-The levels it writes are built from the game's data: they stay **on your
-machine**, to view, not to share or publish ([Terms](terms.md)).
+Then open the `.glb` in the [3DHeat viewer](https://github.com/Holdi601/3DHeat#quick-start):
+download it (**Code -> Download ZIP**, unpack), double-click `start.bat` (it
+offers to install Node.js when it is missing and opens `http://127.0.0.1:5273`),
+then **Background / level -> 3D model...** and pick the file
+([Levels](https://holdi601.github.io/3DHeat/levels.html)); **Captured colour**
+in the same panel shows the ground classes. The level stays on your machine.
+
+When a new release is out, the tool says so when it starts and offers to
+update itself.
 
 Each game reader is its own small project with its own licence file, releases
 and issue tracker, so it can be installed, updated, maintained - or withdrawn

@@ -25,7 +25,44 @@ other tools.
 
 The levels it writes stay on your machine.
 
-## Install
+## Quick start for new users
+
+You need: Windows, [Python](https://www.python.org/downloads/) 3.10 or later
+("Add python.exe to PATH" ticked in its installer), DCS World installed (found
+by itself from the registry, the Steam libraries and the usual folders), and
+about 800 MB of disk space for a whole Caucasus. No Git is needed.
+
+1. Install the tool (one line, in PowerShell or a command prompt):
+
+   ```bash
+   python -m pip install https://github.com/Holdi601/3DHeat-Ext-DCS/archive/refs/tags/v0.2.0.zip
+   ```
+
+2. List the theatres, then export one (a DCS folder that is not found needs
+   `--dcs "<DCS World folder>"`, the one holding `Mods\terrains`):
+
+   ```bash
+   heat3d-dcs-maps list
+   heat3d-dcs-maps level Caucasus -o levels
+   ```
+
+   A large theatre (above 30 million vertices, as `list` shows) stops and asks
+   for a region: `heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name>`
+   writes a square 12 km either side of a point.
+3. The output is `levels\Caucasus.glb` (the level, about 710 MB) and
+   `levels\Caucasus.json` beside it (where it lies on the earth, its towns and
+   airfields); the whole Caucasus takes about 3 minutes.
+4. Open it in the [3DHeat viewer](https://github.com/Holdi601/3DHeat#quick-start):
+   download the viewer (**Code -> Download ZIP**, unpack) and double-click
+   `start.bat`; it offers to install [Node.js](https://nodejs.org/) when it is
+   missing and opens Chrome or Edge at `http://127.0.0.1:5273`. There,
+   **Background / level -> 3D model...** and pick the `.glb`; **Captured
+   colour** in the same panel shows the ground classes.
+
+When a new release is out, the tool says so when it starts and offers to
+update itself (`python -m heat3d_ext_dcs.update` does the same).
+
+## Install from a checkout
 
 New to the command line? Read [Before you start](https://holdi601.github.io/3DHeat-Ext-DCS/before-you-start.html) first.
 
