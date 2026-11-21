@@ -25,7 +25,21 @@ other tools.
 
 The levels it writes stay on your machine.
 
-## Quick start for new users
+## The standalone program
+
+No Python needed: download the file for your system from the
+[latest release](https://github.com/Holdi601/3DHeat-Ext-DCS/releases/latest)
+(`heat3d-dcs-<version>-windows-x64.zip` for Windows,
+`heat3d-dcs-<version>-linux-x64.tar.gz` for DCS World under Proton or Wine on
+Linux), check it against `SHA256SUMS`, unpack it and start `heat3d-dcs`. Its
+window finds your DCS World install, says what is missing, lists the theatres
+that are new or changed since the last extraction and extracts the ones you
+pick into the 3DHeat levels folder, and asks before it updates itself.
+`heat3d-dcs --help` lists its commands (every command below runs through it
+too). The 3DHeat app's Extractors panel can install and update it for you. See
+[The standalone program](https://holdi601.github.io/3DHeat-Ext-DCS/#the-standalone-program-no-python-needed).
+
+## Quick start for new users (Python)
 
 You need: Windows, [Python](https://www.python.org/downloads/) 3.10 or later
 ("Add python.exe to PATH" ticked in its installer), DCS World installed (found
@@ -59,8 +73,11 @@ about 800 MB of disk space for a whole Caucasus. No Git is needed.
    **Background / level -> 3D model...** and pick the `.glb`; **Captured
    colour** in the same panel shows the ground classes.
 
-When a new release is out, the tool says so when it starts and offers to
-update itself (`python -m heat3d_ext_dcs.update` does the same).
+When a new release is out, the tool says so when it starts, shows its notes
+and asks: update now, later, or skip this version. It updates without asking
+only when you chose that: `--auto-update` (this run), the standalone window's
+*Update automatically*, or `HEAT3D_AUTO_UPDATE=1`. `python -m heat3d_ext_dcs.update`
+updates on request; `HEAT3D_NO_UPDATE=1` switches the check off.
 
 ## Install from a checkout
 

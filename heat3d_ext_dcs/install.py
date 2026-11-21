@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import os
-import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -30,16 +29,24 @@ def _registry() -> list[Path]:
 
 
 def _steam_libraries() -> list[Path]:
-    roots = [Path(os.environ.get("ProgramFiles(x86)", r"C:\Program Files (x86)")) / "Steam"]
-    libs: list[Path] = []
-    for root in roots:
-        vdf = root / "steamapps" / "libraryfolders.vdf"
+    """Every Steam library (Windows, Linux native, flatpak and Steam Deck, macOS)."""
+    from .app import paths
+
+    return paths.steam_libraries()
+
+
+def _wine_prefixes() -> list[Path]:
+    """Linux: the usual Wine/Proton prefixes a standalone DCS is installed into (Lutris, plain Wine, a games folder)."""
+    if sys.platform == "win32":
+        return []
+    home = Path.home()
+    out = [home / ".wine"]
+    for base in (home / "Games", home / ".local" / "share" / "lutris" / "prefixes"):
         try:
-            text = vdf.read_text(encoding="utf-8", errors="replace")
+            out += sorted(d for d in base.iterdir() if d.is_dir())
         except OSError:
             continue
-        libs += [Path(p.replace("\\\\", "\\")) for p in re.findall(r'"path"\s+"([^"]+)"', text)]
-    return libs
+    return out
 
 
 def candidates() -> list[Path]:
@@ -50,6 +57,9 @@ def candidates() -> list[Path]:
     for d in drives:
         for base in ("Program Files\\Eagle Dynamics", "Eagle Dynamics", "Games", "SteamLibrary\\steamapps\\common"):
             out += [Path(d) / base / n for n in _NAMES]
+    for prefix in _wine_prefixes():
+        for base in ("drive_c/Program Files/Eagle Dynamics", "drive_c/Games", "drive_c/Eagle Dynamics"):
+            out += [prefix / base / n for n in _NAMES]
     return out
 
 

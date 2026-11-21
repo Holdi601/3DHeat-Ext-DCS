@@ -3,6 +3,7 @@ __pycache__/
 *.egg-info/
 build/
 dist/
+dist-standalone/
 
 # Levels built from a user's own game files never belong here.
 *.glb

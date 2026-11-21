@@ -1,0 +1,8 @@
+{
+  "spec": "heat3d_ext_dcs.standalone_spec",
+  "collect_submodules": ["numpy", "fast_simplification"],
+  "platforms": {
+    "windows-x64": {"build": true, "tested": true, "note": "DCS World standalone and Steam; CI builds and smoke-runs, levels checked on a real install"},
+    "linux-x64": {"build": true, "tested": false, "note": "DCS World under Proton (Steam) or Wine (standalone) found; CI builds and smoke-runs"}
+  }
+}
