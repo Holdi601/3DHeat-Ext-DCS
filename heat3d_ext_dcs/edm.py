@@ -134,9 +134,7 @@ def _value(r: Reader, kind: str):
         return r.vec(2)
     if kind == "osg::Vec3d":
         return r.vec(3)
-    if kind == "const char*":
-        return r.text()
-    if kind == "std::string" or kind == "string":
+    if kind in ("const char*", "std::string", "string"):
         return r.string()
     raise EdmError(f"property type {kind!r} at {r.o}")
 
