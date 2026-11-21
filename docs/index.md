@@ -38,7 +38,7 @@ space for a whole Caucasus; no Git. New to the command line? Read
 [Before you start](before-you-start.md) first.
 
 ```bash
-python -m pip install https://github.com/Holdi601/3DHeat-Ext-DCS/archive/refs/tags/v0.2.0.zip
+python -m pip install https://github.com/Holdi601/3DHeat-Ext-DCS/archive/refs/tags/v0.3.0.zip
 heat3d-dcs-maps list                               # the theatres installed, and whether each can be read
 heat3d-dcs-maps level Caucasus -o levels           # a whole (small) theatre
 heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name>   # 12 km either side of a point

@@ -332,6 +332,54 @@ def cmd_ranges(args) -> int:
     return 0 if cat["weapons"] or cat["sensors"] else 1
 
 
+def cmd_layouts(args) -> int:
+    from . import layouts
+
+    dcs = _dcs(args)
+    if dcs is None:
+        return 2
+    out = Path(args.out)
+    tool = f"heat3d-dcs-maps {__version__}"
+    wanted = [t for t in install.theatres(dcs) if not args.theatres or t.name.lower() in {x.lower() for x in args.theatres}]
+    if not wanted:
+        print("no such theatre (see list)", file=sys.stderr)
+        return 2
+    print(f"reading the stands of the missions under {dcs} ...", flush=True)
+    stands = layouts.stands(dcs, log=lambda m: print(m, flush=True))
+    # The levels already written into the output folder, by theatre: each gets the part of its theatre it holds.
+    levels: dict[str, list[tuple[Path, dict]]] = {}
+    for meta in out.rglob("*.json"):
+        if meta.name.endswith(".layouts.json"):
+            continue
+        try:
+            d = json.loads(meta.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if isinstance(d, dict) and d.get("tool") == "heat3d_ext_dcs" and d.get("theatre") and d.get("bounds"):
+            levels.setdefault(d["theatre"].lower(), []).append((meta, d))
+    for t in wanted:
+        doc = layouts.theatre_layout(t.folder, stands.get(layouts._theatre_id(t.name), {}), tool)
+        o, z, sp = layouts.counts(doc)
+        if not o and not sp:
+            print(f"{t.name}: no airbases found")
+            continue
+        path = out / f"{doc['level']}.layouts.json"
+        layouts.write(path, doc)
+        print(f"ok {path} {o} objectives, {sp} stands", flush=True)
+        for meta, d in levels.get(t.name.lower(), []):
+            b = d["bounds"]
+            part = layouts.within(doc, d.get("level") or meta.stem, (b["x"][0], b["z"][0], b["x"][1], b["z"][1]))
+            dest = meta.with_name(f"{part['level']}.layouts.json")
+            o, z, sp = layouts.counts(part)
+            if not o and not sp:
+                dest.unlink(missing_ok=True)
+                print(f"{part['level']}: no airbase inside", flush=True)
+                continue
+            layouts.write(dest, part)
+            print(f"ok {dest} {o} objectives, {sp} stands", flush=True)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     try:
         from . import update
@@ -385,6 +433,13 @@ def main(argv: list[str] | None = None) -> int:
     from . import gear
 
     gear.add_verbs(sub)
+
+    p = sub.add_parser("layouts", help="each theatre's airbases, runways and parking stands as 3DHeat layouts")
+    p.add_argument("theatres", nargs="*", help="folder names under Mods\\terrains (default: every one)")
+    p.add_argument("-o", "--out", required=True,
+                   help="the levels folder: writes <theatre>.layouts.json there, and beside each level of it found below")
+    p.add_argument("--dcs", help="the DCS World folder")
+    p.set_defaults(run=cmd_layouts)
 
     args = ap.parse_args(argv)
     return args.run(args)

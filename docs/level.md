@@ -52,6 +52,24 @@ A region of the same synthetic theatre, by DCS metres:
 
 Every option, as the program prints it: [Command reference](cli-reference.md).
 
+## Airbases, runways and parking (layouts)
+
+`heat3d-dcs-maps layouts -o <levels folder>` writes each theatre's airbases as a
+3DHeat layout: `<theatre>.layouts.json` in the levels folder, and
+`<level>.layouts.json` beside each level of that theatre found below it, with
+the airbases inside the level. The viewer draws them on the level (Objectives
+panel, Tactics board) and names the airbases of a `.miz` read onto the board.
+
+- **Airbases:** id and name from the theatre's `Radio.lua` and `Beacons.lua`,
+  placed at the middle of their taxiways.
+- **Runways:** from the landing beacons at both ends (where a runway has them).
+- **Parking stands:** every stand that the missions in your install start an
+  aircraft from (the `.miz` files under the DCS folder; only their `mission`
+  table is read), placed where those missions put it.
+
+Encrypted files are never opened. FARPs are a mission's own: they come with a
+mission read onto the board, not with the theatre.
+
 ## Size
 
 The game's mesh is adaptive - open sea in triangles kilometres across, coasts

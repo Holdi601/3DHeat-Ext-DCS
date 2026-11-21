@@ -1,7 +1,10 @@
 # Changelog
 
-## Unreleased
+## 0.3.0
 
+- `layouts`: each theatre's airbases (ids and names), runways and the parking stands the missions in your install
+  start aircraft from, as `<theatre>.layouts.json` and, cut to each level, `<level>.layouts.json` beside the
+  levels. Docs: [Level](docs/level.md#airbases-runways-and-parking-layouts).
 - `catalog`: every aircraft, helicopter, ground unit, ship and weapon of your installation (the modules', asset
   packs' and Saved Games mods' Lua, as `ranges` reads it) as `catalog.json`: type name, display name, class,
   domain, the model it is drawn with, its weapons and a few numbers, and the real vehicle each stands for. The

@@ -35,7 +35,7 @@ about 800 MB of disk space for a whole Caucasus. No Git is needed.
 1. Install the tool (one line, in PowerShell or a command prompt):
 
    ```bash
-   python -m pip install https://github.com/Holdi601/3DHeat-Ext-DCS/archive/refs/tags/v0.2.0.zip
+   python -m pip install https://github.com/Holdi601/3DHeat-Ext-DCS/archive/refs/tags/v0.3.0.zip
    ```
 
 2. List the theatres, then export one (a DCS folder that is not found needs
