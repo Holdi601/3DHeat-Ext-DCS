@@ -157,6 +157,7 @@ def tank_edm() -> bytes:
     w.u32(44)
     w.u32(1)
     w.f64s(0.5, 1.0)
+    w.f32s(*np.eye(4).reshape(-1))  # a visibility node of version 1 carries a transform
     nodes.append("Flame")
     for p in (-1, 0, 1, 2, 1, 1, 3):
         w.i32(p)
