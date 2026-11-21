@@ -8,7 +8,8 @@
   including meshes split over several nodes and skinned meshes. Each model at rest, with a ground unit's turret and
   gun and a helicopter's main rotor as parts that turn, wheels and tracks as running gear, and the collision shells
   as hit regions; three levels of detail. Files that are not EDM models it can open are skipped and listed.
-- `catalog`: a unit's model is also found where its Lua sets the shape field by field.
+- `catalog`: a unit's model is also found where its Lua sets the shape field by field, and units drawn with
+  another unit's model file link to it.
 
 ## 0.3.0
 

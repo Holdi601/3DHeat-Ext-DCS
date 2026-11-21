@@ -165,9 +165,13 @@ def cmd_catalog(args) -> int:
     pack = out.parent.parent / "model-packs" / "dcs" / "model-pack.json"
     if pack.is_file():
         units = json.loads(pack.read_text(encoding="utf-8")).get("units", {})
+        files = {uid: u["file"] for uid, u in units.items()}
+        for u in units.values():  # units drawn with another unit's file
+            for alias in u.get("aliases", []):
+                files.setdefault(alias, u["file"])
         for it in items:
-            if it["id"] in units:
-                it["model"] = f"model-packs/dcs/{units[it['id']]['file']}"
+            if it["id"] in files:
+                it["model"] = f"model-packs/dcs/{files[it['id']]}"
     doc = {"format": "3dheat-catalog", "version": 1, "game": "dcs", "gameBuild": game_build(dcs), "source": source(),
            "items": sorted(items, key=lambda i: (i["kind"], i["id"]))}
     out.parent.mkdir(parents=True, exist_ok=True)
