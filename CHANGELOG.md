@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- `catalog`: every aircraft, helicopter, ground unit, ship and weapon of your installation (the modules', asset
+  packs' and Saved Games mods' Lua, as `ranges` reads it) as `catalog.json`: type name, display name, class,
+  domain, the model it is drawn with, its weapons and a few numbers, and the real vehicle each stands for. The
+  viewer names DCS units by it and draws them with another game's local model of the same vehicle.
+
 ## 0.2.0
 
 - `ranges`: builds a catalogue of weapon and sensor ranges, and the units that carry them, from your own installation, for the viewer's match replay.

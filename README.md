@@ -88,6 +88,7 @@ You should see one line per installed theatre: its name, its size, and `readable
 | `level <theatre> -o <folder>` | one theatre's ground, sea and buildings as a `.glb` level | [level](https://holdi601.github.io/3DHeat-Ext-DCS/level.html) |
 | `towns <theatre>` | the theatre's place names, with DCS coordinates, as JSON | [towns](https://holdi601.github.io/3DHeat-Ext-DCS/towns.html) |
 | `ranges -o <file>` | a catalogue of weapon and sensor ranges from your own installation, for the match replay | [ranges](https://holdi601.github.io/3DHeat-Ext-DCS/ranges.html) |
+| `catalog [-o <file>]` | every aircraft, helicopter, ground unit, ship and weapon of your installation (name, class, the model it is drawn with, its weapons), as `catalog.json` for the viewer's unit names and order (default `$HEAT3D_LEVELS/dcs/catalog.json`) | below |
 | `fit <recording>` | find a theatre's projection from a recording | [fit](https://holdi601.github.io/3DHeat-Ext-DCS/fit.html) |
 
 ```bash
@@ -95,6 +96,7 @@ heat3d-dcs-maps level <theatre> -o levels                                      #
 heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name>  # 12 km either side of a point
 heat3d-dcs-maps towns <theatre>                                                # its place names
 heat3d-dcs-maps ranges -o ranges.json                                          # weapon and sensor ranges
+heat3d-dcs-maps catalog                                                        # unit and weapon catalogue
 ```
 
 `<theatre>` is the name `list` prints. The install is found from the

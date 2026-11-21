@@ -382,6 +382,10 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--no-saved-games", action="store_true", help="read the install only, not mods in Saved Games")
     p.set_defaults(run=cmd_ranges)
 
+    from . import gear
+
+    gear.add_verbs(sub)
+
     args = ap.parse_args(argv)
     return args.run(args)
 
