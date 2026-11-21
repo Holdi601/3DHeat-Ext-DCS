@@ -3,12 +3,15 @@ A local model pack and catalogue in 3DHeat's formats, shared by the `models` and
 
 Model pack: a folder with `model-pack.json` (`{format: "3dheat-model-pack", version: 1, game, gameBuild, source,
 units: {<unit id>: {file, name, names, displayName, kind, type, domain, key, aliases, parts, box, pivots, length,
-width, height, tris}}}`; `name` is the real vehicle's name, the same in every game's pack) and one
+width, height, tris, gear}}}`; `name` is the real vehicle's name, the same in every game's pack) and one
 `.glb` per unit. A unit's file has a root node `unit` (extras: the index entry) with children `lod0`, `lod1`,
-`lod2` (full, coarse, far), each holding one mesh node per part: `hull`, `gear` (wheels and tracks), `turret`
-(extras {joint: "yaw", pivot}), `gun` (extras {joint: "pitch", pivot, parent}) and `rotor` (extras {joint: "spin",
-pivot}); and an optional child `dm` with one node per hit region, `dm:<name>`, extras {part, group}. Positions are
-float32 metres in the viewer's figure frame (x forward, y up, z right) about the unit's own origin.
+`lod2` (full, coarse, far), each holding one mesh node per part: `hull`, `gear` (a ground unit's wheels and tracks;
+an aircraft's retractable landing gear, posed down, extras {retract: true, pivot}, the pivot the top centre of its
+box, and `gear: "retract"` in the index entry), `turret` (extras {joint: "yaw", pivot}), `gun` (extras {joint:
+"pitch", pivot, parent}) and `rotor` (extras {joint: "spin", pivot}); and an optional child `dm` with one node per
+hit region, `dm:<name>`, extras {part, group}. Static objects (buildings, barriers, cargo...) have `kind` and `type`
+"static". Positions are float32 metres in the viewer's figure frame (x forward, y up, z right) about the unit's
+own origin.
 
 Catalogue: `catalog.json` (`{format: "3dheat-catalog", version: 1, game, gameBuild, source, items: [{id, kind,
 name, class, nation, key, model, numbers}]}`). `key` is the real-world name of the vehicle or weapon (like
@@ -207,6 +210,8 @@ def write_unit_glb(path: Path, lods: list[dict], pivots: dict, meta: dict, asset
                 ex = {"joint": "pitch", "pivot": pivots["gun"], "parent": "turret" if "turret" in pivots else None}
             elif part == "rotor" and "rotor" in pivots:
                 ex = {"joint": "spin", "pivot": pivots["rotor"]}
+            elif part == "gear" and "gear" in pivots:
+                ex = {"retract": True, "pivot": pivots["gear"]}
             node(part, li, v, f, ex)
     if dm:
         di = node("dm", 0)
@@ -274,15 +279,23 @@ class Pack:
         lods = lods_of(parts, domain)
         allv = np.concatenate([v for v, _ in lods[0].values()])
         lo, hi = allv.min(0), allv.max(0)
-        fname = re.sub(r"[^a-z0-9_.-]", "_", unit.lower()) + ".glb"
+        base = re.sub(r"[^a-z0-9_.-]", "_", unit.lower())
+        fname, n = base + ".glb", 1
+        taken = {e.get("file") for u, e in self.index["units"].items() if u != unit}
+        while fname in taken:  # units whose names differ only in case ("Container_20ft", "container_20ft")
+            n += 1
+            fname = f"{base}-{n}.glb"
+        retract = "gear" in pivots and "gear" in lods[0]
         meta = {
-            "kind": kind, "domain": domain, "key": key,
-            "anchor": anchor or ("centre" if domain in ("air",) else "ground"),
-            "box": [round(float(x), 4) for x in (*lo, *hi)], "pivots": pivots,
+            "kind": kind, "type": kind + (" helicopter" if kind.startswith("heli") else ""), "domain": domain,
+            "key": key, "anchor": anchor or ("centre" if domain in ("air",) else "ground"),
+            "box": [round(float(x), 4) for x in (*lo, *hi)], "pivots": {p: v for p, v in pivots.items() if p != "gear"},
             "length": round(float(hi[0] - lo[0]), 3), "width": round(float(hi[2] - lo[2]), 3),
             "height": round(float(hi[1] - lo[1]), 3),
             "parts": sorted(lods[0]), "tris": [tris(x) for x in lods], "dm": len(dm or []),
         }
+        if retract:
+            meta["gear"] = "retract"
         if extra:
             meta.update(extra)
         size = write_unit_glb(self.folder / fname, lods, pivots, {"unit": unit, **meta},
@@ -292,13 +305,12 @@ class Pack:
         entry = {**meta, "file": fname, "aliases": sorted(set(aliases or [])), "fingerprint": fingerprint,
                  "gameBuild": self.index["gameBuild"], "source": self.index["source"],
                  "sha256": hashlib.sha256((self.folder / fname).read_bytes()).hexdigest()}
-        # `name` is the real vehicle's name (what other games' units are matched on), `names` further names,
-        # `type` the class word the viewer picks a stand-in figure by.
+        # `name` is the real vehicle's name (what other games' units are matched on), `names` further names;
+        # `type` (in `meta`) is the class word the viewer picks a stand-in figure by.
         display = entry.get("name") or ""
         entry["displayName"] = display
         entry["name"] = key or display
         entry["names"] = [display] if display and display != entry["name"] else []
-        entry["type"] = kind + (" helicopter" if kind.startswith("heli") else "")
         self.index["units"][unit] = entry
         return entry
 

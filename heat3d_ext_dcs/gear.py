@@ -15,7 +15,7 @@ import re
 from pathlib import Path
 
 from . import __version__
-from .lua import LuaTable
+from .lua import LuaTable, Ref
 from .ranges import Catalogue, _s, _n, read_install
 
 #: A unit's class from the words of its `attribute` list, first match wins: (pattern, domain, class).
@@ -77,6 +77,26 @@ def _shape(u: LuaTable) -> str:
     return ""
 
 
+#: Table categories of static objects (barriers, buildings, containers, cargo, FARP pieces, markers...).
+STATIC_CATEGORIES = {"fortification", "fortifications", "cargo", "cargos", "warehouse", "warehouses", "heliport",
+                     "heliports", "effects", "grassairfields", "grass airfields"}
+#: `wsType_Static`, the first word of a static object's `attribute` list.
+WS_STATIC = 5
+
+
+def is_static(table: LuaTable, words: list[str]) -> bool:
+    """A static object rather than a unit: its table's `category`, a `wsType_Static` first attribute or the
+    `Cargos` attribute say so. Railway cars, trailers and towed guns are units (their first attribute is
+    `wsType_Ground`)."""
+    if (_s(table.get("category")) or "").strip().lower() in STATIC_CATEGORIES or "cargos" in words:
+        return True
+    att = table.get("attribute")
+    first = att.array()[0] if isinstance(att, LuaTable) and att.array() else None
+    if isinstance(first, (int, float)) and not isinstance(first, bool):
+        return int(first) == WS_STATIC
+    return isinstance(first, Ref) and first.path.rsplit(".", 1)[-1] == "wsType_Static"
+
+
 def _classify(words: list[str], default_domain: str) -> tuple[str, str]:
     text = " | ".join(words)
     for rx, dom, cls in CLASSES:
@@ -100,6 +120,8 @@ def build(dcs: Path, extra: list[Path]) -> list[dict]:
         seen.add(uid)
         words = _words(table.get("attribute"))
         dom, cls = _classify(words, default)
+        if default == "ground" and is_static(table, words):
+            dom, cls = "ground", "static"
         if default == "air" and re.search(r"helicopter", " ".join(words)) and not cls.startswith("heli"):
             cls = "heli-transport"
         name = _s(table.get("DisplayName")) or uid
@@ -201,8 +223,9 @@ def cmd_models(args) -> int:
     items = build(dcs, extra)
     fill_shapes(dcs, extra, items)
     only = {u.strip() for u in args.units.split(",")} if args.units else None
+    what = {w.strip().lower() for w in args.only.split(",") if w.strip()} if args.only else None
     stats = models.build(dcs, extra, out, items, game_build(dcs), source(), only=only,
-                         log=lambda m: print(m, flush=True))
+                         log=lambda m: print(m, flush=True), what=what, force=args.force)
     print(f"{stats['written']} written, {stats['fresh']} up to date, {stats['failed']} failed, "
           f"{stats['nomodel']} with no model file; {stats['units']} units, {stats['bytes'] / 1e6:.0f} MB "
           f"in {stats['seconds']} s -> {out}")
@@ -227,6 +250,9 @@ def add_verbs(sub) -> None:
     p.add_argument("-o", "--out", help="the pack folder (default <HEAT3D_LEVELS>/model-packs/dcs)")
     p.add_argument("--dcs", help="the DCS World folder")
     p.add_argument("--units", help="only these type names, comma separated")
+    p.add_argument("--only", help="only units of these domains or classes, comma separated (air, heli, ground, sea, "
+                                  "static, mbt...)")
+    p.add_argument("--force", action="store_true", help="rewrite models that are up to date too")
     p.add_argument("--saved-games", help="the DCS Saved Games folder whose Mods to read too (default: found)")
     p.add_argument("--no-saved-games", action="store_true", help="read the install only, not mods in Saved Games")
     p.set_defaults(run=cmd_models)

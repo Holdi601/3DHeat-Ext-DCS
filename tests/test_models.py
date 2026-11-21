@@ -259,3 +259,132 @@ def test_pack_from_a_model(tmp_path):
     assert (out / unit["file"]).read_bytes()[:4] == b"glTF"
     again = models.build(tmp_path / "dcs", [], out, items, "1.0", "test", log=lambda m: None)
     assert again["fresh"] == 1 and again["written"] == 0
+
+
+def _arg_rotation(w: W, name: str, pos, tracks):
+    """An ArgRotationNode at `pos`; `tracks` is [(argument, [(frame, quaternion x, y, z, w)])]."""
+    w.node_base("model::ArgRotationNode", name)
+    w.matrix(np.eye(4))
+    w.f64s(*pos)
+    w.f64s(0, 0, 0, 1)
+    w.f64s(0, 0, 0, 1)
+    w.f64s(1, 1, 1)
+    w.u32(0)  # position tracks
+    w.u32(len(tracks))
+    for arg, keys in tracks:
+        w.u32(arg)
+        w.u32(len(keys))
+        for frame, q in keys:
+            w.f64s(frame, *q)
+    w.u32(0)  # scale tracks
+
+
+S45 = 0.5 ** 0.5
+
+
+def aircraft_edm(lowered: bool = True) -> bytes:
+    """A hull box; a nose gear strut on argument 0, folded forward into the hull at 0 and hanging down at 1, with a
+    wheel below a shock-strut joint (argument 1); a gear door on argument 0, shut at 0 and swung down at 1. With
+    `lowered` False the strut only turns about the vertical and there is no door."""
+    w = W()
+    w.u32(0)
+    w.u32(0)
+    w.sym("model::RootNode")
+    w.text("Scene Root")
+    w.u32(0)
+    w.props()
+    w.f64s(-3, -2, -1, 3, 1, 1)
+    w.f64s(*([0.0] * 12))
+    w.u32(1)
+    w.u32(3)
+    w.sym("BLENDING")
+    w.u8(0)
+    w.sym("MATERIAL_NAME")
+    w.sym("def_material")
+    w.sym("VERTEX_FORMAT")
+    w.u32(2)
+    w.body += bytes([4, 0])
+    w.u32(0)
+    w.u32(0)
+    w.u32(5 if lowered else 4)
+    w.node_base("model::Node", "")
+    w.node_base("model::TransformNode", "body")
+    w.matrix(np.eye(4))
+    folded = (0, 0, S45, S45) if lowered else (0, S45, 0, S45)
+    _arg_rotation(w, "Dummy_strut", (2, -0.4, 0), [(0, [(0.0, folded), (1.0, (0, 0, 0, 1))])])
+    _arg_rotation(w, "Dummy_shock", (0, -1.0, 0), [(1, [(0.0, (0, 0, 0, 1)), (1.0, (0, 0, 0.1, 0.995))])])
+    if lowered:
+        _arg_rotation(w, "Dummy_door", (2, -0.5, 0.3), [(0, [(0.0, (0, 0, 0, 1)), (1.0, (S45, 0, 0, S45))])])
+    for p in ((-1, 0, 1, 2, 1) if lowered else (-1, 0, 1, 2)):
+        w.i32(p)
+    w.u32(1)
+    w.sym("RENDER_NODES")
+    w.u32(4 if lowered else 3)
+    _render(w, "hull", [1], *_box((-3, -0.5, -1), (3, 0.5, 1)))
+    _render(w, "strut", [2], *_box((-0.05, -1.0, -0.05), (0.05, 0, 0.05)))
+    _render(w, "wheel", [3], *_box((-0.2, -0.3, -0.1), (0.2, 0, 0.1)))
+    if lowered:
+        _render(w, "door", [4], *_box((-0.3, -0.02, 0), (0.3, 0, 0.4)))
+    return w.done()
+
+
+def test_landing_gear_is_a_part_posed_down():
+    got = models.assemble(edm.read(aircraft_edm()), "air", "fighter")
+    parts = got["parts"]
+    assert set(parts) == {"hull", "gear"}
+    gv, gf = parts["gear"]
+    assert len(gf) == 36  # strut, wheel and the door, down
+    assert gv[:, 1].min() == pytest.approx(-1.7)  # the wheel below the strut
+    assert got["pivots"]["gear"] == pytest.approx([2.0, -0.4, 0.1])  # the top centre of the gear's box
+    hv, hf = parts["hull"]
+    assert len(hf) == 36  # the hull, the folded strut and the shut door; the wheel (its own joint) is gone
+    assert hv[:, 1].min() == pytest.approx(-0.52)  # nothing hangs below the shut door at rest
+
+
+def test_arguments_that_lower_nothing_make_no_gear():
+    got = models.assemble(edm.read(aircraft_edm(lowered=False)), "air", "fighter")
+    assert set(got["parts"]) == {"hull"} and "gear" not in got["pivots"]
+    assert len(got["parts"]["hull"][1]) == 36  # the strut and wheel stay in the hull at rest
+
+
+def test_a_ground_unit_has_no_retracting_gear():
+    got = models.assemble(edm.read(aircraft_edm()), "ground", "car")
+    assert "gear" not in got["pivots"]
+
+
+def _glb_json(path):
+    data = path.read_bytes()
+    size = struct.unpack("<I", data[12:16])[0]
+    return json.loads(data[20:20 + size])
+
+
+def test_pack_tags_retracting_gear_and_statics(tmp_path):
+    shapes = tmp_path / "dcs" / "Bazar" / "World" / "Shapes"
+    shapes.mkdir(parents=True)
+    (shapes / "jet.edm").write_bytes(aircraft_edm())
+    (shapes / "tank.edm").write_bytes(tank_edm())
+    (shapes / "crate.edm").write_bytes(tank_edm())
+    items = [{"id": "Jet", "kind": "vehicle", "class": "fighter", "domain": "air", "name": "Jet", "shape": "jet"},
+             {"id": "Tank", "kind": "vehicle", "class": "mbt", "domain": "ground", "name": "Tank", "shape": "tank"},
+             {"id": "Crate", "kind": "vehicle", "class": "static", "domain": "ground", "name": "Crate",
+              "shape": "crate"}]
+    out = tmp_path / "pack"
+    stats = models.build(tmp_path / "dcs", [], out, items, "1.0", "test", log=lambda m: None)
+    assert stats["written"] == 3
+    units = json.loads((out / "model-pack.json").read_text(encoding="utf-8"))["units"]
+    jet = units["Jet"]
+    assert jet["gear"] == "retract" and "gear" in jet["parts"] and "gear" not in jet["pivots"]
+    doc = _glb_json(out / jet["file"])
+    gear = [n for n in doc["nodes"] if n["name"] == "gear"]
+    assert len(gear) == 3 and gear[0]["extras"] == {"retract": True, "pivot": [2.0, -0.4, 0.1]}
+    tank = units["Tank"]
+    assert "gear" not in tank and "gear" in tank["parts"]
+    assert all("extras" not in n for n in _glb_json(out / tank["file"])["nodes"] if n["name"] == "gear")
+    crate = units["Crate"]
+    assert crate["kind"] == "static" and crate["type"] == "static" and crate["domain"] == "ground"
+    root = _glb_json(out / crate["file"])["nodes"][0]
+    assert root["extras"]["kind"] == "static" and root["extras"]["type"] == "static"
+    # only some kinds of unit, rewritten although up to date
+    again = models.build(tmp_path / "dcs", [], out, items, "1.0", "test", log=lambda m: None, what={"static"},
+                         force=True)
+    assert again["written"] == 1 and again["fresh"] == 0

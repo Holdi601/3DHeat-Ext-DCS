@@ -89,7 +89,7 @@ You should see one line per installed theatre: its name, its size, and `readable
 | `towns <theatre>` | the theatre's place names, with DCS coordinates, as JSON | [towns](https://holdi601.github.io/3DHeat-Ext-DCS/towns.html) |
 | `ranges -o <file>` | a catalogue of weapon and sensor ranges from your own installation, for the match replay | [ranges](https://holdi601.github.io/3DHeat-Ext-DCS/ranges.html) |
 | `catalog [-o <file>]` | every aircraft, helicopter, ground unit, ship and weapon of your installation (name, class, the model it is drawn with, its weapons), as `catalog.json` for the viewer's unit names and order (default `$HEAT3D_LEVELS/dcs/catalog.json`) | below |
-| `models [-o <folder>] [--units A,B]` | every unit's model of your installation as a local model pack for the viewer (default `$HEAT3D_LEVELS/model-packs/dcs`): one `.glb` per model at three levels of detail, with the parts the viewer moves | below |
+| `models [-o <folder>] [--units A,B] [--only air,static] [--force]` | every unit's model of your installation as a local model pack for the viewer (default `$HEAT3D_LEVELS/model-packs/dcs`): one `.glb` per model at three levels of detail, with the parts the viewer moves | below |
 | `fit <recording>` | find a theatre's projection from a recording | [fit](https://holdi601.github.io/3DHeat-Ext-DCS/fit.html) |
 
 ```bash
@@ -133,12 +133,21 @@ writes a model pack the viewer draws in place of its figures:
 - the parts the viewer moves: a ground unit's turret (argument 0) and gun
   (argument 1) with their pivots, its wheels and tracks, a helicopter's main
   rotor (argument 40);
+- an aircraft's or helicopter's retractable landing gear (arguments 0, 3 and
+  5) as a part of its own, `gear`, posed down with its doors open, with node
+  extras `{retract: true, pivot}` (the top centre of the gear's box) and
+  `gear: "retract"` in the pack's index; the hull keeps the gear bays shut;
+- static objects (buildings, barriers, containers, cargo, FARP pieces,
+  markers...) with `kind` and `type` `static`, so the viewer can tell them
+  from units;
 - the collision shells as hit regions under `dm`;
 - three levels of detail per model (about 14,000 / 2,600 / 700 triangles for a
   ground unit), positions in metres, x forward, y up, z right.
 
 Units that share a model share one file (the others are its aliases). A run
-skips models that have not changed since the last one. A file that is not an
+skips models that have not changed since the last one; `--force` rewrites
+them, `--only` limits a run to some domains or classes (`air`, `heli`,
+`ground`, `sea`, `static`, `mbt`...). A file that is not an
 EDM model this reader opens is skipped and listed at the end, and packed
 databases (`*.edce`) are never opened, so units defined only there have no
 model. The pack stays on your machine.

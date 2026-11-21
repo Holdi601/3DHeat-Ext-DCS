@@ -11,6 +11,9 @@ simplified to three levels of detail.
 - Parts, by the arguments that move them: ground units' turret (argument 0, yaw) and gun (argument 1, pitch), and
   their wheels and tracks (arguments 12-14, or so named); a helicopter's main rotor (argument 40), blades bound to
   its bones included. The rest is the hull.
+- An aircraft's or helicopter's retractable landing gear (arguments 0, 3 and 5) as a part of its own, posed down
+  (struts, wheels, opened doors) with a pivot at the top of its box. Pieces that move with the gear legs' own
+  joints (shock struts, wheels) leave the hull; the rest (closed doors, folded upper struts) stays in it at rest.
 - Collision shells (`ShellNode`) are kept as hit regions under `dm`, with the part they move with.
 - A model file that is not an EDM model a version of this reader knows (a protected third-party file, say) is
   skipped and named in the summary. Packed databases (`*.edce`) are never opened.
@@ -37,6 +40,10 @@ TURRET_ARGS = {"ground": (0,), "sea": ()}
 GUN_ARGS = {"ground": (1,), "sea": ()}
 ROTOR_ARGS = {"heli": (40,)}
 WHEEL_ARGS = {"ground": (12, 13, 14)}
+#: An aircraft's or helicopter's landing gear: nose, right main, left main; 1 is down.
+LANDING_GEAR_ARGS = (0, 3, 5)
+#: How far (m) the lowest point of what those arguments move must come down for it to be landing gear.
+GEAR_DROP = 0.1
 #: Materials and node names that are effects, not the body.
 SKIP_MATERIAL = re.compile(r"bano|additive|self_illum|lines|fake_|flame|smoke|halo|shadow|forest", re.I)
 SKIP_NAME = re.compile(r"flame|fire|smoke|blur|outline|shadow|pilot|_dmg|damage|oblomok|lamp|light|halo|glow|"
@@ -179,11 +186,65 @@ def _gear_named(*names: str) -> bool:
 
 # ------------------------------------------------------------------------------------------------ assembly
 
+def _animated_by(n: edm.Node) -> set:
+    """The arguments that move a node: tracks whose keys differ (some files key arguments to one value)."""
+    out = set()
+    for tracks in (n.pos, n.rot, n.scale):
+        for a, keys in tracks:
+            if a not in out and len(keys) > 1:
+                first = np.asarray(keys[0][1], np.float64)
+                if any(float(np.abs(np.asarray(v, np.float64) - first).max()) > 1e-5 for _f, v in keys[1:]):
+                    out.add(a)
+    return out
+
+
+def landing_gear(e: edm.Edm) -> dict | None:
+    """For a model whose nodes the landing-gear arguments move: per node, the gear node it hangs from (`root`: the
+    highest node above it those arguments move or switch, -1 for none) and whether it leaves the hull (`leg`: a joint
+    of another argument between it and a gear node: shock struts, wheels); with the gear-down pose's matrices and
+    visibility. None for a model without one."""
+    g = set(LANDING_GEAR_ARGS)
+    nodes = e.nodes
+    count = len(nodes)
+    anims = [_animated_by(n) for n in nodes]
+    if not any(a & g for a in anims):
+        return None
+    root = np.full(count, -1, np.int64)
+    leg = np.zeros(count, bool)
+    for i in range(count):
+        j, seen, other = i, 0, False
+        while 0 <= j < count and seen < 512:
+            if anims[j] & g or any(a in g for a, _ in nodes[j].vis):
+                root[i] = j
+            if anims[j] & g and other:
+                leg[i] = True
+            if anims[j] - g:
+                other = True
+            j, seen = nodes[j].parent, seen + 1
+    down = {a: 1.0 for a in LANDING_GEAR_ARGS}
+    # Switches above the gear that hide it at 0 and show it at 1 (some models' "gear fitted" arguments) are on.
+    for i in range(count):
+        if not anims[i] & g:
+            continue
+        j, seen = nodes[i].parent, 0
+        while 0 <= j < count and seen < 512:
+            for a, ranges in nodes[j].vis:
+                if a not in g and any(s <= 1.0 < t for s, t in ranges) and not any(s <= 0.0 < t for s, t in ranges):
+                    down[a] = 1.0
+            j, seen = nodes[j].parent, seen + 1
+    return {"root": root, "leg": leg, "world": world_matrices(e, down), "vis": visible_nodes(e, down)}
+
+
 def assemble(e: edm.Edm, domain: str, cls: str = "") -> dict:
-    """The model at rest as {part: (verts, faces)} plus `pivots` and `dm`, in the figure frame."""
+    """The model at rest as {part: (verts, faces)} plus `pivots` and `dm`, in the figure frame. An aircraft's
+    retractable landing gear is the `gear` part, posed down, with its pivot in `pivots["gear"]`."""
     args: dict = {}
     world = world_matrices(e, args)
     vis = visible_nodes(e, args)
+    lg = landing_gear(e) if domain == "air" else None
+    # Per gear node: its pieces down, its pieces at rest ((verts, faces, leaves the hull)), and the lowest point of
+    # its pieces down and at rest (only pieces shown at rest count there).
+    gear_nodes: dict[int, dict] = {}
     heli = domain == "air" and cls.startswith("heli")
     turret_args = TURRET_ARGS.get(domain, ())
     gun_args = GUN_ARGS.get(domain, ())
@@ -237,14 +298,41 @@ def assemble(e: edm.Edm, domain: str, cls: str = "") -> dict:
             vnode = np.full(len(pos), m.parents[0][0] if m.parents else -1, np.int64)
         vnode[(vnode < 0) | (vnode >= len(e.nodes))] = -1
         placed = pos.copy()
+        placed_down = pos.copy() if lg is not None else None
         for node in np.unique(vnode):
             if node >= 0:
                 sel = vnode == node
                 mat = world[node]
                 placed[sel] = pos[sel] @ mat[:3, :3].T + mat[:3, 3]
+                if placed_down is not None:
+                    mat = lg["world"][node]
+                    placed_down[sel] = pos[sel] @ mat[:3, :3].T + mat[:3, 3]
         tnode = vnode[tri[:, 0]]
         for node in np.unique(tnode):
-            if node >= 0 and (not vis[node] or SKIP_NAME.search(e.nodes[node].name or "")):
+            if node >= 0 and SKIP_NAME.search(e.nodes[node].name or ""):
+                continue
+            root = int(lg["root"][node]) if lg is not None and node >= 0 else -1
+            if root >= 0 and part_of(int(node), m.name) == "hull":
+                gn = gear_nodes.setdefault(root, {"down": [], "rest": [], "low": [np.inf, np.inf]})
+                leg = bool(lg["leg"][node])
+                sub = tri[tnode == node]
+                sub = sub[lg["vis"][np.maximum(vnode[sub], 0)].all(1)] if lg["vis"][node] else sub[:0]
+                if len(sub):
+                    used, inv = np.unique(sub, return_inverse=True)
+                    shown = bool(vis[node])
+                    # A piece the hull keeps that the gear leaves where it was (a door shut again) would draw twice.
+                    if leg or not shown or float(np.abs(placed_down[used] - placed[used]).max()) >= 1e-3:
+                        gn["down"].append((placed_down[used], inv.reshape(-1, 3)))
+                        gn["low"][0] = min(gn["low"][0], float(placed_down[used, 1].min()))
+                        if shown:
+                            gn["low"][1] = min(gn["low"][1], float(placed[used, 1].min()))
+                sub = tri[tnode == node]
+                sub = sub[vis[np.maximum(vnode[sub], 0)].all(1)] if vis[node] else sub[:0]
+                if len(sub):
+                    used, inv = np.unique(sub, return_inverse=True)
+                    gn["rest"].append((placed[used], inv.reshape(-1, 3), leg))
+                continue
+            if node >= 0 and not vis[node]:
                 continue
             sub = tri[tnode == node]
             if node >= 0:
@@ -262,15 +350,25 @@ def assemble(e: edm.Edm, domain: str, cls: str = "") -> dict:
             else:
                 part = "hull"
             parts[part].append((placed[used], inv.reshape(-1, 3)))
+    for gn in gear_nodes.values():
+        # A gear node whose pieces come down (or only show with the gear down) is landing gear; the others (things
+        # some models also key to these arguments) stay in the hull at rest.
+        is_gear = bool(gn["down"]) and gn["low"][0] <= gn["low"][1] - GEAR_DROP
+        parts["gear"] += gn["down"] if is_gear else []
+        parts["hull"] += [(v, f) for v, f, leg in gn["rest"] if not (is_gear and leg)]
     out = {}
     for p, items in parts.items():
         if items:
             from .modelpack import merge
             out[p] = merge(items)
+    if "gear" in out and lg is not None:
+        lo, hi = out["gear"][0].min(0), out["gear"][0].max(0)
     pivots = {}
     for p, i in pivot_nodes.items():
         if p in out:
             pivots[p] = [round(float(x), 4) for x in world[i][:3, 3]]
+    if "gear" in out and lg is not None:
+        pivots["gear"] = [round(float((lo[0] + hi[0]) / 2), 4), round(float(hi[1]), 4), round(float((lo[2] + hi[2]) / 2), 4)]
     dm = []
     for m in e.meshes.get("SHELL_NODES", []):
         if m is None or not len(m.indices) or m.positions.shape[1] < 3:
@@ -379,8 +477,9 @@ def fingerprint(path: Path) -> str:
 
 
 def build(dcs: Path, extra: list[Path], out: Path, items: list[dict], game_build: str, source: str,
-          only: set[str] | None = None, log=print) -> dict:
-    """Writes the pack; returns counts and the files skipped."""
+          only: set[str] | None = None, log=print, what: set[str] | None = None, force: bool = False) -> dict:
+    """Writes the pack; returns counts and the files skipped. `only`: these type names; `what`: units of these
+    domains or classes ("air", "heli", "static"); `force`: rewrites models that are up to date too."""
     t0 = time.monotonic()
     roots = roots_of(dcs, extra)
     index = shape_index(roots)
@@ -389,9 +488,12 @@ def build(dcs: Path, extra: list[Path], out: Path, items: list[dict], game_build
     stats = {"written": 0, "fresh": 0, "nomodel": 0, "failed": 0, "protected": [], "partial": 0}
     by_file: dict[Path, list[dict]] = {}
     for it in items:
-        if it.get("kind") != "vehicle" or it.get("class") == "static":
+        if it.get("kind") != "vehicle":
             continue
         if only and it["id"] not in only:
+            continue
+        if what and not ({it.get("domain"), it.get("class")} & what
+                         or ("heli" in what and (it.get("class") or "").startswith("heli"))):
             continue
         path = resolve(it.get("shape") or "", index) if it.get("shape") else None
         if path is None and lua_shapes.get(it["id"]):
@@ -405,7 +507,7 @@ def build(dcs: Path, extra: list[Path], out: Path, items: list[dict], game_build
     for path, units in sorted(by_file.items(), key=lambda kv: kv[1][0]["id"].lower()):
         first, rest = units[0], units[1:]
         fp = fingerprint(path)
-        if pack.fresh(first["id"], fp):
+        if not force and pack.fresh(first["id"], fp):
             stats["fresh"] += 1
             continue
         try:

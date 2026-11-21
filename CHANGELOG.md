@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.1
+
+- `models`: an aircraft's or helicopter's retractable landing gear is a part of its own (`gear`, posed down with
+  its doors open, extras `{retract: true, pivot}`; `gear: "retract"` in the index entry), so the viewer can raise
+  and lower it; the hull keeps the gear bays shut. Static objects are written too, tagged `kind` and `type`
+  `static`. `--only` limits a run to some domains or classes, `--force` rewrites models that are up to date. Units
+  whose names differ only in case get files of their own.
+- `catalog`: static objects (fortifications, buildings, cargo, heliports, markers...) have the class `static`,
+  from their table's category or their `wsType_Static` attribute.
+
 ## 0.4.0
 
 - `models`: every unit's model of your installation as a local model pack (`model-packs/dcs/`) the viewer draws
