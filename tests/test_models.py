@@ -98,16 +98,22 @@ def _render(w: W, name: str, parents: list[int], v: np.ndarray, f: np.ndarray, w
     w.body += np.asarray(f, "<u2").tobytes()
 
 
-def tank_edm() -> bytes:
+def tank_edm(root_version: int = 1) -> bytes:
     """A hull box, a turret box on a yaw node (argument 0) 1.5 m up, a gun box on a pitch node (argument 1), wheels
-    split over two nodes in one render node, a muzzle flash hidden at rest, a collision shell on the turret."""
+    split over two nodes in one render node, a muzzle flash hidden at rest, a collision shell on the turret.
+    `root_version` 2: the root as some files write it, with one byte more before its boxes."""
     w = W()
     w.u32(0)  # two maps of object counts, empty
     w.u32(0)
     w.sym("model::RootNode")
     w.text("Scene Root")
     w.u32(0)
-    w.props()
+    w.u32(1)
+    w.sym("model::Property<unsigned int>")
+    w.sym("__VERSION__")
+    w.u32(root_version)
+    if root_version == 2:
+        w.u8(2)
     w.f64s(-3, 0, -2, 3, 3, 2)
     w.f64s(*([0.0] * 12))
     w.u32(1)  # one material
@@ -388,3 +394,54 @@ def test_pack_tags_retracting_gear_and_statics(tmp_path):
     again = models.build(tmp_path / "dcs", [], out, items, "1.0", "test", log=lambda m: None, what={"static"},
                          force=True)
     assert again["written"] == 1 and again["fresh"] == 0
+
+
+def test_a_version_2_root_reads_whole():
+    e = edm.read(tank_edm(root_version=2))
+    assert not e.stopped and e.bbox[0] == (-3, 0, -2)
+    assert [m.name for m in e.meshes["RENDER_NODES"] if m is not None] == ["hull", "turret", "gun", "wheels", "flame"]
+
+
+def _sphere(n: int = 40):
+    """A UV sphere, every triangle wound to face out."""
+    th, ph = np.meshgrid(np.linspace(0, np.pi, n), np.linspace(0, 2 * np.pi, n, endpoint=False), indexing="ij")
+    v = np.stack([np.sin(th) * np.cos(ph), np.cos(th), np.sin(th) * np.sin(ph)], -1).reshape(-1, 3)
+    f = []
+    for i in range(n - 1):
+        for j in range(n):
+            a, b, c, d = i * n + j, i * n + (j + 1) % n, (i + 1) * n + j, (i + 1) * n + (j + 1) % n
+            f += [(a, c, b), (b, c, d)]
+    f = np.array(f)
+    a, b, c = v[f[:, 0]], v[f[:, 1]], v[f[:, 2]]
+    out = (np.cross(b - a, c - a) * (a + b + c)).sum(1) >= 0
+    return v, np.where(out[:, None], f, f[:, [0, 2, 1]])
+
+
+def test_clustering_keeps_each_triangle_facing_out():
+    from heat3d_ext_dcs.modelpack import cull_small, unique_faces
+
+    v, f = _sphere()
+    twice = np.concatenate([f, f[:, [1, 2, 0]]])
+    once = unique_faces(twice)
+    assert len(once) == len(f)
+    a, b, c = v[once[:, 0]], v[once[:, 1]], v[once[:, 2]]
+    assert ((np.cross(b - a, c - a) * (a + b + c)).sum(1) >= -1e-12).all()
+    v2, f2 = cull_small(v, f, 300)
+    assert 0 < len(f2) <= 300
+    a, b, c = v2[f2[:, 0]], v2[f2[:, 1]], v2[f2[:, 2]]
+    n = np.cross(b - a, c - a)
+    big = np.linalg.norm(n, axis=1) > 1e-9
+    assert ((n * (a + b + c)).sum(1)[big] > 0).mean() > 0.9
+
+
+def test_landing_gear_keeps_to_its_share():
+    from heat3d_ext_dcs.modelpack import GEAR_SHARE, simplify
+
+    hv, hf = _sphere(60)
+    gv, gf = _sphere(50)
+    parts = {"hull": (hv * 4, hf), "gear": (gv * 0.5 + [0, -4, 0], gf)}
+    out = simplify(parts, 3000, "air")
+    assert len(out["gear"][1]) <= 3000 * GEAR_SHARE * 1.3
+    assert len(out["hull"][1]) > len(out["gear"][1]) * 4
+    # A ground unit's running gear is simplified like the rest.
+    assert len(simplify(parts, 3000, "ground")["gear"][1]) > 3000 * GEAR_SHARE * 1.3

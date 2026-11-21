@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4.2
+
+- `models`: no more dark patches over aircraft. Where simplifying a model fell back to joining nearby vertices, the
+  triangles it kept were stored with their corners sorted, which turned about half of them inside out; the viewer
+  takes a face's side from its winding, so they were lit as seen from behind. Each triangle now keeps its winding.
+- `models`: an aircraft's landing gear takes at most 12 % of each level of detail (it took up to 30 % of a jet's),
+  so the airframe keeps the detail. Pieces stretched between the hull and a gear leg (rubber boots, hoses: meshes
+  split over both) now come down with the gear. A deployed drag chute is no longer part of the model at rest.
+- The EDM reader reads models whose root node is of version 2 (it carries one more byte before its bounding boxes);
+  the 17 such files of an installation, a static warning board among them, failed to read.
+
 ## 0.4.1
 
 - `models`: an aircraft's or helicopter's retractable landing gear is a part of its own (`gear`, posed down with

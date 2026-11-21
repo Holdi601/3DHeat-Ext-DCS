@@ -437,6 +437,8 @@ def read(data: bytes, want: tuple[str, ...] = ("RENDER_NODES", "SHELL_NODES", "S
     r.text()
     r.u32()
     root_props = read_props(r)
+    if root_props.get("__VERSION__") == 2:
+        r.u8()  # a version-2 root carries one byte more before its bounding boxes (17 files of an install)
     bmin = r.vec(3)
     bmax = r.vec(3)
     r.arr("<f8", 12)

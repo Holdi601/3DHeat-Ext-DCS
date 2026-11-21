@@ -75,8 +75,14 @@ def tris(parts: dict) -> int:
     return sum(len(f) for _, f in parts.values())
 
 
-def simplify(parts: dict, budget: int) -> dict:
-    """Quadric simplification of the parts to `budget` triangles in all; the gun and rotor keep more of theirs."""
+#: An aircraft's landing gear at most this share of a level's triangles: modelled in fine detail (struts, links,
+#: hoses), it came to 30 % of an F-16's, taken from the airframe seen far more often.
+GEAR_SHARE = 0.12
+
+
+def simplify(parts: dict, budget: int, domain: str = "") -> dict:
+    """Quadric simplification of the parts to `budget` triangles in all; the gun and rotor keep more of theirs, an
+    aircraft's landing gear (`domain` air or heli) at most `GEAR_SHARE` of them."""
     total = tris(parts)
     if total <= budget:
         return parts
@@ -85,7 +91,9 @@ def simplify(parts: dict, budget: int) -> dict:
     weight = {"gun": 3.0, "turret": 1.5, "rotor": 2.0}
     ratio = budget / total
     keep = {n: min(len(f), int(len(f) * min(1.0, ratio * weight[n]))) for n, (_, f) in parts.items() if n in weight}
-    rest = sum(len(f) for n, (_, f) in parts.items() if n not in weight)
+    if domain in ("air", "heli") and "gear" in parts:
+        keep["gear"] = min(len(parts["gear"][1]), int(budget * GEAR_SHARE))
+    rest = sum(len(f) for n, (_, f) in parts.items() if n not in keep)
     rest_ratio = max(0.002, (budget - sum(keep.values())) / rest) if rest else 1.0
     out = {}
     for name, (v, f) in parts.items():
@@ -114,6 +122,16 @@ def simplify(parts: dict, budget: int) -> dict:
     return out
 
 
+def unique_faces(f: np.ndarray) -> np.ndarray:
+    """Each triangle once (twins: the same three corners), each as it was wound: sorting a triangle's corners to
+    compare them, and keeping them sorted, turned about half of a clustered model's triangles inside out - the dark
+    blotches over DCS jets, as the viewer takes a face's side from its winding."""
+    if not len(f):
+        return f
+    _, first = np.unique(np.sort(f, 1), axis=0, return_index=True)
+    return f[np.sort(first)]
+
+
 def cull_small(v: np.ndarray, f: np.ndarray, want: int) -> tuple[np.ndarray, np.ndarray]:
     """Vertex clustering where quadric simplification stalls (models of many open surfaces, whose borders it
     keeps): vertices are joined on a grid whose cell grows until `want` triangles are left."""
@@ -125,8 +143,8 @@ def cull_small(v: np.ndarray, f: np.ndarray, want: int) -> tuple[np.ndarray, np.
     for _ in range(14):
         step = (lo_s * hi_s) ** 0.5
         v2, f2 = weld(v, f, step)
-        if len(f2):
-            f2 = np.unique(np.sort(f2, 1), axis=0) if len(f2) > want else f2
+        if len(f2) > want:
+            f2 = unique_faces(f2)
         if len(f2) > want:
             lo_s = step
         else:
@@ -142,9 +160,9 @@ def lods_of(parts: dict, domain: str) -> list[dict]:
     """Three levels of detail, each simplified from the full-detail part set to its budget, 16-bit indexable."""
     out = []
     for budget in BUDGET.get(domain, BUDGET["ground"]):
-        lod = simplify(parts, budget)
+        lod = simplify(parts, budget, domain)
         while any(len(v) >= 65535 for v, _ in lod.values()):
-            lod = simplify(lod, int(tris(lod) * 0.7))
+            lod = simplify(lod, int(tris(lod) * 0.7), domain)
         out.append(lod)
     return out
 

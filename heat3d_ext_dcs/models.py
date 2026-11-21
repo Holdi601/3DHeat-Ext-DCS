@@ -47,7 +47,7 @@ GEAR_DROP = 0.1
 #: Materials and node names that are effects, not the body.
 SKIP_MATERIAL = re.compile(r"bano|additive|self_illum|lines|fake_|flame|smoke|halo|shadow|forest", re.I)
 SKIP_NAME = re.compile(r"flame|fire|smoke|blur|outline|shadow|pilot|_dmg|damage|oblomok|lamp|light|halo|glow|"
-                       r"muzzle|tracer|collision|bound", re.I)
+                       r"muzzle|tracer|collision|bound|chute", re.I)
 GEAR_NAME = re.compile(r"wheel|koleso|track|gusen|katok|kolesa|tire|tyre", re.I)
 NOT_GEAR = re.compile(r"above|over|cover|fender|guard|mudflap|box", re.I)
 
@@ -307,6 +307,19 @@ def assemble(e: edm.Edm, domain: str, cls: str = "") -> dict:
                 if placed_down is not None:
                     mat = lg["world"][node]
                     placed_down[sel] = pos[sel] @ mat[:3, :3].T + mat[:3, 3]
+        if lg is not None and len(m.parents) > 1:
+            # A piece stretched between the hull and a gear leg (a rubber boot, a hose: a render node split over both)
+            # goes with the gear, so its gear end comes down with the leg: each such triangle starts at a gear corner
+            # (turned round, its winding kept).
+            tri = tri.copy()
+            vroot = np.where(vnode >= 0, lg["root"][np.maximum(vnode, 0)], -1)
+            tr = vroot[tri]
+            for _ in range(2):
+                turn = (tr[:, 0] < 0) & ((tr[:, 1] >= 0) | (tr[:, 2] >= 0))
+                if not turn.any():
+                    break
+                tri[turn] = tri[turn][:, [1, 2, 0]]
+                tr[turn] = tr[turn][:, [1, 2, 0]]
         tnode = vnode[tri[:, 0]]
         for node in np.unique(tnode):
             if node >= 0 and SKIP_NAME.search(e.nodes[node].name or ""):
