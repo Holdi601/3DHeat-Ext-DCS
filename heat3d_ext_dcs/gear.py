@@ -122,6 +122,16 @@ def build(dcs: Path, extra: list[Path]) -> list[dict]:
     return items
 
 
+def fill_shapes(dcs: Path, extra: list[Path], items: list[dict]) -> None:
+    """The model of units whose Lua sets `<T>.visual.shape` field by field, which the table reading misses."""
+    from .models import roots_of, shapes_from_lua
+
+    found = shapes_from_lua(roots_of(dcs, extra)[1:])
+    for it in items:
+        if it.get("kind") == "vehicle" and not it.get("shape") and found.get(it["id"]):
+            it["shape"] = found[it["id"]]
+
+
 def source() -> str:
     return f"heat3d-dcs-maps {__version__}"
 
@@ -151,6 +161,7 @@ def cmd_catalog(args) -> int:
     out = Path(args.out) if args.out else (Path(lv) / "dcs" / "catalog.json" if lv else Path("catalog.json"))
     t0 = time.monotonic()
     items = build(dcs, extra)
+    fill_shapes(dcs, extra, items)
     pack = out.parent.parent / "model-packs" / "dcs" / "model-pack.json"
     if pack.is_file():
         units = json.loads(pack.read_text(encoding="utf-8")).get("units", {})
@@ -170,6 +181,37 @@ def cmd_catalog(args) -> int:
     return 0
 
 
+def cmd_models(args) -> int:
+    import os
+
+    from . import install, models, ranges
+
+    dcs = install.find(args.dcs)
+    if dcs is None:
+        print("no DCS World install found: give it with --dcs <folder>", flush=True)
+        return 2
+    extra = [] if args.no_saved_games else ([Path(args.saved_games)] if args.saved_games else ranges.saved_games())
+    lv = os.environ.get("HEAT3D_LEVELS")
+    out = Path(args.out) if args.out else (Path(lv) / "model-packs" / "dcs" if lv else Path("model-packs") / "dcs")
+    print(f"reading the unit list of {dcs} ...", flush=True)
+    items = build(dcs, extra)
+    fill_shapes(dcs, extra, items)
+    only = {u.strip() for u in args.units.split(",")} if args.units else None
+    stats = models.build(dcs, extra, out, items, game_build(dcs), source(), only=only,
+                         log=lambda m: print(m, flush=True))
+    print(f"{stats['written']} written, {stats['fresh']} up to date, {stats['failed']} failed, "
+          f"{stats['nomodel']} with no model file; {stats['units']} units, {stats['bytes'] / 1e6:.0f} MB "
+          f"in {stats['seconds']} s -> {out}")
+    if stats["partial"]:
+        print(f"{stats['partial']} models read in part (an item type this reader does not know ends them early)")
+    if stats["protected"]:
+        print(f"{len(stats['protected'])} model files skipped: not EDM models this reader can open "
+              "(protected third-party files, for one):")
+        for p in stats["protected"][:20]:
+            print(f"   {p}")
+    return 1 if stats["failed"] and not stats["written"] and not stats["fresh"] else 0
+
+
 def add_verbs(sub) -> None:
     p = sub.add_parser("catalog", help="every aircraft, ground unit, ship and weapon of your install -> catalog.json")
     p.add_argument("-o", "--out", help="the .json to write (default <HEAT3D_LEVELS>/dcs/catalog.json)")
@@ -177,3 +219,10 @@ def add_verbs(sub) -> None:
     p.add_argument("--saved-games", help="the DCS Saved Games folder whose Mods to read too (default: found)")
     p.add_argument("--no-saved-games", action="store_true", help="read the install only, not mods in Saved Games")
     p.set_defaults(run=cmd_catalog)
+    p = sub.add_parser("models", help="every unit's model of your install -> a local model pack (model-packs/dcs)")
+    p.add_argument("-o", "--out", help="the pack folder (default <HEAT3D_LEVELS>/model-packs/dcs)")
+    p.add_argument("--dcs", help="the DCS World folder")
+    p.add_argument("--units", help="only these type names, comma separated")
+    p.add_argument("--saved-games", help="the DCS Saved Games folder whose Mods to read too (default: found)")
+    p.add_argument("--no-saved-games", action="store_true", help="read the install only, not mods in Saved Games")
+    p.set_defaults(run=cmd_models)

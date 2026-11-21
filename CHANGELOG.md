@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.0
+
+- `models`: every unit's model of your installation as a local model pack (`model-packs/dcs/`) the viewer draws
+  in place of its figures. A new reader for DCS's `.edm` models (versions 8 and 10): the node tree with its
+  transforms, animation arguments, levels of detail and visibility switches, and the meshes hanging from it,
+  including meshes split over several nodes and skinned meshes. Each model at rest, with a ground unit's turret and
+  gun and a helicopter's main rotor as parts that turn, wheels and tracks as running gear, and the collision shells
+  as hit regions; three levels of detail. Files that are not EDM models it can open are skipped and listed.
+- `catalog`: a unit's model is also found where its Lua sets the shape field by field.
+
 ## 0.3.0
 
 - `layouts`: each theatre's airbases (ids and names), runways and the parking stands the missions in your install

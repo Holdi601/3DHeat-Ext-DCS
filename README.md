@@ -89,6 +89,7 @@ You should see one line per installed theatre: its name, its size, and `readable
 | `towns <theatre>` | the theatre's place names, with DCS coordinates, as JSON | [towns](https://holdi601.github.io/3DHeat-Ext-DCS/towns.html) |
 | `ranges -o <file>` | a catalogue of weapon and sensor ranges from your own installation, for the match replay | [ranges](https://holdi601.github.io/3DHeat-Ext-DCS/ranges.html) |
 | `catalog [-o <file>]` | every aircraft, helicopter, ground unit, ship and weapon of your installation (name, class, the model it is drawn with, its weapons), as `catalog.json` for the viewer's unit names and order (default `$HEAT3D_LEVELS/dcs/catalog.json`) | below |
+| `models [-o <folder>] [--units A,B]` | every unit's model of your installation as a local model pack for the viewer (default `$HEAT3D_LEVELS/model-packs/dcs`): one `.glb` per model at three levels of detail, with the parts the viewer moves | below |
 | `fit <recording>` | find a theatre's projection from a recording | [fit](https://holdi601.github.io/3DHeat-Ext-DCS/fit.html) |
 
 ```bash
@@ -97,6 +98,7 @@ heat3d-dcs-maps level <theatre> --around <lat> <lon> 12 -o levels --name <name> 
 heat3d-dcs-maps towns <theatre>                                                # its place names
 heat3d-dcs-maps ranges -o ranges.json                                          # weapon and sensor ranges
 heat3d-dcs-maps catalog                                                        # unit and weapon catalogue
+heat3d-dcs-maps models                                                         # the units' models as a model pack
 ```
 
 `<theatre>` is the name `list` prints. The install is found from the
@@ -117,6 +119,29 @@ where it is otherwise. Exit status: 0 done; 1 failed (or too large, or for
 | `--projection LON0 FE FN` | Transverse Mercator constants for a theatre this tool does not know (see `fit`) |
 
 Every option, as the program prints it: [Command reference](https://holdi601.github.io/3DHeat-Ext-DCS/cli-reference.html).
+
+### Models
+
+`models` reads the unit list as `catalog` does, finds each unit's model
+(`.edm`, the nearest level of detail its `.lods` names) under the install's
+`Bazar\World\Shapes`, `CoreMods` and `Mods` and the mods in Saved Games, and
+writes a model pack the viewer draws in place of its figures:
+
+- the model at rest: every animation argument at 0 (wheels down for ground
+  units, gear up and canopy closed for aircraft), with what a visibility switch
+  hides at rest left out (muzzle flash, damaged pieces, rotor blur);
+- the parts the viewer moves: a ground unit's turret (argument 0) and gun
+  (argument 1) with their pivots, its wheels and tracks, a helicopter's main
+  rotor (argument 40);
+- the collision shells as hit regions under `dm`;
+- three levels of detail per model (about 14,000 / 2,600 / 700 triangles for a
+  ground unit), positions in metres, x forward, y up, z right.
+
+Units that share a model share one file (the others are its aliases). A run
+skips models that have not changed since the last one. A file that is not an
+EDM model this reader opens is skipped and listed at the end, and packed
+databases (`*.edce`) are never opened, so units defined only there have no
+model. The pack stays on your machine.
 
 ## What comes out
 
@@ -200,8 +225,8 @@ we respond quickly and remove anything on request.
 
 ## Licence and sources
 
-MIT ([`LICENSE`](LICENSE)). Needs numpy (BSD-3-Clause); `fit` on a
-`.parquet` needs pyarrow (Apache-2.0). Written for this project. The
+MIT ([`LICENSE`](LICENSE)). Needs numpy (BSD-3-Clause) and, for `models`,
+fast-simplification (MIT); `fit` on a `.parquet` needs pyarrow (Apache-2.0). Written for this project. The
 projection constants are facts published by pydcs
 (github.com/pydcs/dcs, `dcs/terrain/*/projection.py`); only the numbers were
 taken. The projection is Krüger's series as C. F. F. Karney gives it

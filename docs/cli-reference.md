@@ -12,12 +12,12 @@ The other pages explain each command step by step.
 
 ```text
 usage: heat3d-dcs-maps [-h] [--version]
-                       {list,level,towns,fit,ranges,catalog,layouts} ...
+                       {list,level,towns,fit,ranges,catalog,models,layouts} ...
 
 DCS World theatres into 3DHeat levels
 
 positional arguments:
-  {list,level,towns,fit,ranges,catalog,layouts}
+  {list,level,towns,fit,ranges,catalog,models,layouts}
     list                the theatres installed, and whether each can be read
     level               one theatre's ground and sea as a .glb level
     towns               a theatre's place names with DCS coordinates, as JSON
@@ -27,6 +27,8 @@ positional arguments:
                         the match replay
     catalog             every aircraft, ground unit, ship and weapon of your install
                         -> catalog.json
+    models              every unit's model of your install -> a local model pack
+                        (model-packs/dcs)
     layouts             each theatre's airbases, runways and parking stands as 3DHeat
                         layouts
 
