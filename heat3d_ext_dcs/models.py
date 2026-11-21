@@ -433,6 +433,8 @@ def build(dcs: Path, extra: list[Path], out: Path, items: list[dict], game_build
             names = {u.get("key") or "" for u in units} | {u.get("name") or "" for u in units}
             entry["names"] = sorted(n for n in names if n and norm_key(n) != norm_key(entry["name"]))
             stats["written"] += 1
+            if stats["written"] % 20 == 0:
+                pack.save()  # an interrupted run keeps what it wrote
         except (edm.EdmError, ValueError, IndexError, OSError) as exc:
             stats["failed"] += 1
             log(f"   FAILED {first['id']} ({path.name}): {exc}")
